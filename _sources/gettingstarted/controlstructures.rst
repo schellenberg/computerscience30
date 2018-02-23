@@ -12,6 +12,30 @@ Comments
 Anything after ``//`` will be a comment on that line. Not really a control structure, but you should know it.
 
 
+Operators
+----------
+
+JavaScript is odd when it comes to checking for equality (truthy/falsey problems with ==), so we use three equal signs when checking for equality.
+
+Relational
+
+- ``===`` exactly equals
+- ``!==`` does not equal
+- ``=`` assignment
+- ``+=`` add or concatenate
+- ``-=`` subtract
+- ``>`` greater than
+- ``>=`` greater than or equal to
+- ``<`` less than
+- ``<=`` less than or equal to 
+
+Logical
+
+- ``&&`` and
+- ``||`` or
+- ``!`` not
+
+
 If / Else If / Else
 --------------------
 
@@ -73,6 +97,12 @@ Break
 -----
 
 Forces a loop to end immediately. Just include a ``break;`` statement inside the loop somewhere.
+
+
+Try/Catch
+----------
+
+Useful if you are going to run code that might cause an error.
 
 
 Functions
@@ -141,15 +171,46 @@ p5js helpful variables
 
 In addition to what we've already done, here's a quick list of system variables that you will likely find useful:
 
-width - Width (in pixels) of canvas
-height - Height (in pixels) of canvas
-frameCount - Number of frames processed
-frameRate - Rate that frames are processed (per second)
-displayWidth - Width (in pixels) of entire screen
-displayHeight - Height (in pixels) of entire screen
-key - Most recent key pressed on the keyboard
-keyCode - Numeric code for key pressed on keyboard
-keyPressed - True or false? Is a key pressed?
-mousePressed - True or false? Is the mouse pressed?
-mouseButton - Which button is pressed? Left, right, or center
+.. caution:: Double check that these are the same for p5js -- list is originally for Processing
+
+- width - Width (in pixels) of canvas
+- height - Height (in pixels) of canvas
+- frameCount - Number of frames processed
+- frameRate - Rate that frames are processed (per second)
+- displayWidth - Width (in pixels) of entire screen
+- displayHeight - Height (in pixels) of entire screen
+- key - Most recent key pressed on the keyboard
+- keyCode - Numeric code for key pressed on keyboard
+- keyPressed - True or false? Is a key pressed?
+- mousePressed - True or false? Is the mouse pressed?
+- mouseButton - Which button is pressed? Left, right, or center
+
+
+Random
+------
+
+The random() function allows us to generate psuedo-random numbers for use in our code (psuedo-random in theory, but they are random enough that you don't have to care about it for what we're doing...).
+
+Your Turn
+---------
+
+Create a sketch that:
+
+- when the mouse is on the left-hand side of your screen, rectangles should be drawn (all over the screen). The rectangles should be various shades of grey.
+
+- when the mouse is on the right-hand side of the screen, circles should still be drawn all over the screen (in random colours).
+
+
+Constrain
+----------
+
+Keeps a value within a certain range.
+
+Example -- move image with mouse, but don't let it leave the left side of the screen.
+
+
+Local vs Global Scope
+-----------------------
+
+Use ``let`` and ``const`` instead of ``var``. ``let`` gives block based scoping, which is much better. For the most part, you can just look at an example and use ``let`` anywhere you see ``var``.
 
