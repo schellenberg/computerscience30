@@ -21,6 +21,9 @@ Getting Started
 
    gettingstarted/setup.rst
    gettingstarted/helloworld.rst
+   gettingstarted/drawingprimatives.rst
+   gettingstarted/datatypes.rst
+   gettingstarted/controlstructures.rst
 
 
 Helpful Links
