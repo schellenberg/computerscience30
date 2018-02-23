@@ -21,4 +21,13 @@ Getting Started
 
    gettingstarted/setup.rst
    gettingstarted/helloworld.rst
-   
+
+
+Helpful Links
+::::::::::::::
+
+- `p5js Reference <https://p5js.org/reference/>`_
+- `The Coding Train Tutorials <http://thecodingtrain.com/Tutorials/>`_ -- great stuff from Daniel Shiffman
+- `Eloquent JavaScript book <https://eloquentjavascript.net/3rd_edition/>`_ -- though I will not follow all the same conventions, it's a good read
+- `MDN JavaScript Web Docs <https://developer.mozilla.org/en-US/docs/Web/JavaScript>`_
+
