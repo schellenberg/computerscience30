@@ -42,9 +42,12 @@ Map (associative array)
 	> map.has('foo')
 	false
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
-  
-- need some demo ideas...
-	- star chart (http://nifty.stanford.edu/2009/reid-starmap/starmap.html)
+
+- movie review sentiment (http://nifty.stanford.edu/2016/manley-urness-movie-review-sentiment/)  
+- star chart (http://nifty.stanford.edu/2009/reid-starmap/starmap.html)
+
+
+- more demo ideas...
 	- mindreader (http://nifty.stanford.edu/2007/raja-mindreader/)
-	- movie review sentiment (http://nifty.stanford.edu/2016/manley-urness-movie-review-sentiment/)
+	
 
