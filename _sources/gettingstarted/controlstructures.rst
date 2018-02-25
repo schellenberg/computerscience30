@@ -104,6 +104,14 @@ Try/Catch
 
 Useful if you are going to run code that might cause an error.
 
+.. code-block:: javascript
+
+    try {
+        somethingNotDefined();
+    } catch (theError) {
+        console.log("Uh oh. You just had the following error: " + theError);    // console.log() is the same as print()
+    }
+
 
 Functions
 ----------
@@ -116,6 +124,35 @@ Functions
     }
 
 Can return a value, or not. If not, result is ``undefined``.
+
+
+Throwing Exception
+-------------------
+
+If you want to create code that deals gracefully with possible errors. You can `read more about them here <https://eloquentjavascript.net/3rd_edition/08_error.html#h_zT3755/aOp>`_ . Consider:
+
+.. code-block:: javascript
+
+    function multiply(firstNumber, secondNumber) {
+        if (typeof firstNumber !== "number" || typeof secondNumber !== "number") {
+            throw "You cannot multiply unless both arguments are numbers!";
+        }
+
+        return firstNumber * secondNumber;
+    }   
+
+    print(multiply(4, 3))       // 12
+    print(multiply(4, "foo"))   // Error in console: "You cannot multiply unless both arguments are numbers!"
+                                // also crashes the program, since the there was no code to catch the exception
+
+
+    try {
+        multiply(4, "foo");
+    } 
+    catch (e) {
+        console.log(e);         // printed in console: "You cannot multiply unless both arguments are numbers!"
+    }                           //   doesn't crash the program, since the exception was caught!
+
 
 
 p5js Example

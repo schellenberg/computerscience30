@@ -47,6 +47,7 @@ Everything else in JS is an **object**. Think of an object as a container of pro
     print(student["name"])	// "Aaron"
     print(student.age)		// 17
     print(student["age"])	// 17
+    print(student.birthday) // undefined
 
 Although you can use ``.`` or ``[]`` to access properties of an object, the ``.`` syntax is preferred.
 
@@ -63,3 +64,54 @@ Another example:
     circle.x = mouseX;
     circle.y = mouseY;
     ellipse(circle.x, circle.y, circle.radius, circle.radius);
+
+
+To update or add a value to an object:
+
+.. code-block:: javascript
+
+    let student = {
+        name: "Aaron",
+        age: 17
+    };
+
+    print(student.age)  // 17
+    student.age = 18
+    print(student.age)  // 18
+
+    print(student.birthday) // undefined
+    student.birthday = "Jan 1"
+    print(student.birthday) // "Jan 1"
+
+Objects are passed by reference, not copied (time for a memory drawing on the whiteboard!). Consider:
+
+.. code-block:: javascript
+
+    let student = {
+        name: "Aaron",
+        age: 17,
+    };
+
+    anotherStudent = student;
+    anotherStudent.name = "Catherine";
+
+    print(student.name) // Catherine
+
+Notice that this is very different than how a primitive (immutable) data type works. These are copied, not passed by reference:
+
+.. code-block:: javascript
+
+    let number = 42;
+    let anotherNumber = number;
+
+    anotherNumber = number;
+    print(number)           // 42
+    print(anotherNumber)    // 42
+
+    anotherNumber = 15;
+    print(number)           // 42
+    print(anotherNumber)    // 15
+
+
+.. note:: Other than Number, String, and Boolean, everything you use in JavaScript will be an object. In other words, they will all be passed by reference, not copied. Be careful to make a deep copy yourself if you want a separate version of an array, for example.
+
