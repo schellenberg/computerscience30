@@ -31,3 +31,35 @@ String Data Type
 - strings have properties and methods. A useful property to know about is ``length`` -- ``"Sask".length`` === 4. There are built in methods, such as ``"Sask".toUppercase()``. You can find many more at `MDN docs for string methods <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods>`_
 
 
+Objects
+--------
+
+Everything else in JS is an **object**. Think of an object as a container of properties. This will make more sense with an example or two:
+
+.. code-block:: javascript
+
+    let student = {
+    	name: "Aaron",
+    	age: 17
+    };
+
+    print(student.name)		// "Aaron"
+    print(student["name"])	// "Aaron"
+    print(student.age)		// 17
+    print(student["age"])	// 17
+
+Although you can use ``.`` or ``[]`` to access properties of an object, the ``.`` syntax is preferred.
+
+Another example:
+
+.. code-block:: javascript
+
+    let circle = {
+    	x: 200,
+    	y: 300,
+    	radius: 50
+    };
+
+    circle.x = mouseX;
+    circle.y = mouseY;
+    ellipse(circle.x, circle.y, circle.radius, circle.radius);
