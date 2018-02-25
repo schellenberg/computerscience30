@@ -27,6 +27,7 @@ Getting Started
    gettingstarted/drawingprimatives.rst
    gettingstarted/datatypes.rst
    gettingstarted/controlstructures.rst
+   gettingstarted/p5jspecifictopics.rst
 
 
 Helpful Links

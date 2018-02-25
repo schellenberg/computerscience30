@@ -115,6 +115,8 @@ Functions
         return theAnswer;
     }
 
+Can return a value, or not. If not, result is ``undefined``.
+
 
 p5js Example
 ------------------
@@ -213,6 +215,29 @@ Local vs Global Scope
 -----------------------
 
 Use ``let`` and ``const`` instead of ``var``. ``let`` gives block based scoping, which is much better. For the most part, you can just look at an example and use ``let`` anywhere you see ``var``.
+
+
+Your Turn
+----------
+
+Bouncing ball demo (just bounce in one direction). Now you add the following features:
+
+- improve the code so that the ball can bounce both vertically AND horizontally.
+- bounce on edge of ball (instead of the middle of the ball)
+- make the ball speed up or slow down based on some condition (for example, whether the mouse is currently being pressed or not)
+- implement at least one additional feature, such as changing the size or color of the ball based on certain conditions
+
+
+Your Turn
+----------
+
+// Daniel Shiffman
+// http://www.learningprocessing.com
+
+// Example 5-9: Simple Gravity
+
+See if you can alter the code given above in order to make it so that the square eventually stops bouncing.
+
 
 
 Nested Loops
