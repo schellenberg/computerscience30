@@ -11,3 +11,7 @@ CS30-FP3 Use libraries to simplify solutions to programming problems.
 - p5bots? for arduino?
   
 
+
+- https://github.com/generative-light/p5.scribble.js
+- http://ability.nyu.edu/p5.js-speech/
+- 
