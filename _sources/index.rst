@@ -12,7 +12,7 @@ Python Review
    python/languagereview.rst
 
 
-.. note:: To students: You can (and will) find a lot of crappy JavaScript tutorials on the web. Not everyone who writes them actually knows what they are doing, or what best practice is. We are going to be using ECMAScript 2015 (also known as ES6). The biggest thing you need to keep in mind is that we won't ever use the ``var`` keyword (use ``let`` instead). I will also show you how to create classes using ES6 syntax instead of the odd way needed in old versions of JS.
+.. note:: To students: You can (and will) find a lot of crappy JavaScript tutorials on the web. Because JavaScript tries really hard to "work" no matter what, there are some things that work, but are not best practice. We are going to be using ECMAScript 2015 (also known as ES6). The biggest thing you need to keep in mind is that we won't ever use the ``var`` keyword (use ``let`` instead). I will also show you how to create classes using ES6 syntax instead of the odd way needed in old versions of JS.
 
 
 Getting Started
@@ -25,6 +25,8 @@ Getting Started
    gettingstarted/setup.rst
    gettingstarted/helloworld.rst
    gettingstarted/drawingprimatives.rst
+   gettingstarted/booleanlogic.rst
+   gettingstarted/statevariables.rst
    gettingstarted/datatypes.rst
    gettingstarted/controlstructures.rst
    gettingstarted/p5specifictopics.rst
