@@ -31,6 +31,8 @@ String Data Type
 - strings have properties and methods. A useful property to know about is ``length`` -- ``"Sask".length`` === 4. There are built in methods, such as ``"Sask".toUppercase()``. You can find many more at `MDN docs for string methods <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods>`_
 
 
+.. _objects_as_containers_ref:
+
 Objects
 --------
 
@@ -114,4 +116,56 @@ Notice that this is very different than how a primitive (immutable) data type wo
 
 
 .. note:: Other than Number, String, and Boolean, everything you use in JavaScript will be an object. In other words, they will all be passed by reference, not copied. Be careful to make a deep copy yourself if you want a separate version of an array, for example.
+
+Arrays
+-------
+
+Very similar to lists in Python. `Find out more from MDN reference <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array>`_
+
+.. code-block:: javascript
+
+    let groceryList = ["apples", "oranges", "peaches", "milk"];
+    for (let item of groceryList) {
+        print("Don't forget to buy " + item);
+    }
+
+Can also iterate using the length property of the array:
+
+.. code-block:: javascript
+
+    let groceryList = ["apples", "oranges", "peaches", "milk"];
+    for (let i=0; i<groceryList.length; i++) {
+        print("Don't forget to buy " + groceryList[i]);
+    }
+
+Add to end of array with ``push()``:
+
+.. code-block:: javascript
+
+    let groceryList = ["apples", "oranges", "peaches", "milk"];
+    groceryList.push("bananas");
+
+    // ["apples", "oranges", "peaches", "milk", "bananas"]
+
+Remove from end of array with ``pop()``:
+
+.. code-block:: javascript
+
+    let groceryList = ["apples", "oranges", "peaches", "milk"];
+    let lastItem = groceryList.pop();
+
+    // ["apples", "oranges", "peaches"]
+    // lastItem == "milk"
+
+You can also remove from the front of the array with ``shift()``, and add to the front of the array with ``unshift()``.
+
+Make a copy of an array using:
+
+.. code-block:: javascrip
+
+    let groceryList = ["apples", "oranges", "peaches", "milk"];
+    let otherList = groceryList.slice()
+
+    otherList[2] = "pears";
+
 

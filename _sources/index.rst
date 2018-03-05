@@ -24,12 +24,24 @@ Getting Started
 
    gettingstarted/setup.rst
    gettingstarted/helloworld.rst
-   gettingstarted/drawingprimatives.rst
+   gettingstarted/drawingbasics.rst
    gettingstarted/booleanlogic.rst
+   gettingstarted/variablescope.rst
    gettingstarted/statevariables.rst
-   gettingstarted/datatypes.rst
-   gettingstarted/controlstructures.rst
-   gettingstarted/p5specifictopics.rst
+   gettingstarted/nestedloops.rst
+   gettingstarted/objectbasics.rst
+   gettingstarted/translationrotation.rst
+
+
+JavaScript Reference
+:::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+
+   reference/datatypes.rst
+   reference/controlstructures.rst
 
 
 Helpful Links
