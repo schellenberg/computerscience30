@@ -32,6 +32,15 @@ Getting Started
    gettingstarted/objectbasics.rst
    gettingstarted/translationrotation.rst
 
+Data Structures
+::::::::::::::::
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+
+   datastructures/arrayreview.rst
+
 
 JavaScript Reference
 :::::::::::::::::::::
