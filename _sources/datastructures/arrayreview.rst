@@ -105,3 +105,44 @@ Looping Required
 - `withoutTen <https://codingjs.wmcicompsci.ca/exercise?name=withoutTen&title=Array-2>`_
   
 When you finish the questions listed above, just pick any of the questions from Array-1, Array-2 or Array-3. If you want a few more, check out the AP-1 secion (problems sourced from previous AP Computer Science exams).
+
+
+p5js Array Examples
+--------------------
+
+Terrain Generation
+~~~~~~~~~~~~~~~~~~~
+
+Use Perlin noise. Push values into an array. Draw it.
+
+Bouncing Balls
+~~~~~~~~~~~~~~~
+
+Make a bunch of balls move around. Start with an empty array. Push balls into it every time the mouse is clicked. Random sizes, random speeds, random colors. Use object notation for each ball, so it looks something like:
+
+``let newBall = {
+	x: random(width),
+	y: random(height),
+	diameter: random(25, 100),
+	dx: random(-5, 5),
+	dy: random(-5, 5),
+};``
+
+Pixel Array Demo
+~~~~~~~~~~~~~~~~~~
+
+In general, the formula for getting at any pixel location inside the pixels[] array is:
+
+	``(y * width) + x``
+
+Need to use ``loadPixels()`` and ``updatePixels()``. Can use ``red()``, ``blue()``, and ``green()`` to get values from a color variable.
+
+
+Apply some filters:
+
+- inverse filter (255 - red, etc).
+- grayscale (average RGB values, divide by 3)
+- sepia  https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created
+- threshold filter (if brightness > some number, make it white; else make it black)
+
+
