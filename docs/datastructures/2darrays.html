@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>1. JavaScript Arrays &#8212; Computer Science 30 - Saskatchewan</title>
+    <title>JavaScript Two Dimensional Arrays &#8212; Computer Science 30 - Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,8 +97,6 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. JavaScript Data Types" href="../reference/datatypes.html" />
-    <link rel="prev" title="9. Translation and Rotation" href="../gettingstarted/translationrotation.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -244,7 +242,7 @@
             <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=CS30&page=arrayreview'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS30&page=2darrays'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -259,16 +257,10 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">1. JavaScript Arrays</a><ul>
-<li><a class="reference internal" href="#array-practice-questions">1.1. Array Practice Questions</a><ul>
-<li><a class="reference internal" href="#no-looping-required">1.1.1. No Looping Required</a></li>
-<li><a class="reference internal" href="#looping-required">1.1.2. Looping Required</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#p5js-array-examples">1.2. p5js Array Examples</a><ul>
-<li><a class="reference internal" href="#terrain-generation">1.2.1. Terrain Generation</a></li>
-<li><a class="reference internal" href="#bouncing-balls">1.2.2. Bouncing Balls</a></li>
-<li><a class="reference internal" href="#pixel-array-demo">1.2.3. Pixel Array Demo</a></li>
+<li><a class="reference internal" href="#">JavaScript Two Dimensional Arrays</a><ul>
+<li><a class="reference internal" href="#p5js-array-examples">p5js Array Examples</a><ul>
+<li><a class="reference internal" href="#draw-grid">Draw Grid</a></li>
+<li><a class="reference internal" href="#conway-s-game-of-life">Conway’s Game of Life</a></li>
 </ul>
 </li>
 </ul>
@@ -280,18 +272,6 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 9. Translation and Rotation" data-toggle="tooltip">
-    <a href="../gettingstarted/translationrotation.html" >
-      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  
-  <li id="relations-next" title='Next Chapter - 1. JavaScript Data Types' data-toggle="tooltip" >
-    <a href="../reference/datatypes.html" >
-      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -317,133 +297,72 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="javascript-arrays">
-<h1>1. JavaScript Arrays<a class="headerlink" href="#javascript-arrays" title="Permalink to this headline">¶</a></h1>
-<p>Very similar to lists in Python.</p>
-<p>To create an array:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
+  <div class="section" id="javascript-two-dimensional-arrays">
+<h1>JavaScript Two Dimensional Arrays<a class="headerlink" href="#javascript-two-dimensional-arrays" title="Permalink to this headline">¶</a></h1>
+<p>Think of 2d arrays as rows and columns of a spreadsheet.</p>
+<p>To create an two dimensional array:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;thing&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="mi">42</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">]];</span>
 </pre></div>
 </div>
 <p>To access a value in the array:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">stuff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">// 42</span>
-<span class="nx">stuff</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="c1">// &quot;hello&quot;</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">stuff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>        <span class="c1">// [5, 10]</span>
+<span class="nx">stuff</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="c1">// 10</span>
+<span class="nx">stuff</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>        <span class="c1">// [6, 3, 8, &quot;happy&quot;]</span>
+<span class="nx">stuff</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>     <span class="c1">// &quot;happy&quot;</span>
 </pre></div>
 </div>
 <p>To add a value at the end of the array:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">stuff</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;another&quot;</span><span class="p">)</span>
-<span class="c1">// stuff now equals [42, 56, &quot;hello&quot;, 13, true, &quot;another&quot;]</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">stuff</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;other&quot;</span><span class="p">])</span>
+<span class="c1">// stuff now equals [[5, 10], [&quot;thing&quot;, true, 42], [6, 3, 8, &quot;happy&quot;], [5, 2, &quot;other&quot;]]</span>
+</pre></div>
+</div>
+<p>To add a value inside one level of the array:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">stuff</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;great&quot;</span><span class="p">)</span>
+<span class="c1">// stuff now equals [[5, 10, &quot;great&quot;], [&quot;thing&quot;, true, 42], [6, 3, 8, &quot;happy&quot;], [5, 2, &quot;other&quot;]]</span>
 </pre></div>
 </div>
 <p>To remove a value from end of array:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">last</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">.</span><span class="nx">pop</span><span class="p">()</span>
-<span class="c1">// last now equals &quot;another&quot;</span>
-<span class="c1">// stuff now equals [42, 56, &quot;hello&quot;, 13, true]</span>
+<span class="c1">// last now equals [5, 2, &quot;other&quot;]</span>
+<span class="c1">// stuff now equals [[5, 10, &quot;great&quot;], [&quot;thing&quot;, true, 42], [6, 3, 8, &quot;happy&quot;]]</span>
 </pre></div>
 </div>
 <p>To add/remove from the front of the array, use <code class="docutils literal"><span class="pre">unshift(&quot;something&quot;)</span></code> and <code class="docutils literal"><span class="pre">shift()</span></code> respectively.</p>
-<p>If you need to make a copy of an array, be aware that assigning the array to a new variable only adds a pointer to the same memory location (this is known as passing by reference). To make this clear, consider the following:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mi">52</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="s2">&quot;hey&quot;</span><span class="p">];</span>
-<span class="kd">let</span> <span class="nx">other</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">;</span>
-<span class="nx">other</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">35</span><span class="p">;</span>
-<span class="c1">// now, both other and stuff equal [52, 35, &quot;hey&quot;]</span>
-</pre></div>
-</div>
-<p>If you want to create a copy of an array that is <strong>not</strong> pointing to the same memory location, you can do the following:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mi">52</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="s2">&quot;hey&quot;</span><span class="p">];</span>
-    <span class="kd">let</span> <span class="nx">other</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">.</span><span class="nx">slice</span><span class="p">();</span>
-    <span class="nx">other</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">35</span><span class="p">;</span>
-    <span class="c1">// now, other equals [52, 35, &quot;hey&quot;]</span>
-    <span class="c1">// and stuff equals [52, 78, &quot;hey&quot;]</span>
-</pre></div>
-</div>
-<p>Since JavaScript arrays allow you to add/remove values from them easily, it is unusual for you to create an array of a specific size. However, if you want to create an array with a specific number of elements in it, you can call the <em>constructor</em> of the array data type. This creates an empty array, though. You can fill it up with some default values using the <code class="docutils literal"><span class="pre">.fill()</span></code> method.</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>    <span class="c1">// each value is currently empty</span>
-<span class="nx">emptyArray</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>                                 <span class="c1">// now every element is a 0</span>
-</pre></div>
-</div>
-<p>Another way of doing the same thing (which is often preferred), is to simply create the array, then push a bunch of default values into it. This means your array will never be filled with empty elements.</p>
+<p>To create a 10x10 2d array, all filled with 0s.</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="p">[];</span>
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">emptyArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">emptyArray</span><span class="p">.</span><span class="nx">push</span><span class="p">([])</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">emptyArray</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<div class="section" id="array-practice-questions">
-<h2>1.1. Array Practice Questions<a class="headerlink" href="#array-practice-questions" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="no-looping-required">
-<h3>1.1.1. No Looping Required<a class="headerlink" href="#no-looping-required" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=firstLast6&amp;title=Array-1">firstLast6</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=sameFirstLast&amp;title=Array-1">sameFirstLast</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=makePi&amp;title=Array-1">makePi</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=commonEnd&amp;title=Array-1">commonEnd</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=sum3&amp;title=Array-1">sum3</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=rotateLeft3&amp;title=Array-1">rotateLeft3</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=reverse3&amp;title=Array-1">reverse3</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=sum2&amp;title=Array-1">sum2</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=has23&amp;title=Array-1">has23</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=double23&amp;title=Array-1">double23</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=makeMiddle&amp;title=Array-1">makeMiddle</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=midThree&amp;title=Array-1">midThree</a></li>
-</ul>
-</div>
-<div class="section" id="looping-required">
-<h3>1.1.2. Looping Required<a class="headerlink" href="#looping-required" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=countEvens&amp;title=Array-2">countEvens</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=has22&amp;title=Array-2">has22</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=only14&amp;title=Array-2">only14</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=lucky13&amp;title=Array-2">lucky13</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=makeLast&amp;title=Array-1">makeLast</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=maxEnd3&amp;title=Array-1">maxEnd3</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=fizzArray&amp;title=Array-2">fizzArray</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=has77&amp;title=Array-2">has77</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=tripleUp&amp;title=Array-2">tripleUp</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=tenRun&amp;title=Array-2">tenRun</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=withoutTen&amp;title=Array-2">withoutTen</a></li>
-</ul>
-<p>When you finish the questions listed above, just pick any of the questions from Array-1, Array-2 or Array-3. If you want a few more, check out the AP-1 secion (problems sourced from previous AP Computer Science exams).</p>
-</div>
+<p>A handy function that will create a two dimensional array, all filled with 0s.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span>    <span class="kd">function</span> <span class="nx">create2dArray</span><span class="p">(</span><span class="nx">cols</span><span class="p">,</span> <span class="nx">rows</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">cols</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">emptyArray</span><span class="p">.</span><span class="nx">push</span><span class="p">([])</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">rows</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">emptyArray</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">emptyArray</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">myArray</span> <span class="o">=</span> <span class="nx">create2dArray</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+</pre></div>
 </div>
 <div class="section" id="p5js-array-examples">
-<h2>1.2. p5js Array Examples<a class="headerlink" href="#p5js-array-examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="terrain-generation">
-<h3>1.2.1. Terrain Generation<a class="headerlink" href="#terrain-generation" title="Permalink to this headline">¶</a></h3>
-<p>Use Perlin noise. Push values into an array. Draw it.</p>
+<h2>p5js Array Examples<a class="headerlink" href="#p5js-array-examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="draw-grid">
+<h3>Draw Grid<a class="headerlink" href="#draw-grid" title="Permalink to this headline">¶</a></h3>
+<p>Generate a 2d array. Make every entry either a 0 or a 1. Loop through the cols and rows to draw a grid based on the size of the array. If the current location in the array is a 0, fill with black. If it is a 0, fill with white. Generate a new grid each time the mouse is pressed.</p>
 </div>
-<div class="section" id="bouncing-balls">
-<h3>1.2.2. Bouncing Balls<a class="headerlink" href="#bouncing-balls" title="Permalink to this headline">¶</a></h3>
-<p>Make a bunch of balls move around. Start with an empty array. Push balls into it every time the mouse is clicked. Random sizes, random speeds, random colors. Use object notation for each ball, so it looks something like:</p>
-<dl class="docutils">
-<dt><a href="#id1"><span class="problematic" id="id2">``</span></a>let newBall = {</dt>
-<dd><div class="first system-message" id="id1">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/Users/dan/PythonEnvProjects/cs30/_sources/datastructures/arrayreview.rst</tt>, line 131); <em><a href="#id2">backlink</a></em></p>
-Inline literal start-string without end-string.</div>
-<p class="last">x: random(width),
-y: random(height),
-diameter: random(25, 100),
-dx: random(-5, 5),
-dy: random(-5, 5),</p>
-</dd>
-</dl>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/Users/dan/PythonEnvProjects/cs30/_sources/datastructures/arrayreview.rst</tt>, line 133)</p>
-Definition list ends without a blank line; unexpected unindent.</div>
-<p>};``</p>
-</div>
-<div class="section" id="pixel-array-demo">
-<h3>1.2.3. Pixel Array Demo<a class="headerlink" href="#pixel-array-demo" title="Permalink to this headline">¶</a></h3>
-<p>In general, the formula for getting at any pixel location inside the pixels[] array is:</p>
-<blockquote>
-<div><code class="docutils literal"><span class="pre">(y</span> <span class="pre">*</span> <span class="pre">width)</span> <span class="pre">+</span> <span class="pre">x</span></code></div></blockquote>
-<p>Need to use <code class="docutils literal"><span class="pre">loadPixels()</span></code> and <code class="docutils literal"><span class="pre">updatePixels()</span></code>. Can use <code class="docutils literal"><span class="pre">red()</span></code>, <code class="docutils literal"><span class="pre">blue()</span></code>, and <code class="docutils literal"><span class="pre">green()</span></code> to get values from a color variable.</p>
-<p>Apply some filters:</p>
-<ul class="simple">
-<li>inverse filter (255 - red, etc).</li>
-<li>grayscale (average RGB values, divide by 3)</li>
-<li>sepia  <a class="reference external" href="https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created">https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created</a></li>
-<li>threshold filter (if brightness &gt; some number, make it white; else make it black)</li>
-</ul>
+<div class="section" id="conway-s-game-of-life">
+<h3>Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink to this headline">¶</a></h3>
+<p>Introduce the Game of Life. Find some stable shapes. Be sure you completely understand how the game works <strong>before</strong> we attempt to code anything.</p>
+<p>After everyone can determine the “next state” of the game, given a scenario, it’s time to code it up.</p>
 </div>
 </div>
 </div>
@@ -451,19 +370,6 @@ Definition list ends without a blank line; unexpected unindent.</div>
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 9. Translation and Rotation' data-toggle="tooltip">
-    <a href="../gettingstarted/translationrotation.html" >
-      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
-    </a>
-  </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="../gettingstarted/translationrotation.html" ></a>
-  
-  <li id="relations-next" class="navLink" title='Next Section - 1. JavaScript Data Types' data-toggle="tooltip" >
-    <a href="../reference/datatypes.html" >
-      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
-    </a>
-  </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../reference/datatypes.html" >Next Section - 1. JavaScript Data Types</a>
 
 <script type="text/javascript">
 

@@ -98,7 +98,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. JavaScript Control Structures" href="controlstructures.html" />
-    <link rel="prev" title="9. Translation and Rotation" href="../gettingstarted/translationrotation.html" />
+    <link rel="prev" title="1. JavaScript Arrays" href="../datastructures/arrayreview.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -274,8 +274,8 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 9. Translation and Rotation" data-toggle="tooltip">
-    <a href="../gettingstarted/translationrotation.html" >
+  <li id="relations-prev" title="Previous Chapter - 1. JavaScript Arrays" data-toggle="tooltip">
+    <a href="../datastructures/arrayreview.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -327,7 +327,7 @@
 <div class="section" id="number-data-type">
 <h2>1.2. Number Data Type<a class="headerlink" href="#number-data-type" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>aren’t different types for <code class="docutils literal"><span class="pre">int</span></code> and <code class="docutils literal"><span class="pre">float</span></code>, which is a bit weird to get used to</li>
+<li>aren’t different types for <code class="docutils literal"><span class="pre">int</span></code> and <code class="docutils literal"><span class="pre">float</span></code>, everything numeric is just a <code class="docutils literal"><span class="pre">number</span></code></li>
 <li><dl class="first docutils">
 <dt>some special number values include:</dt>
 <dd><ul class="first last">
@@ -338,6 +338,11 @@
 </dd>
 </dl>
 </li>
+<li>you can use some handy functions available through the <code class="docutils literal"><span class="pre">Math</span></code> object. Some that you will probably want to use are:
+- <code class="docutils literal"><span class="pre">let</span> <span class="pre">nearestInt</span> <span class="pre">=</span> <span class="pre">Math.round(1.55);</span> <span class="pre">//</span> <span class="pre">nearestInt</span> <span class="pre">is</span> <span class="pre">now</span> <span class="pre">2</span></code>
+- <code class="docutils literal"><span class="pre">let</span> <span class="pre">nextLowestInt</span> <span class="pre">=</span> <span class="pre">Math.floor(1.55);</span> <span class="pre">//</span> <span class="pre">nextLowestInt</span> <span class="pre">is</span> <span class="pre">now</span> <span class="pre">1</span></code>
+- <code class="docutils literal"><span class="pre">let</span> <span class="pre">nextHighestInt</span> <span class="pre">=</span> <span class="pre">Math.ceil(1.2);</span> <span class="pre">//nextHighestInt</span> <span class="pre">is</span> <span class="pre">now</span> <span class="pre">2</span></code></li>
+<li>if you want to divide, but only keep the integer portion of the result, you could do that using something like <code class="docutils literal"><span class="pre">Math.floor(42</span> <span class="pre">/</span> <span class="pre">10);</span></code></li>
 </ul>
 </div>
 <div class="section" id="string-data-type">
@@ -454,10 +459,10 @@
 </div>
 <p>You can also remove from the front of the array with <code class="docutils literal"><span class="pre">shift()</span></code>, and add to the front of the array with <code class="docutils literal"><span class="pre">unshift()</span></code>.</p>
 <p>Make a copy of an array using:</p>
-<div class="highlight-javascrip"><div class="highlight"><pre><span></span>let groceryList = [&quot;apples&quot;, &quot;oranges&quot;, &quot;peaches&quot;, &quot;milk&quot;];
-let otherList = groceryList.slice()
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">groceryList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apples&quot;</span><span class="p">,</span> <span class="s2">&quot;oranges&quot;</span><span class="p">,</span> <span class="s2">&quot;peaches&quot;</span><span class="p">,</span> <span class="s2">&quot;milk&quot;</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">otherList</span> <span class="o">=</span> <span class="nx">groceryList</span><span class="p">.</span><span class="nx">slice</span><span class="p">()</span>
 
-otherList[2] = &quot;pears&quot;;
+<span class="nx">otherList</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;pears&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -466,12 +471,12 @@ otherList[2] = &quot;pears&quot;;
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 9. Translation and Rotation' data-toggle="tooltip">
-    <a href="../gettingstarted/translationrotation.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 1. JavaScript Arrays' data-toggle="tooltip">
+    <a href="../datastructures/arrayreview.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="../gettingstarted/translationrotation.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="../datastructures/arrayreview.html" ></a>
   
   <li id="relations-next" class="navLink" title='Next Section - 2. JavaScript Control Structures' data-toggle="tooltip" >
     <a href="controlstructures.html" >

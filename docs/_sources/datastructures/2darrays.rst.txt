@@ -1,0 +1,93 @@
+JavaScript Two Dimensional Arrays
+==================================
+
+Think of 2d arrays as rows and columns of a spreadsheet.
+
+
+To create an two dimensional array:
+
+.. code-block:: javascript
+
+	let stuff = [[5, 10], ["thing", true, 42], [6, 3, 8, "happy"]];
+
+To access a value in the array:
+
+.. code-block:: javascript
+
+	stuff[0] 	// [5, 10]
+	stuff[0][1] // 10
+	stuff[2] 	// [6, 3, 8, "happy"]
+	stuff[2][3]	// "happy"
+
+
+To add a value at the end of the array:
+
+.. code-block:: javascript
+
+	stuff.push([5, 2, "other"])
+	// stuff now equals [[5, 10], ["thing", true, 42], [6, 3, 8, "happy"], [5, 2, "other"]]
+
+To add a value inside one level of the array:
+
+.. code-block:: javascript
+
+	stuff[0].push("great")
+	// stuff now equals [[5, 10, "great"], ["thing", true, 42], [6, 3, 8, "happy"], [5, 2, "other"]]
+
+
+To remove a value from end of array:
+
+.. code-block:: javascript
+
+	let last = stuff.pop()
+	// last now equals [5, 2, "other"]
+	// stuff now equals [[5, 10, "great"], ["thing", true, 42], [6, 3, 8, "happy"]]
+
+To add/remove from the front of the array, use ``unshift("something")`` and ``shift()`` respectively.
+
+
+To create a 10x10 2d array, all filled with 0s.
+
+.. code-block:: javascript
+
+    let emptyArray = [];
+    for (let i=0; i<10; i++) {
+    	emptyArray.push([])
+    	for (let j=0; j<10; j++) {
+    		emptyArray[i].push(0);
+    	}
+    }
+
+A handy function that will create a two dimensional array, all filled with 0s. 
+
+.. code-block:: javascript
+
+	function create2dArray(cols, rows) {
+	    let emptyArray = [];
+	    for (let i=0; i<cols; i++) {
+	    	emptyArray.push([])
+	    	for (let j=0; j<rows; j++) {
+	    		emptyArray[i].push(0);
+	    	}
+	    }
+	    return emptyArray;
+	}
+
+    let myArray = create2dArray(20, 20);
+
+
+p5js Array Examples
+--------------------
+
+Draw Grid
+~~~~~~~~~~~
+
+Generate a 2d array. Make every entry either a 0 or a 1. Loop through the cols and rows to draw a grid based on the size of the array. If the current location in the array is a 0, fill with black. If it is a 0, fill with white. Generate a new grid each time the mouse is pressed.
+
+
+Conway's Game of Life
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Introduce the Game of Life. Find some stable shapes. Be sure you completely understand how the game works **before** we attempt to code anything.
+
+After everyone can determine the "next state" of the game, given a scenario, it's time to code it up.

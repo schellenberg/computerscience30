@@ -165,7 +165,7 @@ You can also remove from the front of the array with ``shift()``, and add to the
 
 Make a copy of an array using:
 
-.. code-block:: javascrip
+.. code-block:: javascript
 
     let groceryList = ["apples", "oranges", "peaches", "milk"];
     let otherList = groceryList.slice()
