@@ -10,14 +10,15 @@ let state;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  x = round(width / 2);
-  y = round(height / 2);
 
   state = 1;
   numberOfSegments = 1;
   segmentSize = 10;
   direction = "right";
+
   locations = [];
+  x = roundDownToNearestMultiple(width / 2, segmentSize);
+  y = roundDownToNearestMultiple(height / 2, segmentSize);
   locations.push([x, y]);
   foodSpots = [];
 }
@@ -50,11 +51,23 @@ function keyPressed() {
   if (key === "d" || key === "D") {
     direction = "right";
   }
+  if ((key === "r" || key === "R") && state === 2) {
+    setup();
+  }
 }
+
+function roundDownToNearestMultiple(number, multiple) {
+  let remainder = number % multiple;
+  let answer = number - remainder;
+  return answer;
+}
+
 
 function spawnFood() {
   if (frameCount % 50 === 0) {
-    foodSpots.push([random(width), random(height)]);
+    let x = roundDownToNearestMultiple(random(width), segmentSize);
+    let y = roundDownToNearestMultiple(random(height), segmentSize);
+    foodSpots.push([x, y]);
   }
 }
 

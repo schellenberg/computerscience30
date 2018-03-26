@@ -40,7 +40,8 @@ Data Structures
    :numbered:
 
    datastructures/arrayreview.rst
-
+   datastructures/2darrays.rst
+   
 
 JavaScript Reference
 :::::::::::::::::::::

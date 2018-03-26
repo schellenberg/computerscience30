@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>JavaScript Two Dimensional Arrays &#8212; Computer Science 30 - Saskatchewan</title>
+    <title>2. JavaScript Two Dimensional Arrays &#8212; Computer Science 30 - Saskatchewan</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -97,6 +97,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. JavaScript Data Types" href="../reference/datatypes.html" />
+    <link rel="prev" title="1. JavaScript Arrays" href="arrayreview.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -257,10 +259,10 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">JavaScript Two Dimensional Arrays</a><ul>
-<li><a class="reference internal" href="#p5js-array-examples">p5js Array Examples</a><ul>
-<li><a class="reference internal" href="#draw-grid">Draw Grid</a></li>
-<li><a class="reference internal" href="#conway-s-game-of-life">Conway’s Game of Life</a></li>
+<li><a class="reference internal" href="#">2. JavaScript Two Dimensional Arrays</a><ul>
+<li><a class="reference internal" href="#p5js-array-examples">2.1. p5js Array Examples</a><ul>
+<li><a class="reference internal" href="#draw-grid">2.1.1. Draw Grid</a></li>
+<li><a class="reference internal" href="#conway-s-game-of-life">2.1.2. Conway’s Game of Life</a></li>
 </ul>
 </li>
 </ul>
@@ -272,6 +274,18 @@
         
         
           
+  <li id="relations-prev" title="Previous Chapter - 1. JavaScript Arrays" data-toggle="tooltip">
+    <a href="arrayreview.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - 1. JavaScript Data Types' data-toggle="tooltip" >
+    <a href="../reference/datatypes.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -298,7 +312,7 @@
 <div class="container" id="main-content">
   
   <div class="section" id="javascript-two-dimensional-arrays">
-<h1>JavaScript Two Dimensional Arrays<a class="headerlink" href="#javascript-two-dimensional-arrays" title="Permalink to this headline">¶</a></h1>
+<h1>2. JavaScript Two Dimensional Arrays<a class="headerlink" href="#javascript-two-dimensional-arrays" title="Permalink to this headline">¶</a></h1>
 <p>Think of 2d arrays as rows and columns of a spreadsheet.</p>
 <p>To create an two dimensional array:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;thing&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="mi">42</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">]];</span>
@@ -354,13 +368,13 @@
 </pre></div>
 </div>
 <div class="section" id="p5js-array-examples">
-<h2>p5js Array Examples<a class="headerlink" href="#p5js-array-examples" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. p5js Array Examples<a class="headerlink" href="#p5js-array-examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="draw-grid">
-<h3>Draw Grid<a class="headerlink" href="#draw-grid" title="Permalink to this headline">¶</a></h3>
+<h3>2.1.1. Draw Grid<a class="headerlink" href="#draw-grid" title="Permalink to this headline">¶</a></h3>
 <p>Generate a 2d array. Make every entry either a 0 or a 1. Loop through the cols and rows to draw a grid based on the size of the array. If the current location in the array is a 0, fill with black. If it is a 0, fill with white. Generate a new grid each time the mouse is pressed.</p>
 </div>
 <div class="section" id="conway-s-game-of-life">
-<h3>Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink to this headline">¶</a></h3>
+<h3>2.1.2. Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink to this headline">¶</a></h3>
 <p>Introduce the Game of Life. Find some stable shapes. Be sure you completely understand how the game works <strong>before</strong> we attempt to code anything.</p>
 <p>After everyone can determine the “next state” of the game, given a scenario, it’s time to code it up.</p>
 </div>
@@ -370,6 +384,19 @@
 
   
       
+  <li id="relations-prev" class="navLink" title='Previous Section - 1. JavaScript Arrays' data-toggle="tooltip">
+    <a href="arrayreview.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="arrayreview.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - 1. JavaScript Data Types' data-toggle="tooltip" >
+    <a href="../reference/datatypes.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../reference/datatypes.html" >Next Section - 1. JavaScript Data Types</a>
 
 <script type="text/javascript">
 
