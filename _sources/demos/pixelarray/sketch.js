@@ -1,13 +1,6 @@
-// Terrain Generation
-// Dan Schellenberg
-// Mar 19, 2018
-
-let easter, eye, mammal;
-
+let img;
 function preload() {
-  easter = loadImage("images/easter.jpg");
-  eye = loadImage("images/eye.jpg");
-  mammal = loadImage("images/mammal.jpg");
+  img = loadImage("images/mammal-low.jpg");
 }
 
 function setup() {
@@ -15,35 +8,20 @@ function setup() {
 }
 
 function draw() {
-  background(255);
-  image(mammal, 0, 0);
-
+  image(img, 0, 0);
+  // let d = pixelDensity();
+  // let halfImage = img.width * img.height;
   loadPixels();
-
-  for (let x=0; x<width; x++) {
-    for (let y=0; y<height; y++) {
-      let location = y*width+x;
-      let thisPixel = pixels[location];
-      let r = red(thisPixel);
-      let g = green(thisPixel);
-      let b = blue(thisPixel);
-
-      let newR, newG, newB;
-
-      if (dist(mouseX, mouseY, x, y) > 50) {
-        newR = 0;
-        newG = 0;
-        newB = 0;
+  for (let x =0; x < width; x++) {
+    for (let y = 0; y < height; y++) {
+      // pixels[x*width+y] = color(0);
+      if (dist(mouseX, mouseY, x, y) > 100) {
+        set(x,y, color(0));
       }
-      else {
-        newR = r;
-        newG = g;
-        newB = b;
-      }
-
-      pixels[location] = color(newR, newG, newB);
     }
   }
-
+  // for (let i = 0; i < halfImage; i++) {
+  //   pixels[i + halfImage] = pixels[i];
+  // }
   updatePixels();
 }
