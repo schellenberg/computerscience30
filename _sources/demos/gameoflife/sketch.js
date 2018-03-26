@@ -6,10 +6,16 @@
 let board = [];
 let cols, rows;
 let cellWidth, cellHeight;
+let autoPlay = false;
 
 function setup() {
-  createCanvas(600, 600);
-  // createCanvas(windowWidth, windowHeight);
+  // createCanvas(600, 600);
+  if (windowWidth > windowHeight) {
+    createCanvas(windowHeight, windowHeight);
+  }
+  else {
+    createCanvas(windowWidth, windowWidth);
+  }
 
   rows = 20;
   cols = 20;
@@ -23,6 +29,7 @@ function setup() {
 }
 
 function draw() {
+  autoPlayIfRequired();
   displayBoard();
 }
 
@@ -54,10 +61,9 @@ function update() {
   //decisions you are making in the first array
   let nextTurn = createBoard(cols);
 
-  //loop through the array, but totally ignore the edges (that's left
-  //as a challenge for you). Fun.
-  for (let x = 1; x < cols - 1; x++) {
-    for (let y = 1; y < rows - 1; y++) {
+  //loop through the array
+  for (let x = 0; x < cols; x++) {
+    for (let y = 0; y < rows; y++) {
 
       //count the number of neighbors
       let neighbors = 0;
@@ -65,7 +71,10 @@ function update() {
       //look at the cells in a 3x3 grid surrounding the current cell
       for (let i = -1; i <= 1; i++) {
         for (let j = -1; j <= 1; j++) {
-          neighbors += board[x + i][y + j];
+          //avoid going 'over the edge' of the array
+          if (x+i >= 0 && x+i < cols && y+j >= 0 && y+j < rows) {
+            neighbors += board[x + i][y + j];
+          }
         }
       }
 
@@ -130,15 +139,19 @@ function keyPressed() {
   // space key moves to the next turn
   // r creates a new randomized board
   // c clears the entire board (to prepare for clicking cells)
+  // a turns on autoPlay
 
   if (key === " ") {
     update();
   }
-  if (key === "r") {
+  else if (key === "r" || key === "R") {
     randomizeBoard();
   }
-  if (key === "c") {
+  else if (key === "c" || key === "C") {
     board = createBoard(cols);
+  }
+  else if (key === "a" || key === "A") {
+    autoPlay = !autoPlay;
   }
 }
 
@@ -160,5 +173,14 @@ function mousePressed() {
   }
   else {
     board[xcord][ycord] = 1;
+  }
+}
+
+//---------------------------------------------------------------
+
+function autoPlayIfRequired() {
+  //advance to the next turn automatically if autoPlay is true
+  if (autoPlay && frameCount % 10 === 0) {
+    update();
   }
 }
