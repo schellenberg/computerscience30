@@ -1,20 +1,40 @@
 //snake demo
 //Dan Schellenberg
-//Feb 15, 2018
+//Mar 27, 2018
 
 let locations, foodSpots;
 let segmentSize;
 let x, y, direction;
 let numberOfSegments;
 let state;
+let speed;
+let backgroundMusic;
+let eatFoodSound;
+let speedUpSound;
+let deathSound;
+
+function preload() {
+  eatFoodSound = loadSound("assets/eat-food.wav");
+  speedUpSound = loadSound("assets/speed-up.wav");
+  deathSound = loadSound("assets/dead.wav");
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  state = 1;
+  // since the background music is a big file, load it outside preload (so we
+  // don't have to wait for it), and then call a function when it completes loading
+  backgroundMusic = loadSound("assets/background-music.wav", loopBackgroundMusic);
+
+  eatFoodSound.setVolume(0.9);
+  speedUpSound.setVolume(0.9);
+  deathSound.setVolume(0.9);
+
+  state = "start";
   numberOfSegments = 1;
   segmentSize = 10;
   direction = "right";
+  speed = 5;
 
   locations = [];
   x = roundDownToNearestMultiple(width / 2, segmentSize);
@@ -26,34 +46,52 @@ function setup() {
 function draw() {
   background(255);
 
-  if (state === 1) {
+  if (state === "start") {
+    startScreen();
+  }
+
+  else if (state === "game") {
     spawnFood();
     displayFood();
 
     moveSnake();
     displaySnake();
+
+    displayScore();
   }
-  else if (state === 2) {
+  else if (state === "dead") {
     deathScreen();
   }
 }
 
 function keyPressed() {
-  if (key === "w" || key === "W") {
-    direction = "up";
+  if (state === "start") {
+    state = "game";
   }
-  if (key === "s" || key === "S") {
-    direction = "down";
+  else if (state === "game") {
+    if (key === "w" || key === "W") {
+      direction = "up";
+    }
+    if (key === "s" || key === "S") {
+      direction = "down";
+    }
+    if (key === "a" || key === "A") {
+      direction = "left";
+    }
+    if (key === "d" || key === "D") {
+      direction = "right";
+    }
   }
-  if (key === "a" || key === "A") {
-    direction = "left";
+  else if (state === "dead") {
+    if (key === "r" || key === "R") {
+      setup();
+    }
   }
-  if (key === "d" || key === "D") {
-    direction = "right";
-  }
-  if ((key === "r" || key === "R") && state === 2) {
-    setup();
-  }
+}
+
+function loopBackgroundMusic() {
+  backgroundMusic.setVolume(0.6);
+  backgroundMusic.loop();
 }
 
 function roundDownToNearestMultiple(number, multiple) {
@@ -72,7 +110,7 @@ function spawnFood() {
 }
 
 function displayFood() {
-  for (let i=0; i<foodSpots.length; i++) {
+  for (let i = 0; i < foodSpots.length; i++) {
     noStroke();
     fill(255, 0, 0, 120);
     rect(foodSpots[i][0], foodSpots[i][1], segmentSize, segmentSize);
@@ -114,10 +152,7 @@ function eatingFood() {
 }
 
 function moveSnake() {
-  // if (frameCount % 20 === 0) {
-  //   numberOfSegments++;
-  // }
-  if (frameCount % 5 === 0) {
+  if (frameCount % speed === 0) {
     if (direction === "right") {
       x += segmentSize;
     }
@@ -136,15 +171,34 @@ function moveSnake() {
     }
 
     if (checkForCollision() === true) {
-      state = 2;
+      state = "dead";
+      deathSound.play();
     }
 
     else if (isOffScreen() === true) {
-      state = 2;
+      state = "dead";
+      deathSound.play();
     }
 
     else if (eatingFood() === true) {
+      eatFoodSound.play();
       numberOfSegments++;
+      if (numberOfSegments === 4) {
+        speed = 4;
+        speedUpSound.play(1);
+      }
+      else if (numberOfSegments === 8) {
+        speed = 3;
+        speedUpSound.play(1);
+      }
+      else if (numberOfSegments === 12) {
+        speed = 2;
+        speedUpSound.play(1);
+      }
+      else if (numberOfSegments === 16) {
+        speed = 1;
+        speedUpSound.play(1);
+      }
     }
   }
 }
@@ -157,8 +211,27 @@ function isOffScreen() {
 }
 
 function deathScreen() {
+  backgroundMusic.setVolume(0.2);
   textSize(42);
   textAlign(CENTER, CENTER);
   fill(0);
   text("DEAD!", width / 2, height / 2);
+  text("Press R to restart.", width / 2, height / 2 + 55);
+}
+
+function displayScore() {
+  textSize(42);
+  textAlign(CENTER, CENTER);
+  fill(255, 0, 0, 125);
+  noStroke();
+  text(numberOfSegments, 30, 40);
+}
+
+function startScreen() {
+  textSize(42);
+  textAlign(CENTER, CENTER);
+  fill(0);
+  text("Snake!", width / 2, height / 2);
+  text("Use WASD to move.", width / 2, height / 2 + 55);
+  text("Press any key to begin...", width / 2, height / 2 + 110);
 }
