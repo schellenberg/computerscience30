@@ -64,7 +64,7 @@ function roundDownToNearestMultiple(number, multiple) {
 
 
 function spawnFood() {
-  if (frameCount % 50 === 0) {
+  if (frameCount % 50 === 0 && foodSpots.length < 4) {
     let x = roundDownToNearestMultiple(random(width), segmentSize);
     let y = roundDownToNearestMultiple(random(height), segmentSize);
     foodSpots.push([x, y]);
@@ -99,10 +99,24 @@ function checkForCollision() {
   return false;
 }
 
-function moveSnake() {
-  if (frameCount % 20 === 0) {
-    numberOfSegments++;
+function eatingFood() {
+  let currentX = locations[locations.length - 1][0];
+  let currentY = locations[locations.length - 1][1];
+
+  for (let i = 0; i < foodSpots.length; i++) {
+    if (foodSpots[i][0] === currentX && foodSpots[i][1] === currentY) {
+      // remove this food location from the array
+      foodSpots.splice(i, 1);
+      return true;
+    }
   }
+  return false;
+}
+
+function moveSnake() {
+  // if (frameCount % 20 === 0) {
+  //   numberOfSegments++;
+  // }
   if (frameCount % 5 === 0) {
     if (direction === "right") {
       x += segmentSize;
@@ -124,7 +138,22 @@ function moveSnake() {
     if (checkForCollision() === true) {
       state = 2;
     }
+
+    else if (isOffScreen() === true) {
+      state = 2;
+    }
+
+    else if (eatingFood() === true) {
+      numberOfSegments++;
+    }
   }
+}
+
+function isOffScreen() {
+  let currentX = locations[locations.length - 1][0];
+  let currentY = locations[locations.length - 1][1];
+
+  return currentX < 0 || currentX > width || currentY < 0 || currentY > height;
 }
 
 function deathScreen() {
