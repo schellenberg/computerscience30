@@ -5,7 +5,7 @@
 //  - WARNING: You do NOT want to have players/enemies as simply elements in a
 //     grid, if you try to convert this into a functional game. They would move
 //     in a really goofy way...
-//  - tiles are from http://open.commonly.cc
+//  - tiles are from https://opengameart.org/content/platformer-art-deluxe
 
 let tiles;
 let levelBackground;
