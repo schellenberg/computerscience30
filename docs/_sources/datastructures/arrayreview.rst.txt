@@ -128,21 +128,23 @@ Make a bunch of balls move around. Start with an empty array. Push balls into it
 	dy: random(-5, 5),
 };``
 
-Pixel Array Demo
-~~~~~~~~~~~~~~~~~~
 
-In general, the formula for getting at any pixel location inside the pixels[] array is:
+.. would have done, but it's really slow to do this with p5js
+.. Pixel Array Demo
+.. ~~~~~~~~~~~~~~~~~~
 
-	``(y * width) + x``
+.. In general, the formula for getting at any pixel location inside the pixels[] array is:
 
-Need to use ``loadPixels()`` and ``updatePixels()``. Can use ``red()``, ``blue()``, and ``green()`` to get values from a color variable.
+.. 	``(y * width) + x``
+
+.. Need to use ``loadPixels()`` and ``updatePixels()``. Can use ``red()``, ``blue()``, and ``green()`` to get values from a color variable.
 
 
-Apply some filters:
+.. Apply some filters:
 
-- inverse filter (255 - red, etc).
-- grayscale (average RGB values, divide by 3)
-- sepia  https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created
-- threshold filter (if brightness > some number, make it white; else make it black)
+.. - inverse filter (255 - red, etc).
+.. - grayscale (average RGB values, divide by 3)
+.. - sepia  https://stackoverflow.com/questions/1061093/how-is-a-sepia-tone-created
+.. - threshold filter (if brightness > some number, make it white; else make it black)
 
 

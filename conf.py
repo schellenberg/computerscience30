@@ -44,7 +44,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Computer Science 30 - Saskatchewan'
+project = 'Computer Science 30 - Schellenberg'
 copyright = '2018 Dan Schellenberg'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -119,7 +119,7 @@ html_theme = 'sphinx_bootstrap'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Computer Science 30 - Saskatchewan",
+    'navbar_title': "Computer Science 30 - Schellenberg",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "CS30",
@@ -165,7 +165,7 @@ html_theme_path = ["_templates/plugin_layouts"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'Computer Science 30 - Saskatchewan'
+html_title = 'Computer Science 30 - Schellenberg'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 html_short_title ='CS30'

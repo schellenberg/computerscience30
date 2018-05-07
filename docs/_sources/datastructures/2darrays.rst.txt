@@ -91,3 +91,9 @@ Conway's Game of Life
 Introduce the Game of Life. Find some stable shapes. Be sure you completely understand how the game works **before** we attempt to code anything.
 
 After everyone can determine the "next state" of the game, given a scenario, it's time to code it up.
+
+
+Sudoku Example
+~~~~~~~~~~~~~~~
+
+Hard code a 2d array sudoku initial grid, putting in 0's wherever you want a blank. Also make a 2d array containing the completed grid. Adapt the game of life code (or just start over) to display the sudoku grid.
