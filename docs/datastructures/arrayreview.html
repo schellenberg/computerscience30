@@ -320,13 +320,27 @@
 <h1>1. JavaScript Arrays<a class="headerlink" href="#javascript-arrays" title="Permalink to this headline">¶</a></h1>
 <p>Very similar to lists in Python.</p>
 <p>To create an array:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
-</pre></div>
+
+<div data-childcomponent="js_arrays1" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=js_arrays1 data-lang="javascript"    data-timelimit=25000   data-audio=''     >
+let stuff = [42, 56, "hello", 13, true];
+</textarea>
 </div>
 <p>To access a value in the array:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">stuff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">// 42</span>
-<span class="nx">stuff</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="c1">// &quot;hello&quot;</span>
-</pre></div>
+
+<div data-childcomponent="js_arrays2" class="runestone explainer ac_section alert alert-warning">
+
+<textarea data-component="activecode" id=js_arrays2 data-lang="javascript"    data-timelimit=25000   data-audio=''     >
+let stuff = [42, 56, "hello", 13, true];
+
+writeln(stuff[0]) // 42
+writeln(stuff[2]) // "hello"
+</textarea>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can think of <code class="docutils literal"><span class="pre">writeln</span></code> as similar to Python and p5’s <code class="docutils literal"><span class="pre">print</span></code> command for the purposes of these demos. If you use code similar to this in your projects, you should instead use either <code class="docutils literal"><span class="pre">console.log()</span></code> or <code class="docutils literal"><span class="pre">print()</span></code> (if using p5js).</p>
 </div>
 <p>To add a value at the end of the array:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">stuff</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;another&quot;</span><span class="p">)</span>
@@ -349,15 +363,15 @@
 </div>
 <p>If you want to create a copy of an array that is <strong>not</strong> pointing to the same memory location, you can do the following:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mi">52</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="s2">&quot;hey&quot;</span><span class="p">];</span>
-    <span class="kd">let</span> <span class="nx">other</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">.</span><span class="nx">slice</span><span class="p">();</span>
-    <span class="nx">other</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">35</span><span class="p">;</span>
-    <span class="c1">// now, other equals [52, 35, &quot;hey&quot;]</span>
-    <span class="c1">// and stuff equals [52, 78, &quot;hey&quot;]</span>
+<span class="kd">let</span> <span class="nx">other</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">.</span><span class="nx">slice</span><span class="p">();</span>
+<span class="nx">other</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">35</span><span class="p">;</span>
+<span class="c1">// now, other equals [52, 35, &quot;hey&quot;]</span>
+<span class="c1">// and stuff equals [52, 78, &quot;hey&quot;]</span>
 </pre></div>
 </div>
 <p>Since JavaScript arrays allow you to add/remove values from them easily, it is unusual for you to create an array of a specific size. However, if you want to create an array with a specific number of elements in it, you can call the <em>constructor</em> of the array data type. This creates an empty array, though. You can fill it up with some default values using the <code class="docutils literal"><span class="pre">.fill()</span></code> method.</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>    <span class="c1">// each value is currently empty</span>
-<span class="nx">emptyArray</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>                                 <span class="c1">// now every element is a 0</span>
+<span class="nx">emptyArray</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>                 <span class="c1">// now every element is a 0</span>
 </pre></div>
 </div>
 <p>Another way of doing the same thing (which is often preferred), is to simply create the array, then push a bunch of default values into it. This means your array will never be filled with empty elements.</p>
@@ -413,22 +427,15 @@
 <div class="section" id="bouncing-balls">
 <h3>1.2.2. Bouncing Balls<a class="headerlink" href="#bouncing-balls" title="Permalink to this headline">¶</a></h3>
 <p>Make a bunch of balls move around. Start with an empty array. Push balls into it every time the mouse is clicked. Random sizes, random speeds, random colors. Use object notation for each ball, so it looks something like:</p>
-<dl class="docutils">
-<dt><a href="#id1"><span class="problematic" id="id2">``</span></a>let newBall = {</dt>
-<dd><div class="first system-message" id="id1">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/Users/dan/PythonEnvProjects/cs30/_sources/datastructures/arrayreview.rst</tt>, line 131); <em><a href="#id2">backlink</a></em></p>
-Inline literal start-string without end-string.</div>
-<p class="last">x: random(width),
-y: random(height),
-diameter: random(25, 100),
-dx: random(-5, 5),
-dy: random(-5, 5),</p>
-</dd>
-</dl>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/Users/dan/PythonEnvProjects/cs30/_sources/datastructures/arrayreview.rst</tt>, line 133)</p>
-Definition list ends without a blank line; unexpected unindent.</div>
-<p>};``</p>
+<div class="highlight-javscript"><div class="highlight"><pre><span></span>let newBall = {
+    x: random(width),
+    y: random(height),
+    diameter: random(25, 100),
+    dx: random(-5, 5),
+    dy: random(-5, 5),
+};
+</pre></div>
+</div>
 </div>
 </div>
 </div>

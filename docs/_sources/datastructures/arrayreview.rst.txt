@@ -5,31 +5,40 @@ Very similar to lists in Python.
 
 To create an array:
 
-.. code-block:: javascript
+.. activecode:: js_arrays1
+    :language: javascript
+    :nocodelens:
 
-	let stuff = [42, 56, "hello", 13, true];
+    let stuff = [42, 56, "hello", 13, true];
 
 To access a value in the array:
 
-.. code-block:: javascript
+.. activecode:: js_arrays2
+    :language: javascript
+    :nocodelens:
 
-	stuff[0] // 42
-	stuff[2] // "hello"
+    let stuff = [42, 56, "hello", 13, true];
+
+    writeln(stuff[0]) // 42
+    writeln(stuff[2]) // "hello"
+
+.. note:: You can think of ``writeln`` as similar to Python and p5's ``print`` command for the purposes of these demos. If you use code similar to this in your projects, you should instead use either ``console.log()`` or ``print()`` (if using p5js).
+
 
 To add a value at the end of the array:
 
 .. code-block:: javascript
 
-	stuff.push("another")
-	// stuff now equals [42, 56, "hello", 13, true, "another"]
+    stuff.push("another")
+    // stuff now equals [42, 56, "hello", 13, true, "another"]
 
 To remove a value from end of array:
 
 .. code-block:: javascript
 
-	let last = stuff.pop()
-	// last now equals "another"
-	// stuff now equals [42, 56, "hello", 13, true]
+    let last = stuff.pop()
+    // last now equals "another"
+    // stuff now equals [42, 56, "hello", 13, true]
 
 To add/remove from the front of the array, use ``unshift("something")`` and ``shift()`` respectively.
 
@@ -37,27 +46,27 @@ If you need to make a copy of an array, be aware that assigning the array to a n
 
 .. code-block:: javascript
 
-	let stuff = [52, 78, "hey"];
-	let other = stuff;
-	other[1] = 35;
-	// now, both other and stuff equal [52, 35, "hey"]
+    let stuff = [52, 78, "hey"];
+    let other = stuff;
+    other[1] = 35;
+    // now, both other and stuff equal [52, 35, "hey"]
 
 If you want to create a copy of an array that is **not** pointing to the same memory location, you can do the following:
 
 .. code-block:: javascript
 
     let stuff = [52, 78, "hey"];
-	let other = stuff.slice();
-	other[1] = 35;
-	// now, other equals [52, 35, "hey"]
-	// and stuff equals [52, 78, "hey"]
+    let other = stuff.slice();
+    other[1] = 35;
+    // now, other equals [52, 35, "hey"]
+    // and stuff equals [52, 78, "hey"]
 
 Since JavaScript arrays allow you to add/remove values from them easily, it is unusual for you to create an array of a specific size. However, if you want to create an array with a specific number of elements in it, you can call the *constructor* of the array data type. This creates an empty array, though. You can fill it up with some default values using the ``.fill()`` method.
 
 .. code-block:: javascript
 
-    let emptyArray = new Array(100);	// each value is currently empty
-    emptyArray.fill(0);					// now every element is a 0
+    let emptyArray = new Array(100);    // each value is currently empty
+    emptyArray.fill(0);                 // now every element is a 0
 
 Another way of doing the same thing (which is often preferred), is to simply create the array, then push a bunch of default values into it. This means your array will never be filled with empty elements.
 
@@ -65,7 +74,7 @@ Another way of doing the same thing (which is often preferred), is to simply cre
 
     let emptyArray = [];
     for (let i=0; i<100; i++) {
-    	emptyArray.push(0);
+        emptyArray.push(0);
     }
 
 
@@ -120,13 +129,15 @@ Bouncing Balls
 
 Make a bunch of balls move around. Start with an empty array. Push balls into it every time the mouse is clicked. Random sizes, random speeds, random colors. Use object notation for each ball, so it looks something like:
 
-``let newBall = {
-	x: random(width),
-	y: random(height),
-	diameter: random(25, 100),
-	dx: random(-5, 5),
-	dy: random(-5, 5),
-};``
+.. code-block:: javscript
+
+    let newBall = {
+        x: random(width),
+        y: random(height),
+        diameter: random(25, 100),
+        dx: random(-5, 5),
+        dy: random(-5, 5),
+    };
 
 
 .. would have done, but it's really slow to do this with p5js
@@ -135,7 +146,7 @@ Make a bunch of balls move around. Start with an empty array. Push balls into it
 
 .. In general, the formula for getting at any pixel location inside the pixels[] array is:
 
-.. 	``(y * width) + x``
+..  ``(y * width) + x``
 
 .. Need to use ``loadPixels()`` and ``updatePixels()``. Can use ``red()``, ``blue()``, and ``green()`` to get values from a color variable.
 
