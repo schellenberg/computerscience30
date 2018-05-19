@@ -2,6 +2,11 @@
 // Dan Schellenberg
 // May 18, 2018
 
+// this is indented to show two major ideas:
+// - how to use some of the DOM manipulation functions in p5js
+// - using bootstrap (https://getbootstrap.com/) to style a page, instead of
+//    using our own CSS (note that bootstrap's css is leaded in index.html)
+
 let questionInputs;
 let answers;
 
@@ -18,50 +23,59 @@ function setup() {
   addButtons();
 }
 
+// use some built-in javascript functions to convert bases
 function convert(number, baseFrom, baseTo) {
   return parseInt(number, baseFrom).toString(baseTo);
 }
 
 function createQuestion(baseFrom, baseTo) {
+  // this allows for easily writing a message in text about which conversion we are doing
   let baseToText = {
     2: "binary",
     10: "decimal",
     16: "hexadecimal",
   };
 
+  // start with the random number in base 10, then convert it to required bases
   let randomDecimalNumber = int(random(17, 255));
   let displayValue = convert(randomDecimalNumber, 10, baseFrom);
+
+  // keep track of the answer and the base, to help when interpreting user input
   let answerData = {
     answer: convert(randomDecimalNumber, 10, baseTo),
     base: baseTo,
   };
   answers.push(answerData);
 
+  // add label and question to the html form
   let message = "Convert the following from " + baseToText[baseFrom] + " to " + baseToText[baseTo] + ": " + displayValue;
   let label = createElement("label", message);
   label.parent("quiz");
+
   let question = createInput("");
-  question.class("form-control");
+  question.class("form-control mb-3");
   question.parent("quiz");
   questionInputs.push(question);
 }
 
 function addButtons() {
-  // check answers
+  // check answers button
   let checkButton = createButton("Check Answers");
   checkButton.attribute("type", "button");
   checkButton.parent("quiz");
-  checkButton.class("btn btn-primary");
+  checkButton.class("btn btn-success mb-4 d-block");
   checkButton.mousePressed(answerCheck);
 
   // reset the page -- by default, if ther eis no type attribute given,
   //  the html will cause this button to reload the page
-  let resetButton = createButton("Pick New Questions");
+  let resetButton = createButton("Generate New Questions");
   resetButton.parent("quiz");
-  resetButton.class("btn btn-success");
+  resetButton.class("btn btn-primary d-block");
 }
 
 function answerCheck() {
+  // look at each question, and determine if the answer is valid or not
+  // uses bootstrap is-valid and is-invalid classes for styling...
   for (let i=0; i<questionInputs.length; i++) {
     let theAnswer = answers[i].answer;
     let usersValue = questionInputs[i].value();
