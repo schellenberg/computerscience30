@@ -52,7 +52,13 @@ function createQuestion(baseFrom, baseTo) {
   let label = createElement("label", message);
   label.parent("quiz");
 
-  let question = createInput("");
+  let qustion;
+  if (baseTo === 16) {
+    question = createInput("");
+  }
+  else {
+    question = createInput("", "number");
+  }
   question.class("form-control mb-3");
   question.parent("quiz");
   questionInputs.push(question);
