@@ -5,14 +5,14 @@
 
 // global variables
 let cols, rows;
-let cellSize = 40;
+let cellSize = 10;
 let current;
 let grid = [];
 let stack = [];
 
 function setup() {
-  createCanvas(400, 400);
-  // frameRate(5);
+  createCanvas(800, 800);
+
   cols = floor(width / cellSize);
   rows = floor(height / cellSize);
 
@@ -30,14 +30,10 @@ function setup() {
 
 function draw() {
   background(50);
-  // display the grid cells
-  for (let i = 0; i < grid.length; i++) {
-    grid[i].display();
-  }
 
   // look for a new spot to visit in the grid
   current.visited = true;
-  current.highlight();
+  // current.highlight();
 
   let next = current.checkNeighbors();
   if (next) {
@@ -51,11 +47,16 @@ function draw() {
   // no current neighbors, so check stack to restart from new location
   else if (stack.length > 0) {
     current = stack.pop();
+    print(stack.length);
   }
 
   else {
     noLoop();
-    saveJSON(grid, "maze1.json");
+    // display the grid cells
+    for (let i = 0; i < grid.length; i++) {
+      grid[i].display();
+    }
+    saveJSON(grid, "maze3.json");
   }
 
 }
@@ -75,8 +76,6 @@ function index(i, j) {
     return i + j * cols;
   }
 }
-
-
 
 function removeWalls(firstCell, secondCell) {
   let xIndexDifference = firstCell.i - secondCell.i;

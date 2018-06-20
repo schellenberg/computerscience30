@@ -7,19 +7,20 @@ let cellSize = 20;
 let grid = [];
 
 function preload() {
-  grid = loadJSON("mazes/maze1.json");
+  grid = loadJSON("mazes/maze3.json");
 }
 
 function setup() {
-  createCanvas(400, 400);
-
   // required due to loadJSON returning an object, not an array
   let length = Object.keys(grid).length;
 
-  cols = floor(sqrt(length));
-  rows = floor(sqrt(length));
+  cols = grid[length-1].i;
+  rows = grid[length-1].j;
 
-  background(50);
+  let c = createCanvas(cellSize * (cols+2), cellSize * (rows+2));
+  c.position(cellSize, cellSize);
+
+  background(255);
   // display the grid cells
   for (let i = 0; i < length; i++) {
     display(i);
@@ -36,7 +37,7 @@ function display(cellNumber) {
   let y = grid[cellNumber].j * cellSize;
 
   // draw the walls, if that wall is set to true
-  stroke(255);
+  stroke(0);
   if (grid[cellNumber].walls.top) {
     line(x, y, x + cellSize, y);
   }

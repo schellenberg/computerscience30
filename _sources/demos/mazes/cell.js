@@ -9,8 +9,8 @@ class Cell {
       bottom: true,
       left: true
     };
-    //} [true, true, true, true]; // top, right, bottom, left
     this.visited = false;
+    this.endingLocation = false;
   }
 
   highlight() {
