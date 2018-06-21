@@ -5,7 +5,7 @@
 
 // global variables
 let cols, rows;
-let cellSize = 40;
+let cellSize = 20;
 let current;
 let grid = [];
 let stack = [];
@@ -55,7 +55,7 @@ function draw() {
 
   else {
     noLoop();
-    saveJSON(grid, "maze1.json");
+    saveJSON(grid, "maze1.json", true);
   }
 
 }

@@ -5,6 +5,8 @@
 let cols, rows;
 let cellSize = 20;
 let grid = [];
+let length;
+let current = 0;
 
 function preload() {
   grid = loadJSON("mazes/maze3.json");
@@ -12,24 +14,26 @@ function preload() {
 
 function setup() {
   // required due to loadJSON returning an object, not an array
-  let length = Object.keys(grid).length;
+  length = Object.keys(grid).length;
 
   cols = grid[length-1].i;
   rows = grid[length-1].j;
 
   let c = createCanvas(cellSize * (cols+2), cellSize * (rows+2));
   c.position(cellSize, cellSize);
+}
 
+function draw() {
   background(255);
   // display the grid cells
   for (let i = 0; i < length; i++) {
     display(i);
   }
-}
 
-// function draw() {
-//
-// }
+  // show character moving
+  move();
+  showCharacter(current);
+}
 
 function display(cellNumber) {
   // x and y are the coordinates to display this cell
@@ -49,5 +53,30 @@ function display(cellNumber) {
   }
   if (grid[cellNumber].walls.left) {
     line(x, y, x, y + cellSize);
+  }
+}
+
+
+function showCharacter(cellNumber) {
+  // x and y are the coordinates to display this cell
+  let x = grid[cellNumber].i * cellSize;
+  let y = grid[cellNumber].j * cellSize;
+  fill(0, 255, 0, 100);
+  noStroke();
+  rect(x, y, cellSize, cellSize);
+}
+
+function move() {
+  if (key === 'w' && !grid[current].walls.top) {
+    current -= cols+1;
+  }
+  if (key === 's' && !grid[current].walls.bottom) {
+    current += cols+1;
+  }
+  if (key === 'a' && !grid[current].walls.left) {
+    current -= 1;
+  }
+  if (key === 'd' && !grid[current].walls.right) {
+    current += 1;
   }
 }
