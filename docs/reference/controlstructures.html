@@ -2,85 +2,97 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>2. JavaScript Control Structures &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/matrixeq.css" type="text/css" />
     <link rel="stylesheet" href="../_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webgldemo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/webglinteractive.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/js_lib/prettify.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pytutor.css" type="text/css" />
     <link rel="stylesheet" href="../_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/activecode.css" type="text/css" />
     <link rel="stylesheet" href="../_static/datafile.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/fitb.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/parsons.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/lib/prettify.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
     <link rel="stylesheet" href="../_static/showEval.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/tabbedstuff.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/accessibility.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/poll.css" type="text/css" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/runestonebase.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
     <script type="text/javascript" src="../_static/codemirror.js"></script>
     <script type="text/javascript" src="../_static/xml.js"></script>
     <script type="text/javascript" src="../_static/css.js"></script>
     <script type="text/javascript" src="../_static/htmlmixed.js"></script>
-    <script type="text/javascript" src="../_static/python.js"></script>
     <script type="text/javascript" src="../_static/javascript.js"></script>
-    <script type="text/javascript" src="../_static/activecode.js"></script>
-    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
-    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
-    <script type="text/javascript" src="../_static/clike.js"></script>
-    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/animationbase.js"></script>
     <script type="text/javascript" src="../_static/mchoice.js"></script>
     <script type="text/javascript" src="../_static/timedmc.js"></script>
     <script type="text/javascript" src="../_static/timed.js"></script>
-    <script type="text/javascript" src="../_static/clickable.js"></script>
-    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
     <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
     <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
     <script type="text/javascript" src="../_static/pytutor.js"></script>
     <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
     <script type="text/javascript" src="../_static/skulpt.min.js"></script>
     <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
     <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
     <script type="text/javascript" src="../_static/dragndrop.js"></script>
     <script type="text/javascript" src="../_static/timeddnd.js"></script>
-    <script type="text/javascript" src="../_static/fitb.js"></script>
-    <script type="text/javascript" src="../_static/timedfitb.js"></script>
-    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
-    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
-    <script type="text/javascript" src="../_static/parsons.js"></script>
-    <script type="text/javascript" src="../_static/timedparsons.js"></script>
     <script type="text/javascript" src="../_static/poll.js"></script>
-    <script type="text/javascript" src="../_static/reveal.js"></script>
-    <script type="text/javascript" src="../_static/shortanswer.js"></script>
-    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
-    <script type="text/javascript" src="../_static/showEval.js"></script>
-    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -116,7 +128,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '3.0.8';
+  eBookConfig.runestone_version = '3.2.1';
 </script>
 
 <div id="fb-root"></div>
@@ -132,8 +144,7 @@
 
 
 
-  </head>
-  <body>
+  </head><body>
 
 
 <!-- Begin navbar -->
@@ -319,33 +330,33 @@
 </div>
 <div class="section" id="comments">
 <h2>2.1. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
-<p>Anything after <code class="docutils literal"><span class="pre">//</span></code> will be a comment on that line. Not really a control structure, but you should know it.</p>
+<p>Anything after <code class="docutils literal notranslate"><span class="pre">//</span></code> will be a comment on that line. Not really a control structure, but you should know it.</p>
 </div>
 <div class="section" id="operators">
 <h2>2.2. Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
 <p>JavaScript is odd when it comes to checking for equality (truthy/falsey problems with ==), so we use three equal signs when checking for equality.</p>
 <p>Relational</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">===</span></code> exactly equals</li>
-<li><code class="docutils literal"><span class="pre">!==</span></code> does not equal</li>
-<li><code class="docutils literal"><span class="pre">=</span></code> assignment</li>
-<li><code class="docutils literal"><span class="pre">+=</span></code> add or concatenate</li>
-<li><code class="docutils literal"><span class="pre">-=</span></code> subtract</li>
-<li><code class="docutils literal"><span class="pre">&gt;</span></code> greater than</li>
-<li><code class="docutils literal"><span class="pre">&gt;=</span></code> greater than or equal to</li>
-<li><code class="docutils literal"><span class="pre">&lt;</span></code> less than</li>
-<li><code class="docutils literal"><span class="pre">&lt;=</span></code> less than or equal to</li>
+<li><code class="docutils literal notranslate"><span class="pre">===</span></code> exactly equals</li>
+<li><code class="docutils literal notranslate"><span class="pre">!==</span></code> does not equal</li>
+<li><code class="docutils literal notranslate"><span class="pre">=</span></code> assignment</li>
+<li><code class="docutils literal notranslate"><span class="pre">+=</span></code> add or concatenate</li>
+<li><code class="docutils literal notranslate"><span class="pre">-=</span></code> subtract</li>
+<li><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> greater than</li>
+<li><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> greater than or equal to</li>
+<li><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> less than</li>
+<li><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> less than or equal to</li>
 </ul>
 <p>Logical</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">&amp;&amp;</span></code> and</li>
-<li><code class="docutils literal"><span class="pre">||</span></code> or</li>
-<li><code class="docutils literal"><span class="pre">!</span></code> not</li>
+<li><code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> and</li>
+<li><code class="docutils literal notranslate"><span class="pre">||</span></code> or</li>
+<li><code class="docutils literal notranslate"><span class="pre">!</span></code> not</li>
 </ul>
 </div>
 <div class="section" id="if-else-if-else">
 <h2>2.3. If / Else If / Else<a class="headerlink" href="#if-else-if-else" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">someNumber</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Pick a number&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">someNumber</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Pick a number&quot;</span><span class="p">);</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nx">someNumber</span> <span class="o">&lt;</span> <span class="mi">42</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// do something</span>
@@ -361,7 +372,7 @@
 </div>
 <div class="section" id="while-loops">
 <h2>2.4. While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
 <span class="k">while</span> <span class="p">(</span><span class="nx">number</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">);</span>
@@ -373,7 +384,7 @@
 <div class="section" id="do-while-loops">
 <h2>2.5. Do-While Loops<a class="headerlink" href="#do-while-loops" title="Permalink to this headline">¶</a></h2>
 <p>Guarantees the loop will happen at least once.</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">answer</span><span class="p">;</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">answer</span><span class="p">;</span>
 <span class="k">do</span> <span class="p">{</span>
     <span class="nx">answer</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Best NBA team?&quot;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -383,7 +394,7 @@
 </div>
 <div class="section" id="for-loop">
 <h2>2.6. For Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">number</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">number</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Blastoff!&quot;</span><span class="p">);</span>
@@ -392,12 +403,12 @@
 </div>
 <div class="section" id="break">
 <h2>2.7. Break<a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h2>
-<p>Forces a loop to end immediately. Just include a <code class="docutils literal"><span class="pre">break;</span></code> statement inside the loop somewhere.</p>
+<p>Forces a loop to end immediately. Just include a <code class="docutils literal notranslate"><span class="pre">break;</span></code> statement inside the loop somewhere.</p>
 </div>
 <div class="section" id="try-catch">
 <h2>2.8. Try/Catch<a class="headerlink" href="#try-catch" title="Permalink to this headline">¶</a></h2>
 <p>Useful if you are going to run code that might cause an error.</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
     <span class="nx">somethingNotDefined</span><span class="p">();</span>
 <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">theError</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Uh oh. You just had the following error: &quot;</span> <span class="o">+</span> <span class="nx">theError</span><span class="p">);</span>    <span class="c1">// console.log() is the same as print()</span>
@@ -407,18 +418,18 @@
 </div>
 <div class="section" id="functions">
 <h2>2.9. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">adder</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">adder</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">theAnswer</span> <span class="o">=</span> <span class="nx">first</span> <span class="o">+</span> <span class="nx">second</span><span class="p">;</span>
     <span class="k">return</span> <span class="nx">theAnswer</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Can return a value, or not. If not, result is <code class="docutils literal"><span class="pre">undefined</span></code>.</p>
+<p>Can return a value, or not. If not, result is <code class="docutils literal notranslate"><span class="pre">undefined</span></code>.</p>
 </div>
 <div class="section" id="throwing-exception">
 <h2>2.10. Throwing Exception<a class="headerlink" href="#throwing-exception" title="Permalink to this headline">¶</a></h2>
 <p>If you want to create code that deals gracefully with possible errors. You can <a class="reference external" href="https://eloquentjavascript.net/3rd_edition/08_error.html#h_zT3755/aOp">read more about them here</a> . Consider:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">multiply</span><span class="p">(</span><span class="nx">firstNumber</span><span class="p">,</span> <span class="nx">secondNumber</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">multiply</span><span class="p">(</span><span class="nx">firstNumber</span><span class="p">,</span> <span class="nx">secondNumber</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">firstNumber</span> <span class="o">!==</span> <span class="s2">&quot;number&quot;</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">secondNumber</span> <span class="o">!==</span> <span class="s2">&quot;number&quot;</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">throw</span> <span class="s2">&quot;You cannot multiply unless both arguments are numbers!&quot;</span><span class="p">;</span>
     <span class="p">}</span>
@@ -470,7 +481,7 @@
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 3.0.8.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 3.2.1.
     </p>
   </div>
 </footer>

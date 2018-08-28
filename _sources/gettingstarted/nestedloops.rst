@@ -13,7 +13,9 @@ Loop in a loop. Can draw interesting things.
 
 Try to figure out what this will do **without** running it!
 
-.. code-block:: javascript
+.. p5:: nested-example-1
+    :width: 500
+    :height: 700
 
     function setup() {
         createCanvas(400, 400);
@@ -32,7 +34,7 @@ Try to figure out what this will do **without** running it!
 
 Try to figure out what this will do **without** running it!
 
-.. code-block:: javascript
+.. p5:: nested-example-2
 
     function setup() {
         createCanvas(400, 400);
