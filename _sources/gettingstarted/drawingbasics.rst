@@ -1,4 +1,4 @@
-Drawing Primatives and Color
+Drawing Primitives and Color
 =============================
 
 .. topic:: Quick Overview of Day
