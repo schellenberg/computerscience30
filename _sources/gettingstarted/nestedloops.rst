@@ -14,11 +14,11 @@ Loop in a loop. Can draw interesting things.
 Try to figure out what this will do **without** running it!
 
 .. p5:: nested-example-1
-    :width: 500
-    :height: 700
+    :width: 350
+    :height: 375
 
     function setup() {
-        createCanvas(400, 400);
+        createCanvas(300, 250);
     }
 
     function draw() {
@@ -35,6 +35,7 @@ Try to figure out what this will do **without** running it!
 Try to figure out what this will do **without** running it!
 
 .. p5:: nested-example-2
+    :width: 450
 
     function setup() {
         createCanvas(400, 400);

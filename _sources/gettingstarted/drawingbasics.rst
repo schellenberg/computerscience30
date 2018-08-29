@@ -20,13 +20,12 @@ p5js Example
 
 p5js has a number of functions that get called automatically for you. The most important ones for now are ``setup()``, ``draw()``, ``keyTyped()`` and ``mousePressed()``. 
 
-.. .. code-block:: javascript
+.. p5:: first-demo
+    :width: 400
 
-.. p5:: firstDemo
-	:preview-width: 300
 
     function setup() {
-        createCanvas(600, 600);
+        createCanvas(400, 400);
     }
 
     function draw() {
