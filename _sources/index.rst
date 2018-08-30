@@ -4,7 +4,7 @@ Computer Science 30 - Schellenberg
 .. warning:: This is just a place for me to house content for my students while we experiment with using `p5js <https://p5js.org/>`_ in our Comp Sci 30 course. I'm not creating it to be suitable for others to use, but rather just a testing ground for my course.
 
 
-.. note:: To students: You can (and will) find a lot of outdated JavaScript tutorials on the web. Because JavaScript tries really hard to "work" no matter what, there are many things that work, but are not best practice. We are going to be using ECMAScript 2015 (also known as ES6). The biggest thing you need to keep in mind is that we won't ever use the ``var`` keyword (use ``let`` instead). I will also show you how to create classes using ES6 syntax instead of the odd way needed in old versions of JS.
+.. note:: To students: You can (and will) find a lot of outdated JavaScript tutorials on the web. Because JavaScript tries really hard to "work" no matter what, there are many things that work, but are not best practice. The biggest thing you need to keep in mind is that we won't ever use the ``var`` keyword (use ``let`` instead).
 
 
 .. things i need to add throughout: 

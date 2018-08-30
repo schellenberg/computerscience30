@@ -39,6 +39,7 @@ On Windows, add context menu to Windows Explorer by:
 
 - Settings (Ctrl+Comma) -> System -> check all boxes
 
+
 GitHub
 -------
 
