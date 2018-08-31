@@ -9,7 +9,6 @@ Setting Up a Work Environment
 .. note:: You should be able to set up the following on both your computer at school, as well as at home. Everything listed is open source software, so you can use it for free (and take a look at how it was made, if you'd like to).
 
 
-
 Text Editor
 ------------
 

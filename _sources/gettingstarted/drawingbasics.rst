@@ -35,7 +35,7 @@ p5js has a number of functions that get called automatically for you. The most i
     }
 
 
-As you saw in the last sketch, we can get the current mouse position by simply using the keywords mouseX and mouseY. Another incredibly useful set of keywords is ``pmouseX`` and ``pmouseY``, which stand for "previous" mouseX and mouseY locations.
+As you saw in the last sketch, we can get the current mouse position by simply using the keywords ``mouseX`` and ``mouseY``. Another incredibly useful set of keywords is ``pmouseX`` and ``pmouseY``, which stand for "previous" mouseX and mouseY locations.
 
 
 Your Turn
@@ -49,34 +49,45 @@ Here's a couple of hints:
 - abs(-5) will return 5
 - look up the strokeWeight function in the `p5js.org reference <https://p5js.org/reference/>`_
 
+.. p5:: drawingBasicsYourTurn1
+    :width: 400
+
+
+    function setup() {
+        createCanvas(400, 400);
+    }
+
+    function draw() {
+        background(255);
+    }
+
+
 When you manage to get it working, show me your revised, working version of the sketch. Just put your hand up and be prepared to show it to me.
 
 
 To Remember
 ------------
 
-- use keyTyped() instead of keyPressed()  **in keyTyped(), the key variable is case sensitive!**
+- use ``keyTyped()`` instead of keyPressed()  **in keyTyped(), the key variable is case sensitive!**
 - can return false; to override default behaviour of that key (like space key scrolling...)
 
 
 p5js helpful variables
 -----------------------
 
-In addition to what we've already done, here's a quick list of system variables that you will likely find useful:
+In addition to what we've already done, here's a quick list of system variables that you will likely find useful. You may want to look up more information about these using the `p5js.org reference <https://p5js.org/reference/>`_.
 
-.. caution:: Double check that these are the same for p5js -- list is originally for Processing
-
-- width - Width (in pixels) of canvas
-- height - Height (in pixels) of canvas
-- frameCount - Number of frames processed
-- frameRate - Rate that frames are processed (per second)
-- windowWidth - Width (in pixels) of entire screen
-- windowHeight - Height (in pixels) of entire screen
-- key - Most recent key pressed on the keyboard
-- keyCode - Numeric code for key pressed on keyboard
-- keyPressed - True or false? Is a key pressed?
-- mousePressed - True or false? Is the mouse pressed?
-- mouseButton - Which button is pressed? Left, right, or center
+- ``width`` - Width (in pixels) of canvas
+- ``height`` - Height (in pixels) of canvas
+- ``frameCount`` - Number of frames processed
+- ``frameRate()`` - Rate that frames are processed (per second)
+- ``windowWidth`` - Width (in pixels) of entire screen
+- ``windowHeight`` - Height (in pixels) of entire screen
+- ``key`` - Most recent key pressed on the keyboard
+- ``keyCode`` - Numeric code for key pressed on keyboard
+- ``keyIsPressed`` - True or false? Is a key pressed?
+- ``mouseIsPressed`` - True or false? Is the mouse pressed?
+- ``mouseButton`` - Which button is pressed? Left, right, or center
 
 
 Your Turn
@@ -92,6 +103,17 @@ Create a sketch that makes the following happen:
 
 - when the user hits the "b" key, reset the sketch with a black background
   
+.. p5:: drawingBasicsYourTurn2
+    :width: 400
+
+
+    function setup() {
+        createCanvas(400, 400);
+    }
+
+    function draw() {
+        background(255);
+    }
 
 .. note:: If you want to use the right mouse button as an input for your sketch, you will want to disable the normal right mouse button behaviour of your browser. To do that, include the following in your ``setup()`` function: ``document.addEventListener("contextmenu", event => event.preventDefault())``.
 
@@ -109,7 +131,18 @@ Keeps a value within a certain range.
 
 Example -- move image with mouse, but don't let it leave the left side of the screen.
 
+.. p5:: constrainImage
+    :width: 400
 
+
+    function setup() {
+        createCanvas(400, 400);
+    }
+
+    function draw() {
+        background(255);
+        
+    }
 
 Your Turn
 ----------
@@ -120,12 +153,36 @@ Create a sketch to make the following happen:
 - when the mouse is on the right-hand side of the screen, circles should still be drawn all over the screen (in random colours).
 
 
+.. p5:: drawingBasicsYourTurn3
+    :width: 400
+
+
+    function setup() {
+        createCanvas(400, 400);
+    }
+
+    function draw() {
+        background(255);
+    }
+
 
 Bouncing Ball
 --------------
 
 Bouncing ball demo (just bounce in one direction).
 
+.. p5:: bouncingBall
+    :width: 400
+
+
+    function setup() {
+        createCanvas(400, 400);
+    }
+
+    function draw() {
+        background(255);
+        // make a ball bounce
+    }
 
 Your Turn
 ----------
@@ -144,6 +201,18 @@ PImage
 
 Displaying images in p5js. Load them in the ``preload()`` function to guarantee they are available when you call them. Can also use a callback function to deal with it loading elsewhere.
 
+.. p5:: pimageDemo
+    :width: 400
+
+
+    function setup() {
+        createCanvas(400, 400);
+    }
+
+    function draw() {
+        background(255);
+    }
+
 
 Your Turn
 ---------
@@ -151,3 +220,15 @@ Your Turn
 - find a random image on the web and have it follow your mouse around your sketch
 - now, include the ability to zoom in and out based on the left or right mouse button being pressed
 - improve it by making the zooming occur based on mouse wheel scrolling
+
+.. p5:: drawingBasicsYourTurn4
+    :width: 400
+
+
+    function setup() {
+        createCanvas(400, 400);
+    }
+
+    function draw() {
+        background(255);
+    }

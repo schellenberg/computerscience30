@@ -39,9 +39,14 @@ Can be inline or external. External is greatly preferred.
 
 .. code-block:: html
 
-    body {
-        padding: 0; 
+    body, html {
+        padding: 0;
         margin: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+    ::-webkit-scrollbar {
+        display: none;
     }
 
 
@@ -54,8 +59,8 @@ Can also be inline or external. We will use external, specifically by editing a 
 - project-name
     - css
         - ``style.css``
-    - images
-        - any image files you will be using
+    - assets
+        - any image and sound files you will be using
     - js
         - ``p5.js``
         - ``p5.min.js``

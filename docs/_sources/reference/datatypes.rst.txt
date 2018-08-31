@@ -6,6 +6,62 @@ JavaScript Data Types
     Discuss JavaScript data types. Stick to primitive-ish types (number, string, boolean).
 
 
+
+Checking Data Types
+-------------------
+
+If you aren't sure what the data type of something is, you can check it using the ``typeof`` command. This works on both values (a piece of data) and variables (a container that holds a value).
+
+.. activecode:: checkingDataTypes
+    :language: javascript
+    :nocodelens:
+
+    console.log(typeof 5)
+    
+    // you will likely not use writeln, but it is helpful 
+    // for me to simply output a value you can see
+    writeln(typeof "21")
+
+
+Where did the result of the ``console.log(typeof 5)`` go? Your web browser has a console built into it. Find it now, and you'll see the missing console.log call. You may want to use ``console.log()`` when debugging your projects.
+
+
+Special Number Values
+----------------------
+
+- ``NaN``, which is the result doing something mathematically goofy, like dividing a string by a number. Try it in the console.
+- ``Infinity``, which results when the value of a number is larger than 1.79769313486231570e+308. There's going to be some weird math going on if you use it, so be careful... `MDN docs <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity>`_
+- can use exponential/scientific notation if you'd like: ``5e3`` === ``5000``, and ``6e-4`` === ``0.0006``
+
+
+
+Converting Between Data Types
+-----------------------------
+
+Sometimes you might need to convert from one data type to another. You can use the following functions to **type cast** data:
+
+- ``String(x)`` to convert *x* to a string
+- ``Number(x)`` to convert *x* to a number
+- ``Boolean(x)`` to convert *x* to a boolean
+
+.. activecode:: castingDataTypes
+    :language: javascript
+    :nocodelens:
+
+    let a = 4;
+    writeln( typeof a );
+
+    let b = String(a);
+    writeln( typeof b );
+   
+    let c = Number(b);
+    writeln( typeof c );
+
+    let d = Boolean(c);
+    writeln(typeof d);
+
+
+
 Important Stuff
 ---------------
 
@@ -31,7 +87,7 @@ String Data Type
 -----------------
 
 - stick with double quotes (single works too, but convention is to use double)
-- note that comparison is by value, not reference; "S" + "a" + "s" + "k" === "Sask"
+- note that comparison is by value, not reference; so "S" + "a" + "s" + "k" === "Sask"
 - strings have properties and methods. A useful property to know about is ``length`` -- ``"Sask".length`` === 4. There are built in methods, such as ``"Sask".toUppercase()``. You can find many more at `MDN docs for string methods <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods>`_
 
 
