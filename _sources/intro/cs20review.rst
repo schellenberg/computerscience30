@@ -28,12 +28,11 @@ The fundamental data types that we will need to use in JavaScript include:
 
 - **number** (such as ``3`` or ``-5`` or ``3.14``)
 - **string** (such as ``"hello"`` or ``'Friday'`` or ``"5"``)
-- **boolean** (``True`` or ``False``) 
+- **boolean** (``true`` or ``false``) 
 
-Unlike Python, there aren't different types for ``int`` and ``float``; everything numeric is just a ``number``.
+Unlike Python, there aren't different types for ``int`` and ``float``; everything numeric is just a ``number``. You should also notice that unlike Python, boolean values are not capitalized (in JS, we use ``true``, not ``True``).
 
 .. note:: Notice that at the end of each statement, we use a semicolon (``;``) to tell JavaScript that the statement is complete.
-
 
 Math Operators
 --------------
@@ -68,6 +67,7 @@ If you are increasing or decreasing a variable by one, you can use the following
 
 .. note:: JavaScript uses ``//`` to indicate that everything that follows on that line will be a comment.
 
+.. caution:: Although I use ``writeln()`` in these examples, it is not really the way to output text in JS. I'm doing it here to make it simple to output values to the little output box that shows up when you run the code, but in real-world usage, we will use a different function.
 
 Handy Math Functions
 ---------------------
@@ -220,7 +220,7 @@ Can also iterate using the length property of the array:
     }
 
 
-CodingBat Practice Problems
+CodingJS Practice Problems
 ----------------------------
 
 - `parrotTrouble <https://codingjs.wmcicompsci.ca/exercise?name=parrotTrouble&title=Warmup-1>`_
