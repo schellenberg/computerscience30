@@ -7,7 +7,7 @@ Computer Science 30 - Schellenberg
 .. note:: To students: You can (and will) find a lot of outdated JavaScript tutorials on the web. Because JavaScript tries really hard to "work" no matter what, there are many things that work, but are not best practice. The biggest thing you need to keep in mind is that we won't ever use the ``var`` keyword (use ``let`` instead).
 
 
-.. things i need to add throughout: 
+.. things i need to add throughout:
 ..   CP1 d) Refactor existing code to increase elegance
 ..   CP1 e) Critique third party code (e.g., student, teacher or textbook programs) and make suggestions for improvement
 
@@ -20,6 +20,7 @@ CS20 Review and JavaScript Intro
    :numbered:
 
    intro/cs20review.rst
+   intro/practicequiz.rst
 
 
 Getting Started
@@ -87,7 +88,7 @@ To be added: bubble, selection, insertion, quicksort?
 Number Systems and Character Encoding
 ::::::::::::::::::::::::::::::::::::::
 
-To be added: 
+To be added:
 - binary, decimal, hexadecimal
 - ACSII and Unicode
 
@@ -118,4 +119,3 @@ Helpful Links
 - `The Coding Train Tutorials <http://thecodingtrain.com/Tutorials/>`_ -- great stuff from Daniel Shiffman
 - `MDN JavaScript Web Docs <https://developer.mozilla.org/en-US/docs/Web/JavaScript>`_
 - `Eloquent JavaScript book <https://eloquentjavascript.net/3rd_edition/>`_ -- though I will not follow all the same conventions, it's a good read
-
