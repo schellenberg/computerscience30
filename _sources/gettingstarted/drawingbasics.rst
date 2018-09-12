@@ -3,13 +3,13 @@ Drawing Primitives and Color
 
 .. topic:: Quick Overview of Day
 
-    Draw primative shapes in p5js. Explore storing color values.
+    Draw primitive shapes in p5js. Explore storing color values.
 
 
 Ideas from:
 ----------------
 
-`Processing basic drawing tutorial <https://processing.org/tutorials/drawing/>`_
+`Processing basic drawing tutorial <https://processing.org/tutorials/drawing/>`_ (though this is written for the Java version of Processing, the same ideas apply...)
 
 
 `Processing color tutorial <https://p5js.org/learn/color.html>`_
@@ -18,7 +18,7 @@ Ideas from:
 p5js Example
 ------------------
 
-p5js has a number of functions that get called automatically for you. The most important ones for now are ``setup()``, ``draw()``, ``keyTyped()`` and ``mousePressed()``. 
+p5js has a number of functions that get called automatically for you. The most important ones for now are ``setup()``, ``draw()``, ``keyTyped()`` and ``mousePressed()``.
 
 .. p5:: first-demo
     :width: 400
@@ -55,10 +55,11 @@ Here's a couple of hints:
 
     function setup() {
         createCanvas(400, 400);
+        background(255);
     }
 
     function draw() {
-        background(255);
+
     }
 
 
@@ -95,25 +96,34 @@ Your Turn
 
 Create a sketch that makes the following happen:
 
-- when the user clicks on the sketch with the left mouse button, draw a rectangle there
+- when the user clicks on the sketch with the left mouse button AND is holding down the ``r`` key, draw a rectangle there
 
-- when the user clicks on the sketch with the right mouse button, draw a circle there
+- when the user clicks on the sketch with the right mouse button AND is holding down the ``e`` key, draw a circle there
 
 - when the user hits the "w" key, reset the sketch with a white background
 
 - when the user hits the "b" key, reset the sketch with a black background
-  
+
+You'll want to look up the ``mouseClicked()`` function in the  `p5js.org reference <https://p5js.org/reference/>`_.
+
 .. p5:: drawingBasicsYourTurn2
     :width: 400
 
 
     function setup() {
         createCanvas(400, 400);
+        background(255);
     }
 
     function draw() {
-        background(255);
+
     }
+
+Take it Further
+----------------
+
+- see if you can use the up/down arrow keys to adjust the size of the rectangle and circle that your program draws
+- use some other key(s) to change the color used for the shapes
 
 .. note:: If you want to use the right mouse button as an input for your sketch, you will want to disable the normal right mouse button behaviour of your browser. To do that, include the following in your ``setup()`` function: ``document.addEventListener("contextmenu", event => event.preventDefault())``.
 
@@ -141,7 +151,7 @@ Example -- move image with mouse, but don't let it leave the left side of the sc
 
     function draw() {
         background(255);
-        
+
     }
 
 Your Turn

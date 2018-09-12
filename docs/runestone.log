@@ -1912,3 +1912,9 @@ Aborted!
 127.0.0.1 - - [10/Sep/2018 10:53:29] "GET /_static/rangy-cssclassapplier.js HTTP/1.1" 200 -
 127.0.0.1 - - [10/Sep/2018 10:53:29] "GET /_static/user-highlights.js HTTP/1.1" 200 -
 127.0.0.1 - - [10/Sep/2018 10:53:29] "GET /_static/jquery.idle-timer.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Sep/2018 10:53:29] "GET /_static/processing-1.4.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Sep/2018 10:53:29] "GET /_static/jquery.hotkey.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Sep/2018 10:53:29] "GET /_static/jquery-migrate-1.2.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Sep/2018 10:53:30] "GET /_static/img/logo_small.png HTTP/1.1" 200 -
+
+Aborted!

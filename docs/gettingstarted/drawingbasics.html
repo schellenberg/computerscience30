@@ -278,13 +278,14 @@
 <li><a class="reference internal" href="#to-remember">3.4. To Remember</a></li>
 <li><a class="reference internal" href="#p5js-helpful-variables">3.5. p5js helpful variables</a></li>
 <li><a class="reference internal" href="#id2">3.6. Your Turn</a></li>
-<li><a class="reference internal" href="#random">3.7. Random</a></li>
-<li><a class="reference internal" href="#constrain">3.8. Constrain</a></li>
-<li><a class="reference internal" href="#id3">3.9. Your Turn</a></li>
-<li><a class="reference internal" href="#bouncing-ball">3.10. Bouncing Ball</a></li>
-<li><a class="reference internal" href="#id4">3.11. Your Turn</a></li>
-<li><a class="reference internal" href="#pimage">3.12. PImage</a></li>
-<li><a class="reference internal" href="#id5">3.13. Your Turn</a></li>
+<li><a class="reference internal" href="#take-it-further">3.7. Take it Further</a></li>
+<li><a class="reference internal" href="#random">3.8. Random</a></li>
+<li><a class="reference internal" href="#constrain">3.9. Constrain</a></li>
+<li><a class="reference internal" href="#id4">3.10. Your Turn</a></li>
+<li><a class="reference internal" href="#bouncing-ball">3.11. Bouncing Ball</a></li>
+<li><a class="reference internal" href="#id5">3.12. Your Turn</a></li>
+<li><a class="reference internal" href="#pimage">3.13. PImage</a></li>
+<li><a class="reference internal" href="#id6">3.14. Your Turn</a></li>
 </ul>
 </li>
 </ul>
@@ -335,11 +336,11 @@
 <h1>3. Drawing Primitives and Color<a class="headerlink" href="#drawing-primitives-and-color" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Draw primative shapes in p5js. Explore storing color values.</p>
+<p>Draw primitive shapes in p5js. Explore storing color values.</p>
 </div>
 <div class="section" id="ideas-from">
 <h2>3.1. Ideas from:<a class="headerlink" href="#ideas-from" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://processing.org/tutorials/drawing/">Processing basic drawing tutorial</a></p>
+<p><a class="reference external" href="https://processing.org/tutorials/drawing/">Processing basic drawing tutorial</a> (though this is written for the Java version of Processing, the same ideas apply…)</p>
 <p><a class="reference external" href="https://p5js.org/learn/color.html">Processing color tutorial</a></p>
 </div>
 <div class="section" id="p5js-example">
@@ -376,10 +377,11 @@ function draw() {
 <script type="text/p5" id="drawingBasicsYourTurn1"  data-height="300" data-preview-width="400">
 function setup() {
     createCanvas(400, 400);
+    background(255);
 }
 
 function draw() {
-    background(255);
+
 }
 
 </script>
@@ -414,35 +416,44 @@ function draw() {
 <h2>3.6. Your Turn<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Create a sketch that makes the following happen:</p>
 <ul class="simple">
-<li>when the user clicks on the sketch with the left mouse button, draw a rectangle there</li>
-<li>when the user clicks on the sketch with the right mouse button, draw a circle there</li>
+<li>when the user clicks on the sketch with the left mouse button AND is holding down the <code class="docutils literal notranslate"><span class="pre">r</span></code> key, draw a rectangle there</li>
+<li>when the user clicks on the sketch with the right mouse button AND is holding down the <code class="docutils literal notranslate"><span class="pre">e</span></code> key, draw a circle there</li>
 <li>when the user hits the “w” key, reset the sketch with a white background</li>
 <li>when the user hits the “b” key, reset the sketch with a black background</li>
 </ul>
+<p>You’ll want to look up the <code class="docutils literal notranslate"><span class="pre">mouseClicked()</span></code> function in the  <a class="reference external" href="https://p5js.org/reference/">p5js.org reference</a>.</p>
 
 <div class="embedded_p5">
 <script type="text/p5" id="drawingBasicsYourTurn2"  data-height="300" data-preview-width="400">
 function setup() {
     createCanvas(400, 400);
+    background(255);
 }
 
 function draw() {
-    background(255);
+
 }
 
 </script>
 </div>
+</div>
+<div class="section" id="take-it-further">
+<h2>3.7. Take it Further<a class="headerlink" href="#take-it-further" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>see if you can use the up/down arrow keys to adjust the size of the rectangle and circle that your program draws</li>
+<li>use some other key(s) to change the color used for the shapes</li>
+</ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If you want to use the right mouse button as an input for your sketch, you will want to disable the normal right mouse button behaviour of your browser. To do that, include the following in your <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function: <code class="docutils literal notranslate"><span class="pre">document.addEventListener(&quot;contextmenu&quot;,</span> <span class="pre">event</span> <span class="pre">=&gt;</span> <span class="pre">event.preventDefault())</span></code>.</p>
 </div>
 </div>
 <div class="section" id="random">
-<h2>3.7. Random<a class="headerlink" href="#random" title="Permalink to this headline">¶</a></h2>
+<h2>3.8. Random<a class="headerlink" href="#random" title="Permalink to this headline">¶</a></h2>
 <p>The random() function allows us to generate psuedo-random numbers for use in our code (psuedo-random in theory, but they are random enough that you don’t have to care about it for what we’re doing…).</p>
 </div>
 <div class="section" id="constrain">
-<h2>3.8. Constrain<a class="headerlink" href="#constrain" title="Permalink to this headline">¶</a></h2>
+<h2>3.9. Constrain<a class="headerlink" href="#constrain" title="Permalink to this headline">¶</a></h2>
 <p>Keeps a value within a certain range.</p>
 <p>Example – move image with mouse, but don’t let it leave the left side of the screen.</p>
 
@@ -460,8 +471,8 @@ function draw() {
 </script>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>3.9. Your Turn<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>3.10. Your Turn<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Create a sketch to make the following happen:</p>
 <ul class="simple">
 <li>when the mouse is on the left-hand side of your screen, rectangles should be drawn (all over the screen). The rectangles should be various shades of grey.</li>
@@ -482,7 +493,7 @@ function draw() {
 </div>
 </div>
 <div class="section" id="bouncing-ball">
-<h2>3.10. Bouncing Ball<a class="headerlink" href="#bouncing-ball" title="Permalink to this headline">¶</a></h2>
+<h2>3.11. Bouncing Ball<a class="headerlink" href="#bouncing-ball" title="Permalink to this headline">¶</a></h2>
 <p>Bouncing ball demo (just bounce in one direction).</p>
 
 <div class="embedded_p5">
@@ -499,8 +510,8 @@ function draw() {
 </script>
 </div>
 </div>
-<div class="section" id="id4">
-<h2>3.11. Your Turn<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>3.12. Your Turn<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>Now you add the following features:</p>
 <ul class="simple">
 <li>improve the code so that the ball can bounce both vertically AND horizontally.</li>
@@ -511,7 +522,7 @@ function draw() {
 </ul>
 </div>
 <div class="section" id="pimage">
-<h2>3.12. PImage<a class="headerlink" href="#pimage" title="Permalink to this headline">¶</a></h2>
+<h2>3.13. PImage<a class="headerlink" href="#pimage" title="Permalink to this headline">¶</a></h2>
 <p>Displaying images in p5js. Load them in the <code class="docutils literal notranslate"><span class="pre">preload()</span></code> function to guarantee they are available when you call them. Can also use a callback function to deal with it loading elsewhere.</p>
 
 <div class="embedded_p5">
@@ -527,8 +538,8 @@ function draw() {
 </script>
 </div>
 </div>
-<div class="section" id="id5">
-<h2>3.13. Your Turn<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h2>3.14. Your Turn<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>find a random image on the web and have it follow your mouse around your sketch</li>
 <li>now, include the ability to zoom in and out based on the left or right mouse button being pressed</li>
