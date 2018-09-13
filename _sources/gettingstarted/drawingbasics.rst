@@ -25,13 +25,13 @@ p5js has a number of functions that get called automatically for you. The most i
 
 
     function setup() {
-        createCanvas(400, 400);
+      createCanvas(400, 400);
     }
 
     function draw() {
-        background(255);
-        fill(0);
-        ellipse(mouseX, mouseY, 50, 50);
+      background(255);
+      fill(0);
+      ellipse(mouseX, mouseY, 50, 50);
     }
 
 
@@ -54,8 +54,8 @@ Here's a couple of hints:
 
 
     function setup() {
-        createCanvas(400, 400);
-        background(255);
+      createCanvas(400, 400);
+      background(255);
     }
 
     function draw() {
@@ -111,8 +111,8 @@ You'll want to look up the ``mouseClicked()`` function in the  `p5js.org referen
 
 
     function setup() {
-        createCanvas(400, 400);
-        background(255);
+      createCanvas(400, 400);
+      background(255);
     }
 
     function draw() {
@@ -146,11 +146,11 @@ Example -- move image with mouse, but don't let it leave the left side of the sc
 
 
     function setup() {
-        createCanvas(400, 400);
+      createCanvas(400, 400);
     }
 
     function draw() {
-        background(255);
+      background(255);
 
     }
 
@@ -168,11 +168,11 @@ Create a sketch to make the following happen:
 
 
     function setup() {
-        createCanvas(400, 400);
+      createCanvas(400, 400);
     }
 
     function draw() {
-        background(255);
+      background(255);
     }
 
 
@@ -186,12 +186,12 @@ Bouncing ball demo (just bounce in one direction).
 
 
     function setup() {
-        createCanvas(400, 400);
+      createCanvas(400, 400);
     }
 
     function draw() {
-        background(255);
-        // make a ball bounce
+      background(255);
+      // make a ball bounce
     }
 
 Your Turn
@@ -216,11 +216,11 @@ Displaying images in p5js. Load them in the ``preload()`` function to guarantee 
 
 
     function setup() {
-        createCanvas(400, 400);
+      createCanvas(400, 400);
     }
 
     function draw() {
-        background(255);
+      background(255);
     }
 
 
@@ -236,9 +236,9 @@ Your Turn
 
 
     function setup() {
-        createCanvas(400, 400);
+      createCanvas(400, 400);
     }
 
     function draw() {
-        background(255);
+      background(255);
     }

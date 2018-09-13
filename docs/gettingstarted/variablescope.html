@@ -330,37 +330,41 @@
 <p>Use <code class="docutils literal notranslate"><span class="pre">let</span></code> and <code class="docutils literal notranslate"><span class="pre">const</span></code> instead of <code class="docutils literal notranslate"><span class="pre">var</span></code>. <code class="docutils literal notranslate"><span class="pre">let</span></code> gives block based scoping, which is much better (and more consistent with every other language you will learn). If you are using example code that uses <code class="docutils literal notranslate"><span class="pre">var</span></code>, you can <em>usually</em> just look at the example and use <code class="docutils literal notranslate"><span class="pre">let</span></code> anywhere you see <code class="docutils literal notranslate"><span class="pre">var</span></code>.</p>
 <p>When we use <code class="docutils literal notranslate"><span class="pre">let</span></code> and <code class="docutils literal notranslate"><span class="pre">const</span></code> assignment statements, JavaScript uses block based scope. A block begins with a <code class="docutils literal notranslate"><span class="pre">{</span></code>, and ends with a <code class="docutils literal notranslate"><span class="pre">}</span></code>.</p>
 <p>Can you figure out what the image the following code will create?</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">80</span><span class="p">;</span>
 
-    <span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">createCanvas</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>
-      <span class="nx">background</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-      <span class="nx">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
-      <span class="nx">noLoop</span><span class="p">();</span>
-    <span class="p">}</span>
+<div class="embedded_p5">
+<script type="text/p5" id="scopeDemo"  data-height="300" data-preview-width="400">
+let a = 80;
 
-    <span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">line</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
+      function setup() {
+        createCanvas(700, 400);
+        background(0);
+        stroke(255);
+        noLoop();
+      }
 
-      <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span> <span class="nx">a</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">;</span> <span class="nx">a</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">line</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
-      <span class="p">}</span>
+      function draw() {
+        line(a, 0, a, height);
 
-      <span class="nx">drawAnotherLine</span><span class="p">();</span>
+        for (let a = 120; a < 200; a += 2) {
+          line(a, 0, a, height);
+        }
 
-      <span class="nx">drawYetAnotherLine</span><span class="p">();</span>
+        drawAnotherLine();
 
-    <span class="p">}</span>
+        drawYetAnotherLine();
 
-    <span class="kd">function</span> <span class="nx">drawAnotherLine</span><span class="p">()</span> <span class="p">{</span>
-      <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">320</span><span class="p">;</span>
-      <span class="nx">line</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
-    <span class="p">}</span>
+      }
 
-    <span class="kd">function</span> <span class="nx">drawYetAnotherLine</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">line</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">a</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
-    <span class="p">}</span>
-</pre></div>
+      function drawAnotherLine() {
+        let a = 320;
+        line(a, 0, a, height);
+      }
+
+      function drawYetAnotherLine() {
+        line(a + 5, 0, a + 5, height);
+      }
+
+</script>
 </div>
 <p>Things to try:</p>
 <ul class="simple">

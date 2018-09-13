@@ -18,17 +18,17 @@ Try to figure out what this will do **without** running it!
     :height: 375
 
     function setup() {
-        createCanvas(300, 250);
+      createCanvas(300, 250);
     }
 
     function draw() {
-        for (let i=0; i<width; i+= 5) {
-            for (let j=0; j<height; j+= 5) {
-                fill(int(random(255)), int(random(255)), int(random(255)));
-                noStroke();
-                rect(i, j, 5, 5);
-            }
+      for (let i=0; i<width; i+= 5) {
+        for (let j=0; j<height; j+= 5) {
+          fill(int(random(255)), int(random(255)), int(random(255)));
+          noStroke();
+          rect(i, j, 5, 5);
         }
+      }
     }
 
 
@@ -38,15 +38,15 @@ Try to figure out what this will do **without** running it!
     :width: 450
 
     function setup() {
-        createCanvas(400, 400);
+      createCanvas(400, 400);
     }
 
     function draw() {
-        for (let i = 50; i < 140; i = i+5) {
-            for (let j = 30; j < 75; j = j+5) {
-                point(i, j);
-            }
+      for (let i = 50; i < 140; i = i+5) {
+        for (let j = 30; j < 75; j = j+5) {
+          point(i, j);
         }
+      }
     }
 
 
@@ -63,5 +63,3 @@ Your Turn
 How about this one?
 
 .. image:: images/nested_loop_image.png
-
-

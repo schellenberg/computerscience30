@@ -15,9 +15,10 @@ When we use ``let`` and ``const`` assignment statements, JavaScript uses block b
 
 Can you figure out what the image the following code will create?
 
-.. code-block:: javascript
+.. p5:: scopeDemo
+  :width: 400
 
-    let a = 80;
+  let a = 80;
 
 	function setup() {
 	  createCanvas(700, 400);

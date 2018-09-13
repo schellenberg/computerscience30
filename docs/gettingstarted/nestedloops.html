@@ -335,17 +335,17 @@
 <div class="embedded_p5">
 <script type="text/p5" id="nested-example-1"  data-height="375" data-preview-width="350">
 function setup() {
-    createCanvas(300, 250);
+  createCanvas(300, 250);
 }
 
 function draw() {
-    for (let i=0; i<width; i+= 5) {
-        for (let j=0; j<height; j+= 5) {
-            fill(int(random(255)), int(random(255)), int(random(255)));
-            noStroke();
-            rect(i, j, 5, 5);
-        }
+  for (let i=0; i<width; i+= 5) {
+    for (let j=0; j<height; j+= 5) {
+      fill(int(random(255)), int(random(255)), int(random(255)));
+      noStroke();
+      rect(i, j, 5, 5);
     }
+  }
 }
 
 </script>
@@ -355,15 +355,15 @@ function draw() {
 <div class="embedded_p5">
 <script type="text/p5" id="nested-example-2"  data-height="300" data-preview-width="450">
 function setup() {
-    createCanvas(400, 400);
+  createCanvas(400, 400);
 }
 
 function draw() {
-    for (let i = 50; i < 140; i = i+5) {
-        for (let j = 30; j < 75; j = j+5) {
-            point(i, j);
-        }
+  for (let i = 50; i < 140; i = i+5) {
+    for (let j = 30; j < 75; j = j+5) {
+      point(i, j);
     }
+  }
 }
 
 </script>
