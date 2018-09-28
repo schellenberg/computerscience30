@@ -33,9 +33,10 @@ Getting Started
    gettingstarted/setup.rst
    gettingstarted/helloworld.rst
    gettingstarted/drawingbasics.rst
-   gettingstarted/booleanlogic.rst
    gettingstarted/variablescope.rst
+   gettingstarted/booleanlogic.rst
    gettingstarted/statevariables.rst
+   gettingstarted/loops.rst
    gettingstarted/nestedloops.rst
    gettingstarted/objectbasics.rst
    gettingstarted/translationrotation.rst

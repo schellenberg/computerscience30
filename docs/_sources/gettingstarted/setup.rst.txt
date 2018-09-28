@@ -20,17 +20,17 @@ To make Atom into something better than just a plain text editor, we can install
 
 The packages you must have include:
 
-- ``p5js-snippets``
-- ``p5js-toolbar``
-- ``linter-eslint``
+- ``cs30-p5js-toolbar`` (allows you to run a local development web server to test your code)
+- ``p5js-snippets`` (allows Atom to auto-expand p5js keywords/commands)
+- ``linter-eslint`` (allows Atom to check your code for syntax/style errors)
 	- you will need to say yes when Atom asks if you want to install a bunch of dependencies (other packages that this one needs to do it's job)
 
 Other packages that are nice (and that you will see while I'm demo-ing) include:
 
-- ``minimap``
-- ``highlight-selected``
-- ``color-picker``
-- ``atom-beautify``
+- ``minimap`` (shows an overview of your code on the top right of your editor)
+- ``highlight-selected`` (when you select a word in Atom, all other instances of that word are highlighted as well)
+- ``color-picker`` (lets you to easily select an RGB color value from within Atom)
+- ``atom-beautify`` (attempts to fix simple style errors in your code [indentation, spaces, etc.])
 	- once installed, open Settings -> Packages -> atom-beautify Settings
 	- select JavaScript -> Brace style -> end-expand
 
@@ -61,4 +61,3 @@ Once you have GitHub set up on more than one machine (it is a really nice way to
 #. Do **work**
 #. **Commit** your changes. Write a Summary message describing what you've added/changed, then click ``Commit to Master``.
 #. **Push** (from Repository menu, or the ``Fetch Origin`` button). This sends your new changes up to the GitHub servers.
-
