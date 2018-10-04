@@ -325,11 +325,105 @@
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Understanding object properties.</p>
 </div>
-<p>Take a look at the <a class="reference internal" href="../reference/datatypes.html#objects-as-containers-ref"><span class="std std-ref">Objects</span></a> overview from the JS reference section. Do some demos in the browser console.</p>
+<p>For now, you can think of an object as a container of properties. This will make more sense with an example or two:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">student</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Aaron&quot;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mi">17</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>     <span class="c1">// &quot;Aaron&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>      <span class="c1">// 17</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">);</span> <span class="c1">// undefined</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although you can use <code class="docutils literal notranslate"><span class="pre">.</span></code> or <code class="docutils literal notranslate"><span class="pre">[]</span></code> to access properties of an object, the <code class="docutils literal notranslate"><span class="pre">.</span></code> syntax is preferred.</p>
+</div>
+<p>Another example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">circle</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">x</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="nx">y</span><span class="o">:</span> <span class="mi">300</span><span class="p">,</span>
+    <span class="nx">radius</span><span class="o">:</span> <span class="mi">50</span>
+<span class="p">};</span>
+
+<span class="nx">ellipse</span><span class="p">(</span><span class="nx">circle</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">circle</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">circle</span><span class="p">.</span><span class="nx">radius</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="nx">circle</span><span class="p">.</span><span class="nx">radius</span><span class="o">*</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To update or add a value to an object:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">student</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Aaron&quot;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mi">17</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>  <span class="c1">// 17</span>
+<span class="nx">student</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>  <span class="c1">// 18</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">)</span> <span class="c1">// undefined</span>
+<span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span> <span class="o">=</span> <span class="s2">&quot;Jan 1&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">)</span> <span class="c1">// &quot;Jan 1&quot;</span>
+</pre></div>
+</div>
+<p>Objects are passed by reference, not copied (time for a memory drawing on the whiteboard!). Consider:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">student</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Aaron&quot;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mi">17</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">anotherStudent</span> <span class="o">=</span> <span class="nx">student</span><span class="p">;</span>
+<span class="nx">anotherStudent</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Catherine&quot;</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="c1">// Catherine</span>
+</pre></div>
+</div>
+<p>Notice that this is very different than how a primitive (immutable) data type works. These are copied, not passed by reference:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">anotherNumber</span> <span class="o">=</span> <span class="nx">number</span><span class="p">;</span>
+
+<span class="nx">anotherNumber</span> <span class="o">=</span> <span class="nx">number</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>           <span class="c1">// 42</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">anotherNumber</span><span class="p">)</span>    <span class="c1">// 42</span>
+
+<span class="nx">anotherNumber</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>           <span class="c1">// 42</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">anotherNumber</span><span class="p">)</span>    <span class="c1">// 15</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Other than Number, String, and Boolean, everything you use in JavaScript will be an object. In other words, they will all be passed by reference, not copied. Be careful to make a <strong>deep copy</strong> yourself if you want a separate version of an array, for example.</p>
+</div>
 <div class="section" id="practice-problem">
 <h2>9.1. Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
 <p>Create a ball object. It should have x, y, radius, and color properties. Display it on the canvas. Make it move to the mouse whenever the mouse is pressed. Change the radius when w or s are pressed.</p>
-<p>Add a color property?</p>
+
+<div class="embedded_p5">
+<script type="text/p5" id="ballObjectDemo"  data-height="300" data-preview-width="400">
+let ball;
+
+function setup() {
+  createCanvas(400, 400);
+  ball = {
+    x: 100,
+    y: 200,
+    radius: 25,
+    fillColor: color(255, 0, 0)
+  }
+}
+
+function draw() {
+  background(220);
+  displayBall();
+}
+
+function displayBall() {
+  fill(ball.fillColor);
+  ellipse(ball.x, ball.y, ball.radius*2, ball.radius*2);
+}
+
+</script>
+</div>
 </div>
 </div>
 
