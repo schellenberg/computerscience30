@@ -275,6 +275,8 @@
 <li><a class="reference internal" href="#id1">8.1. Nested Loops</a></li>
 <li><a class="reference internal" href="#your-turn">8.2. Your Turn</a></li>
 <li><a class="reference internal" href="#id2">8.3. Your Turn</a></li>
+<li><a class="reference internal" href="#image-processing">8.4. Image Processing</a></li>
+<li><a class="reference internal" href="#examples-your-turns">8.5. Examples / Your Turns</a></li>
 </ul>
 </li>
 </ul>
@@ -377,6 +379,46 @@ function draw() {
 <h2>8.3. Your Turn<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>How about this one?</p>
 <img alt="../_images/nested_loop_image.png" src="../_images/nested_loop_image.png" />
+</div>
+<div class="section" id="image-processing">
+<h2>8.4. Image Processing<a class="headerlink" href="#image-processing" title="Permalink to this headline">¶</a></h2>
+<p>Another interesting use case for nested loops is adjusting the pixels in an image. Using a nested loops, we can loop at every individual pixel (one loop goes through all x coordinates, while other loop goes through all the y coordinates). The following function will create a grayscale version of whatever image is passed to it:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">makeGrayscale</span><span class="p">(</span><span class="nx">sourceImage</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">img</span> <span class="o">=</span> <span class="nx">createImage</span><span class="p">(</span><span class="nx">sourceImage</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">sourceImage</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
+
+  <span class="nx">img</span><span class="p">.</span><span class="nx">loadPixels</span><span class="p">();</span>
+  <span class="nx">sourceImage</span><span class="p">.</span><span class="nx">loadPixels</span><span class="p">();</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">sourceImage</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span> <span class="nx">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">y</span> <span class="o">&lt;</span> <span class="nx">sourceImage</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span> <span class="nx">y</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">sourceImage</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
+
+      <span class="kd">let</span> <span class="nx">r</span> <span class="o">=</span> <span class="nx">red</span><span class="p">(</span><span class="nx">p</span><span class="p">);</span>
+      <span class="kd">let</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">green</span><span class="p">(</span><span class="nx">p</span><span class="p">);</span>
+      <span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">blue</span><span class="p">(</span><span class="nx">p</span><span class="p">);</span>
+
+      <span class="kd">let</span> <span class="nx">newPixel</span> <span class="o">=</span> <span class="nx">color</span><span class="p">((</span><span class="nx">r</span><span class="o">+</span><span class="nx">g</span><span class="o">+</span><span class="nx">b</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="nx">r</span><span class="o">+</span><span class="nx">g</span><span class="o">+</span><span class="nx">b</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="nx">r</span><span class="o">+</span><span class="nx">g</span><span class="o">+</span><span class="nx">b</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">);</span>
+
+      <span class="nx">img</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">newPixel</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nx">img</span><span class="p">.</span><span class="nx">updatePixels</span><span class="p">();</span>
+  <span class="k">return</span> <span class="nx">img</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples-your-turns">
+<h2>8.5. Examples / Your Turns<a class="headerlink" href="#examples-your-turns" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>negative images</li>
+<li>sepia</li>
+<li>spotlight effect (will be super slow in JS)</li>
+<li>mirror horizontal/vertical</li>
+<li>gradient</li>
+<li>radial gradient</li>
+</ul>
 </div>
 </div>
 

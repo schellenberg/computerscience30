@@ -63,3 +63,46 @@ Your Turn
 How about this one?
 
 .. image:: images/nested_loop_image.png
+
+
+Image Processing
+-----------------
+
+Another interesting use case for nested loops is adjusting the pixels in an image. Using a nested loops, we can loop at every individual pixel (one loop goes through all x coordinates, while other loop goes through all the y coordinates). The following function will create a grayscale version of whatever image is passed to it:
+
+.. code-block:: javascript
+
+    function makeGrayscale(sourceImage) {
+      let img = createImage(sourceImage.width, sourceImage.height);
+
+      img.loadPixels();
+      sourceImage.loadPixels();
+
+      for (let x = 0; x < sourceImage.width; x++) {
+        for (let y = 0; y < sourceImage.height; y++) {
+          let p = sourceImage.get(x, y);
+
+          let r = red(p);
+          let g = green(p);
+          let b = blue(p);
+
+          let newPixel = color((r+g+b)/3, (r+g+b)/3, (r+g+b)/3);
+
+          img.set(x, y, newPixel);
+        }
+      }
+
+      img.updatePixels();
+      return img;
+    }
+
+
+Examples / Your Turns
+----------------------
+
+- negative images
+- sepia
+- spotlight effect (will be super slow in JS)
+- mirror horizontal/vertical
+- gradient
+- radial gradient
