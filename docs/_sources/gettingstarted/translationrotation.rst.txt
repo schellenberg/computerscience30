@@ -20,10 +20,41 @@ https://processing.org/tutorials/transform2d/
 
 
 
+Demo
+-----
+
+Start with a single rectangle on the screen. Turn it into a diamond shape using ``rotate()``. Notice that it is messed up. Use ``translate()`` to fix it. Add another rectangle, but make it something that shouldn't rotate (like a button near the bottom of the screen). Eventually get to code like the following:
+
+.. p5:: rotate-demo
+    :width: 400
+
+    function setup() {
+        createCanvas(400, 400);
+        angleMode(DEGREES);
+    }
+
+    function draw() {
+        background(220);
+        fill(0);
+        
+        push();
+        translate(140, 140);
+        rotate(mouseX);
+        // rectMode(CENTER);
+        rect(0, 0, 25, 25);
+        pop();
+        
+        //button
+        rect(300, 250, 75, 25);
+    }
+
+
 Rotating Towards Something (like the cursor)
 ----------------------------------------------
 
 ``atan2``
+
+
 
 Your Turn
 ----------

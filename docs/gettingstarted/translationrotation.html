@@ -274,9 +274,10 @@
 <li><a class="reference internal" href="#">10. Translation and Rotation</a><ul>
 <li><a class="reference internal" href="#translations">10.1. Translations</a></li>
 <li><a class="reference internal" href="#rotations">10.2. Rotations</a></li>
-<li><a class="reference internal" href="#rotating-towards-something-like-the-cursor">10.3. Rotating Towards Something (like the cursor)</a></li>
-<li><a class="reference internal" href="#your-turn">10.4. Your Turn</a></li>
-<li><a class="reference internal" href="#extra-for-experts">10.5. Extra for Experts</a></li>
+<li><a class="reference internal" href="#demo">10.3. Demo</a></li>
+<li><a class="reference internal" href="#rotating-towards-something-like-the-cursor">10.4. Rotating Towards Something (like the cursor)</a></li>
+<li><a class="reference internal" href="#your-turn">10.5. Your Turn</a></li>
+<li><a class="reference internal" href="#extra-for-experts">10.6. Extra for Experts</a></li>
 </ul>
 </li>
 </ul>
@@ -337,18 +338,47 @@
 <h2>10.2. Rotations<a class="headerlink" href="#rotations" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://processing.org/tutorials/transform2d/">https://processing.org/tutorials/transform2d/</a></p>
 </div>
+<div class="section" id="demo">
+<h2>10.3. Demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h2>
+<p>Start with a single rectangle on the screen. Turn it into a diamond shape using <code class="docutils literal notranslate"><span class="pre">rotate()</span></code>. Notice that it is messed up. Use <code class="docutils literal notranslate"><span class="pre">translate()</span></code> to fix it. Add another rectangle, but make it something that shouldn’t rotate (like a button near the bottom of the screen). Eventually get to code like the following:</p>
+
+<div class="embedded_p5">
+<script type="text/p5" id="rotate-demo"  data-height="300" data-preview-width="400">
+function setup() {
+    createCanvas(400, 400);
+    angleMode(DEGREES);
+}
+
+function draw() {
+    background(220);
+    fill(0);
+
+    push();
+    translate(140, 140);
+    rotate(mouseX);
+    // rectMode(CENTER);
+    rect(0, 0, 25, 25);
+    pop();
+
+    //button
+    rect(300, 250, 75, 25);
+}
+
+</script>
+</div>
+</div>
 <div class="section" id="rotating-towards-something-like-the-cursor">
-<h2>10.3. Rotating Towards Something (like the cursor)<a class="headerlink" href="#rotating-towards-something-like-the-cursor" title="Permalink to this headline">¶</a></h2>
+<h2>10.4. Rotating Towards Something (like the cursor)<a class="headerlink" href="#rotating-towards-something-like-the-cursor" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">atan2</span></code></p>
 </div>
 <div class="section" id="your-turn">
-<h2>10.4. Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
+<h2>10.5. Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
 <p>Draw a clock face that looks like this:</p>
 <img alt="../_images/clockface.png" src="../_images/clockface.png" />
 <p>If you finish early, see if you can get it to have hands that actually work! Look in the reference for seconds(), etc.</p>
 </div>
 <div class="section" id="extra-for-experts">
-<h2>10.5. Extra for Experts<a class="headerlink" href="#extra-for-experts" title="Permalink to this headline">¶</a></h2>
+<h2>10.6. Extra for Experts<a class="headerlink" href="#extra-for-experts" title="Permalink to this headline">¶</a></h2>
 <p>Try to make something like this happen:</p>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=duNzKIRJHuA">https://www.youtube.com/watch?v=duNzKIRJHuA</a></p>
 <p>Might want to look up <code class="docutils literal notranslate"><span class="pre">frameCount</span></code>, and remember how to use modular arithmetic.</p>
