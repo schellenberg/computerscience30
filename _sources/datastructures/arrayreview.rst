@@ -1,6 +1,9 @@
 JavaScript Arrays
 ========================
 
+Basic Array Operations
+-----------------------
+
 Very similar to lists in Python. 
 
 To create an array:
@@ -42,6 +45,9 @@ To remove a value from end of array:
 
 To add/remove from the front of the array, use ``unshift("something")`` and ``shift()`` respectively.
 
+Making a Copy of an Array
+--------------------------
+
 If you need to make a copy of an array, be aware that assigning the array to a new variable only adds a pointer to the same memory location (this is known as passing by reference). To make this clear, consider the following:
 
 .. code-block:: javascript
@@ -61,14 +67,11 @@ If you want to create a copy of an array that is **not** pointing to the same me
     // now, other equals [52, 35, "hey"]
     // and stuff equals [52, 78, "hey"]
 
-Since JavaScript arrays allow you to add/remove values from them easily, it is unusual for you to create an array of a specific size. However, if you want to create an array with a specific number of elements in it, you can call the *constructor* of the array data type. This creates an empty array, though. You can fill it up with some default values using the ``.fill()`` method.
 
-.. code-block:: javascript
+Creating an Array of a Specific Size
+------------------------------------
 
-    let emptyArray = new Array(100);    // each value is currently empty
-    emptyArray.fill(0);                 // now every element is a 0
-
-Another way of doing the same thing (which is often preferred), is to simply create the array, then push a bunch of default values into it. This means your array will never be filled with empty elements.
+Since JavaScript arrays allow you to add/remove values from them easily, it is unusual for you to create an array of a specific size. You can, however, simply create the array, then push a bunch of default values into it. This means your array will never be filled with empty elements (which can save you from ``undefined`` errors in your code).
 
 .. code-block:: javascript
 
@@ -76,6 +79,16 @@ Another way of doing the same thing (which is often preferred), is to simply cre
     for (let i=0; i<100; i++) {
         emptyArray.push(0);
     }
+
+.. note:: 
+
+    Another way of doing this is to call the *constructor* of the array data type. This creates an empty array (with no values in any of the element locations). You can fill it up with some default values using the ``.fill()`` method.
+
+    .. code-block:: javascript
+
+        let emptyArray = new Array(100);    // each value is currently empty
+        emptyArray.fill(0);                 // now every element is a 0
+
 
 
 Array Practice Questions
@@ -129,7 +142,7 @@ Bouncing Balls
 
 Make a bunch of balls move around. Start with an empty array. Push balls into it every time the mouse is clicked. Random sizes, random speeds, random colors. Use object notation for each ball, so it looks something like:
 
-.. code-block:: javscript
+.. code-block:: javascript
 
     let newBall = {
         x: random(width),

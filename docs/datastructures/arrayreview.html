@@ -272,14 +272,17 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">1. JavaScript Arrays</a><ul>
-<li><a class="reference internal" href="#array-practice-questions">1.1. Array Practice Questions</a><ul>
-<li><a class="reference internal" href="#no-looping-required">1.1.1. No Looping Required</a></li>
-<li><a class="reference internal" href="#looping-required">1.1.2. Looping Required</a></li>
+<li><a class="reference internal" href="#basic-array-operations">1.1. Basic Array Operations</a></li>
+<li><a class="reference internal" href="#making-a-copy-of-an-array">1.2. Making a Copy of an Array</a></li>
+<li><a class="reference internal" href="#creating-an-array-of-a-specific-size">1.3. Creating an Array of a Specific Size</a></li>
+<li><a class="reference internal" href="#array-practice-questions">1.4. Array Practice Questions</a><ul>
+<li><a class="reference internal" href="#no-looping-required">1.4.1. No Looping Required</a></li>
+<li><a class="reference internal" href="#looping-required">1.4.2. Looping Required</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#p5js-array-examples">1.2. p5js Array Examples</a><ul>
-<li><a class="reference internal" href="#terrain-generation">1.2.1. Terrain Generation</a></li>
-<li><a class="reference internal" href="#bouncing-balls">1.2.2. Bouncing Balls</a></li>
+<li><a class="reference internal" href="#p5js-array-examples">1.5. p5js Array Examples</a><ul>
+<li><a class="reference internal" href="#terrain-generation">1.5.1. Terrain Generation</a></li>
+<li><a class="reference internal" href="#bouncing-balls">1.5.2. Bouncing Balls</a></li>
 </ul>
 </li>
 </ul>
@@ -330,6 +333,8 @@
   
   <div class="section" id="javascript-arrays">
 <h1>1. JavaScript Arrays<a class="headerlink" href="#javascript-arrays" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basic-array-operations">
+<h2>1.1. Basic Array Operations<a class="headerlink" href="#basic-array-operations" title="Permalink to this headline">¶</a></h2>
 <p>Very similar to lists in Python.</p>
 <p>To create an array:</p>
 
@@ -372,6 +377,9 @@ writeln(stuff[2]) // "hello"
 </pre></div>
 </div>
 <p>To add/remove from the front of the array, use <code class="docutils literal notranslate"><span class="pre">unshift(&quot;something&quot;)</span></code> and <code class="docutils literal notranslate"><span class="pre">shift()</span></code> respectively.</p>
+</div>
+<div class="section" id="making-a-copy-of-an-array">
+<h2>1.2. Making a Copy of an Array<a class="headerlink" href="#making-a-copy-of-an-array" title="Permalink to this headline">¶</a></h2>
 <p>If you need to make a copy of an array, be aware that assigning the array to a new variable only adds a pointer to the same memory location (this is known as passing by reference). To make this clear, consider the following:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mi">52</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="s2">&quot;hey&quot;</span><span class="p">];</span>
 <span class="kd">let</span> <span class="nx">other</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">;</span>
@@ -387,22 +395,29 @@ writeln(stuff[2]) // "hello"
 <span class="c1">// and stuff equals [52, 78, &quot;hey&quot;]</span>
 </pre></div>
 </div>
-<p>Since JavaScript arrays allow you to add/remove values from them easily, it is unusual for you to create an array of a specific size. However, if you want to create an array with a specific number of elements in it, you can call the <em>constructor</em> of the array data type. This creates an empty array, though. You can fill it up with some default values using the <code class="docutils literal notranslate"><span class="pre">.fill()</span></code> method.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>    <span class="c1">// each value is currently empty</span>
-<span class="nx">emptyArray</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>                 <span class="c1">// now every element is a 0</span>
-</pre></div>
 </div>
-<p>Another way of doing the same thing (which is often preferred), is to simply create the array, then push a bunch of default values into it. This means your array will never be filled with empty elements.</p>
+<div class="section" id="creating-an-array-of-a-specific-size">
+<h2>1.3. Creating an Array of a Specific Size<a class="headerlink" href="#creating-an-array-of-a-specific-size" title="Permalink to this headline">¶</a></h2>
+<p>Since JavaScript arrays allow you to add/remove values from them easily, it is unusual for you to create an array of a specific size. You can, however, simply create the array, then push a bunch of default values into it. This means your array will never be filled with empty elements (which can save you from <code class="docutils literal notranslate"><span class="pre">undefined</span></code> errors in your code).</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="p">[];</span>
 <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">emptyArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Another way of doing this is to call the <em>constructor</em> of the array data type. This creates an empty array (with no values in any of the element locations). You can fill it up with some default values using the <code class="docutils literal notranslate"><span class="pre">.fill()</span></code> method.</p>
+<div class="last highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>    <span class="c1">// each value is currently empty</span>
+<span class="nx">emptyArray</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>                 <span class="c1">// now every element is a 0</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="array-practice-questions">
-<h2>1.1. Array Practice Questions<a class="headerlink" href="#array-practice-questions" title="Permalink to this headline">¶</a></h2>
+<h2>1.4. Array Practice Questions<a class="headerlink" href="#array-practice-questions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="no-looping-required">
-<h3>1.1.1. No Looping Required<a class="headerlink" href="#no-looping-required" title="Permalink to this headline">¶</a></h3>
+<h3>1.4.1. No Looping Required<a class="headerlink" href="#no-looping-required" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=firstLast6&amp;title=Array-1">firstLast6</a></li>
 <li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=sameFirstLast&amp;title=Array-1">sameFirstLast</a></li>
@@ -419,7 +434,7 @@ writeln(stuff[2]) // "hello"
 </ul>
 </div>
 <div class="section" id="looping-required">
-<h3>1.1.2. Looping Required<a class="headerlink" href="#looping-required" title="Permalink to this headline">¶</a></h3>
+<h3>1.4.2. Looping Required<a class="headerlink" href="#looping-required" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=countEvens&amp;title=Array-2">countEvens</a></li>
 <li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=has22&amp;title=Array-2">has22</a></li>
@@ -437,21 +452,21 @@ writeln(stuff[2]) // "hello"
 </div>
 </div>
 <div class="section" id="p5js-array-examples">
-<h2>1.2. p5js Array Examples<a class="headerlink" href="#p5js-array-examples" title="Permalink to this headline">¶</a></h2>
+<h2>1.5. p5js Array Examples<a class="headerlink" href="#p5js-array-examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="terrain-generation">
-<h3>1.2.1. Terrain Generation<a class="headerlink" href="#terrain-generation" title="Permalink to this headline">¶</a></h3>
+<h3>1.5.1. Terrain Generation<a class="headerlink" href="#terrain-generation" title="Permalink to this headline">¶</a></h3>
 <p>Use Perlin noise. Push values into an array. Draw it.</p>
 </div>
 <div class="section" id="bouncing-balls">
-<h3>1.2.2. Bouncing Balls<a class="headerlink" href="#bouncing-balls" title="Permalink to this headline">¶</a></h3>
+<h3>1.5.2. Bouncing Balls<a class="headerlink" href="#bouncing-balls" title="Permalink to this headline">¶</a></h3>
 <p>Make a bunch of balls move around. Start with an empty array. Push balls into it every time the mouse is clicked. Random sizes, random speeds, random colors. Use object notation for each ball, so it looks something like:</p>
-<div class="highlight-javscript notranslate"><div class="highlight"><pre><span></span>let newBall = {
-    x: random(width),
-    y: random(height),
-    diameter: random(25, 100),
-    dx: random(-5, 5),
-    dy: random(-5, 5),
-};
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">newBall</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">x</span><span class="o">:</span> <span class="nx">random</span><span class="p">(</span><span class="nx">width</span><span class="p">),</span>
+    <span class="nx">y</span><span class="o">:</span> <span class="nx">random</span><span class="p">(</span><span class="nx">height</span><span class="p">),</span>
+    <span class="nx">diameter</span><span class="o">:</span> <span class="nx">random</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+    <span class="nx">dx</span><span class="o">:</span> <span class="nx">random</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="nx">dy</span><span class="o">:</span> <span class="nx">random</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 </div>
