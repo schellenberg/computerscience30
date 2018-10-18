@@ -23,6 +23,11 @@ CS20 Review and JavaScript Intro
    intro/practicequiz.rst
 
 
+.. note:: 
+
+    You can `download a copy of our p5js template folder <https://github.com/schellenberg/cs30-p5js-template/archive/master.zip>`_, extract the .zip file, then make/download a copy of this each time you are creating a new project.
+
+
 Getting Started
 ::::::::::::::::
 
