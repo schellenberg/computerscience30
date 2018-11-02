@@ -56,15 +56,19 @@ Data Structures
 
    datastructures/arrayreview.rst
    datastructures/2darrays.rst
-
-To be added: maps / associative arrays
+   datastructures/maps.rst
 
 
 External Files
 :::::::::::::::
 
-To be added: Local Storage / cookies, loading 2d array from file data, loadTable for csv
+.. toctree::
+   :maxdepth: 1
+   :numbered:
 
+   externalfiles/syntax.rst
+
+To be added: Local Storage / cookies, loadTable for csv
 
 Using Libraries
 ::::::::::::::::
