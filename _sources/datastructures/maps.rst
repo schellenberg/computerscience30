@@ -38,3 +38,9 @@ More In Depth Demo
 
 Mind reader demo -- perhaps have the students play this ahead of time (prior to ever introducing the Map data type).
 
+
+Assignment Idea
+-----------------
+
+Give starter code for movie review sentiment analysis, and have the students just fill in two functions (related to storing/accessing information from a Map). `Idea from Nifty assignments <http://nifty.stanford.edu/2016/manley-urness-movie-review-sentiment/>`_ 
+
