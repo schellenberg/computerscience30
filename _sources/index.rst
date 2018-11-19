@@ -16,11 +16,11 @@ CS20 Review and JavaScript Intro
 :::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :maxdepth: 1
-   :numbered:
+    :maxdepth: 1
+    :numbered:
 
-   intro/cs20review.rst
-   intro/practicequiz.rst
+    intro/cs20review.rst
+    intro/practicequiz.rst
 
 
 .. note:: 
@@ -32,41 +32,41 @@ Getting Started
 ::::::::::::::::
 
 .. toctree::
-   :maxdepth: 1
-   :numbered:
+    :maxdepth: 1
+    :numbered:
 
-   gettingstarted/setup.rst
-   gettingstarted/helloworld.rst
-   gettingstarted/drawingbasics.rst
-   gettingstarted/variablescope.rst
-   gettingstarted/booleanlogic.rst
-   gettingstarted/statevariables.rst
-   gettingstarted/loops.rst
-   gettingstarted/nestedloops.rst
-   gettingstarted/objectbasics.rst
-   gettingstarted/translationrotation.rst
+    gettingstarted/setup.rst
+    gettingstarted/helloworld.rst
+    gettingstarted/drawingbasics.rst
+    gettingstarted/variablescope.rst
+    gettingstarted/booleanlogic.rst
+    gettingstarted/statevariables.rst
+    gettingstarted/loops.rst
+    gettingstarted/nestedloops.rst
+    gettingstarted/objectbasics.rst
+    gettingstarted/translationrotation.rst
 
 
 Data Structures
 ::::::::::::::::
 
 .. toctree::
-   :maxdepth: 1
-   :numbered:
+    :maxdepth: 1
+    :numbered:
 
-   datastructures/arrayreview.rst
-   datastructures/2darrays.rst
-   datastructures/maps.rst
+    datastructures/arrayreview.rst
+    datastructures/2darrays.rst
+    datastructures/maps.rst
 
 
 External Files
 :::::::::::::::
 
 .. toctree::
-   :maxdepth: 1
-   :numbered:
+    :maxdepth: 1
+    :numbered:
 
-   externalfiles/syntax.rst
+    externalfiles/syntax.rst
 
 To be added: Local Storage / cookies, loadTable for csv
 
@@ -79,8 +79,11 @@ To be added: p5.dom, p5.sound, p5.collide2D, p5.geolocation, p5.scribble
 Object Oriented Programming
 ::::::::::::::::::::::::::::
 
-To be added: ES6 style OOP
+.. toctree::
+   :maxdepth: 1
+   :numbered:
 
+   oop/overview.rst
 
 Recursion
 ::::::::::
@@ -115,11 +118,11 @@ JavaScript Reference
 :::::::::::::::::::::
 
 .. toctree::
-   :maxdepth: 1
-   :numbered:
+    :maxdepth: 1
+    :numbered:
 
-   reference/datatypes.rst
-   reference/controlstructures.rst
+    reference/datatypes.rst
+    reference/controlstructures.rst
 
 
 Helpful Links

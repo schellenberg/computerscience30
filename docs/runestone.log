@@ -4070,3 +4070,353 @@ ConnectionAbortedError: [WinError 10053] An established connection was aborted b
 127.0.0.1 - - [02/Nov/2018 15:33:54] "GET /runestone/static/favicon.ico HTTP/1.1" 404 -
 
 Aborted!
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/bootstrap-3.0.0/css/bootstrap.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/accessibility.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/activecode.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/codemirror.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/js_lib/prettify.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/poll.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/tabbedstuff.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58230)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/video.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58231)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/webgldemo.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58232)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/webglinteractive.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58233)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/jquery-ui-1.10.3.custom.min.css HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58234)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/runestonevideo.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/webglinteractive.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/FileSaver.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/Blob.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/jquery_i18n/jquery.i18n.emitter.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/jquery_i18n/jquery.i18n.emitter.bidi.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/activecode-i18n.en.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/matrixeq.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/p5-widget.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/js_lib/prettify.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/js_lib/hammer.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/timedparsons.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/jquery-ui-1.10.3.custom.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/jquery-fix.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/bootstrap-3.0.0/js/bootstrap.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/bootstrap-sphinx.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/waypoints.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/rangy-textrange.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/user-highlights.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/jquery.idle-timer.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/processing-1.4.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/jquery.hotkey.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:02] "GET /_static/jquery-migrate-1.2.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:03] "GET /_static/img/logo_small.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:03] "GET /_static/bootstrap-3.0.0/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58265)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Nov/2018 10:46:03] code 404, message File not found
+127.0.0.1 - - [15/Nov/2018 10:46:03] "GET /runestone/static/favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /externalfiles/syntax.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/jquery-ui-1.10.3.custom.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/user-highlights.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/runestone-custom-sphinx-bootstrap.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/video.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/webgldemo.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/webglinteractive.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/jquery_i18n/jquery.i18n.emitter.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/jquery_i18n/jquery.i18n.emitter.bidi.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/activecode-i18n.en.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/matrixeq.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/p5-widget.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/js_lib/prettify.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/js_lib/hammer.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/timedparsons.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/runestonevideo.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/webglinteractive.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/FileSaver.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/Blob.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/jquery-ui-1.10.3.custom.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/jquery-fix.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/bootstrap-3.0.0/js/bootstrap.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/bootstrap-sphinx.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/waypoints.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/rangy-textrange.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/user-highlights.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/jquery.idle-timer.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/processing-1.4.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/jquery.hotkey.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:15] "GET /_static/jquery-migrate-1.2.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:16] code 404, message File not found
+127.0.0.1 - - [15/Nov/2018 10:46:16] "GET /runestone/static/favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET / HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58311)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/video.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/webgldemo.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/webglinteractive.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/jquery-ui-1.10.3.custom.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/user-highlights.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/runestone-custom-sphinx-bootstrap.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/jquery_i18n/jquery.i18n.emitter.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/jquery_i18n/jquery.i18n.emitter.bidi.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/activecode-i18n.en.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/matrixeq.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/p5-widget.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/js_lib/prettify.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/js_lib/hammer.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/timedparsons.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/runestonevideo.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/webglinteractive.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/FileSaver.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/Blob.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/jquery-ui-1.10.3.custom.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/jquery-fix.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/bootstrap-3.0.0/js/bootstrap.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/bootstrap-sphinx.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/waypoints.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/rangy-textrange.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/user-highlights.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/jquery.idle-timer.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/processing-1.4.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/jquery.hotkey.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:27] "GET /_static/jquery-migrate-1.2.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/video.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/webgldemo.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/webglinteractive.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/jquery-ui-1.10.3.custom.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/user-highlights.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/runestone-custom-sphinx-bootstrap.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/jquery_i18n/jquery.i18n.emitter.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/jquery_i18n/jquery.i18n.emitter.bidi.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/activecode-i18n.en.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/matrixeq.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/p5-widget.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/js_lib/prettify.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/js_lib/hammer.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/timedparsons.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/runestonevideo.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/webglinteractive.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/FileSaver.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/Blob.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/jquery-ui-1.10.3.custom.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/jquery-fix.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/bootstrap-3.0.0/js/bootstrap.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/bootstrap-sphinx.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/waypoints.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/rangy-textrange.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/user-highlights.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/jquery.idle-timer.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/processing-1.4.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/jquery.hotkey.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:28] "GET /_static/jquery-migrate-1.2.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:32] "GET / HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 58377)
+Traceback (most recent call last):
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 721, in __init__
+    self.handle()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 418, in handle
+    self.handle_one_request()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 406, in handle_one_request
+    method()
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 639, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\http\server.py", line 800, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Users\schellenbergd\AppData\Local\Programs\Thonny\lib\socketserver.py", line 800, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [15/Nov/2018 10:46:37] "GET /oop/overview.html HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:37] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:37] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:37] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:37] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Nov/2018 10:46:37] code 404, message File not found
+127.0.0.1 - - [15/Nov/2018 10:46:37] "GET /runestone/static/favicon.ico HTTP/1.1" 404 -
+
+Aborted!
