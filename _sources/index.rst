@@ -101,8 +101,14 @@ To be added: bubble, selection, insertion, quicksort?
 Number Systems and Character Encoding
 ::::::::::::::::::::::::::::::::::::::
 
+.. toctree::
+    :maxdepth: 1
+    :numbered:
+
+    numbersystems/practice.rst
+
 To be added:
-- binary, decimal, hexadecimal
+- binary, decimal, hexadecimal explanation
 - ACSII and Unicode
 
 
