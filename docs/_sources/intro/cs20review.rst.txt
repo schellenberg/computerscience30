@@ -99,6 +99,10 @@ If you want to divide, but only keep the integer portion of the result, you coul
 
     writeln(theQuotient);
 
+Special Numberical Values
+--------------------------
+
+There are certain situations where you will encounter special values, including ``NaN``, ``Infinity``, and ``-Infinity``. ``NaN`` stands for Not a Number, and will show up if you attempt something like ``let edge = "Bono"/2``. The Infinity values show up if you exceed 1.79769313486231570e+308 (very unlikely in practice), but don't follow all the mathematical rules of infinity. It is, however, important to know about these values so that you can try to identify what has gone wrong if you encounter one while debugging one of your programs.
 
 Operators
 ----------
