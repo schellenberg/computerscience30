@@ -8,36 +8,42 @@ Setting Up a Work Environment
 
 .. note:: You should be able to set up the following on both your computer at school, as well as at home. Everything listed is open source software, so you can use it for free (and take a look at how it was made, if you'd like to).
 
+p5js Web Editor
+----------------
+
+If you are just needing to do a quick sketch/experiment using p5js, you can use the `p5js web editor <https://editor.p5js.org/>`_. Although the web editor isn't quite as full featured as setting up a local development environment, it is really simple to jump in and start coding. You should create yourself an account so that you can use (and save your work on) the web editor whenever you'd like.
+
 
 Text Editor
 ------------
 
-Although you can use any text editor you'd like, I recommend you use `Atom <https://atom.io/>`_. Atom works on Windows, Mac and Linux, so you should be able to get everything working on whatever computer you have.
+Although you can use any text editor you'd like, I recommend you use `Visual Studio Code <https://code.visualstudio.com/>`_. VSCode works on Windows, Mac and Linux, so you should be able to get everything working on whatever computer you have.
 
-`Download Atom now. <https://atom.io/>`_
+`Download Visual Studio Code now. <https://code.visualstudio.com/>`_
 
-To make Atom into something better than just a plain text editor, we can install packages to extend the built in functionality. To do this, open Settings (Windows) or Preferences (Mac). The keyboard shortcut for this is ``Ctrl+,`` (Windows) or ``Cmd+,`` (Mac). Now click on the Install tab, then type in the names of the packages shown below.
+.. important:: Be sure to select the "Open with Code" options when installing VSCode! This allows you to right click on a file/folder in File Explorer and easily open it in VSCode.
 
-The packages you must have include:
+To make VSCode into something better than just a plain text editor, we can install packages to extend the built in functionality. To do this, click on the extensions tab (on the left hand sidebar).
 
-- ``cs30-p5js-toolbar`` (allows you to run a local development web server to test your code)
-- ``p5js-snippets`` (allows Atom to auto-expand p5js keywords/commands)
-- ``linter-eslint`` (allows Atom to check your code for syntax/style errors)
-	- you will need to say yes when Atom asks if you want to install a bunch of dependencies (other packages that this one needs to do it's job)
+.. image:: images/vscode-sidebar.png
 
-Other packages that are nice (and that you will see while I'm demo-ing) include:
+The packages should add to your VSCode installation include:
 
-- ``minimap`` (shows an overview of your code on the top right of your editor)
-- ``highlight-selected`` (when you select a word in Atom, all other instances of that word are highlighted as well)
-- ``color-picker`` (lets you to easily select an RGB color value from within Atom)
-- ``atom-beautify`` (attempts to fix simple style errors in your code [indentation, spaces, etc.])
-	- once installed, open Settings -> Packages -> atom-beautify Settings
-	- select JavaScript -> Brace style -> end-expand
+- ``p5js Snippets`` (allows VSCode to auto-expand p5js keywords/commands)
+- ``Live Server`` (lets you run your code on your local machine for testing, by adding a "Go Live" button to the bottom of your VS Code window)
 
-On Windows, add context menu to Windows Explorer by:
 
-- Settings (Ctrl+Comma) -> System -> check all boxes
+Optional Additional Feature
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+There is a configuration file in our template folder called `.eslintrc.js` that helps provide instant feedback about possible problems in your code using a tool called ESLint (for example, warning you that you didn't declare a variable before using it, or that your indentation is incorrect). Setting up your machine to use this may not be feasible in a computer lab scenario, as it requires admin rights to install Node.js. If you cannot install Node.js, the VS Code setup  will still work just fine, but you will not get instant feedback from ESLint about possible problems in your code.
+
+Install Node.js from `https://nodejs.org <https://nodejs.org>`_ (which also installs npm -- node package manager)
+
+- in VS Code, open Terminal and type `npm install -g eslint`
+- if you have installation problems with eslint, you can try updating npm [in VS Code, open Terminal and type `npm install npm@latest -g`]
+
+- Install the ``ESLint`` extension in VS Code (allows VS Code to use ESLint, which helps you write better formatted JavaScript, and warns you of errors as you type your code)
 
 GitHub
 -------

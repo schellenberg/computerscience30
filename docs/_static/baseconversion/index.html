@@ -7,6 +7,12 @@
     <script src="js/p5.min.js"></script>
     <script src="js/p5.dom.min.js"></script>
     <script src="sketch.js"></script>
+    
+    <!-- stop enter from reloading page due to submitting form -->
+    <script type="text/javascript">
+      window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();answerCheck();return false;}}},true);
+    </script>
+
   </head>
   <body>
     <div class="container">
