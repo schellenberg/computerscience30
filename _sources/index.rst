@@ -68,7 +68,7 @@ External Files
 
     externalfiles/syntax.rst
 
-To be added: Local Storage / cookies, loadTable for csv
+To be added: Local Storage / cookies, loadTable for csv?
 
 Using Libraries
 ::::::::::::::::
