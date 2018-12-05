@@ -43,6 +43,7 @@ Getting Started
     gettingstarted/statevariables.rst
     gettingstarted/loops.rst
     gettingstarted/nestedloops.rst
+    gettingstarted/refactoring.rst
     gettingstarted/objectbasics.rst
     gettingstarted/translationrotation.rst
 

@@ -43,6 +43,7 @@ Getting Started
     gettingstarted/statevariables.rst
     gettingstarted/loops.rst
     gettingstarted/nestedloops.rst
+    gettingstarted/refactoring.rst
     gettingstarted/objectbasics.rst
     gettingstarted/translationrotation.rst
 
@@ -68,7 +69,7 @@ External Files
 
     externalfiles/syntax.rst
 
-To be added: Local Storage / cookies, loadTable for csv
+To be added: Local Storage / cookies, loadTable for csv?
 
 Using Libraries
 ::::::::::::::::
