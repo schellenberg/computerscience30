@@ -89,8 +89,11 @@ Object Oriented Programming
 Recursion
 ::::::::::
 
-To be added: factorial, fibonacci, practice problems with codingBat style questions
-possibly a flood fill or maze solver?
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+
+   recursion/overview.rst
 
 
 Sorting

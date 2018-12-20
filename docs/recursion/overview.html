@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>1. Intro To JavaScript &#8212; Computer Science 30 - Schellenberg</title>
+    <title>1. Recursion Explanation and Demos &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -110,8 +110,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. CS Basics Practice Quiz" href="practicequiz.html" />
-    <link rel="prev" title="Computer Science 30 - Schellenberg" href="../index.html" />
+    <link rel="next" title="1. Number Systems" href="../numbersystems/practice.html" />
+    <link rel="prev" title="1. Object Oriented Programming" href="../oop/overview.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -256,7 +256,7 @@
             <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=CS30&page=cs20review'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS30&page=overview'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -271,18 +271,11 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">1. Intro To JavaScript</a><ul>
-<li><a class="reference internal" href="#variables-and-data-types">1.1. Variables and Data Types</a></li>
-<li><a class="reference internal" href="#math-operators">1.2. Math Operators</a></li>
-<li><a class="reference internal" href="#handy-math-functions">1.3. Handy Math Functions</a></li>
-<li><a class="reference internal" href="#special-numberical-values">1.4. Special Numberical Values</a></li>
-<li><a class="reference internal" href="#operators">1.5. Operators</a></li>
-<li><a class="reference internal" href="#if-else-if-else">1.6. If / Else If / Else</a></li>
-<li><a class="reference internal" href="#while-loops">1.7. While Loops</a></li>
-<li><a class="reference internal" href="#for-loop">1.8. For Loop</a></li>
-<li><a class="reference internal" href="#functions">1.9. Functions</a></li>
-<li><a class="reference internal" href="#arrays">1.10. Arrays</a></li>
-<li><a class="reference internal" href="#codingjs-practice-problems">1.11. CodingJS Practice Problems</a></li>
+<li><a class="reference internal" href="#">1. Recursion Explanation and Demos</a><ul>
+<li><a class="reference internal" href="#sierpinski-triangle">1.1. Sierpinski Triangle</a></li>
+<li><a class="reference internal" href="#fractal-circles">1.2. Fractal Circles</a></li>
+<li><a class="reference internal" href="#fractal-tree">1.3. Fractal Tree</a></li>
+<li><a class="reference internal" href="#extensions">1.4. Extensions</a></li>
 </ul>
 </li>
 </ul>
@@ -292,14 +285,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - Computer Science 30 - Schellenberg" data-toggle="tooltip">
-    <a href="../index.html" >
+  <li id="relations-prev" title="Previous Chapter - 1. Object Oriented Programming" data-toggle="tooltip">
+    <a href="../oop/overview.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 2. CS Basics Practice Quiz' data-toggle="tooltip" >
-    <a href="practicequiz.html" >
+  <li id="relations-next" title='Next Chapter - 1. Number Systems' data-toggle="tooltip" >
+    <a href="../numbersystems/practice.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -329,332 +322,52 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="intro-to-javascript">
-<h1>1. Intro To JavaScript<a class="headerlink" href="#intro-to-javascript" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
-<p class="topic-title first">Quick Overview of Day</p>
-<p>Review programming control structures learned in CS20, translating them from Python into JavaScript. CodingBat practice problems.</p>
-</div>
-<div class="section" id="variables-and-data-types">
-<h2>1.1. Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
-<p>We use variables in our programs whenever we need to keep track of something that can change over time. Variables allow us to improve the reusability of our code.</p>
-<p>We have to be careful how we name variables, since they can’t be keywords like <cite>if</cite>, <cite>while</cite>, etc. A keyword is a word that already has a special meaning in the language we are programming in.</p>
-<p>JavaScript follows the camelCaseVariableNamingConvention, which means that your variables should start with a lowercase letter, and if they contain more than one word, you should capitalize each word that follows the first (like <cite>helpfulVariable</cite> or <cite>thisIsSomethingElse</cite>).</p>
-<p>When declaring a new variable to be used in JavaScript, you should always write <code class="docutils literal notranslate"><span class="pre">let</span></code> before the name of the variable. For example, you might say:</p>
-
-<div data-childcomponent="variableNames" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=variableNames data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-          >
-let name = "John Doe";
-let age = 17;
-</textarea>
-</div>
-<p>The fundamental data types that we will need to use in JavaScript include:</p>
+  <div class="section" id="recursion-explanation-and-demos">
+<h1>1. Recursion Explanation and Demos<a class="headerlink" href="#recursion-explanation-and-demos" title="Permalink to this headline">¶</a></h1>
+<p>Simply put, recursion is a function that calls itself.</p>
+<p>Refresh your memory of factorials. Define factorials recursively (math, then code).</p>
+<p>Practice problems from <a class="reference external" href="https://codingjs.wmcicompsci.ca/">CodingJS Recursion-1</a> section.</p>
+<div class="section" id="sierpinski-triangle">
+<h2>1.1. Sierpinski Triangle<a class="headerlink" href="#sierpinski-triangle" title="Permalink to this headline">¶</a></h2>
+<p>Make a Sierpinski triangle drawing program in p5.</p>
+<img alt="../_images/sierpinski-triangle.gif" src="../_images/sierpinski-triangle.gif" />
+<p>Key ideas:</p>
 <ul class="simple">
-<li><strong>number</strong> (such as <code class="docutils literal notranslate"><span class="pre">3</span></code> or <code class="docutils literal notranslate"><span class="pre">-5</span></code> or <code class="docutils literal notranslate"><span class="pre">3.14</span></code>)</li>
-<li><strong>string</strong> (such as <code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'Friday'</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;5&quot;</span></code>)</li>
-<li><strong>boolean</strong> (<code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>)</li>
-</ul>
-<p>Unlike Python, there aren’t different types for <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">float</span></code>; everything numeric is just a <code class="docutils literal notranslate"><span class="pre">number</span></code>. You should also notice that unlike Python, boolean values are not capitalized (in JS, we use <code class="docutils literal notranslate"><span class="pre">true</span></code>, not <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Notice that at the end of each statement, we use a semicolon (<code class="docutils literal notranslate"><span class="pre">;</span></code>) to tell JavaScript that the statement is complete.</p>
-</div>
-</div>
-<div class="section" id="math-operators">
-<h2>1.2. Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this headline">¶</a></h2>
-<p>We can do math with JavaScript, but we need to know the operators to use. The following table shows the most frequently used math operators in JavaScript.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="12%" />
-<col width="52%" />
-<col width="26%" />
-<col width="10%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Symbols</th>
-<th class="head">Operations</th>
-<th class="head">Example</th>
-<th class="head">Output</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>+</td>
-<td>Addition</td>
-<td><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span></code></td>
-<td>3</td>
-</tr>
-<tr class="row-odd"><td>-</td>
-<td>Subtraction</td>
-<td><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">-</span> <span class="pre">1</span></code></td>
-<td>1</td>
-</tr>
-<tr class="row-even"><td>*</td>
-<td>Multiplication</td>
-<td><code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">2</span></code></td>
-<td>4</td>
-</tr>
-<tr class="row-odd"><td>/</td>
-<td>Division</td>
-<td><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">/</span> <span class="pre">2</span></code></td>
-<td>2.5</td>
-</tr>
-<tr class="row-even"><td>%</td>
-<td>Modulo (remainder)</td>
-<td><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">%</span> <span class="pre">2</span></code></td>
-<td>1</td>
-</tr>
-<tr class="row-odd"><td>**</td>
-<td>Power</td>
-<td><code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">**</span> <span class="pre">2</span></code></td>
-<td>25</td>
-</tr>
-</tbody>
-</table>
-<p>If you are increasing or decreasing a variable by one, you can use the following shorthand:</p>
-
-<div data-childcomponent="incrementingDemo" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=incrementingDemo data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-          >
-let a = 4;
-let b = 4;
-
-a++;    // a is now 5
-writeln(a);
-
-b--;    // b is now 3
-writeln(b);
-</textarea>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">JavaScript uses <code class="docutils literal notranslate"><span class="pre">//</span></code> to indicate that everything that follows on that line will be a comment.</p>
-</div>
-<div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last">Although I use <code class="docutils literal notranslate"><span class="pre">writeln()</span></code> in these examples, it is not really the way to output text in JS. I’m doing it here to make it simple to output values to the little output box that shows up when you run the code, but in real-world usage, we will use a different function.</p>
-</div>
-</div>
-<div class="section" id="handy-math-functions">
-<h2>1.3. Handy Math Functions<a class="headerlink" href="#handy-math-functions" title="Permalink to this headline">¶</a></h2>
-<p>You can use some handy functions available through the <code class="docutils literal notranslate"><span class="pre">Math</span></code> object. Some that you will probably want to use are:</p>
-
-<div data-childcomponent="mathFunctions" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=mathFunctions data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-          >
-let nearestInt = Math.round(1.55);
-writeln(nearestInt);
-
-let nextLowestInt = Math.floor(1.55);
-writeln(nextLowestInt);
-
-let nextHighestInt = Math.ceil(1.2);
-writeln(nextHighestInt);
-</textarea>
-</div>
-<p>If you want to divide, but only keep the integer portion of the result, you could do that using something like:</p>
-
-<div data-childcomponent="truncatingDivision" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=truncatingDivision data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-          >
-let someNumber = 42;
-let theQuotient = Math.floor(someNumber / 10);
-
-writeln(theQuotient);
-</textarea>
-</div>
-</div>
-<div class="section" id="special-numberical-values">
-<h2>1.4. Special Numberical Values<a class="headerlink" href="#special-numberical-values" title="Permalink to this headline">¶</a></h2>
-<p>There are certain situations where you will encounter special values, including <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, and <code class="docutils literal notranslate"><span class="pre">-Infinity</span></code>. <code class="docutils literal notranslate"><span class="pre">NaN</span></code> stands for Not a Number, and will show up if you attempt something like <code class="docutils literal notranslate"><span class="pre">let</span> <span class="pre">edge</span> <span class="pre">=</span> <span class="pre">&quot;Bono&quot;/2</span></code>. The Infinity values show up if you exceed 1.79769313486231570e+308 (very unlikely in practice), but don’t follow all the mathematical rules of infinity. It is, however, important to know about these values so that you can try to identify what has gone wrong if you encounter one while debugging one of your programs.</p>
-</div>
-<div class="section" id="operators">
-<h2>1.5. Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">JavaScript is odd when it comes to checking for equality (uses truthy/falsey with ==), so we use three equal signs when checking for equality.</p>
-</div>
-<p>Relational</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">===</span></code> exactly equals</li>
-<li><code class="docutils literal notranslate"><span class="pre">!==</span></code> does not exactly equal</li>
-<li><code class="docutils literal notranslate"><span class="pre">=</span></code> assignment</li>
-<li><code class="docutils literal notranslate"><span class="pre">+=</span></code> add or concatenate</li>
-<li><code class="docutils literal notranslate"><span class="pre">-=</span></code> subtract</li>
-<li><code class="docutils literal notranslate"><span class="pre">&gt;</span></code> greater than</li>
-<li><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> greater than or equal to</li>
-<li><code class="docutils literal notranslate"><span class="pre">&lt;</span></code> less than</li>
-<li><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> less than or equal to</li>
-</ul>
-<p>Logical</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> and</li>
-<li><code class="docutils literal notranslate"><span class="pre">||</span></code> or</li>
-<li><code class="docutils literal notranslate"><span class="pre">!</span></code> not</li>
+<li>use an object to hold point data (x and y coordinates)</li>
+<li>have a function that calculates the midpoint between two coordinates, and returns the resulting coordinate</li>
+<li>create a sierpinski(points, degree) recursive function. Use the degree as both the exit clause, as well as the index value to select a fill color from a list of colors</li>
 </ul>
 </div>
-<div class="section" id="if-else-if-else">
-<h2>1.6. If / Else If / Else<a class="headerlink" href="#if-else-if-else" title="Permalink to this headline">¶</a></h2>
-<p>In JavaScript, blocks of code start and end using <code class="docutils literal notranslate"><span class="pre">{</span></code> and <code class="docutils literal notranslate"><span class="pre">}</span></code>. <strong>You should still indent your code properly</strong> (to make your code readable), but the indentation doesn’t affect the way your program runs.</p>
-
-<div data-childcomponent="conditionalDemo" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=conditionalDemo data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-          >
-let someNumber = prompt("Pick a number");
-
-if (someNumber < 42) {
-    writeln("Small number.");
-}
-else if (someNumber === 42) {
-    writeln("The answer. To life, the universe, and everything.");
-}
-else {
-    writeln("Large number.");
-}
-</textarea>
+<div class="section" id="fractal-circles">
+<h2>1.2. Fractal Circles<a class="headerlink" href="#fractal-circles" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://p5js.org/examples/structure-recursion.html">Check out the demo here</a>.</p>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Try entering 42 above. Can you fix the problem?</p>
+<div class="section" id="fractal-tree">
+<h2>1.3. Fractal Tree<a class="headerlink" href="#fractal-tree" title="Permalink to this headline">¶</a></h2>
+<p>If students are interested in another demo, build something like this <a class="reference external" href="https://www.youtube.com/watch?v=0jjeOYMjmDU">Coding Train fractal tree demo</a>.</p>
 </div>
-</div>
-<div class="section" id="while-loops">
-<h2>1.7. While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
-
-<div data-childcomponent="whileLoop" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=whileLoop data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-          >
-let number = 0;
-
-while (number < 10) {
-    number = number + 1;
-    writeln(number);
-}
-</textarea>
-</div>
-</div>
-<div class="section" id="for-loop">
-<h2>1.8. For Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
-
-<div data-childcomponent="forLoop" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=forLoop data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-          >
-for (let number = 1; number <= 10; number++) {
-    writeln(number);
-}
-writeln("Blastoff!");
-</textarea>
-</div>
-</div>
-<div class="section" id="functions">
-<h2>1.9. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-
-<div data-childcomponent="functions" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=functions data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-          >
-function adder(first, second) {
-    let theAnswer = first + second;
-    return theAnswer;
-}
-
-writeln(adder(2, 4));
-</textarea>
-</div>
-<p>Can return a value, or not. If not, result is <code class="docutils literal notranslate"><span class="pre">undefined</span></code>.</p>
-</div>
-<div class="section" id="arrays">
-<h2>1.10. Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h2>
-<p>Very similar to lists in Python. <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Find out more from MDN reference</a></p>
-
-<div data-childcomponent="arrayExample1" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=arrayExample1 data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-          >
-let groceryList = ["apples", "oranges", "peaches", "milk"];
-for (let item of groceryList) {
-    writeln("Don't forget to buy " + item);
-}
-</textarea>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">You can use <code class="docutils literal notranslate"><span class="pre">for...of</span></code> to iterate over characters in a string as well.</p>
-</div>
-<p>Can also iterate using the length property of the array:</p>
-
-<div data-childcomponent="arrayExample2" class="runestone explainer ac_section alert alert-warning">
-
-<textarea data-component="activecode" id=arrayExample2 data-lang="javascript" 
-      data-timelimit=25000    
-    data-audio=''   
-          >
-let groceryList = ["apples", "oranges", "peaches", "milk"];
-for (let i=0; i<groceryList.length; i++) {
-    writeln("Don't forget to buy " + groceryList[i]);
-}
-</textarea>
-</div>
-</div>
-<div class="section" id="codingjs-practice-problems">
-<h2>1.11. CodingJS Practice Problems<a class="headerlink" href="#codingjs-practice-problems" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=parrotTrouble&amp;title=Warmup-1">parrotTrouble</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=diff21&amp;title=Warmup-1">diff21</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=makes10&amp;title=Warmup-1">makes10</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=nearHundred&amp;title=Warmup-1">nearHundred</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=sortaSum&amp;title=Logic-1">sortaSum</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=posNeg&amp;title=Warmup-1">posNeg</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=cigarParty&amp;title=Logic-1">cigarParty</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=dateFashion&amp;title=Logic-1">dateFashion</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=squirrelPlay&amp;title=Logic-1">squirrelPlay</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=love6&amp;title=Logic-1">love6</a></li>
-<li><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise?name=nearTen&amp;title=Logic-1">nearTen</a></li>
-</ul>
+<div class="section" id="extensions">
+<h2>1.4. Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h2>
+<p>Maze generator demo (already have a version built in my demos folder…). Warning – This is a much more involved/challenging demo.</p>
 </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - Computer Science 30 - Schellenberg' data-toggle="tooltip">
-    <a href="../index.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 1. Object Oriented Programming' data-toggle="tooltip">
+    <a href="../oop/overview.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="../index.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="../oop/overview.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 2. CS Basics Practice Quiz' data-toggle="tooltip" >
-    <a href="practicequiz.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 1. Number Systems' data-toggle="tooltip" >
+    <a href="../numbersystems/practice.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="practicequiz.html" >Next Section - 2. CS Basics Practice Quiz</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../numbersystems/practice.html" >Next Section - 1. Number Systems</a>
 
 <script type="text/javascript">
 

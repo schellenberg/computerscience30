@@ -88,6 +88,7 @@ ActiveCode.prototype.init = function(opts) {
         this.caption = ""
     }
     this.addCaption();
+    this.addJSONLibrary();
 
     if (this.autorun) {
         $(document).ready(this.runProg.bind(this));
@@ -613,7 +614,7 @@ ActiveCode.prototype.showCodelens = function () {
     if (cl) {
         this.codelens.removeChild(cl)
     }
-    var code = this.editor.getValue();
+    var code = this.buildProg(false);
     var myVars = {};
     myVars.code = code;
     myVars.origin = "opt-frontend.js";
@@ -774,7 +775,21 @@ errorText.NotImplementedError = $.i18n("msg_activecode_not_implemented_error");
 errorText.NotImplementedErrorFix = $.i18n("msg_activecode_not_implemented_error_fix");
 
 
-
+ActiveCode.prototype.addJSONLibrary = function () {
+    var jsonExternalLibInfo = {
+            path : '_static/json.sk-master/__init__.js',
+            dependencies : [
+            '_static/json.sk-master/stringify.js'
+            ]
+        };
+    if (Sk.externalLibraries) {
+        Sk.externalLibraries.json = jsonExternalLibInfo;
+    } else {
+        Sk.externalLibraries = {
+            json: jsonExternalLibInfo
+        };
+    }
+};
 
 ActiveCode.prototype.setTimeLimit = function (timer) {
     var timelimit = this.timelimit;
@@ -795,7 +810,7 @@ ActiveCode.prototype.setTimeLimit = function (timer) {
             Sk.execLimit = timelimit;
         } else {
             Sk.execLimit = 25000;
-    }
+        }
     }
 
 };
@@ -813,17 +828,20 @@ ActiveCode.prototype.fileReader = function(divid) {
     if (elem == null && Sk.builtinFiles["files"][divid]) {
         return Sk.builtinFiles["files"][divid];
     } else {
-        // try remote file
-        $.ajax({async: false,
-                url: `/runestone/ajax/get_datafile?course_id=${eBookConfig.course}&acid=${divid}`,
-                success: function(data) {
-                    result = JSON.parse(data).data;
-                    },
-                error: function(err) {
-                     result = null;
-                    }})
-        if (result) {
-            return result
+        // try remote file unless it ends with .js or .py -- otherwise we'll ask the server for all
+        // kinds of modules that we are trying to import
+        if ( ! (divid.endsWith('.js') || divid.endsWith('.py')) ) {
+            $.ajax({async: false,
+                    url: `/runestone/ajax/get_datafile?course_id=${eBookConfig.course}&acid=${divid}`,
+                    success: function(data) {
+                        result = JSON.parse(data).data;
+                        },
+                    error: function(err) {
+                        result = null;
+                        }})
+            if (result) {
+                return result
+            }
         }
     }
     if (elem == null && result === null) {
@@ -898,7 +916,7 @@ ActiveCode.prototype.filewriter = function(bytes, name, pos) {
     return current.length;
 }
 
-ActiveCode.prototype.buildProg = function() {
+ActiveCode.prototype.buildProg = function(useSuffix) {
     // assemble code from prefix, suffix, and editor for running.
     var pretext;
     var prog = this.editor.getValue() + "\n";
@@ -920,7 +938,7 @@ ActiveCode.prototype.buildProg = function() {
         prog = pretext + prog
     }
 
-    if(this.suffix) {
+    if(useSuffix && this.suffix) {
         prog = prog + this.suffix;
 }
 
@@ -962,7 +980,7 @@ ActiveCode.prototype.manage_scrubber = function (scrubber_dfd, history_dfd, save
 
 
 ActiveCode.prototype.runProg = function () {
-    var prog = this.buildProg();
+    var prog = this.buildProg(true);
     var saveCode = "True";
     var scrubber_dfd, history_dfd, skulpt_run_dfd;
     $(this.output).text('');
@@ -981,6 +999,7 @@ ActiveCode.prototype.runProg = function () {
         python3: this.python3,
         imageProxy: 'http://image.runestone.academy:8080/320x',
         inputfunTakesPrompt: true,
+        jsonpSites : ['https://itunes.apple.com'],
     });
     Sk.divid = this.divid;
     this.setTimeLimit();
@@ -1086,7 +1105,7 @@ JSActiveCode.prototype.outputfun = function (a) {
 
 JSActiveCode.prototype.runProg = function() {
     var _this = this;
-    var prog = this.buildProg();
+    var prog = this.buildProg(true);
     var einfo;
     var scrubber_dfd, history_dfd;
     var saveCode = "True";
@@ -1139,7 +1158,7 @@ function HTMLActiveCode (opts) {
 }
 
 HTMLActiveCode.prototype.runProg = function () {
-    var prog = this.buildProg();
+    var prog = this.buildProg(true);
     var scrubber_dfd, history_dfd, saveCode;
 
     var __ret = this.manage_scrubber(scrubber_dfd, history_dfd, saveCode);
@@ -1767,6 +1786,7 @@ LiveCode.prototype.init = function(opts) {
     this.resource = eBookConfig.proxyuri_runs ||  '/runestone/proxy/jobeRun';
     this.jobePutFiles = eBookConfig.proxyuri_files || '/runestone/proxy/jobePushFile/';
     this.jobeCheckFiles = eBookConfig.proxyuri_files || '/runestone/proxy/jobeCheckFile/';
+    // TODO:  should add a proper put/check in pavement.tmpl as this is misleading and will break on runestone
 
     this.div2id = {};
     if (this.stdin) {
@@ -1807,7 +1827,7 @@ LiveCode.prototype.runProg = function() {
     var saveCode = "True";
     var sfilemap = {java: '', cpp: 'test.cpp', c: 'test.c', python3: 'test.py', python2: 'test.py'};
     var source = this.editor.getValue();
-    source = this.buildProg();
+    source = this.buildProg(true);
 
     var __ret = this.manage_scrubber(scrubber_dfd, history_dfd, saveCode);
     history_dfd = __ret.history_dfd;

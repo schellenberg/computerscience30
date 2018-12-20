@@ -27,8 +27,6 @@ Poll.prototype.init = function (opts) {
     }
     this.resultsViewer = $(orig).data('results');
 
-    console.log(this.comment);
-        
     this.getQuestionText();
     this.getOptionText(); //populates optionList
     this.renderPoll();  //generates HTML
@@ -88,6 +86,7 @@ Poll.prototype.renderPoll = function() {
             "type":"radio",
             "value":i
         });
+        $(radio).click(this.submitPoll.bind(this))
         var label = document.createElement("label");
         $(label).attr("for", tmpid);
         $(label).text(this.optionList[i]);
@@ -101,20 +100,8 @@ Poll.prototype.renderPoll = function() {
         this.renderTextField();
     }
 
-    var button = document.createElement("button");
-    button.onclick = function() {
-        _this.submitPoll();
-    };
-    button.textContent = "Complete";
-    $(button).attr({
-        "class" : "btn btn-success",
-        "name" : "Submit Poll",
-    });
-
     this.resultsDiv.id = this.divid + "_results";
-    this.completeButton = button;
 
-    this.pollForm.appendChild(button);
     this.containerDiv.appendChild(this.pollForm);
     this.containerDiv.appendChild(this.resultsDiv);
     $(this.origElem).replaceWith(this.containerDiv);
@@ -162,14 +149,16 @@ Poll.prototype.submitPoll = function() {
 
     // log the fact that the user has answered the poll to local storage
     localStorage.setItem(this.divid, "true");
-    $(this.completeButton).attr('disabled','disabled')
+    $(this.pollForm).append(`<span id=${this.divid}_sent><strong>Thanks, your response has been recorded</strong></span>`);
 
     // show the results of the poll
-    var data = {};
-    data.div_id = this.divid;
-    data.course = eBookConfig.course;
-    jQuery.get(eBookConfig.ajaxURL+"getpollresults", data, this.showPollResults);
-};
+    if (this.resultsViewer === "all") {
+        var data = {};
+        data.div_id = this.divid;
+        data.course = eBookConfig.course;
+        jQuery.get(eBookConfig.ajaxURL+"getpollresults", data, this.showPollResults);
+    }
+}
 
 Poll.prototype.showPollResults = function(data) {
     //displays the results returned by the server
@@ -178,10 +167,14 @@ Poll.prototype.showPollResults = function(data) {
     var opt_list = results[1];
     var count_list = results[2];
     var div_id = results[3];
+    var my_vote = results[4];
 
-    if (localStorage.getItem(this.divid) === "true") {
-        $(this.completeButton).attr('disabled','disabled');
+    // resture current users vote
+    if (my_vote > -1) {
+        this.optsArray[my_vote].checked = 'checked';
     }
+
+    // show results summary if appropriate
     if (this.resultsViewer === "all" && localStorage.getItem(this.divid === "true") || eBookConfig.isInstructor ) {
         $(this.resultsDiv).html("<b>Results:</b><br><br>");
 
