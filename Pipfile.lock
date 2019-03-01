@@ -1,0 +1,25 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "2eb1d3081e8817a07fc76c3d8866447cf1d2f031b517223ef874001a8340045a"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.7"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "runestonecomponents": {
+            "git": "https://github.com/schellenberg/RunestoneComponents.git",
+            "ref": "58d79f0c10a445f857e22aedf53c5de4bc9b405c"
+        }
+    },
+    "develop": {}
+}
