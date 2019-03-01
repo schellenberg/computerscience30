@@ -11,7 +11,8 @@ Square Moving Around Screen
 
 Create a sketch that accomplishes the following:
 
-*add an gif image here of a square moving around the outsides of a browser window*
+.. image:: images/moving_rectangle.gif
+
 
 Have students attempt this first, *before* introducing the idea of a state variable.
 
