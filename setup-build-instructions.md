@@ -8,6 +8,11 @@
 - ``pipenv install git+https://github.com/schellenberg/RunestoneComponents.git#egg=RunestoneComponents``
   - note that this is a slightly customized version of the Runestone Components main repo. If you aren't going to use the p5 directive (that embeds p5 sketches into the text), you can just use ``pipenv install runestone``
 
+## Additional Machine Setup
+- install pipenv ``pip install pipenv``
+- clone the cs30 repo, then cd to the repo folder
+- run ``pipenv install`` in the cs30 repo folder
+
 ## Build Instructions
 - ``cd`` to cs30 repo folder, something like ``cd E:\Users\schellenbergd\Documents\GitHub\cs30``
 - ``pipenv shell``
