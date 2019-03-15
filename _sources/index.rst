@@ -45,6 +45,7 @@ Getting Started
     gettingstarted/nestedloops.rst
     gettingstarted/refactoring.rst
     gettingstarted/objectbasics.rst
+    gettingstarted/builtinfunctions.rst
     gettingstarted/translationrotation.rst
 
 

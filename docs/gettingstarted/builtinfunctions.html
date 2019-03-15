@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>12. Translation and Rotation &#8212; Computer Science 30 - Schellenberg</title>
+    <title>11. Helpful Built In JS Functions &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -111,8 +111,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. JavaScript Arrays" href="../datastructures/arrayreview.html" />
-    <link rel="prev" title="11. Helpful Built In JS Functions" href="builtinfunctions.html" />
+    <link rel="next" title="12. Translation and Rotation" href="translationrotation.html" />
+    <link rel="prev" title="10. Object Basics" href="objectbasics.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -257,7 +257,7 @@
             <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=CS30&page=translationrotation'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS30&page=builtinfunctions'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -272,13 +272,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">12. Translation and Rotation</a><ul>
-<li><a class="reference internal" href="#translations">12.1. Translations</a></li>
-<li><a class="reference internal" href="#rotations">12.2. Rotations</a></li>
-<li><a class="reference internal" href="#demo">12.3. Demo</a></li>
-<li><a class="reference internal" href="#rotating-towards-something-like-the-cursor">12.4. Rotating Towards Something (like the cursor)</a></li>
-<li><a class="reference internal" href="#your-turn">12.5. Your Turn</a></li>
-<li><a class="reference internal" href="#extra-for-experts">12.6. Extra for Experts</a></li>
+<li><a class="reference internal" href="#">11. Helpful Built In JS Functions</a><ul>
+<li><a class="reference internal" href="#more-information">11.1. More Information</a></li>
+<li><a class="reference internal" href="#p5js-example">11.2. p5js Example</a></li>
 </ul>
 </li>
 </ul>
@@ -288,14 +284,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 11. Helpful Built In JS Functions" data-toggle="tooltip">
-    <a href="builtinfunctions.html" >
+  <li id="relations-prev" title="Previous Chapter - 10. Object Basics" data-toggle="tooltip">
+    <a href="objectbasics.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 1. JavaScript Arrays' data-toggle="tooltip" >
-    <a href="../datastructures/arrayreview.html" >
+  <li id="relations-next" title='Next Chapter - 12. Translation and Rotation' data-toggle="tooltip" >
+    <a href="translationrotation.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -325,83 +321,110 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="translation-and-rotation">
-<h1>12. Translation and Rotation<a class="headerlink" href="#translation-and-rotation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="helpful-built-in-js-functions">
+<h1>11. Helpful Built In JS Functions<a class="headerlink" href="#helpful-built-in-js-functions" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
-<p>Things you should know about translating and rotating in p5js.</p>
+<p>Listing a few built in JS functions, and where to find documentation for them.</p>
 </div>
-<div class="section" id="translations">
-<h2>12.1. Translations<a class="headerlink" href="#translations" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://processing.org/tutorials/transform2d/">https://processing.org/tutorials/transform2d/</a></p>
-</div>
-<div class="section" id="rotations">
-<h2>12.2. Rotations<a class="headerlink" href="#rotations" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://processing.org/tutorials/transform2d/">https://processing.org/tutorials/transform2d/</a></p>
-</div>
-<div class="section" id="demo">
-<h2>12.3. Demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h2>
-<p>Start with a single rectangle on the screen. Turn it into a diamond shape using <code class="docutils literal notranslate"><span class="pre">rotate()</span></code>. Notice that it is messed up. Use <code class="docutils literal notranslate"><span class="pre">translate()</span></code> to fix it. Add another rectangle, but make it something that shouldn’t rotate (like a button near the bottom of the screen). Eventually get to code like the following:</p>
+<p>While we will mostly be spending our time learning functions that are specific to p5js, it is helpful to realize that any built in JS function will also work while using the p5js library. One example of a helpful built in function is the <code class="docutils literal notranslate"><span class="pre">setInterval</span></code> and <code class="docutils literal notranslate"><span class="pre">setTimeout</span></code> functions. These functions allow you to run a specific function every <em>x</em> milliseconds, or after <em>x</em> milliseconds have gone by. Consider the following example, which would print <em>Hello</em> into your console every two seconds:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">sayHi</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 
-<div class="embedded_p5">
-<script type="text/p5" id="rotate-demo"  data-height="300" data-preview-width="400">
-function setup() {
-    createCanvas(400, 400);
-    angleMode(DEGREES);
-}
+<span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">sayHi</span><span class="p">,</span> <span class="mi">2000</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If you want want the function to repeat at a specifc interval for awhile, but then to stop, you need to keep track of the ID that the function returns. Consider the following:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">sayHi</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 
-function draw() {
-    background(220);
-    fill(0);
+<span class="kd">let</span> <span class="nx">intervalID</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">sayHi</span><span class="p">,</span> <span class="mi">2000</span><span class="p">);</span>
 
-    push();
-    translate(140, 140);
-    rotate(mouseX);
-    // rectMode(CENTER);
-    rect(0, 0, 25, 25);
-    pop();
+<span class="c1">// assume that the following is triggered by</span>
+<span class="c1">// something else happening in your program...</span>
+<span class="nx">clearInterval</span><span class="p">(</span><span class="nx">intervalID</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If you only want the function to occur <strong>once</strong>, you can use <code class="docutils literal notranslate"><span class="pre">setTimeout</span></code> instead:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">sayHi</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 
-    //button
-    rect(300, 250, 75, 25);
-}
+<span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">sayHi</span><span class="p">,</span> <span class="mi">2000</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>You can keep track of the id that <code class="docutils literal notranslate"><span class="pre">setTimeout</span></code> returns as well, if there is a chance you will cancel the event.</p>
+<div class="section" id="more-information">
+<h2>11.1. More Information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h2>
+<p>A great place to look for information about built in functions is the <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN Web Docs for JavaScript</a>.</p>
+<p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout docs</a></p>
+<p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval docs</a></p>
+</div>
+<div class="section" id="p5js-example">
+<h2>11.2. p5js Example<a class="headerlink" href="#p5js-example" title="Permalink to this headline">¶</a></h2>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">E:\Users\schellenbergd\Documents\GitHub\cs30\_sources\gettingstarted\builtinfunctions.rst</tt>, line 57)</p>
+<p>Duplicate ID – see gettingstarted/objectbasics, line 99</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">p5</span><span class="p">::</span> <span class="n">ballObjectDemo</span>
+  <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">400</span>
 
-</script>
+  <span class="n">let</span> <span class="n">ball</span><span class="p">;</span>
+
+  <span class="n">function</span> <span class="n">setup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">createCanvas</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>
+    <span class="n">ball</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">x</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="n">y</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+      <span class="n">radius</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+      <span class="n">fillColor</span><span class="p">:</span> <span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">setInterval</span><span class="p">(</span><span class="n">setRandomBallColor</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">function</span> <span class="n">draw</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">background</span><span class="p">(</span><span class="mi">220</span><span class="p">);</span>
+    <span class="n">moveBall</span><span class="p">();</span>
+    <span class="n">displayBall</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="n">function</span> <span class="n">moveBall</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">ball</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">mouseX</span><span class="p">;</span>
+    <span class="n">ball</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">mouseY</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">function</span> <span class="n">displayBall</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">fill</span><span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">fillColor</span><span class="p">);</span>
+    <span class="n">ellipse</span><span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">ball</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">ball</span><span class="o">.</span><span class="n">radius</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">ball</span><span class="o">.</span><span class="n">radius</span><span class="o">*</span><span class="mi">2</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">function</span> <span class="n">setRandomBallColor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">let</span> <span class="n">possibleColors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;white&quot;</span><span class="p">];</span>
+    <span class="n">ball</span><span class="o">.</span><span class="n">fillColor</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="n">possibleColors</span><span class="p">);</span>
+  <span class="p">}</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="rotating-towards-something-like-the-cursor">
-<h2>12.4. Rotating Towards Something (like the cursor)<a class="headerlink" href="#rotating-towards-something-like-the-cursor" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">atan2</span></code></p>
-</div>
-<div class="section" id="your-turn">
-<h2>12.5. Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
-<p>Draw a clock face that looks like this:</p>
-<img alt="../_images/clockface.png" src="../_images/clockface.png" />
-<p>If you finish early, see if you can get it to have hands that actually work! Look in the reference for seconds(), etc.</p>
-</div>
-<div class="section" id="extra-for-experts">
-<h2>12.6. Extra for Experts<a class="headerlink" href="#extra-for-experts" title="Permalink to this headline">¶</a></h2>
-<p>Try to make something like this happen:</p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=duNzKIRJHuA">https://www.youtube.com/watch?v=duNzKIRJHuA</a></p>
-<p>Might want to look up <code class="docutils literal notranslate"><span class="pre">frameCount</span></code>, and remember how to use modular arithmetic.</p>
 </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 11. Helpful Built In JS Functions' data-toggle="tooltip">
-    <a href="builtinfunctions.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 10. Object Basics' data-toggle="tooltip">
+    <a href="objectbasics.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="builtinfunctions.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="objectbasics.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 1. JavaScript Arrays' data-toggle="tooltip" >
-    <a href="../datastructures/arrayreview.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 12. Translation and Rotation' data-toggle="tooltip" >
+    <a href="translationrotation.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../datastructures/arrayreview.html" >Next Section - 1. JavaScript Arrays</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="translationrotation.html" >Next Section - 12. Translation and Rotation</a>
 
 <script type="text/javascript">
 
