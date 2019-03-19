@@ -54,7 +54,7 @@ A great place to look for information about built in functions is the `MDN Web D
 p5js Example
 -----------------
 
-.. p5:: ballObjectDemo
+.. p5:: builtInFunctionsDemo
   :width: 400
 
   let ball;

@@ -364,47 +364,44 @@
 </div>
 <div class="section" id="p5js-example">
 <h2>11.2. p5js Example<a class="headerlink" href="#p5js-example" title="Permalink to this headline">¶</a></h2>
-<div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">E:\Users\schellenbergd\Documents\GitHub\cs30\_sources\gettingstarted\builtinfunctions.rst</tt>, line 57)</p>
-<p>Duplicate ID – see gettingstarted/objectbasics, line 99</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">p5</span><span class="p">::</span> <span class="n">ballObjectDemo</span>
-  <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">400</span>
 
-  <span class="n">let</span> <span class="n">ball</span><span class="p">;</span>
+<div class="embedded_p5">
+<script type="text/p5" id="builtInFunctionsDemo"  data-height="300" data-preview-width="400">
+let ball;
 
-  <span class="n">function</span> <span class="n">setup</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">createCanvas</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>
-    <span class="n">ball</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="n">x</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
-      <span class="n">y</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
-      <span class="n">radius</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
-      <span class="n">fillColor</span><span class="p">:</span> <span class="n">color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="n">window</span><span class="o">.</span><span class="n">setInterval</span><span class="p">(</span><span class="n">setRandomBallColor</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
-  <span class="p">}</span>
+function setup() {
+  createCanvas(400, 400);
+  ball = {
+    x: 100,
+    y: 200,
+    radius: 25,
+    fillColor: color(255, 0, 0)
+  }
+  window.setInterval(setRandomBallColor, 1000);
+}
 
-  <span class="n">function</span> <span class="n">draw</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">background</span><span class="p">(</span><span class="mi">220</span><span class="p">);</span>
-    <span class="n">moveBall</span><span class="p">();</span>
-    <span class="n">displayBall</span><span class="p">();</span>
-  <span class="p">}</span>
+function draw() {
+  background(220);
+  moveBall();
+  displayBall();
+}
 
-  <span class="n">function</span> <span class="n">moveBall</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">ball</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">mouseX</span><span class="p">;</span>
-    <span class="n">ball</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">mouseY</span><span class="p">;</span>
-  <span class="p">}</span>
+function moveBall() {
+  ball.x = mouseX;
+  ball.y = mouseY;
+}
 
-  <span class="n">function</span> <span class="n">displayBall</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">fill</span><span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">fillColor</span><span class="p">);</span>
-    <span class="n">ellipse</span><span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">ball</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">ball</span><span class="o">.</span><span class="n">radius</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">ball</span><span class="o">.</span><span class="n">radius</span><span class="o">*</span><span class="mi">2</span><span class="p">);</span>
-  <span class="p">}</span>
+function displayBall() {
+  fill(ball.fillColor);
+  ellipse(ball.x, ball.y, ball.radius*2, ball.radius*2);
+}
 
-  <span class="n">function</span> <span class="n">setRandomBallColor</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">let</span> <span class="n">possibleColors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;white&quot;</span><span class="p">];</span>
-    <span class="n">ball</span><span class="o">.</span><span class="n">fillColor</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="n">possibleColors</span><span class="p">);</span>
-  <span class="p">}</span>
-</pre></div>
-</div>
+function setRandomBallColor() {
+  let possibleColors = ["red", "green", "blue", "yellow", "orange", "white"];
+  ball.fillColor = random(possibleColors);
+}
+
+</script>
 </div>
 </div>
 </div>
