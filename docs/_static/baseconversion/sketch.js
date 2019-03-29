@@ -1,11 +1,12 @@
 // DOM demo with base conversions
 // Dan Schellenberg
 // May 18, 2018
+// icon feedback added March 29, 2019
 
 // this is indented to show two major ideas:
 // - how to use some of the DOM manipulation functions in p5js
 // - using bootstrap (https://getbootstrap.com/) to style a page, instead of
-//    using our own CSS (note that bootstrap's css is leaded in index.html)
+//    using our own CSS (note that bootstrap's css is linked to in index.html)
 
 let questionInputs;
 let answers;
@@ -47,21 +48,38 @@ function createQuestion(baseFrom, baseTo) {
   };
   answers.push(answerData);
 
+  // add container div for label and question -- allows for icon validation
+  let container = createElement("div");
+  container.class("form-group position-relative");
+  container.parent("quiz");
+
   // add label and question to the html form
   let message = "Convert the following from " + baseToText[baseFrom] + " to " + baseToText[baseTo] + ": " + displayValue;
   let label = createElement("label", message);
-  label.parent("quiz");
+  label.parent(container);
 
   let qustion;
-  if (baseTo === 16) {
-    question = createInput("");
-  }
-  else {
-    question = createInput("", "number");
-  }
-  question.class("form-control mb-3");
-  question.parent("quiz");
+  question = createInput("");
+  question.class("form-control mb-3 question");
+  question.parent(container);
   questionInputs.push(question);
+
+  //add divs for icon feedback
+  valid = createElement("div");
+  valid.class("valid-feedback feedback-icon");
+  valid.parent(container);
+
+  validIcon = createElement("i");
+  validIcon.class("fa fa-check");
+  validIcon.parent(valid);
+
+  invalid = createElement("div");
+  invalid.class("invalid-feedback feedback-icon");
+  invalid.parent(container);
+
+  invalidIcon = createElement("i");
+  invalidIcon.class("fa fa-times");
+  invalidIcon.parent(invalid);
 }
 
 function addButtons() {
