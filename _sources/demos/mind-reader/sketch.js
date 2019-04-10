@@ -1,9 +1,4 @@
-// Project Title
-// Your Name
-// Date
-//
-// Extra for Experts:
-// - describe what you did to take this project "above and beyond"
+//Mind Reader Demo
 
 let choiceHistory;
 let lastFourGuesses;
@@ -24,7 +19,7 @@ function setup() {
   fill(0);
   textAlign(CENTER, CENTER);
   textSize(textSizeVariable);
-  text("You need to outsmart my computer program.\nI will predict whether you will choose tails or heads.\n\nIf I'm right, I get 1 point.\nIf I'm wrong, you get 1 point.\n\nThe game goes to " + scoreToWin + " points.\n\nPress the t or h key to begin.", width/2, height/2);
+  text("You need to outsmart my computer program.\nI will predict whether you will choose tails or heads.\n\nIf I'm right, I get 1 point.\nIf I'm wrong, you get 1 point.\n\nThe game goes to " + scoreToWin + " points.\n\nControls:\nTails - click on left side of screen or press 't'\nHeads - click on right side of screen or press 'h'", width/2, height/2);
   noLoop();
 }
 
@@ -76,11 +71,11 @@ function updateDisplay() {
     textSize(textSizeVariable);
     if (userScore > computerScore) {
       fill(0, 255, 0);
-      text("You win!\nI'm impressed!\nPress s to play again.", width/2, height/2);
+      text("You win!\nI'm impressed!\nClick to play again.", width/2, height/2);
     }
     else {
       fill(0, 0, 255);
-      text("You lose!\nBetter luck next time!\nPress s to play again.", width/2, height/2);
+      text("You lose!\nBetter luck next time!\nClick to play again.", width/2, height/2);
     }
   }
 }
@@ -109,6 +104,20 @@ function keyTyped() {
   }
   else if (key === "s") {
     setup();
+  }
+}
+
+function mousePressed() {
+  if (gameIsOver) {
+    setup();
+  }
+  if (mouseX < width/2) {
+    userChoice = "h";
+    takeTurn();
+  }
+  else {
+    userChoice = "t";
+    takeTurn();
   }
 }
 

@@ -61,6 +61,13 @@ Data Structures
     datastructures/maps.rst
 
 
+.. .. raw:: html
+
+..    <iframe id="conversionPractice" src="/_static/mindreader"> </iframe>
+
+Try beating my `mind reader </_static/mindreader>`_ built in p5js. 
+
+
 External Files
 :::::::::::::::
 
