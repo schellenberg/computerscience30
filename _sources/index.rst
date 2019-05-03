@@ -93,6 +93,7 @@ Object Oriented Programming
    :numbered:
 
    oop/overview.rst
+   oop/pairprogramming.rst
 
 Recursion
 ::::::::::
