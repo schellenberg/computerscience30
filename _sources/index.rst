@@ -47,6 +47,7 @@ Getting Started
     gettingstarted/objectbasics.rst
     gettingstarted/builtinfunctions.rst
     gettingstarted/translationrotation.rst
+    gettingstarted/generativeart.rst
 
 
 Data Structures
