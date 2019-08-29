@@ -77,9 +77,8 @@ External Files
     :numbered:
 
     externalfiles/loadStrings.rst
-    externalfiles/localstorage.rst
+    externalfiles/localStorage.rst
 
-To be added: Local Storage / cookies, loadTable for csv?
 
 Using Libraries
 ::::::::::::::::
