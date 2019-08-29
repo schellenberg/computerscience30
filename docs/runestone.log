@@ -7301,3 +7301,86 @@ Traceback (most recent call last):
     f = self.send_head()
   File "C:\Python37\Lib\http\server.py", line 698, in send_head
     self.send_error(HTTPStatus.NOT_FOUND, "File not found")
+  File "C:\Python37\Lib\http\server.py", line 481, in send_error
+    self.wfile.write(body)
+  File "C:\Python37\Lib\socketserver.py", line 799, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /externalfiles/syntax.html HTTP/1.1" 200 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/activecode.css?v=78EE59F HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/dragndrop.css?v=A828DAB1 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/CodeChat.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/parsons.css?v=A1E2433E HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/spreadsheet.css?v=28549A88 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/jexcel.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/japp.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/runestone-custom-sphinx-bootstrap.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/runestonebase.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/jquery.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/timedparsons.js?v=4BB0E482 HTTP/1.1" 200 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/underscore.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/doctools.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/jquery-fix.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/bookfuncs.js?v=99768D70 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/codemirror.js?v=77018329 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/sql.js?v=4CD470E6 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/activecode-i18n.en.js?v=DA169A22 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/skulpt.min.js?v=EEB8131E HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/skulpt-stdlib.js?v=A9BBDEEE HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/activecode.js?v=DAEF8A8A HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/sql-wasm.js?v=DE2A0975 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/mchoice.js?v=8BF4AC13 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/timed.js?v=9D71EDF0 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/clickable.js?v=6690DBCF HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/dragndrop.js?v=84188863 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/fitb.js?v=FA60A182 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/lp.js?v=2701088E HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/gas.js?v=D2930CED HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/parsons.js?v=C67A953C HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/poll.js?v=C0A3DF52 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/reveal.js?v=83C3F10 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/shortanswer.js?v=BA091142 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/spreadsheet.js?v=9B995CB7 HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/jexcel.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/japp.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/jquery-ui-1.10.3.custom.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/user-highlights.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Aug/2019 14:58:17] code 404, message File not found
+127.0.0.1 - - [29/Aug/2019 14:58:17] "GET /_static/html4css1.css HTTP/1.1" 404 -
+127.0.0.1 - - [29/Aug/2019 14:58:18] "GET /_static/img/logo_small.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Aug/2019 14:58:18] "GET /_static/bootstrap-3.0.0/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 -
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 57173)
+Traceback (most recent call last):
+  File "C:\Python37\Lib\socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Python37\Lib\socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Python37\Lib\socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Python37\Lib\http\server.py", line 646, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python37\Lib\socketserver.py", line 720, in __init__
+    self.handle()
+  File "C:\Python37\Lib\http\server.py", line 426, in handle
+    self.handle_one_request()
+  File "C:\Python37\Lib\http\server.py", line 414, in handle_one_request
+    method()
+  File "C:\Python37\Lib\http\server.py", line 653, in do_GET
+    self.copyfile(f, self.wfile)
+  File "C:\Python37\Lib\http\server.py", line 844, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "c:\users\schellenbergd\.virtualenvs\computerscience30-tsishxqg\lib\shutil.py", line 82, in copyfileobj
+    fdst.write(buf)
+  File "C:\Python37\Lib\socketserver.py", line 799, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+----------------------------------------
+
+Aborted!

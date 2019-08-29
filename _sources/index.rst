@@ -76,7 +76,8 @@ External Files
     :maxdepth: 1
     :numbered:
 
-    externalfiles/syntax.rst
+    externalfiles/loadStrings.rst
+    externalfiles/localstorage.rst
 
 To be added: Local Storage / cookies, loadTable for csv?
 
