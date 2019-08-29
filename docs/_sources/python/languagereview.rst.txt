@@ -382,7 +382,7 @@ Remember the number guessing game we created in Scratch? The basic premise was a
 We are going to try to implement this game in Python. **Please note: you will likely run into many problems trying to create this game in Python.** However, it can be really helpful to try problems that feel like they are above your skill level. Soon, you will be able to create programs like this on your own! Your teacher might choose to give you some time to try this on your own, then demonstrate a possible solution to the problem, or perhaps come back to this game in a couple of weeks.
 
 
-.. activecode:: module_intro_3
+.. activecode:: number_guessing_game
     :caption: Create a number guessing game here!
     
     # the algorithm for the game can be described as follows

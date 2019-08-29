@@ -129,9 +129,11 @@ To be added:
 Capstone Coding Project
 ::::::::::::::::::::::::
 
-To be added:
-- project description
-- project documentation expectations
+.. toctree::
+    :maxdepth: 1
+    :numbered:
+
+    capstoneproject/overview.rst
 
 
 JavaScript Reference

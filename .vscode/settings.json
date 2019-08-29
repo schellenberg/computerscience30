@@ -1,3 +1,4 @@
 {
-    "restructuredtext.confPath": "${workspaceFolder}"
+    "restructuredtext.confPath": "${workspaceFolder}",
+    "python.pythonPath": "C:\\Users\\schellenbergd\\.virtualenvs\\computerscience30-TSishxQG\\Scripts\\python.exe"
 }

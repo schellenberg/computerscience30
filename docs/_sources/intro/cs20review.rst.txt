@@ -67,7 +67,7 @@ If you are increasing or decreasing a variable by one, you can use the following
 
 .. note:: JavaScript uses ``//`` to indicate that everything that follows on that line will be a comment.
 
-.. caution:: Although I use ``writeln()`` in these examples, it is not really the way to output text in JS. I'm doing it here to make it simple to output values to the little output box that shows up when you run the code, but in real-world usage, we will use a different function.
+.. caution:: Although I use ``writeln()`` in these examples, it is not really the way to output text in JS. I'm doing it here to make it simple to output values to the little output box that shows up when you run the code, but in real-world usage, we will use the ``console.log()`` function.
 
 Handy Math Functions
 ---------------------
