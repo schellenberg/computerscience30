@@ -83,7 +83,13 @@ External Files
 Using Libraries
 ::::::::::::::::
 
-To be added: p5.dom, p5.sound, p5.collide2D, p5.geolocation, p5.scribble
+.. toctree::
+    :maxdepth: 1
+    :numbered:
+
+    libraries/sound.rst
+    libraries/scribble.rst
+    libraries/dom.rst
 
 
 Object Oriented Programming

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>3. Drawing Primitives and Color &#8212; Computer Science 30 - Schellenberg</title>
+    <title>1. p5.sound Library &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -122,8 +122,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Loops - For and While" href="loops.html" />
-    <link rel="prev" title="2. Hello World" href="helloworld.html" />
+    <link rel="next" title="2. p5.scribble Library" href="scribble.html" />
+    <link rel="prev" title="2. localStorage" href="../externalfiles/localstorage.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -268,7 +268,7 @@
             <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=CS30&page=drawingbasics'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS30&page=sound'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -283,21 +283,10 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">3. Drawing Primitives and Color</a><ul>
-<li><a class="reference internal" href="#ideas-from">3.1. Ideas from:</a></li>
-<li><a class="reference internal" href="#p5js-example">3.2. p5js Example</a></li>
-<li><a class="reference internal" href="#your-turn">3.3. Your Turn</a></li>
-<li><a class="reference internal" href="#to-remember">3.4. To Remember</a></li>
-<li><a class="reference internal" href="#p5js-helpful-variables">3.5. p5js helpful variables</a></li>
-<li><a class="reference internal" href="#id2">3.6. Your Turn</a></li>
-<li><a class="reference internal" href="#take-it-further">3.7. Take it Further</a></li>
-<li><a class="reference internal" href="#random">3.8. Random</a></li>
-<li><a class="reference internal" href="#constrain">3.9. Constrain</a></li>
-<li><a class="reference internal" href="#id4">3.10. Your Turn</a></li>
-<li><a class="reference internal" href="#bouncing-ball">3.11. Bouncing Ball</a></li>
-<li><a class="reference internal" href="#id5">3.12. Your Turn</a></li>
-<li><a class="reference internal" href="#pimage">3.13. PImage</a></li>
-<li><a class="reference internal" href="#id6">3.14. Your Turn</a></li>
+<li><a class="reference internal" href="#">1. p5.sound Library</a><ul>
+<li><a class="reference internal" href="#installing-a-library">1.1. Installing a Library</a></li>
+<li><a class="reference internal" href="#using-the-sound-library">1.2. Using the Sound Library</a></li>
+<li><a class="reference internal" href="#demo">1.3. Demo</a></li>
 </ul>
 </li>
 </ul>
@@ -307,14 +296,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 2. Hello World" data-toggle="tooltip">
-    <a href="helloworld.html" >
+  <li id="relations-prev" title="Previous Chapter - 2. localStorage" data-toggle="tooltip">
+    <a href="../externalfiles/localstorage.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 4. Loops - For and While' data-toggle="tooltip" >
-    <a href="loops.html" >
+  <li id="relations-next" title='Next Chapter - 2. p5.scribble Library' data-toggle="tooltip" >
+    <a href="scribble.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -344,251 +333,59 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="drawing-primitives-and-color">
-<h1>3. Drawing Primitives and Color<a class="headerlink" href="#drawing-primitives-and-color" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
-<p class="topic-title first">Quick Overview of Day</p>
-<p>Draw primitive shapes in p5js. Explore storing color values.</p>
+  <div class="section" id="p5-sound-library">
+<h1>1. p5.sound Library<a class="headerlink" href="#p5-sound-library" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installing-a-library">
+<h2>1.1. Installing a Library<a class="headerlink" href="#installing-a-library" title="Permalink to this headline">¶</a></h2>
+<p>A p5.js library can be any JavaScript code that extends or adds to the p5.js core functionality. p5.dom and p5.sound are part of the p5.js distribution, while contributed libraries are developed, owned, and maintained by members of the p5.js community. I have also included the p5.collide library as part of the p5js template folder that we have been using. For any other library that you want to use (you can find a <a class="reference external" href="https://p5js.org/libraries/">list of them here</a>), you will need to download the .js file, put it in your project folder, then link to it using a script tag in your HTML file.</p>
+<p>To include a library in your sketch, link it into your HTML file, after you have linked in p5.js. An example HTML file might look like this:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!doctype html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/p5.js&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/p5.sound.js&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;sketch.js&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
 </div>
-<div class="section" id="ideas-from">
-<h2>3.1. Ideas from:<a class="headerlink" href="#ideas-from" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://p5js.org/learn/coordinate-system-and-shapes.html">p5js basic drawing tutorial</a> – Coordinate System and Shapes</p>
-<p><a class="reference external" href="https://p5js.org/learn/color.html">p5js color tutorial</a> – we’ll mostly use RGB</p>
 </div>
-<div class="section" id="p5js-example">
-<h2>3.2. p5js Example<a class="headerlink" href="#p5js-example" title="Permalink to this headline">¶</a></h2>
-<p>p5js has a number of functions that get called automatically for you. The most important ones for now are <code class="docutils literal notranslate"><span class="pre">setup()</span></code>, <code class="docutils literal notranslate"><span class="pre">draw()</span></code>, <code class="docutils literal notranslate"><span class="pre">keyTyped()</span></code> and <code class="docutils literal notranslate"><span class="pre">mousePressed()</span></code>.</p>
-
-<div class="embedded_p5">
-<script type="text/p5" id="first-demo" data-autoplay data-height="400" data-preview-width="400">
-function setup() {
-  createCanvas(350, 300);
-}
-
-function draw() {
-  background(255);
-  fill(0);
-  ellipse(mouseX, mouseY, 50, 50);
-}
-
-</script>
-</div>
-<p>As you saw in the last sketch, we can get the current mouse position by simply using the keywords <code class="docutils literal notranslate"><span class="pre">mouseX</span></code> and <code class="docutils literal notranslate"><span class="pre">mouseY</span></code>. Another incredibly useful set of keywords is <code class="docutils literal notranslate"><span class="pre">pmouseX</span></code> and <code class="docutils literal notranslate"><span class="pre">pmouseY</span></code>, which stand for “previous” mouseX and mouseY locations.</p>
-</div>
-<div class="section" id="your-turn">
-<h2>3.3. Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
-<p>I want to have p5js make the line that is being drawn be wider when the mouse moves faster horizontally, and thinner when the mouse is moving slower horizontally. See if you can make that happen.</p>
-<p>Here’s a couple of hints:</p>
+<div class="section" id="using-the-sound-library">
+<h2>1.2. Using the Sound Library<a class="headerlink" href="#using-the-sound-library" title="Permalink to this headline">¶</a></h2>
+<p>For a full list of functionality, you should check the <a class="reference external" href="https://p5js.org/reference/#/libraries/p5.sound">p5.sound reference page</a>. I will only cover the very basics here.</p>
 <ul class="simple">
-<li><p>the formula for calculating the speed of the mouse’s horizontal motion is the absolute value of the difference between mouseX and pmouseX</p></li>
-<li><p>abs(-5) will return 5</p></li>
-<li><p>look up the strokeWeight function in the <a class="reference external" href="https://p5js.org/reference/">p5js.org reference</a></p></li>
-</ul>
-
-<div class="embedded_p5">
-<script type="text/p5" id="drawingBasicsYourTurn1"  data-height="300" data-preview-width="400">
-function setup() {
-  createCanvas(400, 400);
-  background(255);
-}
-
-function draw() {
-
-}
-
-</script>
-</div>
-<p>When you manage to get it working, show me your revised, working version of the sketch. Just put your hand up and be prepared to show it to me.</p>
-</div>
-<div class="section" id="to-remember">
-<h2>3.4. To Remember<a class="headerlink" href="#to-remember" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>use <code class="docutils literal notranslate"><span class="pre">keyTyped()</span></code> instead of keyPressed()  <strong>in keyTyped(), the key variable is case sensitive!</strong></p></li>
-<li><p>can return false; to override default behaviour of that key (like space key scrolling…)</p></li>
+<li><p><a class="reference external" href="https://p5js.org/reference/#/p5.SoundFile/loadSound">loadSound()</a> – should be done in preload if you are going to use it right away</p></li>
+<li><p><a class="reference external" href="https://p5js.org/reference/#/p5.SoundFile/play">play()</a> – play the p5.SoundFile that has been loaded</p></li>
+<li><p><a class="reference external" href="https://p5js.org/reference/#/p5.SoundFile/pause">pause()</a> – pause the p5.SoundFile that is playing</p></li>
+<li><p><a class="reference external" href="https://p5js.org/reference/#/p5.SoundFile/loop">loop()</a> – loop the p5.SoundFile (play it over and over again)</p></li>
+<li><p><a class="reference external" href="https://p5js.org/reference/#/p5.SoundFile/pause">pause()</a> – pause the p5.SoundFile that is playing</p></li>
+<li><p><a class="reference external" href="https://p5js.org/reference/#/p5.SoundFile/setVolume">setVolume()</a> – set the volume of a sound file between 0.0 (silence) and 1.0 (full volume)</p></li>
 </ul>
 </div>
-<div class="section" id="p5js-helpful-variables">
-<h2>3.5. p5js helpful variables<a class="headerlink" href="#p5js-helpful-variables" title="Permalink to this headline">¶</a></h2>
-<p>In addition to what we’ve already done, here’s a quick list of system variables that you will likely find useful. You may want to look up more information about these using the <a class="reference external" href="https://p5js.org/reference/">p5js.org reference</a>.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">width</span></code> - Width (in pixels) of canvas</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">height</span></code> - Height (in pixels) of canvas</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frameCount</span></code> - Number of frames processed</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frameRate()</span></code> - Rate that frames are processed (per second)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">windowWidth</span></code> - Width (in pixels) of entire screen</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">windowHeight</span></code> - Height (in pixels) of entire screen</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> - Most recent key pressed on the keyboard</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyCode</span></code> - Numeric code for key pressed on keyboard</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyIsPressed</span></code> - True or false? Is a key pressed?</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mouseIsPressed</span></code> - True or false? Is the mouse pressed?</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mouseButton</span></code> - Which button is pressed? Left, right, or center</p></li>
-</ul>
-</div>
-<div class="section" id="id2">
-<h2>3.6. Your Turn<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>Create a sketch that makes the following happen:</p>
-<ul class="simple">
-<li><p>when the user clicks on the sketch AND is holding down the <code class="docutils literal notranslate"><span class="pre">r</span></code> key, draw a rectangle there</p></li>
-<li><p>when the user clicks on the sketch AND is holding down the <code class="docutils literal notranslate"><span class="pre">e</span></code> key, draw a circle there</p></li>
-<li><p>when the user hits the “w” key, reset the sketch with a white background</p></li>
-<li><p>when the user hits the “b” key, reset the sketch with a black background</p></li>
-</ul>
-<p>You’ll want to look up the <code class="docutils literal notranslate"><span class="pre">mouseClicked()</span></code> function in the  <a class="reference external" href="https://p5js.org/reference/">p5js.org reference</a>.</p>
-
-<div class="embedded_p5">
-<script type="text/p5" id="drawingBasicsYourTurn2"  data-height="300" data-preview-width="400">
-function setup() {
-  createCanvas(400, 400);
-  background(255);
-}
-
-function draw() {
-
-}
-
-</script>
-</div>
-</div>
-<div class="section" id="take-it-further">
-<h2>3.7. Take it Further<a class="headerlink" href="#take-it-further" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>see if you can use the up/down arrow keys to adjust the size of the rectangle and circle that your program draws</p></li>
-<li><p>use some other key(s) to change the color used for the shapes</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you want to use the right mouse button as an input for your sketch, you will want to disable the normal right mouse button behaviour of your browser. To do that, include the following in your <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function: <code class="docutils literal notranslate"><span class="pre">document.addEventListener(&quot;contextmenu&quot;,</span> <span class="pre">event</span> <span class="pre">=&gt;</span> <span class="pre">event.preventDefault())</span></code>.</p>
-</div>
-</div>
-<div class="section" id="random">
-<h2>3.8. Random<a class="headerlink" href="#random" title="Permalink to this headline">¶</a></h2>
-<p>The random() function allows us to generate psuedo-random numbers for use in our code (psuedo-random in theory, but they are random enough that you don’t have to care about it for what we’re doing…).</p>
-</div>
-<div class="section" id="constrain">
-<h2>3.9. Constrain<a class="headerlink" href="#constrain" title="Permalink to this headline">¶</a></h2>
-<p>Keeps a value within a certain range.</p>
-<p>Example – move image with mouse, but don’t let it leave the left side of the screen.</p>
-
-<div class="embedded_p5">
-<script type="text/p5" id="constrainImage"  data-height="300" data-preview-width="400">
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(255);
-
-}
-
-</script>
-</div>
-</div>
-<div class="section" id="id4">
-<h2>3.10. Your Turn<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>Create a sketch to make the following happen:</p>
-<ul class="simple">
-<li><p>when the mouse is on the left-hand side of your screen, rectangles should be drawn (all over the screen). The rectangles should be various shades of grey.</p></li>
-<li><p>when the mouse is on the right-hand side of the screen, circles should still be drawn all over the screen (in random colours).</p></li>
-</ul>
-
-<div class="embedded_p5">
-<script type="text/p5" id="drawingBasicsYourTurn3"  data-height="300" data-preview-width="400">
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(255);
-}
-
-</script>
-</div>
-</div>
-<div class="section" id="bouncing-ball">
-<h2>3.11. Bouncing Ball<a class="headerlink" href="#bouncing-ball" title="Permalink to this headline">¶</a></h2>
-<p>Bouncing ball demo (just bounce in one direction).</p>
-
-<div class="embedded_p5">
-<script type="text/p5" id="bouncingBall"  data-height="300" data-preview-width="400">
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(255);
-  // make a ball bounce
-}
-
-</script>
-</div>
-</div>
-<div class="section" id="id5">
-<h2>3.12. Your Turn<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>Now you add the following features:</p>
-<ul class="simple">
-<li><p>improve the code so that the ball can bounce both vertically AND horizontally.</p></li>
-<li><p>bounce on edge of ball (instead of the middle of the ball)</p></li>
-<li><p>make the ball speed up or slow down based on some condition (for example, whether the mouse is currently being pressed or not)</p></li>
-<li><p>implement at least one additional feature, such as changing the size or color of the ball based on certain conditions</p></li>
-<li><p>change the ball to something else (maybe a DVD logo?)</p></li>
-</ul>
-</div>
-<div class="section" id="pimage">
-<h2>3.13. PImage<a class="headerlink" href="#pimage" title="Permalink to this headline">¶</a></h2>
-<p>Displaying images in p5js. Load them in the <code class="docutils literal notranslate"><span class="pre">preload()</span></code> function to guarantee they are available when you call them. Can also use a callback function to deal with it loading elsewhere.</p>
-
-<div class="embedded_p5">
-<script type="text/p5" id="pimageDemo"  data-height="300" data-preview-width="400">
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(255);
-}
-
-</script>
-</div>
-</div>
-<div class="section" id="id6">
-<h2>3.14. Your Turn<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>find a random image on the web and have it follow your mouse around your sketch</p></li>
-<li><p>now, include the ability to zoom in and out based on the left or right mouse button being pressed</p></li>
-<li><p>improve it by making the zooming occur based on mouse wheel scrolling</p></li>
-</ul>
-
-<div class="embedded_p5">
-<script type="text/p5" id="drawingBasicsYourTurn4"  data-height="300" data-preview-width="400">
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(255);
-}
-
-</script>
-</div>
+<div class="section" id="demo">
+<h2>1.3. Demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h2>
+<p>Bouncing ball demo. Background music. Bouncing sound effect.</p>
 </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 2. Hello World' data-toggle="tooltip">
-    <a href="helloworld.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 2. localStorage' data-toggle="tooltip">
+    <a href="../externalfiles/localstorage.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="helloworld.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="../externalfiles/localstorage.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 4. Loops - For and While' data-toggle="tooltip" >
-    <a href="loops.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 2. p5.scribble Library' data-toggle="tooltip" >
+    <a href="scribble.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="loops.html" >Next Section - 4. Loops - For and While</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="scribble.html" >Next Section - 2. p5.scribble Library</a>
 
 <script type="text/javascript">
 

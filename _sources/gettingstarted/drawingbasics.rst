@@ -21,10 +21,12 @@ p5js has a number of functions that get called automatically for you. The most i
 
 .. p5:: first-demo
     :width: 400
+    :height: 400
+    :autoplay:
 
 
     function setup() {
-      createCanvas(400, 400);
+      createCanvas(350, 300);
     }
 
     function draw() {

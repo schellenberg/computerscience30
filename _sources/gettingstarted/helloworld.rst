@@ -15,6 +15,10 @@ Front End Web Development
 - CSS - style
 - JavaScript - logic
 
+We will spend our semeseter working on JavaScript, but it is useful to refresh your memory regarding HTML and CSS, since JavaScript is embedded within an HTML page.
+
+Your first assignment of the semester will be to create a simple webpage that will be used as a directory/list of all your assignments for the semester. 
+
 
 .. note:: 
 
