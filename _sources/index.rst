@@ -38,10 +38,10 @@ Getting Started
     gettingstarted/setup.rst
     gettingstarted/helloworld.rst
     gettingstarted/drawingbasics.rst
+    gettingstarted/loops.rst
     gettingstarted/variablescope.rst
     gettingstarted/booleanlogic.rst
     gettingstarted/statevariables.rst
-    gettingstarted/loops.rst
     gettingstarted/nestedloops.rst
     gettingstarted/refactoring.rst
     gettingstarted/objectbasics.rst
@@ -76,8 +76,8 @@ External Files
     :maxdepth: 1
     :numbered:
 
-    externalfiles/loadStrings.rst
-    externalfiles/localStorage.rst
+    externalfiles/loadstrings.rst
+    externalfiles/localstorage.rst
 
 
 Using Libraries
@@ -154,3 +154,6 @@ Helpful Links
 - `The Coding Train Tutorials <http://thecodingtrain.com/Tutorials/>`_ -- great stuff from Daniel Shiffman
 - `MDN JavaScript Web Docs <https://developer.mozilla.org/en-US/docs/Web/JavaScript>`_
 - `Eloquent JavaScript book <https://eloquentjavascript.net/3rd_edition/>`_ -- though I will not follow all the same conventions, it's a good read
+- `Collision Detection Library <https://github.com/bmoren/p5.collide2D>`_ -- p5.collide2D provides tools for calculating collision detection for 2D geometry with p5.js
+- `The Nature of Code <https://natureofcode.com/book/>`_ -- Goes beyond what we do in class. Written in Processing, not p5js, so you need to do a bit of code conversion. Ask me for help, if needed.
+- `Open Game Art <https://opengameart.org/>`_ -- provides a variety of high quality, freely licensed art, so that free/open source game developers can use it in their games

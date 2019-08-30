@@ -1,10 +1,10 @@
 // Traffic Light Starter Code
-// Dan Schellenberg
-// Sept 25, 2018
+// Your Name Here
+// The Date Here
 
 // GOAL: make a 'traffic light' simulator. For now, just have the light
 // changing according to time. You may want to investigate the millis()
-// function at https://p5js.org/reference/
+// function at https://p5js.org/reference/#/p5/millis
 
 function setup() {
   createCanvas(600, 600);

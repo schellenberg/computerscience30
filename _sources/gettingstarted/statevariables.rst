@@ -57,7 +57,40 @@ Try to alter the code given above so that the background continues to switch fro
 Practice Problem
 -----------------
 
-Traffic light simluator. Give students starter code, and have them attempt to get a traffic light working. Can be done nicely with a state variable, and use of the ``millis()`` function.
+Traffic light simluator. Start with the following code, and attempt to get a traffic light working. Can be done nicely with a state variable, and use of the ``millis()`` function.
+
+.. code-block:: javascript
+
+	// Traffic Light Starter Code
+	// Your Name Here
+	// The Date Here
+
+	// GOAL: make a 'traffic light' simulator. For now, just have the light
+	// changing according to time. You may want to investigate the millis()
+	// function at https://p5js.org/reference/#/p5/millis
+
+	function setup() {
+	  createCanvas(600, 600);
+	}
+
+	function draw() {
+	  background(255);
+	  drawOutlineOfLights();
+	}
+
+	function drawOutlineOfLights() {
+	  //box
+	  rectMode(CENTER);
+	  fill(0);
+	  rect(width/2, height/2, 75, 200, 10);
+
+	  //lights
+	  fill(255);
+	  ellipse(width/2, height/2 - 65, 50, 50); //top
+	  ellipse(width/2, height/2, 50, 50); //middle
+	  ellipse(width/2, height/2 + 65, 50, 50); //bottom
+	}
+
 
 Practice Problem
 ----------------

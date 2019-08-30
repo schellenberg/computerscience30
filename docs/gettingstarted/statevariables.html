@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>6. State Variables &#8212; Computer Science 30 - Schellenberg</title>
+    <title>7. State Variables &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -122,8 +122,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Loops - For and While" href="loops.html" />
-    <link rel="prev" title="5. Boolean Logic" href="booleanlogic.html" />
+    <link rel="next" title="8. Nested Loops" href="nestedloops.html" />
+    <link rel="prev" title="6. Boolean Logic" href="booleanlogic.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -283,13 +283,13 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">6. State Variables</a><ul>
-<li><a class="reference internal" href="#square-moving-around-screen">6.1. Square Moving Around Screen</a></li>
-<li><a class="reference internal" href="#id1">6.2. State Variables</a></li>
-<li><a class="reference internal" href="#timing-millis">6.3. Timing – <code class="docutils literal notranslate"><span class="pre">millis()</span></code></a></li>
-<li><a class="reference internal" href="#try-this">6.4. Try This</a></li>
-<li><a class="reference internal" href="#practice-problem">6.5. Practice Problem</a></li>
-<li><a class="reference internal" href="#id2">6.6. Practice Problem</a></li>
+<li><a class="reference internal" href="#">7. State Variables</a><ul>
+<li><a class="reference internal" href="#square-moving-around-screen">7.1. Square Moving Around Screen</a></li>
+<li><a class="reference internal" href="#id1">7.2. State Variables</a></li>
+<li><a class="reference internal" href="#timing-millis">7.3. Timing – <code class="docutils literal notranslate"><span class="pre">millis()</span></code></a></li>
+<li><a class="reference internal" href="#try-this">7.4. Try This</a></li>
+<li><a class="reference internal" href="#practice-problem">7.5. Practice Problem</a></li>
+<li><a class="reference internal" href="#id2">7.6. Practice Problem</a></li>
 </ul>
 </li>
 </ul>
@@ -299,14 +299,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 5. Boolean Logic" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 6. Boolean Logic" data-toggle="tooltip">
     <a href="booleanlogic.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 7. Loops - For and While' data-toggle="tooltip" >
-    <a href="loops.html" >
+  <li id="relations-next" title='Next Chapter - 8. Nested Loops' data-toggle="tooltip" >
+    <a href="nestedloops.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -337,24 +337,24 @@
 <div class="container" id="main-content">
   
   <div class="section" id="state-variables">
-<h1>6. State Variables<a class="headerlink" href="#state-variables" title="Permalink to this headline">¶</a></h1>
+<h1>7. State Variables<a class="headerlink" href="#state-variables" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title first">Quick Overview of Day</p>
 <p>Use state variables to control the flow of a program.</p>
 </div>
 <div class="section" id="square-moving-around-screen">
-<h2>6.1. Square Moving Around Screen<a class="headerlink" href="#square-moving-around-screen" title="Permalink to this headline">¶</a></h2>
+<h2>7.1. Square Moving Around Screen<a class="headerlink" href="#square-moving-around-screen" title="Permalink to this headline">¶</a></h2>
 <p>Create a sketch that accomplishes the following:</p>
 <img alt="../_images/moving_rectangle.gif" src="../_images/moving_rectangle.gif" />
 <p>Have students attempt this first, <em>before</em> introducing the idea of a state variable.</p>
 </div>
 <div class="section" id="id1">
-<h2>6.2. State Variables<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>7.2. State Variables<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>What are they?
 Why bother?</p>
 </div>
 <div class="section" id="timing-millis">
-<h2>6.3. Timing – <code class="docutils literal notranslate"><span class="pre">millis()</span></code><a class="headerlink" href="#timing-millis" title="Permalink to this headline">¶</a></h2>
+<h2>7.3. Timing – <code class="docutils literal notranslate"><span class="pre">millis()</span></code><a class="headerlink" href="#timing-millis" title="Permalink to this headline">¶</a></h2>
 <p>You can find out how many milliseconds (thousands of a second) have elapsed since the run of the program began.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">someTime</span><span class="p">;</span>
 
@@ -375,15 +375,46 @@ Why bother?</p>
 </div>
 </div>
 <div class="section" id="try-this">
-<h2>6.4. Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h2>
+<h2>7.4. Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h2>
 <p>Try to alter the code given above so that the background continues to switch from black to white once every 2 seconds.</p>
 </div>
 <div class="section" id="practice-problem">
-<h2>6.5. Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
-<p>Traffic light simluator. Give students starter code, and have them attempt to get a traffic light working. Can be done nicely with a state variable, and use of the <code class="docutils literal notranslate"><span class="pre">millis()</span></code> function.</p>
+<h2>7.5. Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
+<p>Traffic light simluator. Start with the following code, and attempt to get a traffic light working. Can be done nicely with a state variable, and use of the <code class="docutils literal notranslate"><span class="pre">millis()</span></code> function.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Traffic Light Starter Code</span>
+<span class="c1">// Your Name Here</span>
+<span class="c1">// The Date Here</span>
+
+<span class="c1">// GOAL: make a &#39;traffic light&#39; simulator. For now, just have the light</span>
+<span class="c1">// changing according to time. You may want to investigate the millis()</span>
+<span class="c1">// function at https://p5js.org/reference/#/p5/millis</span>
+
+<span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">createCanvas</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+  <span class="nx">drawOutlineOfLights</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">drawOutlineOfLights</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">//box</span>
+  <span class="nx">rectMode</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">);</span>
+  <span class="nx">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="nx">rect</span><span class="p">(</span><span class="nx">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="nx">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+
+  <span class="c1">//lights</span>
+  <span class="nx">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+  <span class="nx">ellipse</span><span class="p">(</span><span class="nx">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="nx">height</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span> <span class="c1">//top</span>
+  <span class="nx">ellipse</span><span class="p">(</span><span class="nx">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="nx">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span> <span class="c1">//middle</span>
+  <span class="nx">ellipse</span><span class="p">(</span><span class="nx">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="nx">height</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span> <span class="c1">//bottom</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="id2">
-<h2>6.6. Practice Problem<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>7.6. Practice Problem<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Put a button in the middle of the screen. When it is clicked, switch to a screen that has a ball bouncing around.</p>
 </div>
 </div>
@@ -391,19 +422,19 @@ Why bother?</p>
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 5. Boolean Logic' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - 6. Boolean Logic' data-toggle="tooltip">
     <a href="booleanlogic.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="booleanlogic.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 7. Loops - For and While' data-toggle="tooltip" >
-    <a href="loops.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 8. Nested Loops' data-toggle="tooltip" >
+    <a href="nestedloops.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="loops.html" >Next Section - 7. Loops - For and While</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="nestedloops.html" >Next Section - 8. Nested Loops</a>
 
 <script type="text/javascript">
 

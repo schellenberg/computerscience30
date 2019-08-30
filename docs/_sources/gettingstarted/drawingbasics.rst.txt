@@ -9,10 +9,9 @@ Drawing Primitives and Color
 Ideas from:
 ----------------
 
-`Processing basic drawing tutorial <https://processing.org/tutorials/drawing/>`_ (though this is written for the Java version of Processing, the same ideas apply...)
+`p5js basic drawing tutorial <https://p5js.org/learn/coordinate-system-and-shapes.html>`_ -- Coordinate System and Shapes
 
-
-`Processing color tutorial <https://p5js.org/learn/color.html>`_
+`p5js color tutorial <https://p5js.or g/learn/color.html>`_ -- we'll mostly use RGB
 
 
 p5js Example
