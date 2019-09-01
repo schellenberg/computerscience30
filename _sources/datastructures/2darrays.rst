@@ -88,7 +88,7 @@ Generate a 2d array. Make every entry either a 0 or a 1. Loop through the cols a
 Conway's Game of Life
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Introduce the Game of Life. Find some stable shapes. Be sure you completely understand how the game works **before** we attempt to code anything.
+Introduce the Game of Life (`presentation <https://docs.google.com/presentation/d/1c3T1NS3HTJZfyx6o3RTOKx1vM-SApqSmMxigyOnU9l0/edit?usp=sharing>`_ and :download:`handout <../handouts/game-of-life-handout.pdf>`. Find some stable shapes. Be sure you completely understand how the game works **before** we attempt to code anything.
 
 After everyone can determine the "next state" of the game, given a scenario, it's time to code it up.
 
