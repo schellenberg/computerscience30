@@ -10,7 +10,7 @@ Hex Overview
     :align: left
     :http: https
 
-`YouTube Link to Video <https://www.youtube.com/watch?v=jvx-NrILgpE>`_
+.. `YouTube Link to Video <https://www.youtube.com/watch?v=jvx-NrILgpE>`_
 
 Converting Hexadecimal
 ------------------------
@@ -21,4 +21,4 @@ Converting Hexadecimal
     :align: left
     :http: https
 
-`YouTube Link to Video <https://www.youtube.com/watch?v=t_kA5KQxByc>`_
+.. `YouTube Link to Video <https://www.youtube.com/watch?v=t_kA5KQxByc>`_

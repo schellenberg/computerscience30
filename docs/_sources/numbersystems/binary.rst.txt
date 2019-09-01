@@ -10,7 +10,7 @@ Binary Numbers and Base Systems
     :align: left
     :http: https
 
-`YouTube Link to Video <https://www.youtube.com/watch?v=LpuPe81bc2w>`_
+.. `YouTube Link to Video <https://www.youtube.com/watch?v=LpuPe81bc2w>`_
 
 
 Conversion between Binary and Decimal
@@ -22,7 +22,7 @@ Conversion between Binary and Decimal
     :align: left
     :http: https
 
-`YouTube Link to Video <https://www.youtube.com/watch?v=tfKe8PPI2zs>`_
+.. `YouTube Link <https://www.youtube.com/watch?v=tfKe8PPI2zs>`_
 
 
 Binary <-> Decimal Conversion Practice

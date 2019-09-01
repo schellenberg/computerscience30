@@ -1,11 +1,8 @@
-Number Systems 
-===============
+Base Conversion Practice 
+=========================
 
 You should be familiar with converting between binary, decimal and hexadecimal. We will work through these ideas on the whiteboard in class to be sure you are feeling confident with them.
 
-
-Base Conversion Practice
--------------------------
 
 .. .. raw:: html
 

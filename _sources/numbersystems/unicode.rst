@@ -10,7 +10,7 @@ The Unicode Miracle
     :align: left
     :http: https
 
-`YouTube Link to Video <https://www.youtube.com/watch?v=MijmeoH9LT4>`_
+.. `YouTube Link to Video <https://www.youtube.com/watch?v=MijmeoH9LT4>`_
 
 
 Will YouTube Ever Run Out of Video IDs?
@@ -22,4 +22,4 @@ Will YouTube Ever Run Out of Video IDs?
     :align: left
     :http: https
 
-`YouTube Link to Video <https://www.youtube.com/watch?v=gocwRvLhDf8>`_
+.. `YouTube Link to Video <https://www.youtube.com/watch?v=gocwRvLhDf8>`_

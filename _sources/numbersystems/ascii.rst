@@ -10,7 +10,7 @@ Understanding ASCII Video
     :align: left
     :http: https
 
-`YouTube Link to Video <https://www.youtube.com/watch?v=5aJKKgSEUnY>`_
+.. `YouTube Link to Video <https://www.youtube.com/watch?v=5aJKKgSEUnY>`_
 
 
 Character Table
