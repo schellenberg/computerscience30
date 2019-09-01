@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>1. Binary &#8212; Computer Science 30 - Schellenberg</title>
+    <title>4. ASCII &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -122,8 +122,8 @@
     <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Hexadecimal" href="hex.html" />
-    <link rel="prev" title="1. Recursion Explanation and Demos" href="../recursion/overview.html" />
+    <link rel="next" title="5. Unicode" href="unicode.html" />
+    <link rel="prev" title="3. Number Systems" href="practice.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -268,7 +268,7 @@
             <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=CS30&page=binary'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS30&page=ascii'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -283,10 +283,9 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">1. Binary</a><ul>
-<li><a class="reference internal" href="#binary-numbers-and-base-systems">1.1. Binary Numbers and Base Systems</a></li>
-<li><a class="reference internal" href="#conversion-between-binary-and-decimal">1.2. Conversion between Binary and Decimal</a></li>
-<li><a class="reference internal" href="#binary-decimal-conversion-practice">1.3. Binary &lt;-&gt; Decimal Conversion Practice</a></li>
+<li><a class="reference internal" href="#">4. ASCII</a><ul>
+<li><a class="reference internal" href="#understanding-ascii-video">4.1. Understanding ASCII Video</a></li>
+<li><a class="reference internal" href="#character-table">4.2. Character Table</a></li>
 </ul>
 </li>
 </ul>
@@ -296,14 +295,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 1. Recursion Explanation and Demos" data-toggle="tooltip">
-    <a href="../recursion/overview.html" >
+  <li id="relations-prev" title="Previous Chapter - 3. Number Systems" data-toggle="tooltip">
+    <a href="practice.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 2. Hexadecimal' data-toggle="tooltip" >
-    <a href="hex.html" >
+  <li id="relations-next" title='Next Chapter - 5. Unicode' data-toggle="tooltip" >
+    <a href="unicode.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -333,50 +332,38 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="binary">
-<h1>1. Binary<a class="headerlink" href="#binary" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="binary-numbers-and-base-systems">
-<h2>1.1. Binary Numbers and Base Systems<a class="headerlink" href="#binary-numbers-and-base-systems" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="ascii">
+<h1>4. ASCII<a class="headerlink" href="#ascii" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="understanding-ascii-video">
+<h2>4.1. Understanding ASCII Video<a class="headerlink" href="#understanding-ascii-video" title="Permalink to this headline">¶</a></h2>
 
     <div class="runestone" style="margin-left: auto; margin-right:auto">
-        <div id="LpuPe81bc2w" class="align-left youtube-video" data-video-height="315" data-video-width="560" data-video-videoid="LpuPe81bc2w" data-video-divid="LpuPe81bc2w" data-video-start="0" data-video-end="-1" ></div>
+        <div id="5aJKKgSEUnY" class="align-left youtube-video" data-video-height="315" data-video-width="560" data-video-videoid="5aJKKgSEUnY" data-video-divid="5aJKKgSEUnY" data-video-start="0" data-video-end="-1" ></div>
     </div>
-    <p><a class="reference external" href="https://www.youtube.com/watch?v=LpuPe81bc2w">YouTube Link to Video</a></p>
+    <p><a class="reference external" href="https://www.youtube.com/watch?v=5aJKKgSEUnY">YouTube Link to Video</a></p>
 </div>
-<div class="section" id="conversion-between-binary-and-decimal">
-<h2>1.2. Conversion between Binary and Decimal<a class="headerlink" href="#conversion-between-binary-and-decimal" title="Permalink to this headline">¶</a></h2>
-
-    <div class="runestone" style="margin-left: auto; margin-right:auto">
-        <div id="tfKe8PPI2zs" class="align-left youtube-video" data-video-height="315" data-video-width="560" data-video-videoid="tfKe8PPI2zs" data-video-divid="tfKe8PPI2zs" data-video-start="0" data-video-end="-1" ></div>
-    </div>
-    <div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">/Users/danschellenberg/Documents/GitHub/computerscience30/_sources/numbersystems/binary.rst</span>, line 2); <em><a href="#id1">backlink</a></em></p>
-<p>Duplicate explicit target name: “youtube link to video”.</p>
-</div>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=tfKe8PPI2zs">YouTube Link to Video</a></p>
-</div>
-<div class="section" id="binary-decimal-conversion-practice">
-<h2>1.3. Binary &lt;-&gt; Decimal Conversion Practice<a class="headerlink" href="#binary-decimal-conversion-practice" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://studio.code.org/projects/applab/iukLbcDnzqgoxuu810unLw">Practice Binary to/from Decimal Conversions</a></p>
+<div class="section" id="character-table">
+<h2>4.2. Character Table<a class="headerlink" href="#character-table" title="Permalink to this headline">¶</a></h2>
+<p>Search the web for <cite>ASCII table</cite> to find the assigned numerical values for each character. <a class="reference external" href="https://ascii.cl/">Here is one such table</a>.</p>
 </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 1. Recursion Explanation and Demos' data-toggle="tooltip">
-    <a href="../recursion/overview.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - 3. Number Systems' data-toggle="tooltip">
+    <a href="practice.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="../recursion/overview.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="practice.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 2. Hexadecimal' data-toggle="tooltip" >
-    <a href="hex.html" >
+  <li id="relations-next" class="navLink" title='Next Section - 5. Unicode' data-toggle="tooltip" >
+    <a href="unicode.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="hex.html" >Next Section - 2. Hexadecimal</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="unicode.html" >Next Section - 5. Unicode</a>
 
 <script type="text/javascript">
 

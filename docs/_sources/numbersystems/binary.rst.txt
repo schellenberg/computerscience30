@@ -23,3 +23,10 @@ Conversion between Binary and Decimal
     :http: https
 
 `YouTube Link to Video <https://www.youtube.com/watch?v=tfKe8PPI2zs>`_
+
+
+Binary <-> Decimal Conversion Practice
+----------------------------------------
+
+`Practice Binary to/from Decimal Conversions <https://studio.code.org/projects/applab/iukLbcDnzqgoxuu810unLw>`_ 
+
