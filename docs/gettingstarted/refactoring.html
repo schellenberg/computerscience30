@@ -285,11 +285,12 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">9. Refactoring Code</a><ul>
 <li><a class="reference internal" href="#introduction-to-refactoring-code">9.1. Introduction to Refactoring Code</a></li>
-<li><a class="reference internal" href="#bouncing-rectangle">9.2. Bouncing Rectangle</a></li>
-<li><a class="reference internal" href="#rollover">9.3. Rollover</a></li>
-<li><a class="reference internal" href="#target">9.4. Target</a></li>
-<li><a class="reference internal" href="#colorful-target">9.5. Colorful Target</a></li>
-<li><a class="reference internal" href="#chess-board">9.6. Chess Board</a></li>
+<li><a class="reference internal" href="#using-functions-to-increase-readability">9.2. Using Functions to Increase Readability</a></li>
+<li><a class="reference internal" href="#bouncing-rectangle">9.3. Bouncing Rectangle</a></li>
+<li><a class="reference internal" href="#rollover">9.4. Rollover</a></li>
+<li><a class="reference internal" href="#target">9.5. Target</a></li>
+<li><a class="reference internal" href="#colorful-target">9.6. Colorful Target</a></li>
+<li><a class="reference internal" href="#chess-board">9.7. Chess Board</a></li>
 </ul>
 </li>
 </ul>
@@ -346,8 +347,43 @@
 <h2>9.1. Introduction to Refactoring Code<a class="headerlink" href="#introduction-to-refactoring-code" title="Permalink to this headline">¶</a></h2>
 <p>Insert Stefan’s presentation here… (code refactorization, saved in Google Drive CS20-30 IS Team)</p>
 </div>
+<div class="section" id="using-functions-to-increase-readability">
+<h2>9.2. Using Functions to Increase Readability<a class="headerlink" href="#using-functions-to-increase-readability" title="Permalink to this headline">¶</a></h2>
+<p>Let’s improve the following code by using functions. Three logical functions to use might be move, bounce and display.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Learning Processing</span>
+<span class="c1">// Daniel Shiffman</span>
+<span class="c1">// http://www.learningprocessing.com</span>
+
+<span class="c1">// Example 5-6: Bouncing Ball</span>
+<span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">speed</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">size</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+
+    <span class="c1">// Add the current speed to the x location.</span>
+    <span class="nx">x</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">speed</span><span class="p">;</span>
+
+    <span class="c1">// Remember, || means &quot;or.&quot;</span>
+    <span class="k">if</span> <span class="p">((</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="nx">width</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
+        <span class="c1">// If the object reaches either edge, multiply speed by -1 to turn it around.</span>
+        <span class="nx">speed</span> <span class="o">=</span> <span class="nx">speed</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Display circle at x location</span>
+    <span class="nx">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="nx">fill</span><span class="p">(</span><span class="mi">175</span><span class="p">);</span>
+    <span class="nx">ellipse</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">32</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="bouncing-rectangle">
-<h2>9.2. Bouncing Rectangle<a class="headerlink" href="#bouncing-rectangle" title="Permalink to this headline">¶</a></h2>
+<h2>9.3. Bouncing Rectangle<a class="headerlink" href="#bouncing-rectangle" title="Permalink to this headline">¶</a></h2>
 <p>Refactor the following code. Be sure the functionality of the program remains the same once you have completed your refactoring.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>    <span class="kd">let</span> <span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">d</span><span class="p">;</span>
 <span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
@@ -365,7 +401,7 @@
 </div>
 </div>
 <div class="section" id="rollover">
-<h2>9.3. Rollover<a class="headerlink" href="#rollover" title="Permalink to this headline">¶</a></h2>
+<h2>9.4. Rollover<a class="headerlink" href="#rollover" title="Permalink to this headline">¶</a></h2>
 <p>Refactor the following code. Be sure the functionality of the program remains the same once you have completed your refactoring.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// This example is adapted from Learning Processing Example 5-3 by Daniel Shiffman</span>
 <span class="c1">// http://www.learningprocessing.com</span>
@@ -385,7 +421,7 @@
 </div>
 </div>
 <div class="section" id="target">
-<h2>9.4. Target<a class="headerlink" href="#target" title="Permalink to this headline">¶</a></h2>
+<h2>9.5. Target<a class="headerlink" href="#target" title="Permalink to this headline">¶</a></h2>
 <p>Refactor the following code. Be sure the functionality of the program remains the same once you have completed your refactoring.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
 <span class="nx">createCanvas</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>
@@ -408,7 +444,7 @@
 </div>
 </div>
 <div class="section" id="colorful-target">
-<h2>9.5. Colorful Target<a class="headerlink" href="#colorful-target" title="Permalink to this headline">¶</a></h2>
+<h2>9.6. Colorful Target<a class="headerlink" href="#colorful-target" title="Permalink to this headline">¶</a></h2>
 <p>Refactor the following code. Be sure the functionality of the program remains the same once you have completed your refactoring.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
 <span class="nx">createCanvas</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>
@@ -442,7 +478,7 @@
 </div>
 </div>
 <div class="section" id="chess-board">
-<h2>9.6. Chess Board<a class="headerlink" href="#chess-board" title="Permalink to this headline">¶</a></h2>
+<h2>9.7. Chess Board<a class="headerlink" href="#chess-board" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
 <span class="nx">createCanvas</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">);</span>
 <span class="p">}</span>

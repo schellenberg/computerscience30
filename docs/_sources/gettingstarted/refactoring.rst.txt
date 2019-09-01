@@ -11,6 +11,44 @@ Introduction to Refactoring Code
 
 Insert Stefan's presentation here... (code refactorization, saved in Google Drive CS20-30 IS Team)
 
+Using Functions to Increase Readability
+----------------------------------------
+
+Let's improve the following code by using functions. Three logical functions to use might be move, bounce and display.
+
+.. code-block:: javascript
+
+    // Learning Processing
+    // Daniel Shiffman
+    // http://www.learningprocessing.com
+
+    // Example 5-6: Bouncing Ball
+    let x = 0;
+    let speed = 1;
+
+    function setup() {
+        size(200,200);
+    }
+
+    function draw() {
+        background(255);
+
+        // Add the current speed to the x location.
+        x = x + speed;
+
+        // Remember, || means "or."
+        if ((x > width) || (x < 0)) {
+            // If the object reaches either edge, multiply speed by -1 to turn it around.
+            speed = speed * -1;
+        }
+
+        // Display circle at x location
+        stroke(0);
+        fill(175);
+        ellipse(x,100,32,32);
+    }
+
+
 
 Bouncing Rectangle
 -------------------
