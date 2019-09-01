@@ -125,6 +125,8 @@ Number Systems and Character Encoding
     :maxdepth: 1
     :numbered:
 
+    numbersystems/binary.rst
+    numbersystems/hex.rst
     numbersystems/practice.rst
 
 To be added:

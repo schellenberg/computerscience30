@@ -125,11 +125,11 @@ Number Systems and Character Encoding
     :maxdepth: 1
     :numbered:
 
+    numbersystems/binary.rst
+    numbersystems/hex.rst
     numbersystems/practice.rst
-
-To be added:
-- binary, decimal, hexadecimal explanation
-- ACSII and Unicode
+    numbersystems/ascii.rst
+    numbersystems/unicode.rst
 
 
 Capstone Coding Project

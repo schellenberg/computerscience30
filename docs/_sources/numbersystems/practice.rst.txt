@@ -3,17 +3,6 @@ Number Systems
 
 You should be familiar with converting between binary, decimal and hexadecimal. We will work through these ideas on the whiteboard in class to be sure you are feeling confident with them.
 
-Overview Video
----------------
-
-.. youtube:: jvx-NrILgpE
-    :height: 315
-    :width: 560
-    :align: left
-    :http: https
-
-`YouTube Link to Video <https://www.youtube.com/watch?v=jvx-NrILgpE>`_
-
 
 Base Conversion Practice
 -------------------------
