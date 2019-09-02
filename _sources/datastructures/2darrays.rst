@@ -92,6 +92,11 @@ Introduce the Game of Life (`presentation <https://docs.google.com/presentation/
 
 After everyone can determine the "next state" of the game, given a scenario, it's time to code it up.
 
+Platformer Example
+--------------------
+
+Load starting grid from a text file. Put images in the appropriate spots, based on which character was in the text file grid.
+
 
 Sudoku Example
 ~~~~~~~~~~~~~~~

@@ -94,6 +94,11 @@ Walker OOP.
         nevan.display();
     }
 
+Try This
+---------
+
+Change the probabilities for your random walker. Perhaps a particular walker has a tendency to head to the right side of the screen... 
+
 
 Demo with Arrays of Objects
 ----------------------------
@@ -118,9 +123,13 @@ Ball Bouncing Demo
 More Demos
 -----------------
 
-- Button (displays and handles clicks)
+- Button (displays and handles clicks -- create a class that allows you to draw buttons on the screen. Have the constructor take in values for the buttons x, y, width and height)
 - Stickman (displays, moves, followsMouse, eats, bounceAround)
+    - now use that to show multiple Stickmen on the screen, possibly doing different things
 - Ball (displays, moves)
-    - multiple instances -- basic collision detection and handling
+    - multiple instances 
+    - try this: basic collision detection and handling
 - Timer (start, pause, resume, setWaitTime)
+    - now use that to show multiple Stickmen on the screen, possibly doing different things
 - Bubble (display, bubbleUpToTop)
+    - Create a bubble class that sends bubbles soaring upwards, but that cannot go up beyond the top of the screen. Find an image online and make them display as that image. Their movement upwards should be bubble-ish (so it should move side to side as well as floating upwards)
