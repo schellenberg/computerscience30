@@ -227,16 +227,16 @@ Can also iterate using the length property of the array:
 CodingJS Practice Problems
 ----------------------------
 
-- `parrotTrouble <https://codingjs.wmcicompsci.ca/exercise?name=parrotTrouble&title=Warmup-1>`_
-- `diff21 <https://codingjs.wmcicompsci.ca/exercise?name=diff21&title=Warmup-1>`_
-- `makes10 <https://codingjs.wmcicompsci.ca/exercise?name=makes10&title=Warmup-1>`_
-- `nearHundred <https://codingjs.wmcicompsci.ca/exercise?name=nearHundred&title=Warmup-1>`_
-- `sortaSum <https://codingjs.wmcicompsci.ca/exercise?name=sortaSum&title=Logic-1>`_
-- `posNeg <https://codingjs.wmcicompsci.ca/exercise?name=posNeg&title=Warmup-1>`_
-- `cigarParty <https://codingjs.wmcicompsci.ca/exercise?name=cigarParty&title=Logic-1>`_
-- `dateFashion <https://codingjs.wmcicompsci.ca/exercise?name=dateFashion&title=Logic-1>`_
-- `squirrelPlay <https://codingjs.wmcicompsci.ca/exercise?name=squirrelPlay&title=Logic-1>`_
-- `love6 <https://codingjs.wmcicompsci.ca/exercise?name=love6&title=Logic-1>`_
-- `nearTen <https://codingjs.wmcicompsci.ca/exercise?name=nearTen&title=Logic-1>`_
+- `parrotTrouble <https://codingjs.wmcicompsci.ca/exercise.html?name=parrotTrouble&title=Warmup-1>`_
+- `diff21 <https://codingjs.wmcicompsci.ca/exercise.html?name=diff21&title=Warmup-1>`_
+- `makes10 <https://codingjs.wmcicompsci.ca/exercise.html?name=makes10&title=Warmup-1>`_
+- `nearHundred <https://codingjs.wmcicompsci.ca/exercise.html?name=nearHundred&title=Warmup-1>`_
+- `sortaSum <https://codingjs.wmcicompsci.ca/exercise.html?name=sortaSum&title=Logic-1>`_
+- `posNeg <https://codingjs.wmcicompsci.ca/exercise.html?name=posNeg&title=Warmup-1>`_
+- `cigarParty <https://codingjs.wmcicompsci.ca/exercise.html?name=cigarParty&title=Logic-1>`_
+- `dateFashion <https://codingjs.wmcicompsci.ca/exercise.html?name=dateFashion&title=Logic-1>`_
+- `squirrelPlay <https://codingjs.wmcicompsci.ca/exercise.html?name=squirrelPlay&title=Logic-1>`_
+- `love6 <https://codingjs.wmcicompsci.ca/exercise.html?name=love6&title=Logic-1>`_
+- `nearTen <https://codingjs.wmcicompsci.ca/exercise.html?name=nearTen&title=Logic-1>`_
 
 
