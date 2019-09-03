@@ -43,6 +43,7 @@ Getting Started
     gettingstarted/builtinfunctions.rst
     gettingstarted/translationrotation.rst
     gettingstarted/generativeart.rst
+    gettingstarted/perlin.rst
 
 
 Data Structures
@@ -111,7 +112,12 @@ Recursion
 Sorting
 ::::::::
 
-To be added: bubble, selection, insertion, quicksort?
+.. toctree::
+    :maxdepth: 1
+    :numbered:
+
+    sorting/bubble.rst
+    sorting/selection.rst
 
 
 Number Systems and Character Encoding
@@ -121,6 +127,7 @@ Number Systems and Character Encoding
     :maxdepth: 1
     :numbered:
 
+    numbersystems/bits.rst
     numbersystems/binary.rst
     numbersystems/hex.rst
     numbersystems/practice.rst

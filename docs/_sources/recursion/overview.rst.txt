@@ -3,9 +3,23 @@ Recursion Explanation and Demos
 
 Simply put, recursion is a function that calls itself.
 
+.. youtube:: Mv9NEXX1VHc
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
+.. `YouTube Link to Video <https://www.youtube.com/watch?v=Mv9NEXX1VHc>`_
+
 Refresh your memory of factorials. Define factorials recursively (math, then code).
 
-Practice problems from `CodingJS Recursion-1 <https://codingjs.wmcicompsci.ca/>`_ section.
+Practice problems from `CodingJS Recursion-1 <https://codingjs.wmcicompsci.ca/>`_ section. Be sure to do at least the following:
+
+- factorial
+- bunnyEars
+- fibonacci
+- triangle
+- bunnyEars2
 
 
 Sierpinski Triangle
