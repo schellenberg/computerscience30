@@ -1,4 +1,5 @@
 {
     "restructuredtext.confPath": "${workspaceFolder}",
-    "python.pythonPath": "C:\\Users\\schellenbergd\\.virtualenvs\\computerscience30-TSishxQG\\Scripts\\python.exe"
+    "python.pythonPath": "C:\\Users\\schellenbergd\\.virtualenvs\\computerscience30-TSishxQG\\Scripts\\python.exe",
+    "restructuredtext.linter.run": "off"
 }
