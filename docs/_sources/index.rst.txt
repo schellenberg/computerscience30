@@ -169,3 +169,16 @@ Helpful Links
 - `Collision Detection Library <https://github.com/bmoren/p5.collide2D>`_ -- p5.collide2D provides tools for calculating collision detection for 2D geometry with p5.js
 - `The Nature of Code <https://natureofcode.com/book/>`_ -- Goes beyond what we do in class. Written in Processing, not p5js, so you need to do a bit of code conversion. Ask me for help, if needed.
 - `Eloquent JavaScript book <https://eloquentjavascript.net/3rd_edition/>`_ -- though I will not follow all the same conventions, it's a good read
+
+
+Random Videos
+::::::::::::::
+
+- `Public Key Cryptography - Diffie/Hellman <https://www.youtube.com/watch?v=YEBfamv-_do>`_ 
+- `Hashing Algorithms and Security - Computerphile <https://www.youtube.com/watch?v=b4b8ktEV4Bg>`_ 
+- `How NOT to Store Passwords! - Computerphile <https://www.youtube.com/watch?v=8ZtInClXe1Q>`_ 
+- `Security of Data on Disk (SSD vs HD) <https://www.youtube.com/watch?v=4SSSMi4X_mA>`_ 
+- `How YouTube Works <https://www.youtube.com/watch?v=OqQk7kLuaK4>`_ 
+- `Data & Medicine - Code.org <https://www.youtube.com/watch?v=bMrDHtGHFR4>`_ 
+- `Cross Site Scripting - Computerphile <https://www.youtube.com/watch?v=L5l9lSnNMxg>`_ 
+- `SQL Injection - Computerphile <https://www.youtube.com/watch?v=_jKylhJtPmI>`_ 
