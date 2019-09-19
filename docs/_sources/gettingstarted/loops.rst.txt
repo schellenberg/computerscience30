@@ -27,7 +27,18 @@ For Loop Example::
   }
 
 
-Demo
------
+Refactoring Example 1
+----------------------
 
-Draw a archery target image using while loop. Then do it using a for loop. Then do it with a for loop, counting up from 0, and using an array of colors to fill in the circles.
+`Open this code, and refactor it using a for loop and while loop <https://editor.p5js.org/schellenberg/sketches/99xcneo7q>`_ 
+
+
+Refactoring Example 2
+----------------------
+
+`Open this code, and refactor it using a for loop and an array <https://editor.p5js.org/schellenberg/sketches/thcEnD26l>`_ 
+
+.. Demo
+.. -----
+
+.. Draw a archery target image using while loop. Then do it using a for loop. Then do it with a for loop, counting up from 0, and using an array of colors to fill in the circles.

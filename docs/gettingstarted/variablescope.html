@@ -2,35 +2,31 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>5. Variable Scope &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=341DBE1C" />
-    <link rel="stylesheet" type="text/css" href="../_static/activecode.css?v=78EE59F" />
-    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css?v=B28E0910" />
-    <link rel="stylesheet" type="text/css" href="../_static/clickable.css?v=343A135B" />
-    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css?v=D101CC50" />
-    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css?v=931EACB9" />
-    <link rel="stylesheet" type="text/css" href="../_static/datafile.css?v=BCD38BE" />
-    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css?v=A828DAB1" />
-    <link rel="stylesheet" type="text/css" href="../_static/fitb.css?v=71852D76" />
-    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=EA7C0F6C" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
     <link rel="stylesheet" type="text/css" href="../_static/p5.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/parsons.css?v=A1E2433E" />
-    <link rel="stylesheet" type="text/css" href="../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../_static/poll.css?v=431459C5" />
-    <link rel="stylesheet" type="text/css" href="../_static/reveal.css?v=7BF74A61" />
-    <link rel="stylesheet" type="text/css" href="../_static/showEval.css?v=F960C0B4" />
-    <link rel="stylesheet" type="text/css" href="../_static/spreadsheet.css?v=28549A88" />
-    <link rel="stylesheet" type="text/css" href="../_static/jexcel.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/japp.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css?v=8435FFC1" />
-    <link rel="stylesheet" type="text/css" href="../_static/video.css?v=E589DE38" />
-    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=4EB84728" />
-    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=21C88BC4" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/js_lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
@@ -42,70 +38,63 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/jquery.highlight.js?v=F48946A5"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js?v=99768D70"></script>
-    <script type="text/javascript" src="../_static/codemirror.js?v=77018329"></script>
-    <script type="text/javascript" src="../_static/xml.js?v=2D028995"></script>
-    <script type="text/javascript" src="../_static/css.js?v=DCA90274"></script>
-    <script type="text/javascript" src="../_static/python.js?v=24485A53"></script>
-    <script type="text/javascript" src="../_static/htmlmixed.js?v=372C094F"></script>
-    <script type="text/javascript" src="../_static/javascript.js?v=CEA7EE5E"></script>
-    <script type="text/javascript" src="../_static/sql.js?v=4CD470E6"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js?v=6F1F5263"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js?v=998C78A1"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js?v=8EBB15E7"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=5824D9C3"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js?v=98DF5447"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js?v=55219209"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js?v=4F0BEBCB"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=15D4678A"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.en.js?v=DA169A22"></script>
-    <script type="text/javascript" src="../_static/skulpt.min.js?v=EEB8131E"></script>
-    <script type="text/javascript" src="../_static/skulpt-stdlib.js?v=A9BBDEEE"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../_static/activecode.js?v=DAEF8A8A"></script>
-    <script type="text/javascript" src="../_static/clike.js?v=B985002B"></script>
-    <script type="text/javascript" src="../_static/timed_activecode.js?v=C841A5EC"></script>
-    <script type="text/javascript" src="../_static/sql-wasm.js?v=DE2A0975"></script>
-    <script type="text/javascript" src="../_static/animationbase.js?v=B45130AE"></script>
-    <script type="text/javascript" src="../_static/mchoice.js?v=8BF4AC13"></script>
-    <script type="text/javascript" src="../_static/timedmc.js?v=9304523A"></script>
-    <script type="text/javascript" src="../_static/timed.js?v=9D71EDF0"></script>
-    <script type="text/javascript" src="../_static/clickable.js?v=6690DBCF"></script>
-    <script type="text/javascript" src="../_static/timedclickable.js?v=5BA90747"></script>
-    <script type="text/javascript" src="../_static/d3.v2.min.js?v=ADE5D104"></script>
-    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js?v=C6DC1D07"></script>
-    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../_static/pytutor.js?v=DF08F5B7"></script>
-    <script type="text/javascript" src="../_static/codelens.js?v=68D45700"></script>
-    <script type="text/javascript" src="../_static/datafile.js?v=C14D6F8"></script>
-    <script type="text/javascript" src="../_static/dragndrop.js?v=84188863"></script>
-    <script type="text/javascript" src="../_static/timeddnd.js?v=1A222EDB"></script>
-    <script type="text/javascript" src="../_static/fitb.js?v=FA60A182"></script>
-    <script type="text/javascript" src="../_static/timedfitb.js?v=D4FEAAC3"></script>
-    <script type="text/javascript" src="../_static/lp.js?v=2701088E"></script>
-    <script type="text/javascript" src="../_static/gas.js?v=D2930CED"></script>
-    <script type="text/javascript" src="../_static/matrixeq.js?v=1FB22B23"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
     <script type="text/javascript" src="../_static/p5-widget.js"></script>
-    <script type="text/javascript" src="../_static/js_lib/prettify.js?v=D560DBAE"></script>
-    <script type="text/javascript" src="../_static/js_lib/hammer.min.js?v=15E24CE5"></script>
-    <script type="text/javascript" src="../_static/parsons.js?v=C67A953C"></script>
-    <script type="text/javascript" src="../_static/timedparsons.js?v=4BB0E482"></script>
-    <script type="text/javascript" src="../_static/poll.js?v=C0A3DF52"></script>
-    <script type="text/javascript" src="../_static/reveal.js?v=83C3F10"></script>
-    <script type="text/javascript" src="../_static/shortanswer.js?v=BA091142"></script>
-    <script type="text/javascript" src="../_static/timed_shortanswer.js?v=90301BA9"></script>
-    <script type="text/javascript" src="../_static/showEval.js?v=2064C798"></script>
-    <script type="text/javascript" src="../_static/spreadsheet.js?v=9B995CB7"></script>
-    <script type="text/javascript" src="../_static/jexcel.js"></script>
-    <script type="text/javascript" src="../_static/japp.js"></script>
-    <script type="text/javascript" src="../_static/tabbedstuff.js?v=196A23BC"></script>
-    <script type="text/javascript" src="../_static/runestonevideo.js?v=255DE041"></script>
-    <script type="text/javascript" src="../_static/webglinteractive.js?v=7D80F988"></script>
-    <script type="text/javascript" src="../_static/FileSaver.min.js?v=8B232E7A"></script>
-    <script type="text/javascript" src="../_static/Blob.js?v=3D0C0929"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script type="text/javascript" src="../_static/jquery-fix.js"></script>
@@ -142,7 +131,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '4.1.0';
+  eBookConfig.runestone_version = '3.2.8';
 </script>
 
 <div id="fb-root"></div>
@@ -380,9 +369,9 @@ let a = 80;
 </div>
 <p>Things to try:</p>
 <ul class="simple">
-<li><p>add a <code class="docutils literal notranslate"><span class="pre">let</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">50;</span></code> as the first line inside of the draw() loop</p></li>
-<li><p>move the <code class="docutils literal notranslate"><span class="pre">let</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">50;</span></code> to be the second line inside of the draw() loop (after the first line is drawn)</p></li>
-<li><p>try both of the above again, but this time remove the <code class="docutils literal notranslate"><span class="pre">let</span></code>, so it simply reads <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">50;</span></code></p></li>
+<li>add a <code class="docutils literal notranslate"><span class="pre">let</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">50;</span></code> as the first line inside of the draw() loop</li>
+<li>move the <code class="docutils literal notranslate"><span class="pre">let</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">50;</span></code> to be the second line inside of the draw() loop (after the first line is drawn)</li>
+<li>try both of the above again, but this time remove the <code class="docutils literal notranslate"><span class="pre">let</span></code>, so it simply reads <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">50;</span></code></li>
 </ul>
 <p>Be sure you understand exactly why each of the results of the situations above happen! You may want to open up the Chrome (or whatever browser you are using) console (F12, or Ctrl-Opt/Alt-J).</p>
 </div>
@@ -422,7 +411,7 @@ let a = 80;
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 4.1.0.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 3.2.8.
     </p>
   </div>
 </footer>
