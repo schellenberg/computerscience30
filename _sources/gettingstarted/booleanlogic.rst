@@ -22,11 +22,18 @@ Reading Code
 .. If you want, you can get an :download:`editable version of the handout <../handouts/explaining_booleans.docx>`.
 
 
-Practice Problem
------------------
+*Don't open these until you have read the handout above, and figured out what will happen using only your brain!*
 
-Create a sketch so that:
+- `Solution to Example 1 <https://editor.p5js.org/schellenberg/full/36XCzEGKQ>`_ 
+- `Solution to Example 2 <https://editor.p5js.org/schellenberg/full/X45nRNukc>`_ 
 
-- if the mouse is pressed and the "t" key is pressed, triangles will be drawn all over the screen. Each triangle should be the same shape, just in different locations.
 
-- if the "x" or "z" keys are pressed, draw ellipses all over the screen
+
+.. Practice Problem
+.. -----------------
+
+.. Create a sketch so that:
+
+.. - if the mouse is pressed and the "t" key is pressed, triangles will be drawn all over the screen. Each triangle should be the same shape, just in different locations.
+
+.. - if the "x" or "z" keys are pressed, draw ellipses all over the screen

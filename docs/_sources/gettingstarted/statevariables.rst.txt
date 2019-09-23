@@ -13,6 +13,7 @@ Create a sketch that accomplishes the following:
 
 .. image:: images/moving_rectangle.gif
 
+You can `open a live version of this here <https://editor.p5js.org/schellenberg/present/-4DTtO-om>`_ 
 
 Have students attempt this first, *before* introducing the idea of a state variable.
 
