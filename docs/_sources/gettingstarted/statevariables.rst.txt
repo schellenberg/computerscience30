@@ -47,6 +47,7 @@ You can find out how many milliseconds (thousands of a second) have elapsed sinc
 	  }
 	}
 
+`Open an editable version of the above code in the p5js editor <https://editor.p5js.org/schellenberg/sketches/N1b8Tk-M9>`_ 
 
 
 Try This
@@ -91,6 +92,9 @@ Traffic light simluator. Start with the following code, and attempt to get a tra
 	  ellipse(width/2, height/2, 50, 50); //middle
 	  ellipse(width/2, height/2 + 65, 50, 50); //bottom
 	}
+
+
+`Open an editable version of the above code in the p5js editor <https://editor.p5js.org/schellenberg/sketches/N51M3BkvY>`_ 
 
 
 Practice Problem
