@@ -47,7 +47,7 @@ You can find out how many milliseconds (thousands of a second) have elapsed sinc
 	  }
 	}
 
-`Open an editable version of the above code in the p5js editor <https://editor.p5js.org/schellenberg/sketches/N1b8Tk-M9>`_ 
+`Open an editable version of the millis example above in the p5js editor <https://editor.p5js.org/schellenberg/sketches/N1b8Tk-M9>`_ 
 
 
 Try This
@@ -94,7 +94,7 @@ Traffic light simluator. Start with the following code, and attempt to get a tra
 	}
 
 
-`Open an editable version of the above code in the p5js editor <https://editor.p5js.org/schellenberg/sketches/N51M3BkvY>`_ 
+`Open an editable version of the traffic light starter code above in the p5js editor <https://editor.p5js.org/schellenberg/sketches/N51M3BkvY>`_ 
 
 
 Practice Problem
