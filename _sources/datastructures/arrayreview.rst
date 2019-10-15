@@ -97,34 +97,34 @@ Array Practice Questions
 No Looping Required
 ~~~~~~~~~~~~~~~~~~~~
 
-- `firstLast6 <https://codingjs.wmcicompsci.ca/exercise?name=firstLast6&title=Array-1>`_
-- `sameFirstLast <https://codingjs.wmcicompsci.ca/exercise?name=sameFirstLast&title=Array-1>`_
-- `makePi <https://codingjs.wmcicompsci.ca/exercise?name=makePi&title=Array-1>`_
-- `commonEnd <https://codingjs.wmcicompsci.ca/exercise?name=commonEnd&title=Array-1>`_
-- `sum3 <https://codingjs.wmcicompsci.ca/exercise?name=sum3&title=Array-1>`_
-- `rotateLeft3 <https://codingjs.wmcicompsci.ca/exercise?name=rotateLeft3&title=Array-1>`_
-- `reverse3 <https://codingjs.wmcicompsci.ca/exercise?name=reverse3&title=Array-1>`_
-- `sum2 <https://codingjs.wmcicompsci.ca/exercise?name=sum2&title=Array-1>`_
-- `has23 <https://codingjs.wmcicompsci.ca/exercise?name=has23&title=Array-1>`_
-- `double23 <https://codingjs.wmcicompsci.ca/exercise?name=double23&title=Array-1>`_
-- `makeMiddle <https://codingjs.wmcicompsci.ca/exercise?name=makeMiddle&title=Array-1>`_
-- `midThree <https://codingjs.wmcicompsci.ca/exercise?name=midThree&title=Array-1>`_
+- `firstLast6 <https://codingjs.wmcicompsci.ca/exercise.html?name=firstLast6&title=Array-1>`_
+- `sameFirstLast <https://codingjs.wmcicompsci.ca/exercise.html?name=sameFirstLast&title=Array-1>`_
+- `makePi <https://codingjs.wmcicompsci.ca/exercise.html?name=makePi&title=Array-1>`_
+- `commonEnd <https://codingjs.wmcicompsci.ca/exercise.html?name=commonEnd&title=Array-1>`_
+- `sum3 <https://codingjs.wmcicompsci.ca/exercise.html?name=sum3&title=Array-1>`_
+- `rotateLeft3 <https://codingjs.wmcicompsci.ca/exercise.html?name=rotateLeft3&title=Array-1>`_
+- `reverse3 <https://codingjs.wmcicompsci.ca/exercise.html?name=reverse3&title=Array-1>`_
+- `sum2 <https://codingjs.wmcicompsci.ca/exercise.html?name=sum2&title=Array-1>`_
+- `has23 <https://codingjs.wmcicompsci.ca/exercise.html?name=has23&title=Array-1>`_
+- `double23 <https://codingjs.wmcicompsci.ca/exercise.html?name=double23&title=Array-1>`_
+- `makeMiddle <https://codingjs.wmcicompsci.ca/exercise.html?name=makeMiddle&title=Array-1>`_
+- `midThree <https://codingjs.wmcicompsci.ca/exercise.html?name=midThree&title=Array-1>`_
 
 
 Looping Required
 ~~~~~~~~~~~~~~~~~
 
-- `countEvens <https://codingjs.wmcicompsci.ca/exercise?name=countEvens&title=Array-2>`_
-- `has22 <https://codingjs.wmcicompsci.ca/exercise?name=has22&title=Array-2>`_
-- `only14 <https://codingjs.wmcicompsci.ca/exercise?name=only14&title=Array-2>`_
-- `lucky13 <https://codingjs.wmcicompsci.ca/exercise?name=lucky13&title=Array-2>`_
-- `makeLast <https://codingjs.wmcicompsci.ca/exercise?name=makeLast&title=Array-1>`_
-- `maxEnd3 <https://codingjs.wmcicompsci.ca/exercise?name=maxEnd3&title=Array-1>`_
-- `fizzArray <https://codingjs.wmcicompsci.ca/exercise?name=fizzArray&title=Array-2>`_
-- `has77 <https://codingjs.wmcicompsci.ca/exercise?name=has77&title=Array-2>`_
-- `tripleUp <https://codingjs.wmcicompsci.ca/exercise?name=tripleUp&title=Array-2>`_
-- `tenRun <https://codingjs.wmcicompsci.ca/exercise?name=tenRun&title=Array-2>`_
-- `withoutTen <https://codingjs.wmcicompsci.ca/exercise?name=withoutTen&title=Array-2>`_
+- `countEvens <https://codingjs.wmcicompsci.ca/exercise.html?name=countEvens&title=Array-2>`_
+- `has22 <https://codingjs.wmcicompsci.ca/exercise.html?name=has22&title=Array-2>`_
+- `only14 <https://codingjs.wmcicompsci.ca/exercise.html?name=only14&title=Array-2>`_
+- `lucky13 <https://codingjs.wmcicompsci.ca/exercise.html?name=lucky13&title=Array-2>`_
+- `makeLast <https://codingjs.wmcicompsci.ca/exercise.html?name=makeLast&title=Array-1>`_
+- `maxEnd3 <https://codingjs.wmcicompsci.ca/exercise.html?name=maxEnd3&title=Array-1>`_
+- `fizzArray <https://codingjs.wmcicompsci.ca/exercise.html?name=fizzArray&title=Array-2>`_
+- `has77 <https://codingjs.wmcicompsci.ca/exercise.html?name=has77&title=Array-2>`_
+- `tripleUp <https://codingjs.wmcicompsci.ca/exercise.html?name=tripleUp&title=Array-2>`_
+- `tenRun <https://codingjs.wmcicompsci.ca/exercise.html?name=tenRun&title=Array-2>`_
+- `withoutTen <https://codingjs.wmcicompsci.ca/exercise.html?name=withoutTen&title=Array-2>`_
   
 When you finish the questions listed above, just pick any of the questions from Array-1, Array-2 or Array-3. If you want a few more, check out the AP-1 secion (problems sourced from previous AP Computer Science exams).
 
