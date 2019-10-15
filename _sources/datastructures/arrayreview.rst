@@ -62,10 +62,12 @@ If you want to create a copy of an array that is **not** pointing to the same me
 .. code-block:: javascript
 
     let stuff = [52, 78, "hey"];
-    let other = stuff.slice();
+    let other = [...stuff];   //or you can use stuff.slice();
     other[1] = 35;
     // now, other equals [52, 35, "hey"]
     // and stuff equals [52, 78, "hey"]
+
+.. note:: Be aware that this method only creates a completely new array for single-dimensional arrays!
 
 
 Creating an Array of a Specific Size
