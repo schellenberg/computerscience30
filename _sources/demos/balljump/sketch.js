@@ -1,6 +1,6 @@
-// p5js template project - replace with project title
-// Dan Schellenberg - replace with your name
-// Feb 2, 2018 - replace with the date
+// basic gravity jumping demo for Donovan
+// Dan Schellenberg
+// Oct 17, 2019
 
 let x, y;
 let radius;
@@ -8,8 +8,6 @@ let xVelocity, yVelocity;
 let xAcceleration, yAcceration;
 let gravity;
 
-// the setup function will only run once (before the draw loop begins)
-// this is where you want to set up the environment (size of canvas, etc)
 function setup() {
   createCanvas(windowWidth, windowHeight);
   radius = 50;
@@ -29,6 +27,12 @@ function draw() {
   y += yVelocity;
 
   yAcceration = 0;
+
+  // handle hitting the ground
+  if (y + radius >= height) {
+    y = height - radius - 1; //just above the ground
+    yVelocity = 0;
+  }
 
   //display ball
   ellipse(x, y, radius*2, radius*2);
