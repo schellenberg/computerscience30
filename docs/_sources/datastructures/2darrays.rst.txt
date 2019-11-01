@@ -8,40 +8,40 @@ To create an two dimensional array:
 
 .. code-block:: javascript
 
-	let stuff = [[5, 10], ["thing", true, 42], [6, 3, 8, "happy"]];
+    let stuff = [[5, 10], ["thing", true, 42], [6, 3, 8, "happy"]];
 
 To access a value in the array:
 
 .. code-block:: javascript
 
-	stuff[0] 	// [5, 10]
-	stuff[0][1] // 10
-	stuff[2] 	// [6, 3, 8, "happy"]
-	stuff[2][3]	// "happy"
+    stuff[0] 	// [5, 10]
+    stuff[0][1] // 10
+    stuff[2] 	// [6, 3, 8, "happy"]
+    stuff[2][3]	// "happy"
 
 
 To add a value at the end of the array:
 
 .. code-block:: javascript
 
-	stuff.push([5, 2, "other"])
-	// stuff now equals [[5, 10], ["thing", true, 42], [6, 3, 8, "happy"], [5, 2, "other"]]
+    stuff.push([5, 2, "other"])
+    // stuff now equals [[5, 10], ["thing", true, 42], [6, 3, 8, "happy"], [5, 2, "other"]]
 
 To add a value inside one level of the array:
 
 .. code-block:: javascript
 
-	stuff[0].push("great")
-	// stuff now equals [[5, 10, "great"], ["thing", true, 42], [6, 3, 8, "happy"], [5, 2, "other"]]
+    stuff[0].push("great")
+    // stuff now equals [[5, 10, "great"], ["thing", true, 42], [6, 3, 8, "happy"], [5, 2, "other"]]
 
 
 To remove a value from end of array:
 
 .. code-block:: javascript
 
-	let last = stuff.pop()
-	// last now equals [5, 2, "other"]
-	// stuff now equals [[5, 10, "great"], ["thing", true, 42], [6, 3, 8, "happy"]]
+    let last = stuff.pop()
+    // last now equals [5, 2, "other"]
+    // stuff now equals [[5, 10, "great"], ["thing", true, 42], [6, 3, 8, "happy"]]
 
 To add/remove from the front of the array, use ``unshift("something")`` and ``shift()`` respectively.
 
@@ -52,26 +52,26 @@ To create a 10x10 2d array, all filled with 0s.
 
     let emptyArray = [];
     for (let i=0; i<10; i++) {
-    	emptyArray.push([])
-    	for (let j=0; j<10; j++) {
-    		emptyArray[i].push(0);
-    	}
+        emptyArray.push([])
+        for (let j=0; j<10; j++) {
+            emptyArray[i].push(0);
+        }
     }
 
 A handy function that will create a two dimensional array, all filled with 0s. 
 
 .. code-block:: javascript
 
-	function create2dArray(cols, rows) {
-	    let emptyArray = [];
-	    for (let i=0; i<cols; i++) {
-	    	emptyArray.push([])
-	    	for (let j=0; j<rows; j++) {
-	    		emptyArray[i].push(0);
-	    	}
-	    }
-	    return emptyArray;
-	}
+    function create2dArray(cols, rows) {
+        let emptyArray = [];
+        for (let i = 0; i < cols; i++) {
+            emptyArray.push([])
+            for (let j = 0; j < rows; j++) {
+                emptyArray[i].push(0);
+            }
+        }
+        return emptyArray;
+    }
 
     let myArray = create2dArray(20, 20);
 
@@ -93,7 +93,7 @@ Introduce the Game of Life (`presentation <https://docs.google.com/presentation/
 After everyone can determine the "next state" of the game, given a scenario, it's time to code it up.
 
 Platformer Example
---------------------
+~~~~~~~~~~~~~~~~~~~
 
 Load starting grid from a text file. Put images in the appropriate spots, based on which character was in the text file grid.
 
@@ -102,3 +102,50 @@ Sudoku Example
 ~~~~~~~~~~~~~~~
 
 Hard code a 2d array sudoku initial grid, putting in 0's wherever you want a blank. Also make a 2d array containing the completed grid. Adapt the game of life code (or just start over) to display the sudoku grid.
+
+
+
+2-D Arrays Practice Quiz
+-------------------------
+
+
+Question 1
+~~~~~~~~~~~
+
+.. parsonsprob:: 2d-arrays-practice-quiz-1
+    :language: javascript
+
+    Rearrange the given code to create a 2 dimensional array.</p>
+    -----
+    let rows = 20;
+    let cols = 20;
+    let someArray = [];
+    for (let i = 0; i < cols; i++) {
+        someArray.push([])
+        for (let j = 0; j < rows; j++) {
+            someArray[i].push(0);
+        }
+    }
+
+
+Question 2
+~~~~~~~~~~~
+
+.. fillintheblank:: 2d-arrays-practice-quiz-2
+
+    What will the following program print?::
+
+        let counter = 0;
+        let someArray = [[0,1,1,0],
+                         [1,0,1,0],
+                         [1,0,0,0],
+                         [0,1,0,1]];
+        for (let i = 0; i < someArray.length; i++) {
+            for (let j = 0; j < someArray[i].length; j++) {
+                counter += someArray[i][j];
+            }
+        }
+
+    - :7: Great!
+      :.*: Try again! Think about what that nested for loop is doing...
+

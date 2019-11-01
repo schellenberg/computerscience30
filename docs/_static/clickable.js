@@ -160,7 +160,7 @@ ClickableArea.prototype.checkLocalStorage = function () {
     this.hasStoredAnswers = false;
     var len = localStorage.length;
     if (len > 0) {
-        var ex = localStorage.getItem(this.localStorageKey());
+        var ex = localStorage.getItem(eBookConfig.email + ":" + this.divid + "-given");
         if (ex !== null) {
             this.hasStoredAnswers = true;
             try {
@@ -169,7 +169,7 @@ ClickableArea.prototype.checkLocalStorage = function () {
             } catch (err) {
                 // error while parsing; likely due to bad value stored in storage
                 console.log(err.message);
-                localStorage.removeItem(this.localStorageKey());
+                localStorage.removeItem(eBookConfig.email + ":" + this.divid + "-given");
                 this.hasStoredAnswers = false;
                 this.restoreAnswers({});
                 return;
@@ -209,7 +209,7 @@ ClickableArea.prototype.setLocalStorage = function (data) {
     var timeStamp = new Date();
     var correct = data.correct;
     var storageObject = {"answer": answer, "correct": correct, "timestamp": timeStamp};
-    localStorage.setItem(this.localStorageKey(), JSON.stringify(storageObject));
+    localStorage.setItem(eBookConfig.email + ":" + this.divid + "-given", JSON.stringify(storageObject));
 };
 
 /*==========================

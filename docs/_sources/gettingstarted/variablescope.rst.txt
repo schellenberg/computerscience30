@@ -57,3 +57,9 @@ Things to try:
 - try both of the above again, but this time remove the ``let``, so it simply reads ``a = 50;``
 
 Be sure you understand exactly why each of the results of the situations above happen! You may want to open up the Chrome (or whatever browser you are using) console (F12, or Ctrl-Opt/Alt-J).
+
+
+Practice Quiz
+--------------
+
+Needs to be created...
