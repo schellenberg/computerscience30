@@ -34,11 +34,7 @@ Proposal
 
 Daily GitHub commit history 
     - Can see progress over time with commits
-    - 5 marks
-
-Milestone history included 
-    - history.md file updated over time 
-    - 5 marks
+    - 10 marks
 
 Time Management 
     - Used all class time wisely
