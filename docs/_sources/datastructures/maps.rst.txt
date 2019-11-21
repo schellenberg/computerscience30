@@ -32,6 +32,35 @@ To check if a key exists inside a map:
 
 Note that we can save any type of data inside the value, not just a string. It can be a number, an object, an array, etc. A simple example would be to save coordinates (an x, y pair) into a map as an object...
 
+CodingJS Practice Problems
+---------------------------
+
+Map Level 1
+~~~~~~~~~~~~
+
+- `mapCount <https://codingjs.wmcicompsci.ca/exercise.html?name=mapCount&title=Map-1>`_ 
+- `mapBully <https://codingjs.wmcicompsci.ca/exercise.html?name=mapBully&title=Map-1>`_ 
+- `mapShare <https://codingjs.wmcicompsci.ca/exercise.html?name=mapShare&title=Map-1>`_ 
+- `mapAB <https://codingjs.wmcicompsci.ca/exercise.html?name=mapAB&title=Map-1>`_ 
+- `topping1 <https://codingjs.wmcicompsci.ca/exercise.html?name=topping1&title=Map-1>`_ 
+- `topping2 <https://codingjs.wmcicompsci.ca/exercise.html?name=topping2&title=Map-1>`_ 
+- `topping3 <https://codingjs.wmcicompsci.ca/exercise.html?name=topping3&title=Map-1>`_ 
+- `mapAB2 <https://codingjs.wmcicompsci.ca/exercise.html?name=mapAB2&title=Map-1>`_ 
+- `mapAB3 <https://codingjs.wmcicompsci.ca/exercise.html?name=mapAB3&title=Map-1>`_ 
+- `mapAB4 <https://codingjs.wmcicompsci.ca/exercise.html?name=mapAB4&title=Map-1>`_ 
+
+Map Level 2
+~~~~~~~~~~~~
+
+- `word0 <https://codingjs.wmcicompsci.ca/exercise.html?name=word0&title=Map-2>`_ 
+- `wordLen <https://codingjs.wmcicompsci.ca/exercise.html?name=wordLen&title=Map-2>`_ 
+- `pairs <https://codingjs.wmcicompsci.ca/exercise.html?name=pairs&title=Map-2>`_ 
+- `wordCount <https://codingjs.wmcicompsci.ca/exercise.html?name=wordCount&title=Map-2>`_ 
+- `firstChar <https://codingjs.wmcicompsci.ca/exercise.html?name=firstChar&title=Map-2>`_ 
+- `wordAppend <https://codingjs.wmcicompsci.ca/exercise.html?name=wordAppend&title=Map-2>`_ 
+- `wordMultiple <https://codingjs.wmcicompsci.ca/exercise.html?name=wordMultiple&title=Map-2>`_ 
+- `allSwap <https://codingjs.wmcicompsci.ca/exercise.html?name=allSwap&title=Map-2>`_ 
+- `firstSwap <https://codingjs.wmcicompsci.ca/exercise.html?name=firstSwap&title=Map-2>`_ 
 
 More In Depth Demo
 -------------------
@@ -43,4 +72,8 @@ Assignment Idea
 -----------------
 
 Give starter code for movie review sentiment analysis, and have the students just fill in two functions (related to storing/accessing information from a Map). `Idea from Nifty assignments <http://nifty.stanford.edu/2016/manley-urness-movie-review-sentiment/>`_ 
+
+
+Practice Quiz
+--------------
 
