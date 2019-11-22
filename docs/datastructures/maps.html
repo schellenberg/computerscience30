@@ -401,7 +401,186 @@
 </div>
 <div class="section" id="practice-quiz">
 <h2>3.4. Practice Quiz<a class="headerlink" href="#practice-quiz" title="Permalink to this headline">¶</a></h2>
+
+        <div class="runestone">
+        <div data-component="fillintheblank" id="maps_parsing_code_1">
+            <p>Q-1: What would the following code print?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">wordArray</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;computer&quot;</span><span class="p">,</span> <span class="s2">&quot;science&quot;</span><span class="p">,</span> <span class="s2">&quot;thirty&quot;</span><span class="p">];</span>
+<span class="n">let</span> <span class="n">myMap</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Map</span><span class="p">();</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">wordArray</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">wordArray</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">wordArray</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">length</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">myMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;science&quot;</span><span class="p">));</span>
+</pre></div>
 </div>
+<input type="text">
+        <script type="application/json">
+            [[{"number": [7, 7], "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="maps_parsing_code_2">
+            <p>Q-2: What would the following code print?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">wordArray</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;computer&quot;</span><span class="p">,</span> <span class="s2">&quot;science&quot;</span><span class="p">,</span> <span class="s2">&quot;thirty&quot;</span><span class="p">];</span>
+<span class="n">let</span> <span class="n">myMap</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Map</span><span class="p">();</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">wordArray</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">wordArray</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">wordArray</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">length</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">myMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;computer&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<input type="text">
+        <script type="application/json">
+            [[{"number": [8, 8], "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="maps_parsing_code_3">
+            <p>Q-3: What would the following code print?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">mapChanger</span><span class="p">(</span><span class="n">someMap</span><span class="p">){</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">someMap</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">someMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">someMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">));</span>
+  <span class="p">}</span>
+  <span class="n">someMap</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">someMap</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">let</span> <span class="n">myMap</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Map</span><span class="p">();</span>
+<span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">);</span>
+<span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">);</span>
+<span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;excited&quot;</span><span class="p">);</span>
+
+<span class="n">myMap</span> <span class="o">=</span> <span class="n">mapChanger</span><span class="p">(</span><span class="n">myMap</span><span class="p">);</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">myMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*happy\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="maps_parsing_code_4">
+            <p>Q-4: What would the following code print?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">mapChanger</span><span class="p">(</span><span class="n">someMap</span><span class="p">){</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">someMap</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">someMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">someMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">));</span>
+  <span class="p">}</span>
+  <span class="n">someMap</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">someMap</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">let</span> <span class="n">myMap</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Map</span><span class="p">();</span>
+<span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">);</span>
+<span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;excited&quot;</span><span class="p">);</span>
+
+<span class="n">myMap</span> <span class="o">=</span> <span class="n">mapChanger</span><span class="p">(</span><span class="n">myMap</span><span class="p">);</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">myMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*sad\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="maps_parsing_code_5">
+            <p>Q-5: What would the following code print?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">mapChanger</span><span class="p">(</span><span class="n">someMap</span><span class="p">){</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">someMap</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">someMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">someMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">));</span>
+  <span class="p">}</span>
+  <span class="n">someMap</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">someMap</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">let</span> <span class="n">myMap</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Map</span><span class="p">();</span>
+<span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">);</span>
+<span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;excited&quot;</span><span class="p">);</span>
+
+<span class="n">myMap</span> <span class="o">=</span> <span class="n">mapChanger</span><span class="p">(</span><span class="n">myMap</span><span class="p">);</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">myMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*undefined\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! What does JavaScript send back if you try to access something that doesn\u2019t exist?</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="maps_parsing_code_6">
+            <p>Q-6: What would the following code print?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">otherMapChanger</span><span class="p">(</span><span class="n">someMap</span><span class="p">){</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">someMap</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">someMap</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">let</span> <span class="n">combined</span> <span class="o">=</span> <span class="n">someMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">someMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">);</span>
+    <span class="n">someMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;ab&quot;</span><span class="p">,</span> <span class="n">combined</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">someMap</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">let</span> <span class="n">myMap</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Map</span><span class="p">();</span>
+<span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;happy&quot;</span><span class="p">);</span>
+<span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">);</span>
+<span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;excited&quot;</span><span class="p">);</span>
+
+<span class="n">myMap</span> <span class="o">=</span> <span class="n">otherMapChanger</span><span class="p">(</span><span class="n">myMap</span><span class="p">);</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">myMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;ab&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*happysad\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again!</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+        <div class="runestone">
+        <div data-component="fillintheblank" id="maps_parsing_code_7">
+            <p>Q-7: What would the following code print?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">otherMapChanger</span><span class="p">(</span><span class="n">someMap</span><span class="p">){</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">someMap</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">someMap</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">let</span> <span class="n">combined</span> <span class="o">=</span> <span class="n">someMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">someMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">);</span>
+    <span class="n">someMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;ab&quot;</span><span class="p">,</span> <span class="n">combined</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">someMap</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">let</span> <span class="n">myMap</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Map</span><span class="p">();</span>
+<span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;sad&quot;</span><span class="p">);</span>
+<span class="n">myMap</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;excited&quot;</span><span class="p">);</span>
+
+<span class="n">myMap</span> <span class="o">=</span> <span class="n">otherMapChanger</span><span class="p">(</span><span class="n">myMap</span><span class="p">);</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">myMap</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;ab&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*undefined\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! What does JavaScript send back if you try to access something that doesn\u2019t exist?</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </div>
 </div>
 
 
