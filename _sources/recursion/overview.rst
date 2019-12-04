@@ -125,14 +125,14 @@ Practice Quiz
             return n;
           }
           else if (n < 50) {
-            mystery(n * 2);
+            return mystery(n * 2);
           }
           else {
-            mystery(n * 3);
+            return mystery(n * 3);
           }
         }
 
-        console.log(mystery(2)); 
+        console.log(mystery(5)); 
 
     - :240: Great!
       :.*: Try again!
@@ -155,13 +155,13 @@ Practice Quiz
             return str;
           }
           else if (str.slice(0,1) === "c") {
-            stringRecursion(str.slice(1) + "c", c - 1);
+            return stringRecursion(str.slice(1) + "c", c - 1);
           }
           else if (str.slice(0,1) === "o") {
-            stringRecursion(str.slice(1) + "o", c - 2);
+            return stringRecursion(str.slice(1) + "o", c - 2);
           }
           else {
-            stringRecursion(str.slice(1) + "n", c - 1);
+            return stringRecursion(str.slice(1) + "n", c - 1);
           }
         }
 
