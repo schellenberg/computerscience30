@@ -36,7 +36,7 @@ FITB.prototype.init = function (opts) {
     this.correct = null;
     // See comments in fitb.py for the format of ``feedbackArray`` (which is identical in both files).
     //
-    // Find the script tag containing JSON and parse it. See `SO <https://stackoverflow.com/questions/9320427/best-practice-for-embedding-arbitrary-json-in-the-dom>`_. If this parses to ``false``, then no feedback is available; server-side grading will be performed.
+    // Find the script tag containing JSON and parse it. See `SO <https://stackoverflow.com/questions/9320427/best-practice-for-embedding-arbitrary-json-in-the-dom>`_.
     this.feedbackArray = JSON.parse(this.scriptSelector(this.origElem).html());
 
     this.createFITBElement();
@@ -75,7 +75,6 @@ FITB.prototype.renderFITBInput = function () {
     // Set the class for the text inputs, then store references to them.
     let ba = $(this.containerDiv).find(':input');
     ba.attr('class', 'form form-control selectwidthauto');
-    ba.attr("aria-label", "input area");
     this.blankArray = ba.toArray();
 };
 
@@ -124,44 +123,19 @@ FITB.prototype.renderFITBFeedbackDiv = function () {
 ===================================*/
 
 FITB.prototype.restoreAnswers = function (data) {
-    // Restore answers from storage retrieval done in RunestoneBase.
-    try {
-        // The newer format encodes data as a JSON object.
-        var arr = JSON.parse(data.answer);
-        // The result should be an array. If not, try comma parsing instead.
-        if (!Array.isArray(arr)) {
-            throw new Error();
-        }
-    } catch (err) {
-        // The old format didn't.
-        var arr = data.answer.split(",");
-    }
+    // Restore answers from storage retrieval done in RunestoneBase
+    var arr = data.answer.split(",");
     for (var i = 0; i < this.blankArray.length; i++) {
         $(this.blankArray[i]).attr("value", arr[i]);
     }
-
-    // Use the feedback from the server, or recompute it locally.
-    if (!this.feedbackArray) {
-        this.displayFeed = data.displayFeed;
-        this.correct = data.correct;
-        this.isCorrectArray = data.isCorrectArray;
-        // Only render if all the data is present; local storage might have old data missing some of these items.
-        if ((typeof(this.displayFeed) !== 'undefined') &&
-            (typeof(this.correct) !== 'undefined') &&
-            (typeof(this.isCorrectArray) !== 'undefined')) {
-
-            this.renderFITBFeedback();
-        }
-    } else {
-        this.startEvaluation(true);
-    }
+    this.startEvaluation();
 };
 
 FITB.prototype.checkLocalStorage = function () {
     // Loads previous answers from local storage if they exist
     var len = localStorage.length;
     if (len > 0) {
-        var ex = localStorage.getItem(this.localStorageKey());
+        var ex = localStorage.getItem(eBookConfig.email + ":" + this.divid + "-given");
         if (ex !== null) {
             try {
                 var storedData = JSON.parse(ex);
@@ -169,18 +143,32 @@ FITB.prototype.checkLocalStorage = function () {
             } catch (err) {
                 // error while parsing; likely due to bad value stored in storage
                 console.log(err.message);
-                localStorage.removeItem(this.localStorageKey());
+                localStorage.removeItem(eBookConfig.email + ":" + this.divid + "-given");
                 return;
             }
 
-            this.restoreAnswers(storedData);
+            for (var i = 0; i < this.blankArray.length; i++) {
+                $(this.blankArray[i]).attr("value", arr[i]);
+            }
+            if (this.useRunestoneServices) {
+                var answer = storedData.answer.join(",")
+                this.logBookEvent({"event": "fillb", "act": answer, "answer": answer, "correct": storedData.correct, "div_id": this.divid});
+                this.enableCompareButton();
+            }
         }
     }
 };
 
 FITB.prototype.setLocalStorage = function (data) {
-    let key = this.localStorageKey();
-    localStorage.setItem(key, JSON.stringify(data));
+    // logs answer to local storage
+    this.given_arr = [];
+    for (var i = 0; i < this.blankArray.length; i++)
+        this.given_arr.push(this.blankArray[i].value);
+
+    var now = new Date();
+    var correct = data.correct;
+    var storageObject = {"answer": this.given_arr, "correct": correct, "timestamp": now};
+    localStorage.setItem(eBookConfig.email + ":" + this.divid + "-given", JSON.stringify(storageObject));
 };
 
 /*==============================
@@ -192,39 +180,11 @@ FITB.prototype.startEvaluation = function (logFlag) {
     // Start of the evaulation chain
     this.isCorrectArray = [];
     this.displayFeed = [];
-    this.given_arr = [];
-    for (var i = 0; i < this.blankArray.length; i++)
-        this.given_arr.push(this.blankArray[i].value);
-
-    // Grade locally if we can't ask the server to grade.
-    if (this.feedbackArray) {
-        this.evaluateAnswers();
-        this.renderFITBFeedback();
-    }
+    this.evaluateAnswers();
+    this.renderFITBFeedback();
     if (logFlag) {   // Sometimes we don't want to log the answer--for example, when timed exam questions are re-loaded
-        let answer = JSON.stringify(this.given_arr);
-
-        // Save the answer locally.
-        this.setLocalStorage({
-            answer: answer,
-            timestamp: new Date(),
-        });
-
-        var that = this;
-        ret = this.logBookEvent({"event": "fillb", "act": answer, "answer":answer, "correct": (this.correct ? "T" : "F"), "div_id": this.divid})
-        if (!this.feedbackArray) {
-            // On success, update the feedback from the server's grade.
-            ret.done(function (data) {
-                that.setLocalStorage({
-                    answer: answer,
-                    timestamp: data.timestamp
-                });
-                that.correct = data.correct;
-                that.displayFeed = data.displayFeed;
-                that.isCorrectArray = data.isCorrectArray;
-                that.renderFITBFeedback();
-            });
-        }
+        var answer = JSON.stringify(this.given_arr);
+        this.logBookEvent({"event": "fillb", "act": answer, "answer":answer, "correct": (this.correct ? "T" : "F"), "div_id": this.divid});
     }
     if (this.useRunestoneServices) {
         this.enableCompareButton();
@@ -238,12 +198,10 @@ FITB.prototype.startEvaluation = function (logFlag) {
 //
 // Outputs:
 //
-// - ``this.displayFeed`` is an array of HTML feedback.
+// - ``this.displayFeed`` is an array ot HTML feedback.
 // - ``this.isCorrectArray`` is an array of true, false, or null (the question wasn't answered).
 // - ``this.correct`` is true, false, or null (the question wasn't answered).
 FITB.prototype.evaluateAnswers = function () {
-    // Keep track if all answers are correct or not.
-    this.correct = true;
     for (var i = 0; i < this.blankArray.length; i++) {
         var given = this.blankArray[i].value;
 
@@ -279,14 +237,29 @@ FITB.prototype.evaluateAnswers = function () {
                     }
                 }
             }
-            // The answer is correct if it matched the first element in the array. A special case: if only one answer is provided, count it wrong; this is a misformed problem.
-            let is_correct = (j === 0) && (fbl.length > 1);
-            this.isCorrectArray.push(is_correct);
-            if (!is_correct) {
-                this.correct = false;
-            }
+            // The answer is correct if it matched the first element in the array.
+            this.isCorrectArray.push(j === 0);
         }
     }
+
+    if ($.inArray(null, this.isCorrectArray) < 0 && $.inArray(false, this.isCorrectArray) < 0) {
+        this.correct = true;
+    } else if (this.isCompletelyBlank()) {
+        this.correct = null;
+    } else {
+        this.correct = false;
+    }
+    this.setLocalStorage({"correct": (this.correct ? "T" : "F")});
+};
+
+FITB.prototype.isCompletelyBlank = function () {
+    // Returns true if the user didn't fill in any of the blanks, else false
+    for (var i = 0; i < this.isCorrectArray.length; i++) {
+        if (this.isCorrectArray[i] !== "") {
+            return false;
+        }
+    }
+    return true;
 };
 
 FITB.prototype.renderFITBFeedback = function () {

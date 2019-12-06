@@ -7,7 +7,6 @@ var isMouseDown = false;
 document.onmousedown = function() { isMouseDown = true };
 document.onmouseup   = function() { isMouseDown = false };
 var edList = {};
-var allDburls = {};
 
 ActiveCode.prototype = new RunestoneBase();
 var socket, connection, doc;
@@ -38,21 +37,12 @@ ActiveCode.prototype.init = function(opts) {
     this.hidecode = $(orig).data('hidecode');
     this.chatcodes = $(orig).data('chatcodes');
     this.hidehistory = $(orig).data('hidehistory');
-    this.tie = $(orig).data('tie')
-    this.dburl = $(orig).data('dburl');
     this.runButton = null;
     this.enabledownload = $(orig).data('enabledownload');
     this.downloadButton = null;
     this.saveButton = null;
     this.loadButton = null;
     this.outerDiv = null;
-    this.partner = ""
-    if ((! eBookConfig.allow_pairs) || $(orig).data('nopair')) {
-        this.enablePartner = false;
-    } else {
-        this.enablePartner = true;
-    }
-
     this.output = null; // create pre for output
     this.graphics = null; // create div for turtle graphics
     this.codecoach = null;
@@ -122,15 +112,8 @@ ActiveCode.prototype.createEditor = function (index) {
         this.containerDiv.appendChild(linkdiv);
     }
     this.containerDiv.appendChild(codeDiv);
-    var edmode = this.containerDiv.lang;
-    if (edmode === 'sql')  {
-        edmode = 'text/x-sql'
-    } else if (edmode === 'java') {
-        edmode = 'text/x-java'
-    }
-
     var editor = CodeMirror(codeDiv, {value: this.code, lineNumbers: true,
-        mode: edmode, indentUnit: 4,
+        mode: this.containerDiv.lang, indentUnit: 4,
         matchBrackets: true, autoMatchParens: true,
         extraKeys: {"Tab": "indentMore", "Shift-Tab": "indentLess"}
     });
@@ -260,16 +243,6 @@ ActiveCode.prototype.createControls = function () {
         ctrlDiv.appendChild(butt);
         $(butt).click(this.showCodelens.bind(this));
     }
-
-    // TIE
-    if(this.tie) {
-        butt = document.createElement("button");
-        $(butt).addClass("ac_opt btn btn-default");
-        $(butt).text("Open Code Coach");
-        this.tieButt = butt;
-        ctrlDiv.appendChild(butt);
-        $(butt).click(this.showTIE.bind(this))
-    }
     // CodeCoach
     // bnm - disable code coach until it is revamped  2017-7-22
     // if (this.useRunestoneServices && $(this.origElem).data("coach")) {
@@ -291,49 +264,6 @@ ActiveCode.prototype.createControls = function () {
         this.atButton = butt;
         ctrlDiv.appendChild(butt);
         $(butt).click((function() {new AudioTour(this.divid, this.code, 1, $(this.origElem).data("audio"))}).bind(this));
-    }
-
-    if (this.enablePartner) {
-        var checkPartner = document.createElement("input");
-        checkPartner.type = 'checkbox'
-        checkPartner.id = `${this.divid}_part`
-        ctrlDiv.appendChild(checkPartner);
-        var plabel = document.createElement('label');
-        plabel.for = `${this.divid}_part`;
-        $(plabel).text("Pair?");
-        ctrlDiv.appendChild(plabel);
-        $(checkPartner).click((function () {
-            if (this.partner) {
-                this.partner = false;
-                $(partnerTextBox).hide()
-                this.partner = ''
-                partnerTextBox.value = ''
-                $(plabel).text("Pair?");
-            } else {
-                let didAgree = localStorage.getItem("partnerAgree")
-                if( ! didAgree) {
-                    didAgree = confirm("Pair Programming should only be used with the consent of your instructor." +
-                      "Your partner must be a registered member of the class and have agreed to pair with you." +
-                      "By clicking OK you certify that both of these conditions have been met."
-                      );
-                    if (didAgree) {
-                        localStorage.setItem("partnerAgree", "true");
-                    } else {
-                        return;
-                    }
-                }
-                this.partner = true;
-                $(plabel).text('with: ');
-                $(partnerTextBox).show();
-            }
-        }).bind(this))
-        var partnerTextBox = document.createElement("input")
-        partnerTextBox.type = 'text'
-        ctrlDiv.appendChild(partnerTextBox);
-        $(partnerTextBox).hide()
-        $(partnerTextBox).change((function () {
-            this.partner = partnerTextBox.value;
-        }).bind(this))
     }
 
     if(this.chatcodes && eBookConfig.enable_chatcodes) {
@@ -385,10 +315,6 @@ ActiveCode.prototype.createControls = function () {
     $(this.outerDiv).prepend(ctrlDiv);
     this.controlDiv = ctrlDiv;
 
-};
-
-ActiveCode.prototype.enableSaveLoad = function () {
-    $(this.runButton).text($.i18n("msg_activecode_save_run"));
 };
 
 // Activecode -- If the code has not changed wrt the scrubber position value then don't save the code or reposition the scrubber
@@ -484,7 +410,7 @@ ActiveCode.prototype.createOutput = function () {
     // to hold turtle graphics output.  We use a div in case the turtle changes from
     // using a canvas to using some other element like svg in the future.
     var outDiv = document.createElement("div");
-    $(outDiv).addClass("ac_output col-md-12");
+    $(outDiv).addClass("ac_output col-md-5");
     this.outDiv = outDiv;
     this.output = document.createElement('pre');
     this.output.id = this.divid+'_stdout';
@@ -500,13 +426,13 @@ ActiveCode.prototype.createOutput = function () {
         $(this.graphics).addClass("visible-ac-canvas");
     }).bind(this));
 
-    var clearDiv = document.createElement("div");
-    $(clearDiv).css("clear","both");  // needed to make parent div resize properly
-    this.outerDiv.appendChild(clearDiv);
-
     outDiv.appendChild(this.output);
     outDiv.appendChild(this.graphics);
     this.outerDiv.appendChild(outDiv);
+
+    var clearDiv = document.createElement("div");
+    $(clearDiv).css("clear","both");  // needed to make parent div resize properly
+    this.outerDiv.appendChild(clearDiv);
 
 
     var lensDiv = document.createElement("div");
@@ -762,46 +688,6 @@ ActiveCode.prototype.showCodeCoach = function () {
     });
 };
 
-ActiveCode.prototype.showTIE = function() {
-    var tieDiv = document.createElement("div");
-    $(this.tieButt).attr("disabled","disabled");
-    $(tieDiv).addClass("tie-container");
-    $(tieDiv).data("tie-id", this.divid)
-    var ifm = document.createElement('iframe')
-    $(ifm).addClass("tie-frame")
-    ifm.src = `https://tech-interview-exercises.appspot.com/client/question.html?qid=${this.tie}`
-
-    setIframeDimensions = function() {
-        $('.tie-container').css('width', $('.tie-container').parent().width());
-    //    $('.tie-frame').css('width', $('.tie-frame').parent().width() - 120);
-    };
-    ifm.onload = setIframeDimensions;
-
-    $(function() {
-        $(window).resize(setIframeDimensions);
-      });
-
-    window.addEventListener('message', (function(evt) {
-        if (evt.origin != 'https://tech-interview-exercises.appspot.com') {
-          return;
-        }
-        // Handle the event accordingly.
-        // evt.data contains the code
-        this.logRunEvent({
-            'div_id': this.divid,
-            'code': JSON.parse(evt.data),
-            'lang': this.language,
-            'errinfo': 'TIEresult',
-            'to_save': true,
-            'prefix': this.pretext,
-            'suffix': this.suffix
-        });
-      }).bind(this), false)
-
-    this.logBookEvent({'event': 'tie', 'act': 'open', 'div_id': this.divid});
-    tieDiv.appendChild(ifm)
-    this.outerDiv.appendChild(tieDiv)
-}
 
 ActiveCode.prototype.toggleEditorVisibility = function () {
 
@@ -809,31 +695,29 @@ ActiveCode.prototype.toggleEditorVisibility = function () {
 
 ActiveCode.prototype.addErrorMessage = function (err) {
     // Add the error message
+    // But, adjust the line numbers.  If the line number is <= pretextLines then it is in included code
+    // if it is greater than the number of included lines but less than the pretext + current editor then it is in the student code.
+    // adjust the line number we display by eliminating the pre-included code.
+    let errorOutside = false;
+    if (err.traceback.length >= 1) {
+        errorLine = err.traceback[0].lineno;
+        if (errorLine <= this.pretextLines || errorLine > (this.progLines + this.pretextLines)) {
+            errorOutside = true;
+        } else {
+            if (this.pretextLines > 0) {
+                err.traceback[0].lineno = err.traceback[0].lineno - this.pretextLines + 1;
+            } 
+        }
+    }
     var errHead = $('<h3>').html('Error');
     this.eContainer = this.outerDiv.appendChild(document.createElement('div'));
     this.eContainer.className = 'error alert alert-danger';
     this.eContainer.id = this.divid + '_errinfo';
     this.eContainer.appendChild(errHead[0]);
     var errText = this.eContainer.appendChild(document.createElement('pre'));
-
-    // But, adjust the line numbers.  If the line number is <= pretextLines then it is in included code
-    // if it is greater than the number of included lines but less than the pretext + current editor then it is in the student code.
-    // adjust the line number we display by eliminating the pre-included code.
-    if (err.traceback.length >= 1) {
-        errorLine = err.traceback[0].lineno;
-        if (errorLine <= this.pretextLines){
-            errText.innerHTML = "An error occurred in the hidden, included code. Sorry we can't give you a more helpful error message";
-            return;
-        }
-        else if (errorLine > (this.progLines + this.pretextLines)) {
-            errText.innerHTML = "An error occurred after the end of your code. One possible reason is that you have an unclosed parenthesis or string. Another possibility is that there is an error in the hidden test code.";
-            return;
-        }
-        else {
-            if (this.pretextLines > 0) {
-                err.traceback[0].lineno = err.traceback[0].lineno - this.pretextLines + 1;
-            }
-        }
+    if (errorOutside) {
+        errText.innerHTML = "An error occurred but it was outside of your code";
+        return;
     }
     var errString = err.toString();
     var to = errString.indexOf(":");
@@ -889,14 +773,13 @@ errorText.IndentationError = $.i18n("msg_activecode_indentation_error");
 errorText.IndentationErrorFix = $.i18n("msg_activecode_indentation_error_fix");
 errorText.NotImplementedError = $.i18n("msg_activecode_not_implemented_error");
 errorText.NotImplementedErrorFix = $.i18n("msg_activecode_not_implemented_error_fix");
-errorText.KeyError = $.i18n("msg_activecode_key_error");
-errorText.KeyErrorFix = $.i18n("msg_activecode_key_error_fix");
+
 
 ActiveCode.prototype.addJSONLibrary = function () {
     var jsonExternalLibInfo = {
-            path : eBookConfig.app + '/static/' + eBookConfig.course + '/_static/json.sk-master/__init__.js',
+            path : '_static/json.sk-master/__init__.js',
             dependencies : [
-                eBookConfig.app + '/static/' + eBookConfig.course + '/_static/json.sk-master/stringify.js'
+            '_static/json.sk-master/stringify.js'
             ]
         };
     if (Sk.externalLibraries) {
@@ -942,7 +825,7 @@ ActiveCode.prototype.fileReader = function(divid) {
     let elem = document.getElementById(divid);
     let data = ""
     let result = ""
-    if (elem == null && Sk.builtinFiles.files.hasOwnProperty(divid)) {
+    if (elem == null && Sk.builtinFiles["files"][divid]) {
         return Sk.builtinFiles["files"][divid];
     } else {
         // try remote file unless it ends with .js or .py -- otherwise we'll ask the server for all
@@ -1002,57 +885,36 @@ ActiveCode.prototype.outputfun = function(text) {
         $(this.output).append(text);
     };
 
-ActiveCode.prototype.filewriter = function(fobj, bytes) {
-    let filecomponent = document.getElementById(fobj.name);
+ActiveCode.prototype.filewriter = function(bytes, name, pos) {
+    let filecomponent = document.getElementById(name);
     if (! filecomponent) {
         let container = document.createElement('div')
         $(container).addClass('runestone')
         let tab = document.createElement('div');
         $(tab).addClass('datafile_caption');
-        tab.innerHTML = `Data file: <code>${fobj.name}</code>`;
+        tab.innerHTML = `Data file: <code>${name}</code>`;
         filecomponent = document.createElement('textarea')
         filecomponent.rows = 10;
         filecomponent.cols = 50;
-        filecomponent.id = fobj.name;
+        filecomponent.id = name;
         $(filecomponent).css('margin-bottom','5px');
         $(filecomponent).addClass('ac_output');
         container.appendChild(tab);
         container.appendChild(filecomponent);
         this.outerDiv.appendChild(container)
     } else {
-        if (fobj.pos$ == 0) {
+        if (pos == 0) {
             $(filecomponent).val("")
         }
     }
 
     let current = $(filecomponent).val()
-    current = current + bytes.v;
+    current = current + bytes;
     $(filecomponent).val(current);
     $(filecomponent).css('display', 'block');
-    fobj.pos$ = current.length;
 
     return current.length;
 }
-
-ActiveCode.prototype.getIncludedCode = function(divid) {
-    var wresult;
-    if(edList[divid]) {
-        return edList[divid].editor.getValue();
-    } else {
-        wresult = $.ajax({
-            async: false,
-            url: `/runestone/ajax/get_datafile?course_id=${eBookConfig.course}&acid=${divid}`,
-            success: function(data) {
-                result = JSON.parse(data).data;
-                },
-            error: function(err) {
-                result = null;
-            }})
-
-        return result;
-    }
-}
-
 
 ActiveCode.prototype.buildProg = function(useSuffix) {
     // assemble code from prefix, suffix, and editor for running.
@@ -1067,12 +929,11 @@ ActiveCode.prototype.buildProg = function(useSuffix) {
 
         pretext = "";
         for (var x=0; x < this.includes.length; x++) {
-            let iCode = this.getIncludedCode(this.includes[x]);
-            pretext = pretext + iCode + "\n";
+            pretext = pretext + edList[this.includes[x]].editor.getValue();
         }
         this.pretext = pretext;
         if(this.pretext) {
-            this.pretextLines = (this.pretext.match(/\n/g) || '').length
+            this.pretextLines = (this.pretext.match(/\n/g) || '').length + 1
         }
         prog = pretext + prog
     }
@@ -1134,10 +995,8 @@ ActiveCode.prototype.runProg = function () {
     Sk.configure({
         output: this.outputfun.bind(this),
         read: this.fileReader,
-        filewrite: this.filewriter.bind(this),
-        __future__: Sk.python3,
-        nonreadopen : true,
-//        python3: this.python3,
+        filewriter: this.filewriter.bind(this),
+        python3: this.python3,
         imageProxy: 'http://image.runestone.academy:8080/320x',
         inputfunTakesPrompt: true,
         jsonpSites : ['https://itunes.apple.com'],
@@ -1149,6 +1008,7 @@ ActiveCode.prototype.runProg = function () {
     $(this.runButton).attr('disabled', 'disabled');
     $(this.historyScrubber).off("slidechange");
     $(this.historyScrubber).slider("disable");
+    $(this.codeDiv).switchClass("col-md-12", "col-md-7", {duration: 500, queue: false});
     $(this.outDiv).show({duration: 700, queue: false});
 
     var __ret = this.manage_scrubber(scrubber_dfd, history_dfd, saveCode);
@@ -1178,8 +1038,7 @@ ActiveCode.prototype.runProg = function () {
                 'errinfo': 'success',
                 'to_save': saveCode,
                 'prefix': this.pretext,
-                'suffix': this.suffix,
-                'partner': this.partner
+                'suffix': this.suffix
             }); // Log the run event
         }).bind(this),
         (function (err) {  // fail
@@ -1267,6 +1126,7 @@ JSActiveCode.prototype.runProg = function() {
 
     $(this.eContainer).remove();
     $(this.output).text('');
+    $(this.codeDiv).switchClass("col-md-12","col-md-6",{duration:500,queue:false});
     $(this.outDiv).show({duration:700,queue:false});
 
     try {
@@ -1358,11 +1218,6 @@ HTMLActiveCode.prototype.createOutput = function () {
     this.outerDiv.appendChild(clearDiv);
 
 };
-
-HTMLActiveCode.prototype.enableSaveLoad = function () {
-    $(this.runButton).text($.i18n("msg_activecode_render"));
-};
-
 
 
 String.prototype.replaceAll = function (target, replacement) {
@@ -1538,7 +1393,7 @@ function AudioTour (divid, code, bnum, audio_text) {
     $(this.prev_audio).click((function () {
         this.prevAudio();
     }).bind(this));
-
+    
     // handle the click to pause or play the audio
     $(this.pause_audio).click((function () {
         this.pauseAndPlayAudio(divid);
@@ -1625,7 +1480,7 @@ AudioTour.prototype.tour = function (divid, audio_type, bcount) {
     }
     $(this.audio_code).html(str);
     this.len = this.aname.length; // set the number of audio file in the tour
-
+    
     this.currIndex = 0;
     this.playCurrIndexAudio();
 };
@@ -2072,7 +1927,6 @@ LiveCode.prototype.runProg_callback = function(data) {
         var host, source, editor;
         var saveCode = "True";
         var sfilemap = {java: '', cpp: 'test.cpp', c: 'test.c', python3: 'test.py', python2: 'test.py'};
-        source = this.editor.getValue();
 
         xhr = new XMLHttpRequest();
 
@@ -2080,6 +1934,7 @@ LiveCode.prototype.runProg_callback = function(data) {
 
         var odiv = this.output;
         $(this.runButton).attr('disabled', 'disabled');
+        $(this.codeDiv).switchClass("col-md-12","col-md-6",{duration:500,queue:false});
         $(this.outDiv).show({duration:700,queue:false});
         $(this.errDiv).remove();
         $(this.output).css("visibility","visible");
@@ -2365,240 +2220,6 @@ LiveCode.prototype.pushDataFile = function (file, resolve, reject) {
      return classes;
  }
 
- //
- // SQL
- //
-
- SQLActiveCode.prototype = new ActiveCode();
-
- function SQLActiveCode(opts) {
-     if (opts) {
-         this.init(opts)
-         }
-     }
-
-SQLActiveCode.prototype.init = function(opts) {
-
-    ActiveCode.prototype.init.apply(this,arguments);
-
-    if (eBookConfig.useRunestoneServices) {
-        var fnprefix = '/runestone/books/published/' + eBookConfig.basecourse + '/_static';
-    } else {
-        var fnprefix = '/_static';
-    }
-    this.config = {
-        locateFile: filename => `${fnprefix}/${filename}`
-    }
-
-    var self = this;
-
-    initSqlJs(this.config).then(function (SQL) {
-    // set up call to load database asynchronously if given
-        if (self.dburl) {
-            if (! self.dburl.startsWith("http")) {
-                self.dburl = window.location.protocol + '//' + window.location.host + self.dburl;
-            }
-            $(self.runButton).attr('disabled','disabled')
-            if (! (self.dburl in allDburls)) {
-                allDburls[self.dburl] = {status: 'loading', xWaitFor: jQuery.Deferred() };
-            } else {
-                if (allDburls[self.dburl].status == 'loading') {
-                    allDburls[self.dburl].xWaitFor.done(function() {
-                        self.db = new SQL.Database(allDburls[self.dburl].db);
-                        $(self.runButton).removeAttr('disabled')
-                    });
-                    return;
-                }
-                self.db = new SQL.Database(allDburls[self.dburl].db);
-                $(self.runButton).removeAttr('disabled')
-                return;
-            }
-            var xhr = new XMLHttpRequest();
-
-            // For example: https://github.com/lerocha/chinook-database/raw/master/ChinookDatabase/DataSources/Chinook_Sqlite.sqlite
-            xhr.open('GET', self.dburl, true);
-            xhr.responseType = 'arraybuffer';
-
-            xhr.onload = e => {
-                var uInt8Array = new Uint8Array(xhr.response);
-                self.db = new SQL.Database(uInt8Array);
-                $(self.runButton).removeAttr('disabled')
-                allDburls[self.dburl].db = uInt8Array;
-                allDburls[self.dburl].status = 'ready';
-                allDburls[self.dburl].xWaitFor.resolve();
-                // contents is now [{columns:['col1','col2',...], values:[[first row], [second row], ...]}]
-                };
-            xhr.send();
-        } else {
-            self.db = new SQL.Database();
-        }
-    });
-};
-
-
-SQLActiveCode.prototype.runProg = function()  {
-    var result_mess = "success"
-    var scrubber_dfd, history_dfd, saveCode
-    // Clear any old results
-    saveCode = "True"
-    let divid = this.divid+'_sql_out';
-    let respDiv = document.getElementById(divid);
-    if (respDiv) {
-        respDiv.parentElement.removeChild(respDiv)
-    }
-    $(this.output).text("")
-    // Run this query
-    let query = this.buildProg(false);  // false --> Do not include suffix
-    try {
-        var res = this.db.exec(query);
-    } catch(error) {
-        result_mess = error.toString();
-        $(this.output).text(error);
-        $(this.outDiv).show();
-    }
-    this.logRunEvent({
-        'div_id': this.divid,
-        'code': this.editor.getValue(),
-        'lang': this.language,
-        'errinfo': result_mess,
-        'to_save': saveCode,
-        'prefix': this.pretext,
-        'suffix': this.suffix,
-        'partner': this.partner
-    }); // Log the run event
-
-    var __ret = this.manage_scrubber(scrubber_dfd, history_dfd, saveCode);
-    history_dfd = __ret.history_dfd;
-    saveCode = __ret.saveCode;
-
-    history_dfd.then(function() {
-        if (this.slideit) {
-            $(this.historyScrubber).on("slidechange", this.slideit.bind(this));
-        }
-        $(this.historyScrubber).slider("enable");
-    });
-
-    if (result_mess != "success") {
-        return;
-    }
-    // Create a nice table to show the result of the query
-    if (res[0].values.length > 100) {
-        $(this.output).text("Result set is longer than 100 rows limiting output to first 100")
-    }
-    let table = createTable(res[0]);
-    respDiv = document.createElement('div')
-    respDiv.id = divid;
-    $(respDiv).addClass('table-responsive-md')
-    $(respDiv).css('max-height', '500px')
-    $(respDiv).css('overflow', 'scroll')
-    this.outDiv.appendChild(respDiv)
-    respDiv.appendChild(table)
-    $(this.outDiv).show()
-
-    // Now handle autograding
-    if (this.suffix) {
-        result = this.autograde(res[0]);
-        $(this.output).text(result);
-    }
-
-}
-
-SQLActiveCode.prototype.autograde = function(result_table) {
-    tests = this.suffix.split(/\n/);
-    this.passed = 0;
-    this.failed = 0;
-    // Tests should be of the form
-    // assert row,col oper value for example
-    // assert 4,4 == 3
-    result = ""
-    tests = tests.filter(function(s) {
-        return s.indexOf('assert') > -1
-    })
-    for (let test of tests) {
-        let wlist = test.split(/\s+/);
-        wlist.shift();
-        loc = wlist.shift()
-        oper = wlist.shift();
-        expected = wlist.join(' ');
-        [row,col] = loc.split(',');
-        result += this.testOneAssert(row, col, oper, expected, result_table);
-        result += "\n"
-    }
-    pct = 100 * this.passed / (this.passed + this.failed);
-    pct = pct.toLocaleString(undefined, { maximumFractionDigits: 2});
-    result += `You passed ${this.passed} out of ${this.passed+this.failed} tests for ${pct}%`
-    this.logBookEvent({event: 'unittest',
-                       div_id: this.divid,
-                       course: eBookConfig.course,
-                       act: `percent:${pct}:passed:${this.passed}:failed:${this.failed}`
-                    });
-    return result;
-}
-
-SQLActiveCode.prototype.testOneAssert = function(row, col, oper, expected, result_table) {
-    let actual  = result_table.values[row][col]
-    const operators = {
-        "==" : function (operand1, operand2) {
-            return operand1 == operand2;
-        },
-        "!=" : function (operand1, operand2) {
-            return operand1 != operand2;
-        },
-        ">" : function (operand1, operand2) {
-            return operand1 > operand2;
-        },
-        "<" : function (operand1, operand2) {
-            return operand1 > operand2;
-        }
-    };
-
-    res = operators[oper](actual, expected)
-    if (res) {
-        output = `Pass: ${actual} ${oper} ${expected} in row ${row} column ${result_table.columns[col]}`;
-        this.passed++;
-    } else {
-        output = `Failed ${actual} ${oper} ${expected} in row ${row} column ${result_table.columns[col]}`;
-        this.failed++
-    }
-    return output;
-}
-
-
-function createTable(tableData) {
-    var table = document.createElement('table');
-    var head = document.createElement('thead');
-    var tableBody = document.createElement('tbody');
-    var theads = document.createElement('tr')
-
-    tableData.columns.forEach(function(colData) {
-        let th = document.createElement('th');
-        th.appendChild(document.createTextNode(colData));
-        theads.appendChild(th);
-    });
-    table.appendChild(head);
-    head.appendChild(theads);
-    tableData.values.slice(0,100).forEach(function(rowData) {
-      var row = document.createElement('tr');
-
-      rowData.forEach(function(cellData) {
-        var cell = document.createElement('td');
-        cell.appendChild(document.createTextNode(cellData));
-        row.appendChild(cell);
-      });
-
-      tableBody.appendChild(row);
-    });
-
-    table.appendChild(tableBody);
-    $(table).css('background', 'white');
-    $(table).addClass('table-striped table-light thead-dark')
-    return table;
-  }
-
-
-//
-// ActiveCode Factory Class
-//
 
 ACFactory = {};
 
@@ -2613,8 +2234,6 @@ ACFactory.createActiveCode = function (orig, lang, addopts) {
         return new JSActiveCode(opts);
     } else if (lang === 'htmlmixed') {
         return new HTMLActiveCode(opts);
-    } else if (lang === 'sql') {
-        return new SQLActiveCode(opts);
     } else if (['java', 'cpp', 'c', 'python3', 'python2'].indexOf(lang) > -1) {
         return new LiveCode(opts);
     } else {   // default is python
@@ -2622,7 +2241,6 @@ ACFactory.createActiveCode = function (orig, lang, addopts) {
     }
 
 };
-
 
 // used by web2py controller(s)
 ACFactory.addActiveCodeToDiv = function(outerdivid, acdivid, sid, initialcode, language) {
@@ -2659,8 +2277,15 @@ ACFactory.createScratchActivecode = function() {
     // use the URL to assign a divid - each page should have a unique Activecode block id.
     // Remove everything from the URL but the course and page name
     // todo:  this could probably be eliminated and simply moved to the template file
-    var divid = eBookConfig.course + "_scratch_ac";
-    divid = divid.replace(/[#.]/g,''); // in case book title has characters that will mess up our selectors
+    var divid = document.URL.split('#')[0];
+    if (divid.indexOf('static') > -1) {
+        divid = divid.split('static')[1];
+    } else {
+        divid = divid.split('/');
+        divid = divid.slice(-2).join("");
+    }
+    divid = divid.split('?')[0];  // remove any query string (e.g ?lastPosition)
+    divid = divid.replaceAll('/', '').replace('.html', '').replace(':', '');
     eBookConfig.scratchDiv = divid;
     var lang = eBookConfig.acDefaultLanguage ? eBookConfig.acDefaultLanguage : 'python'
     // generate the HTML
@@ -2706,11 +2331,6 @@ ACFactory.toggleScratchActivecode = function () {
 
 };
 
-
-//
-// Page Initialization
-//
-
 $(document).ready(function() {
     ACFactory.createScratchActivecode();
     $('[data-component=activecode]').each( function(index ) {
@@ -2722,10 +2342,6 @@ $(document).ready(function() {
         for (k in edList) {
             edList[k].disableSaveLoad();
         }
-    } else {
-        for (k in edList) {
-            edList[k].enableSaveLoad();
-        }
     }
 
 });
@@ -2735,6 +2351,9 @@ if (typeof component_factory === 'undefined') {
 }
 component_factory['activecode'] = ACFactory.createActiveCodeFromOpts;
 
+$(document).bind("runestone:login", function() {
+    $(".run-button").text($.i18n("msg_activecode_save_run"));
+});
 
 // This seems a bit hacky and possibly brittle, but its hard to know how long it will take to
 // figure out the login/logout status of the user.  Sometimes its immediate, and sometimes its
