@@ -17,6 +17,7 @@ function setup() {
   theArray = generateRandomArray(8, 15);
 
   createQuestion("bubble", "swap");
+  createQuestion("bubble", "pass");
   addButtons();
 }
 
@@ -27,9 +28,46 @@ function convert(number, baseFrom, baseTo) {
 
 function createQuestion(whichAlgorithm, swapOrPass) {
 
-  // start with the random number in base 10, then convert it to required bases
-  // let randomDecimalNumber = int(random(17, 255));
-  // let displayValue = convert(randomDecimalNumber, 10, baseFrom);
+  let thingToFind;
+  let message;
+
+  if (whichAlgorithm === "bubble") {
+    if (swapOrPass === "swap") {
+      let maxSwaps = bubbleSort({theList: theArray, totalSwaps: true});
+      let minSwaps = 5;
+      while (minSwaps > maxSwaps) {
+        minSwaps--;
+      }
+      let whichSwap = int(random(minSwaps, maxSwaps));
+      thingToFind = whichSwap;
+
+      let answerData = {
+        answer: bubbleSort({theList: theArray, howManySwaps: whichSwap}),
+        type: swapOrPass
+      };
+      answers.push(answerData);
+
+      message = "Given the array <code>[" + str(theArray) + "]</code>, what is swap number " + thingToFind + " when using bubble sort?<br>If your answer was 5 and 8, write it as <code>5 8</code> (the values separated by a space).";
+    }
+
+    if (swapOrPass === "pass") {
+      let maxPasses = bubbleSort({theList: theArray, totalPasses: true});
+      let minPasses = 2;
+      while (minPasses > maxPasses) {
+        minPasses--;
+      }
+      let whichPass = int(random(minPasses, maxPasses));
+      thingToFind = whichPass;
+
+      let answerData = {
+        answer: bubbleSort({theList: theArray, passesRequired: whichPass}),
+        type: swapOrPass
+      };
+      answers.push(answerData);
+
+      message = "Given the array <code>[" + str(theArray) + "]</code>, what is the state of the array after pass number " + thingToFind + " when using bubble sort?<br>Write your answer in the form <code>[3,7,12,4,8,5]</code> (with no spaces between the values of the array).";
+    }
+  }
 
   // keep track of the answer and the base, to help when interpreting user input
   // let answerData = {
@@ -43,9 +81,8 @@ function createQuestion(whichAlgorithm, swapOrPass) {
   container.class("form-group position-relative");
   container.parent("quiz");
 
-  // add label and question to the html form
+  // add label and question to the html form -- message was created above...
   // let message = "Convert the following from " + baseToText[baseFrom] + " to " + baseToText[baseTo] + ": " + displayValue;
-  let message = "Given the array [" + str(theArray) + "], what is the 4th swap when using bubble sort?<br>If your answer was 5 and 8, write it as <code>5 8</code> (the values separated by a space).";
   let label = createElement("label", message);
   label.parent(container);
 
@@ -94,19 +131,24 @@ function answerCheck() {
   for (let i=0; i<questionInputs.length; i++) {
     let theAnswer = answers[i].answer;
     let usersValue = questionInputs[i].value();
+    let answerIsRight = false;
 
-    if (answers[i].base === 2) {
-      // use regular expressions to remove leading 0's from a binary number
-      usersValue = usersValue.replace(/^0+/, "");
+    if (answers[i].type === "swap") {
+      // use regular expressions to split the answer into parts
+      let numbers = usersValue.split(/(\s+)/).filter( e => e.trim().length > 0);
+      if (int(numbers[0]) === theAnswer.first && int(numbers[1]) === theAnswer.second ||
+          int(numbers[1]) === theAnswer.first && int(numbers[0]) === theAnswer.second) {
+            answerIsRight = true;
+          }
     }
-    else if (answers[i].base === 16) {
+    else if (answers[i].type === "pass") {
       // convert hexadecimal value to lowercase
-      usersValue = usersValue.toLowerCase();
-      // remove the leading "x", if it exists
-      usersValue = usersValue.replace(/^x/, "");
+      if (usersValue === stringVersionOfArray(theAnswer)) {
+        answerIsRight = true;
+      }
     }
 
-    if (usersValue === theAnswer) {
+    if (answerIsRight) {
       // first get rid of any existing validation classes
       questionInputs[i].removeClass("is-invalid");
       questionInputs[i].removeClass("is-valid");
@@ -124,6 +166,14 @@ function answerCheck() {
   }
 }
 
+function stringVersionOfArray(someArray) {
+  let theString = "[";
+  for (let i = 0; i < someArray.length; i++) {
+    theString = theString + someArray[i] + ",";
+  }
+  let cleanedString = theString.slice(0, -1) + "]";
+  return cleanedString;
+}
 
 function generateRandomArray(howManyNumbers, maxSize) {
   let myArray = [];
@@ -136,8 +186,8 @@ function generateRandomArray(howManyNumbers, maxSize) {
 
 // Bubble Sort....
 
-function bubbleSort(aList, howManySwaps = null, passesRequired = null) {
-  let localList = [...aList];
+function bubbleSort({theList, howManySwaps = undefined, passesRequired = undefined, totalSwaps = undefined, totalPasses = undefined}) {
+  let localList = [...theList];
   let swapRequired = true;
   let swapNumber = 0;
   let passNumber = 0;
@@ -165,6 +215,13 @@ function bubbleSort(aList, howManySwaps = null, passesRequired = null) {
     if (passNumber === passesRequired) {
       return localList;
     }
+  }
+
+  if (totalPasses) {
+    return passNumber;
+  }
+  if (totalSwaps) {
+    return swapNumber;
   }
 }
 
