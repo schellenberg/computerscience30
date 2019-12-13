@@ -18,6 +18,8 @@ function setup() {
 
   createQuestion("bubble", "swap");
   createQuestion("bubble", "pass");
+  createQuestion("selection", "swap");
+  createQuestion("selection", "pass");
   addButtons();
 }
 
@@ -47,7 +49,7 @@ function createQuestion(whichAlgorithm, swapOrPass) {
       };
       answers.push(answerData);
 
-      message = "Given the array <code>[" + str(theArray) + "]</code>, what is swap number " + thingToFind + " when using bubble sort?<br>If your answer was 5 and 8, write it as <code>5 8</code> (the values separated by a space).";
+      message = "Given the array <code>[" + str(theArray) + "]</code>, what is swap number " + thingToFind + " when using <strong>bubble</strong> sort?<br>If your answer was 5 and 8, write it as <code>5 8</code> (the values separated by a space).";
     }
 
     if (swapOrPass === "pass") {
@@ -60,21 +62,52 @@ function createQuestion(whichAlgorithm, swapOrPass) {
       thingToFind = whichPass;
 
       let answerData = {
-        answer: bubbleSort({theList: theArray, passesRequired: whichPass}),
+        answer: bubbleSort({theList: theArray, howManyPasses: whichPass}),
         type: swapOrPass
       };
       answers.push(answerData);
 
-      message = "Given the array <code>[" + str(theArray) + "]</code>, what is the state of the array after pass number " + thingToFind + " when using bubble sort?<br>Write your answer in the form <code>[3,7,12,4,8,5]</code> (with no spaces between the values of the array).";
+      message = "Given the array <code>[" + str(theArray) + "]</code>, what is the state of the array after pass number " + thingToFind + " when using <strong>bubble</strong> sort?<br>Write your answer in the form <code>[3,7,12,4,8,5]</code> (with no spaces between the values of the array).";
     }
   }
 
-  // keep track of the answer and the base, to help when interpreting user input
-  // let answerData = {
-  //   answer: convert(randomDecimalNumber, 10, baseTo),
-  //   base: baseTo,
-  // };
-  // answers.push(answerData);
+  if (whichAlgorithm === "selection") {
+    if (swapOrPass === "swap") {
+      let maxSwaps = selectionSort({theList: theArray, totalSwaps: true});
+      let minSwaps = 2;
+      while (minSwaps > maxSwaps) {
+        minSwaps--;
+      }
+      let whichSwap = int(random(minSwaps, maxSwaps));
+      thingToFind = whichSwap;
+
+      let answerData = {
+        answer: selectionSort({theList: theArray, howManySwaps: whichSwap}),
+        type: swapOrPass
+      };
+      answers.push(answerData);
+
+      message = "Given the array <code>[" + str(theArray) + "]</code>, what is swap number " + thingToFind + " when using <strong>selection</strong> sort?<br>If your answer was 5 and 8, write it as <code>5 8</code> (the values separated by a space).";
+    }
+
+    if (swapOrPass === "pass") {
+      let maxPasses = selectionSort({theList: theArray, totalPasses: true});
+      let minPasses = 2;
+      while (minPasses > maxPasses) {
+        minPasses--;
+      }
+      let whichPass = int(random(minPasses, maxPasses));
+      thingToFind = whichPass;
+
+      let answerData = {
+        answer: selectionSort({theList: theArray, howManyPasses: whichPass}),
+        type: swapOrPass
+      };
+      answers.push(answerData);
+
+      message = "Given the array <code>[" + str(theArray) + "]</code>, what is the state of the array after pass number " + thingToFind + " when using <strong>selection</strong> sort?<br>Write your answer in the form <code>[3,7,12,4,8,5]</code> (with no spaces between the values of the array).";
+    }
+  }
 
   // add container div for label and question -- allows for icon validation
   let container = createElement("div");
@@ -82,7 +115,6 @@ function createQuestion(whichAlgorithm, swapOrPass) {
   container.parent("quiz");
 
   // add label and question to the html form -- message was created above...
-  // let message = "Convert the following from " + baseToText[baseFrom] + " to " + baseToText[baseTo] + ": " + displayValue;
   let label = createElement("label", message);
   label.parent(container);
 
@@ -184,9 +216,7 @@ function generateRandomArray(howManyNumbers, maxSize) {
   return myArray;
 }
 
-// Bubble Sort....
-
-function bubbleSort({theList, howManySwaps = undefined, passesRequired = undefined, totalSwaps = undefined, totalPasses = undefined}) {
+function bubbleSort({theList, howManySwaps = undefined, howManyPasses = undefined, totalSwaps = undefined, totalPasses = undefined}) {
   let localList = [...theList];
   let swapRequired = true;
   let swapNumber = 0;
@@ -212,7 +242,7 @@ function bubbleSort({theList, howManySwaps = undefined, passesRequired = undefin
       } 
     }
     passNumber++;
-    if (passNumber === passesRequired) {
+    if (passNumber === howManyPasses) {
       return localList;
     }
   }
@@ -223,33 +253,53 @@ function bubbleSort({theList, howManySwaps = undefined, passesRequired = undefin
   if (totalSwaps) {
     return swapNumber;
   }
+
+  return localList;
 }
 
-// let someArray = [5,15,3,8,9,1,20,7];
 
+function selectionSort({theList, howManySwaps = undefined, howManyPasses = undefined, totalSwaps = undefined, totalPasses = undefined}) {
 
-// Selection Sort
+  let localList = [...theList];
+  let swapNumber = 0;
+  let passNumber = 0;
 
-function selectionSort(aList) {
   let swapLocation = 0;
 
-  while (swapLocation < aList.length) {
+  while (swapLocation < localList.length) {
     let smallestLocation = swapLocation;
 
     // one pass
-    for (let i = swapLocation; i < aList.length; i++) {
-      if (aList[i] < aList[smallestLocation]) {
+    for (let i = swapLocation; i < localList.length; i++) {
+      if (localList[i] < localList[smallestLocation]) {
         smallestLocation = i;
       }
     }
 
     // swap
-    let temp = aList[swapLocation];
-    aList[swapLocation] = aList[smallestLocation];
-    aList[smallestLocation] = temp;
+    let temp = localList[swapLocation];
+    localList[swapLocation] = localList[smallestLocation];
+    localList[smallestLocation] = temp;
 
     swapLocation++;
+
+    passNumber++;
+    if (passNumber === howManyPasses) {
+      return localList;
+    }
+    
+    swapNumber++;
+    if (swapNumber === howManySwaps) {
+      return {first: localList[swapLocation], second: localList[smallestLocation]};
+    }
   }
 
-  return aList;
+  if (totalPasses) {
+    return passNumber;
+  }
+  if (totalSwaps) {
+    return swapNumber;
+  }
+  
+  return localList;
 }
