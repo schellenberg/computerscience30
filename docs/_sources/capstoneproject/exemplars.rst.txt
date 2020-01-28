@@ -18,6 +18,14 @@ Previous Projects
     - `Legend of the Fallen Angel game <https://wmcics30.github.io/cs30-major-project-1/>`_ 
     - `Legend of the Fallen Angel repo <https://github.com/wmcics30/cs30-major-project-1/>`_ 
 
+- Angry Birds Clone (Navaneeth) 
+    - `Angry Birds Clone game <https://wmcics30.github.io/cs30/>`_ 
+    - `Angry Birds Clone repo <https://github.com/wmcics30/cs30>`_ 
+
+- Pacman Clone (Anurag)
+    - `Pacman Clone game <https://wmcics30.github.io/Major_Project/>`_ 
+    - `Pacman Clone repo <https://github.com/wmcics30/Major_Project>`_ 
+
 - Chamber of Echoes Card Game (Austin)
     - `Chamber of Echoes Card Game <https://wmcics30.github.io/majorproject-2/>`_ 
     - `Chamber of Echoes Card Game repo <https://github.com/wmcics30/majorproject-2/>`_ 
@@ -42,4 +50,15 @@ Previous Projects
     - `Top Down Flying Game <https://wmcics30.github.io/CharlieMurph.github.io/majorproject>`_ 
     - `Top Down Flying Game repo <https://github.com/wmcics30/CharlieMurph.github.io/tree/master/majorproject>`_ 
 
+- Dungeon Crawler Game (Nick)
+    - `Dungeon Crawler Game <https://wmcics30.github.io/major-project-5/>`_ 
+    - `Dungeon Crawler Game repo <https://github.com/wmcics30/major-project-5/>`_ 
 
+- 3D Snake (Jordie) 
+    - `3D Snake Game <https://wmcics30.github.io/Major-Project-6/>`_ 
+    - `3D Snake Game repo <https://github.com/wmcics30/Major-Project-6>`_ 
+
+
+- Alien Shooter (Mueez) 
+    - `Alien Shooter Game <https://wmcics30.github.io/major-project-7/>`_ 
+    - `Alien Shooter Game repo <https://github.com/wmcics30/major-project-7>`_ 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="js/p5.min.js"></script>
+    <script src="js/p5.dom.min.js"></script>
+    <script src="sketch.js"></script>
+    
+    <!-- stop enter from reloading page due to submitting form -->
+    <script type="text/javascript">
+      window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();answerCheck();return false;}}},true);
+    </script>
+    
+    <style>
+      .valid-feedback.feedback-icon,
+      .invalid-feedback.feedback-icon {
+          position: absolute;
+          width: auto;
+          bottom: 10px;
+          right: 10px;
+          margin-top: 0;
+      }   
+    </style>
+
+  </head>
+  <body>
+    <h1 class="text-center">Sorting Algorithms Quiz</h1>
+    <h4 class="text-center">Bubble Sort and Selection Sort</h4>
+    <div class="container">
+      
+      <form id="quiz" class="form-group">
+
+      </form>
+
+    </div>
+  </body>
+</html>
