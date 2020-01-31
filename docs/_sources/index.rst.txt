@@ -41,6 +41,7 @@ Getting Started
     gettingstarted/refactoring.rst
     gettingstarted/objectbasics.rst
     gettingstarted/builtinfunctions.rst
+    gettingstarted/strings.rst
     gettingstarted/translationrotation.rst
     gettingstarted/generativeart.rst
     gettingstarted/perlin.rst
