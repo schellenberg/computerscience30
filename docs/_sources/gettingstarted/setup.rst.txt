@@ -40,8 +40,8 @@ There is a configuration file in our template folder called `.eslintrc.js` that 
 
 Install Node.js from `https://nodejs.org <https://nodejs.org>`_ (which also installs npm -- node package manager)
 
-- in VS Code, open Terminal and type `npm install -g eslint`
-- if you have installation problems with eslint, you can try updating npm [in VS Code, open Terminal and type `npm install npm@latest -g`]
+- in VS Code, open Terminal and type ``npm install -g eslint``
+- if you have installation problems with eslint, you can try updating npm [in VS Code, open Terminal and type ``npm install npm@latest -g``]
 
 - Install the ``ESLint`` extension in VS Code (allows VS Code to use ESLint, which helps you write better formatted JavaScript, and warns you of errors as you type your code)
 
