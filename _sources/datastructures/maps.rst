@@ -72,7 +72,7 @@ Mind reader demo -- perhaps have the students play this ahead of time (prior to 
 Assignment Idea
 -----------------
 
-Give :download:`starter code <sentiment-analysis-starter-code.zip>` for movie review sentiment analysis, and have the students just fill in two functions (related to storing/accessing information from a Map). `Idea from Nifty assignments <http://nifty.stanford.edu/2016/manley-urness-movie-review-sentiment/>`_ 
+Give :download:`starter code <../handouts/sentiment-analysis-starter-code.zip>` for movie review sentiment analysis, and have the students just fill in two functions (related to storing/accessing information from a Map). `Idea from Nifty assignments <http://nifty.stanford.edu/2016/manley-urness-movie-review-sentiment/>`_ 
 
 
 Practice Quiz
