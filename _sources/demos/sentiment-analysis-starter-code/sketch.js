@@ -33,13 +33,15 @@ function setup() {
 }
 
 function draw() {
-
+  // you don't need anything in the draw loop, as the runAnalysis function will get called
+  // whenever the button is pressed (you can see how I did this in the setup function) 
 }
 
 function learnWordScores() {
   //need to loop through the information from the text file, and assign appropriate scores to each word
+  // you will want to use the .split function built into JS (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)
 
-
+  
 }
 
 function runAnalysis() {
