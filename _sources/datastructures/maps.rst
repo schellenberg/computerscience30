@@ -63,6 +63,26 @@ Map Level 2
 - `firstSwap <https://codingjs.wmcicompsci.ca/exercise.html?name=firstSwap&title=Map-2>`_ 
 
 
+Iterating Over a Map
+------------------------
+
+Sometimes you want to look at every key/value pair within a map. There are a number of ways to do this, but one of the simplest is to use a ``for...of`` loop, which could look like the following:
+
+.. code-block:: javascript
+
+	for (let [key, value] of someMap) {
+	  // the key variable holds the value used to access something in the map
+	  // the value variable holds whatever the contents are
+
+	  // in other words, someMap.get(key) would return the same thing as value
+	}
+
+To practice iterating through a map, you should try the following questions from CodingJS:
+
+- `mapLargest <https://codingjs.wmcicompsci.ca/exercise.html?name=mapLargest&title=Map-2>`_
+- `mapLongestSentence <https://codingjs.wmcicompsci.ca/exercise.html?name=mapLongestSentence&title=Map-2>`_
+
+
 More In Depth Demo
 -------------------
 

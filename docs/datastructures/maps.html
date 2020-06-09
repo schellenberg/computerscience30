@@ -289,9 +289,10 @@
 <li><a class="reference internal" href="#map-level-2">3.1.2. Map Level 2</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#more-in-depth-demo">3.2. More In Depth Demo</a></li>
-<li><a class="reference internal" href="#assignment-idea">3.3. Assignment Idea</a></li>
-<li><a class="reference internal" href="#practice-quiz">3.4. Practice Quiz</a></li>
+<li><a class="reference internal" href="#iterating-over-a-map">3.2. Iterating Over a Map</a></li>
+<li><a class="reference internal" href="#more-in-depth-demo">3.3. More In Depth Demo</a></li>
+<li><a class="reference internal" href="#assignment-idea">3.4. Assignment Idea</a></li>
+<li><a class="reference internal" href="#practice-quiz">3.5. Practice Quiz</a></li>
 </ul>
 </li>
 </ul>
@@ -391,16 +392,33 @@
 </ul>
 </div>
 </div>
+<div class="section" id="iterating-over-a-map">
+<h2>3.2. Iterating Over a Map<a class="headerlink" href="#iterating-over-a-map" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes you want to look at every key/value pair within a map. There are a number of ways to do this, but one of the simplest is to use a <code class="docutils literal notranslate"><span class="pre">for...of</span></code> loop, which could look like the following:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="p">[</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">]</span> <span class="k">of</span> <span class="nx">someMap</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// the key variable holds the value used to access something in the map</span>
+  <span class="c1">// the value variable holds whatever the contents are</span>
+
+  <span class="c1">// in other words, someMap.get(key) would return the same thing as value</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>To practice iterating through a map, you should try the following questions from CodingJS:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=mapLargest&amp;title=Map-2">mapLargest</a></p></li>
+<li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=mapLongestSentence&amp;title=Map-2">mapLongestSentence</a></p></li>
+</ul>
+</div>
 <div class="section" id="more-in-depth-demo">
-<h2>3.2. More In Depth Demo<a class="headerlink" href="#more-in-depth-demo" title="Permalink to this headline">¶</a></h2>
+<h2>3.3. More In Depth Demo<a class="headerlink" href="#more-in-depth-demo" title="Permalink to this headline">¶</a></h2>
 <p>Mind reader demo – perhaps have the students play this ahead of time (prior to ever introducing the Map data type).</p>
 </div>
 <div class="section" id="assignment-idea">
-<h2>3.3. Assignment Idea<a class="headerlink" href="#assignment-idea" title="Permalink to this headline">¶</a></h2>
+<h2>3.4. Assignment Idea<a class="headerlink" href="#assignment-idea" title="Permalink to this headline">¶</a></h2>
 <p>Give <a class="reference download internal" download="" href="../_downloads/427a836d179a4ed318c1b001c95b49fd/sentiment-analysis-starter-code.zip"><code class="xref download docutils literal notranslate"><span class="pre">starter</span> <span class="pre">code</span></code></a> for movie review sentiment analysis, and have the students just fill in two functions (related to storing/accessing information from a Map). <a class="reference external" href="http://nifty.stanford.edu/2016/manley-urness-movie-review-sentiment/">Idea from Nifty assignments</a></p>
 </div>
 <div class="section" id="practice-quiz">
-<h2>3.4. Practice Quiz<a class="headerlink" href="#practice-quiz" title="Permalink to this headline">¶</a></h2>
+<h2>3.5. Practice Quiz<a class="headerlink" href="#practice-quiz" title="Permalink to this headline">¶</a></h2>
 
         <div class="runestone">
         <div data-component="fillintheblank" id="maps_parsing_code_1">
