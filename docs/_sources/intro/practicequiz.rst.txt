@@ -8,7 +8,7 @@ Topics To Know
 - conditionals (if/else if/else)
 - loops (while and/or for)
 - functions
-- boolean logic/logical operators - CodingBat practice is probably the best choice for getting this nailed down...
+- boolean logic/logical operators - `CodingJS <https://codingjs.wmcicompsci.ca/>`_  practice is probably the best choice for getting this nailed down...
 
 
 Question 1
