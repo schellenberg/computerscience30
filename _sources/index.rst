@@ -35,7 +35,6 @@ Getting Started
     gettingstarted/loops.rst
     gettingstarted/pairprogramming.rst
     gettingstarted/statevariables.rst
-    gettingstarted/refactoring.rst
     gettingstarted/objectbasics.rst
     gettingstarted/builtinfunctions.rst
     gettingstarted/strings.rst
