@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4. Pair Programming Lab &#8212; Computer Science 30 - Schellenberg</title>
+    <title>4. Pair Programming Work &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -124,7 +124,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="5. State Variables" href="statevariables.html" />
-    <link rel="prev" title="3. Loops - For and While" href="loops.html" />
+    <link rel="prev" title="3. Loops and Nested Loops" href="loops.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -284,11 +284,16 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">4. Pair Programming Lab</a><ul>
+<li><a class="reference internal" href="#">4. Pair Programming Work</a><ul>
 <li><a class="reference internal" href="#boolean-order-of-operations-reminder">4.1. Boolean Order of Operations Reminder</a></li>
 <li><a class="reference internal" href="#reading-code">4.2. Reading Code</a></li>
 <li><a class="reference internal" href="#experimenting-with-the-code">4.3. Experimenting with the Code</a></li>
 <li><a class="reference internal" href="#adding-new-functionality">4.4. Adding New Functionality</a></li>
+<li><a class="reference internal" href="#square-moving-around-screen">4.5. Square Moving Around Screen</a></li>
+<li><a class="reference internal" href="#state-variables">4.6. State Variables</a></li>
+<li><a class="reference internal" href="#timing-millis">4.7. Timing – <code class="docutils literal notranslate"><span class="pre">millis()</span></code></a></li>
+<li><a class="reference internal" href="#try-this">4.8. Try This</a></li>
+<li><a class="reference internal" href="#practice-problem">4.9. Practice Problem</a></li>
 </ul>
 </li>
 </ul>
@@ -298,7 +303,7 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">3. </span>Loops - For and While" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">3. </span>Loops and Nested Loops" data-toggle="tooltip">
     <a href="loops.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
@@ -335,8 +340,8 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="pair-programming-lab">
-<h1><span class="section-number">4. </span>Pair Programming Lab<a class="headerlink" href="#pair-programming-lab" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pair-programming-work">
+<h1><span class="section-number">4. </span>Pair Programming Work<a class="headerlink" href="#pair-programming-work" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Work together with a partner to read code and determine what it will do. Then add new functionality to the code.</p>
@@ -371,12 +376,86 @@
 <li><p><a class="reference external" href="https://editor.p5js.org/schellenberg/present/_xGAzqX46">Solution to Challenge for Example 2</a></p></li>
 </ul>
 </div>
+<div class="section" id="square-moving-around-screen">
+<h2><span class="section-number">4.5. </span>Square Moving Around Screen<a class="headerlink" href="#square-moving-around-screen" title="Permalink to this headline">¶</a></h2>
+<p>Create a sketch that accomplishes the following:</p>
+<img alt="../_images/moving_rectangle.gif" src="../_images/moving_rectangle.gif" />
+<p>You can <a class="reference external" href="https://editor.p5js.org/schellenberg/present/-4DTtO-om">open a live version of this here</a></p>
+<p>Have students attempt this first, <em>before</em> introducing the idea of a state variable.</p>
+</div>
+<div class="section" id="state-variables">
+<h2><span class="section-number">4.6. </span>State Variables<a class="headerlink" href="#state-variables" title="Permalink to this headline">¶</a></h2>
+<p>What are they?
+Why bother?</p>
+</div>
+<div class="section" id="timing-millis">
+<h2><span class="section-number">4.7. </span>Timing – <code class="docutils literal notranslate"><span class="pre">millis()</span></code><a class="headerlink" href="#timing-millis" title="Permalink to this headline">¶</a></h2>
+<p>You can find out how many milliseconds (thousands of a second) have elapsed since the run of the program began.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">someTime</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">createCanvas</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="mi">600</span><span class="p">);</span>
+  <span class="nx">someTime</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">millis</span><span class="p">()</span> <span class="o">&lt;</span> <span class="nx">someTime</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">background</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://editor.p5js.org/schellenberg/sketches/N1b8Tk-M9">Open an editable version of the millis example above in the p5js editor</a></p>
+</div>
+<div class="section" id="try-this">
+<h2><span class="section-number">4.8. </span>Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h2>
+<p>Try to alter the code given above so that the background continues to switch from black to white once every 2 seconds.</p>
+</div>
+<div class="section" id="practice-problem">
+<h2><span class="section-number">4.9. </span>Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
+<p>Traffic light simluator. Start with the following code, and attempt to get a traffic light working. Can be done nicely with a state variable, and use of the <code class="docutils literal notranslate"><span class="pre">millis()</span></code> function.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Traffic Light Starter Code</span>
+<span class="c1">// Your Name Here</span>
+<span class="c1">// The Date Here</span>
+
+<span class="c1">// GOAL: make a &#39;traffic light&#39; simulator. For now, just have the light</span>
+<span class="c1">// changing according to time. You may want to investigate the millis()</span>
+<span class="c1">// function at https://p5js.org/reference/#/p5/millis</span>
+
+<span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">createCanvas</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">background</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+  <span class="nx">drawOutlineOfLights</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">drawOutlineOfLights</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">//box</span>
+  <span class="nx">rectMode</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">);</span>
+  <span class="nx">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="nx">rect</span><span class="p">(</span><span class="nx">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="nx">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+
+  <span class="c1">//lights</span>
+  <span class="nx">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+  <span class="nx">ellipse</span><span class="p">(</span><span class="nx">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="nx">height</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span> <span class="c1">//top</span>
+  <span class="nx">ellipse</span><span class="p">(</span><span class="nx">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="nx">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span> <span class="c1">//middle</span>
+  <span class="nx">ellipse</span><span class="p">(</span><span class="nx">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="nx">height</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span> <span class="c1">//bottom</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://editor.p5js.org/schellenberg/sketches/N51M3BkvY">Open an editable version of the traffic light starter code above in the p5js editor</a></p>
+</div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">3. </span>Loops - For and While' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">3. </span>Loops and Nested Loops' data-toggle="tooltip">
     <a href="loops.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>

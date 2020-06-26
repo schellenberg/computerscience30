@@ -87,32 +87,11 @@ Notice that this is very different than how a primitive (immutable) data type wo
   Other than Number, String, and Boolean, everything you use in JavaScript will be an object. In other words, they will all be passed by reference, not copied. Be careful to make a **deep copy** yourself if you want a separate version of an array, for example.
 
 
-Practice Problem
+Class Demo
 -----------------
 
-Create a ball object. It should have x, y, radius, and color properties. Display it on the canvas. Make it move to the mouse whenever the mouse is pressed. Change the radius when w or s are pressed.
+Create a bubble object. It should have x, y, diameter, and color properties. Spawn 20 bubbles in setup, and ``push()`` them all into an array (use a ``spawnBubble()`` function to create and push a bubble object into the array). Use a ``for ... of`` loop inside the draw loop to display each of the bubbles in the array, and move each bubble randomly each frame. Use ``window.setInterval(spawnBubble, 500)`` in the setup function to automatically call the spawnBubble function every half second (500 milliseconds). 
 
-.. p5:: ballObjectDemo
-  :width: 400
+The demo should look `something like this <https://editor.p5js.org/schellenberg/present/AqvisFhH1>`_.
 
-  let ball;
-
-  function setup() {
-    createCanvas(400, 400);
-    ball = {
-      x: 100,
-      y: 200,
-      radius: 25,
-      fillColor: color(255, 0, 0)
-    }
-  }
-
-  function draw() {
-    background(220);
-    displayBall();
-  }
-
-  function displayBall() {
-    fill(ball.fillColor);
-    ellipse(ball.x, ball.y, ball.radius*2, ball.radius*2);
-  }
+Change the bubble motion to use Perlin noise. The resulting demo should `now look something like this <https://editor.p5js.org/schellenberg/present/L1JYDY2zE>`_.

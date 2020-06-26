@@ -72,7 +72,7 @@ Try to figure out what this will do **without** running it!
       }
     }
 
-Once you thnk you know what it will do, you can `check your guess by clicking here <https://editor.p5js.org/schellenberg/present/RpkErQVDV>`_.
+Once you thnk you know what it will do, you can `check your guess for example 1 by clicking here <https://editor.p5js.org/schellenberg/present/RpkErQVDV>`_.
 
 
 Try to figure out what this will do **without** running it!
@@ -92,7 +92,7 @@ Try to figure out what this will do **without** running it!
       }
     }
 
-Once you thnk you know what it will do, you can `check your guess by clicking here <https://editor.p5js.org/schellenberg/present/xsaxKiUw8>`_.
+Once you thnk you know what it will do, you can `check your guess for example 2 by clicking here <https://editor.p5js.org/schellenberg/present/xsaxKiUw8>`_.
 
 Your Turn
 ----------
@@ -129,499 +129,95 @@ To talk about/include:
 .. Draw a archery target image using while loop. Then do it using a for loop. Then do it with a for loop, counting up from 0, and using an array of colors to fill in the circles.
 
 
+Square Moving Around Screen
+---------------------------
 
+Create a sketch that accomplishes the following:
 
-Loops Practice Quiz
---------------------
+.. image:: images/moving_rectangle.gif
 
-Note that the same code fragments are used in each question below. You might find it useful to sketch out on paper what you think each code fragment will create, then match your answers with the images provided in the questions below.
+You can `open a live version of this here <https://editor.p5js.org/schellenberg/present/-4DTtO-om>`_ 
 
-.. mchoice:: loops-practice-quiz-1
-  :random:
+Have students attempt this first, *before* introducing the idea of a state variable.
 
-  Which of the following code fragments would generate the image below?
-  
-  .. image:: images/loops-1.png
-  
-  - .. code-block:: javascript
+State Variables
+----------------
 
-      for (let i = 0; i < 20; i++) {
-        line(i*2, 0, i * 15, height);
-      }
+What are they?
+Why bother?
 
-    + Yes! Nicely done!
 
-  - .. code-block:: javascript
+Timing -- ``millis()``
+-----------------------
 
-      for (let i = 40; i > 0; i--) {
-        rect(i * 2, i * 2, i * 2, i * 5);
-      }
+You can find out how many milliseconds (thousands of a second) have elapsed since the run of the program began. 
 
-    - Try again!
+.. code-block:: javascript
 
-  - .. code-block:: javascript
+	let someTime;
 
-      let i = 0;
-      while (i < width) {
-        line(0, i, width, i);
-        i += 10;
-      }
+	function setup() {
+	  createCanvas(600,600);
+	  someTime = 2000;
+	}
 
-    - Try again!
+	function draw() {
+	  if (millis() < someTime) {
+	    background(255);
+	  }
+	  else {
+	    background(0);
+	  }
+	}
 
-  - .. code-block:: javascript
+`Open an editable version of the millis example above in the p5js editor <https://editor.p5js.org/schellenberg/sketches/N1b8Tk-M9>`_ 
 
-      for (let i = 0; i < width; i += 10) {
-        line(i, 0, i, height);
-      }
 
-    - Try again!
+Try This
+---------
 
-  - .. code-block:: javascript
+Try to alter the code given above so that the background continues to switch from black to white once every 2 seconds.
 
-      for (let i = 0; i < width; i++) {
-        if (i % 15 === 0) {
-          line(0, 0, width, i);
-        }
-      }
 
-    - Try again!
+Practice Problem
+-----------------
 
-  - .. code-block:: javascript
+Traffic light simluator. Start with the following code, and attempt to get a traffic light working. Can be done nicely with a state variable, and use of the ``millis()`` function.
 
-      for (let i = 125; i > 50; i -= 15) {
-        rect(i, i + 50, 10, i);
-      }
+.. code-block:: javascript
 
-    - Try again!
+	// Traffic Light Starter Code
+	// Your Name Here
+	// The Date Here
 
-  - .. code-block:: javascript
+	// GOAL: make a 'traffic light' simulator. For now, just have the light
+	// changing according to time. You may want to investigate the millis()
+	// function at https://p5js.org/reference/#/p5/millis
 
-      let i = 50;
-      while (i < 170) {
-        rect(i, i + 50, i, 10);
-        i += 20;
-      }
+	function setup() {
+	  createCanvas(600, 600);
+	}
 
-    - Try again!
+	function draw() {
+	  background(255);
+	  drawOutlineOfLights();
+	}
 
+	function drawOutlineOfLights() {
+	  //box
+	  rectMode(CENTER);
+	  fill(0);
+	  rect(width/2, height/2, 75, 200, 10);
 
-.. mchoice:: loops-practice-quiz-2
-  :random:
+	  //lights
+	  fill(255);
+	  ellipse(width/2, height/2 - 65, 50, 50); //top
+	  ellipse(width/2, height/2, 50, 50); //middle
+	  ellipse(width/2, height/2 + 65, 50, 50); //bottom
+	}
 
-  Which of the following code fragments would generate the image below?
-  
-  .. image:: images/loops-2.png
-  
-  - .. code-block:: javascript
 
-      for (let i = 0; i < 20; i++) {
-        line(i*2, 0, i * 15, height);
-      }
+`Open an editable version of the traffic light starter code above in the p5js editor <https://editor.p5js.org/schellenberg/sketches/N51M3BkvY>`_ 
 
-    - Try again!
 
-  - .. code-block:: javascript
 
-      for (let i = 40; i > 0; i--) {
-        rect(i * 2, i * 2, i * 2, i * 5);
-      }
-
-    + Yes! Nicely done!
-
-  - .. code-block:: javascript
-
-      let i = 0;
-      while (i < width) {
-        line(0, i, width, i);
-        i += 10;
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 0; i < width; i += 10) {
-        line(i, 0, i, height);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 0; i < width; i++) {
-        if (i % 15 === 0) {
-          line(0, 0, width, i);
-        }
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 125; i > 50; i -= 15) {
-        rect(i, i + 50, 10, i);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      let i = 50;
-      while (i < 170) {
-        rect(i, i + 50, i, 10);
-        i += 20;
-      }
-
-    - Try again!
-
-
-.. mchoice:: loops-practice-quiz-3
-  :random:
-
-  Which of the following code fragments would generate the image below?
-  
-  .. image:: images/loops-3.png
-  
-  - .. code-block:: javascript
-
-      for (let i = 0; i < 20; i++) {
-        line(i*2, 0, i * 15, height);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 40; i > 0; i--) {
-        rect(i * 2, i * 2, i * 2, i * 5);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      let i = 0;
-      while (i < width) {
-        line(0, i, width, i);
-        i += 10;
-      }
-
-    + Yes! Nicely done!
-
-  - .. code-block:: javascript
-
-      for (let i = 0; i < width; i += 10) {
-        line(i, 0, i, height);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 0; i < width; i++) {
-        if (i % 15 === 0) {
-          line(0, 0, width, i);
-        }
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 125; i > 50; i -= 15) {
-        rect(i, i + 50, 10, i);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      let i = 50;
-      while (i < 170) {
-        rect(i, i + 50, i, 10);
-        i += 20;
-      }
-
-    - Try again!
-
-
-.. mchoice:: loops-practice-quiz-4
-  :random:
-
-  Which of the following code fragments would generate the image below?
-  
-  .. image:: images/loops-4.png
-  
-  - .. code-block:: javascript
-
-      for (let i = 0; i < 20; i++) {
-        line(i*2, 0, i * 15, height);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 40; i > 0; i--) {
-        rect(i * 2, i * 2, i * 2, i * 5);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      let i = 0;
-      while (i < width) {
-        line(0, i, width, i);
-        i += 10;
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 0; i < width; i += 10) {
-        line(i, 0, i, height);
-      }
-
-    + Yes! Nicely done!
-
-  - .. code-block:: javascript
-
-      for (let i = 0; i < width; i++) {
-        if (i % 15 === 0) {
-          line(0, 0, width, i);
-        }
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 125; i > 50; i -= 15) {
-        rect(i, i + 50, 10, i);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      let i = 50;
-      while (i < 170) {
-        rect(i, i + 50, i, 10);
-        i += 20;
-      }
-
-    - Try again!
-
-
-.. mchoice:: loops-practice-quiz-5
-  :random:
-
-  Which of the following code fragments would generate the image below?
-  
-  .. image:: images/loops-5.png
-  
-  - .. code-block:: javascript
-
-      for (let i = 0; i < 20; i++) {
-        line(i*2, 0, i * 15, height);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 40; i > 0; i--) {
-        rect(i * 2, i * 2, i * 2, i * 5);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      let i = 0;
-      while (i < width) {
-        line(0, i, width, i);
-        i += 10;
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 0; i < width; i += 10) {
-        line(i, 0, i, height);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 0; i < width; i++) {
-        if (i % 15 === 0) {
-          line(0, 0, width, i);
-        }
-      }
-
-    + Yes! Nicely done!
-
-  - .. code-block:: javascript
-
-      for (let i = 125; i > 50; i -= 15) {
-        rect(i, i + 50, 10, i);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      let i = 50;
-      while (i < 170) {
-        rect(i, i + 50, i, 10);
-        i += 20;
-      }
-
-    - Try again!
-
-
-
-.. mchoice:: loops-practice-quiz-6
-  :random:
-
-  Which of the following code fragments would generate the image below?
-  
-  .. image:: images/loops-6.png
-  
-  - .. code-block:: javascript
-
-      for (let i = 0; i < 20; i++) {
-        line(i*2, 0, i * 15, height);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 40; i > 0; i--) {
-        rect(i * 2, i * 2, i * 2, i * 5);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      let i = 0;
-      while (i < width) {
-        line(0, i, width, i);
-        i += 10;
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 0; i < width; i += 10) {
-        line(i, 0, i, height);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 0; i < width; i++) {
-        if (i % 15 === 0) {
-          line(0, 0, width, i);
-        }
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 125; i > 50; i -= 15) {
-        rect(i, i + 50, 10, i);
-      }
-
-    + Yes! Nicely done!
-
-  - .. code-block:: javascript
-
-      let i = 50;
-      while (i < 170) {
-        rect(i, i + 50, i, 10);
-        i += 20;
-      }
-
-    - Try again!
-
-
-.. mchoice:: loops-practice-quiz-7
-  :random:
-
-  Which of the following code fragments would generate the image below?
-  
-  .. image:: images/loops-7.png
-  
-  - .. code-block:: javascript
-
-      for (let i = 0; i < 20; i++) {
-        line(i*2, 0, i * 15, height);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 40; i > 0; i--) {
-        rect(i * 2, i * 2, i * 2, i * 5);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      let i = 0;
-      while (i < width) {
-        line(0, i, width, i);
-        i += 10;
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 0; i < width; i += 10) {
-        line(i, 0, i, height);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 0; i < width; i++) {
-        if (i % 15 === 0) {
-          line(0, 0, width, i);
-        }
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      for (let i = 125; i > 50; i -= 15) {
-        rect(i, i + 50, 10, i);
-      }
-
-    - Try again!
-
-  - .. code-block:: javascript
-
-      let i = 50;
-      while (i < 170) {
-        rect(i, i + 50, i, 10);
-        i += 20;
-      }
-
-    + Yes! Nicely done!

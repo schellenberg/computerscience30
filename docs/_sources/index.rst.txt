@@ -34,14 +34,7 @@ Getting Started
     gettingstarted/drawingbasics.rst
     gettingstarted/loops.rst
     gettingstarted/pairprogramming.rst
-    gettingstarted/statevariables.rst
-    gettingstarted/refactoring.rst
     gettingstarted/objectbasics.rst
-    gettingstarted/builtinfunctions.rst
-    gettingstarted/strings.rst
-    gettingstarted/translationrotation.rst
-    gettingstarted/generativeart.rst
-    gettingstarted/perlin.rst
 
 Better Development Environment
 :::::::::::::::::::::::::::::::
@@ -152,6 +145,16 @@ Capstone Coding Project
     capstoneproject/exemplars.rst
 
 
+Practice Quizzes
+:::::::::::::::::
+
+.. toctree::
+    :maxdepth: 1
+    :numbered:
+
+    practicequiz/loops.rst
+
+
 JavaScript Reference
 :::::::::::::::::::::
 
@@ -161,7 +164,7 @@ JavaScript Reference
 
     reference/datatypes.rst
     reference/controlstructures.rst
-
+    reference/strings.rst
 
 Helpful Links
 ::::::::::::::
