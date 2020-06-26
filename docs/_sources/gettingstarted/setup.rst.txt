@@ -25,9 +25,9 @@ Although you can use any text editor you'd like, I recommend you use `Visual Stu
 
 To make VSCode into something better than just a plain text editor, we can install packages to extend the built in functionality. To do this, click on the extensions tab (on the left hand sidebar).
 
-.. image:: images/vscode-sidebar.png
+.. image:: images/extensions-icon.png
 
-The packages should add to your VSCode installation include:
+The packages you should add to your VSCode installation include:
 
 - ``p5js Snippets`` (allows VSCode to auto-expand p5js keywords/commands)
 - ``Live Server`` (lets you run your code on your local machine for testing, by adding a "Go Live" button to the bottom of your VS Code window)

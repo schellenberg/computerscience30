@@ -3,15 +3,10 @@ Setting Up a Work Environment
 
 .. topic:: Quick Overview of Day
 
-    Get your computer set up for the rest of the semester!
+    Level up from using the p5js web editor, and get your computer set up for the rest of the semester!
 
 
 .. note:: You should be able to set up the following on both your computer at school, as well as at home. Everything listed is open source software, so you can use it for free (and take a look at how it was made, if you'd like to).
-
-p5js Web Editor
-----------------
-
-If you are just needing to do a quick sketch/experiment using p5js, you can use the `p5js web editor <https://editor.p5js.org/>`_. Although the web editor isn't quite as full featured as setting up a local development environment, it is really simple to jump in and start coding. You should create yourself an account so that you can use (and save your work on) the web editor whenever you'd like.
 
 
 Text Editor
@@ -25,9 +20,9 @@ Although you can use any text editor you'd like, I recommend you use `Visual Stu
 
 To make VSCode into something better than just a plain text editor, we can install packages to extend the built in functionality. To do this, click on the extensions tab (on the left hand sidebar).
 
-.. image:: images/vscode-sidebar.png
+.. image:: images/extensions-icon.png
 
-The packages should add to your VSCode installation include:
+The packages you should add to your VSCode installation include:
 
 - ``p5js Snippets`` (allows VSCode to auto-expand p5js keywords/commands)
 - ``Live Server`` (lets you run your code on your local machine for testing, by adding a "Go Live" button to the bottom of your VS Code window)

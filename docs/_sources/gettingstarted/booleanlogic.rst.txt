@@ -1,13 +1,13 @@
-Boolean Logic
+Pair Programming Lab
 =============================
 
 .. topic:: Quick Overview of Day
 
-    Practice boolean logic. ``!`` means not. ``&&`` means and. ``||`` means or.
+    Work together with a partner to read code and determine what it will do. Then add new functionality to the code.
 
 
-Order of Operations
---------------------
+Boolean Order of Operations Reminder
+-------------------------------------
 
 - NOT ``!``
 - AND ``&&``
@@ -24,9 +24,8 @@ Reading Code
 
 *Don't open these until you have read the handout above, and figured out what will happen using only your brain!*
 
-- `Solution to Example 1 <https://editor.p5js.org/schellenberg/full/36XCzEGKQ>`_ 
-- `Solution to Example 2 <https://editor.p5js.org/schellenberg/full/X45nRNukc>`_ 
-
+- `Solution to Example 1 <https://editor.p5js.org/schellenberg/sketches/36XCzEGKQ>`_ 
+- `Solution to Example 2 <https://editor.p5js.org/schellenberg/sketches/X45nRNukc>`_ 
 
 
 .. Practice Problem
@@ -38,8 +37,10 @@ Reading Code
 
 .. - if the "x" or "z" keys are pressed, draw ellipses all over the screen
 
+Adding New Functionality
+-------------------------
 
-Practice Quiz
---------------
+Now that you have determined how the code works, improve both of the above projects so that when the button variable is true, the rectangle can be dragged around the screen to a new location. In order to make this work reasonably well, you should drag the rectangle by middle point (half way across it vertically, half way across it horizontally). If you are unsure what I mean, take a look at the completed versions below:
 
-Needs to be created...
+- `Solution to Challenge for Example 1 <https://editor.p5js.org/schellenberg/present/k3sB-_5ag>`_ 
+- `Solution to Challenge for Example 2 <https://editor.p5js.org/schellenberg/present/_xGAzqX46>`_ 

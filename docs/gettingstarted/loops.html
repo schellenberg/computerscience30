@@ -1,129 +1,130 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>4. Loops - For and While &#8212; Computer Science 30 - Schellenberg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Loops and Nested Loops &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css?v=1FF7F927" />
-    <link rel="stylesheet" type="text/css" href="../_static/fitb.css?v=3BA0E63E" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=341DBE1C" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css?v=78EE59F" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css?v=B28E0910" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css?v=343A135B" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css?v=D101CC50" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css?v=931EACB9" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css?v=BCD38BE" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css?v=A828DAB1" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css?v=71852D76" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=EA7C0F6C" />
     <link rel="stylesheet" type="text/css" href="../_static/p5.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/parsons.css?v=2F3E13EE" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css?v=A1E2433E" />
     <link rel="stylesheet" type="text/css" href="../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" type="text/css" href="../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../_static/spreadsheet.css?v=B5F018A" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css?v=431459C5" />
+    <link rel="stylesheet" type="text/css" href="../_static/reveal.css?v=7BF74A61" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css?v=F960C0B4" />
+    <link rel="stylesheet" type="text/css" href="../_static/spreadsheet.css?v=28549A88" />
     <link rel="stylesheet" type="text/css" href="../_static/jexcel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/japp.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../_static/video.css?v=E5385B3B" />
-    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
-    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css?v=8435FFC1" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css?v=E589DE38" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=4EB84728" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=21C88BC4" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js?v=4AA8F078"></script>
-    <script type="text/javascript" src="../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../_static/sql.js?v=1B4587EC"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.en.js?v=70E93DF2"></script>
-    <script type="text/javascript" src="../_static/skulpt.min.js?v=E7EA033F"></script>
-    <script type="text/javascript" src="../_static/skulpt-stdlib.js?v=A9BBDEEE"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../_static/activecode.js?v=D7AAECEE"></script>
-    <script type="text/javascript" src="../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../_static/sql-wasm.js?v=44FE0709"></script>
-    <script type="text/javascript" src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../_static/mchoice.js?v=6F3B51A7"></script>
-    <script type="text/javascript" src="../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../_static/dragndrop.js?v=3984FD8D"></script>
-    <script type="text/javascript" src="../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../_static/lp.js?v=F137FF7A"></script>
-    <script type="text/javascript" src="../_static/gas.js?v=F0D0F02E"></script>
-    <script type="text/javascript" src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../_static/p5-widget.js"></script>
-    <script type="text/javascript" src="../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../_static/poll.js?v=11AD6126"></script>
-    <script type="text/javascript" src="../_static/reveal.js?v=9C3AAF60"></script>
-    <script type="text/javascript" src="../_static/shortanswer.js?v=BB0B99B1"></script>
-    <script type="text/javascript" src="../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../_static/spreadsheet.js?v=CFA364DA"></script>
-    <script type="text/javascript" src="../_static/jexcel.js"></script>
-    <script type="text/javascript" src="../_static/japp.js"></script>
-    <script type="text/javascript" src="../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../_static/Blob.js?v=AEC2447"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F48946A5"></script>
+    <script src="../_static/bookfuncs.js?v=99768D70"></script>
+    <script src="../_static/codemirror.js?v=77018329"></script>
+    <script src="../_static/xml.js?v=2D028995"></script>
+    <script src="../_static/css.js?v=DCA90274"></script>
+    <script src="../_static/python.js?v=24485A53"></script>
+    <script src="../_static/htmlmixed.js?v=372C094F"></script>
+    <script src="../_static/javascript.js?v=CEA7EE5E"></script>
+    <script src="../_static/sql.js?v=4CD470E6"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js?v=6F1F5263"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js?v=998C78A1"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js?v=8EBB15E7"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=5824D9C3"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js?v=98DF5447"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js?v=55219209"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js?v=4F0BEBCB"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=15D4678A"></script>
+    <script src="../_static/activecode-i18n.en.js?v=DA169A22"></script>
+    <script src="../_static/skulpt.min.js?v=EEB8131E"></script>
+    <script src="../_static/skulpt-stdlib.js?v=A9BBDEEE"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/activecode.js?v=DAEF8A8A"></script>
+    <script src="../_static/clike.js?v=B985002B"></script>
+    <script src="../_static/timed_activecode.js?v=C841A5EC"></script>
+    <script src="../_static/sql-wasm.js?v=DE2A0975"></script>
+    <script src="../_static/animationbase.js?v=B45130AE"></script>
+    <script src="../_static/mchoice.js?v=8BF4AC13"></script>
+    <script src="../_static/timedmc.js?v=9304523A"></script>
+    <script src="../_static/timed.js?v=9D71EDF0"></script>
+    <script src="../_static/clickable.js?v=6690DBCF"></script>
+    <script src="../_static/timedclickable.js?v=5BA90747"></script>
+    <script src="../_static/d3.v2.min.js?v=ADE5D104"></script>
+    <script src="../_static/jquery.ba-bbq.min.js?v=C6DC1D07"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
+    <script src="../_static/pytutor.js?v=DF08F5B7"></script>
+    <script src="../_static/codelens.js?v=68D45700"></script>
+    <script src="../_static/datafile.js?v=C14D6F8"></script>
+    <script src="../_static/dragndrop.js?v=84188863"></script>
+    <script src="../_static/timeddnd.js?v=1A222EDB"></script>
+    <script src="../_static/fitb.js?v=FA60A182"></script>
+    <script src="../_static/timedfitb.js?v=D4FEAAC3"></script>
+    <script src="../_static/lp.js?v=2701088E"></script>
+    <script src="../_static/gas.js?v=D2930CED"></script>
+    <script src="../_static/matrixeq.js?v=1FB22B23"></script>
+    <script src="../_static/p5-widget.js"></script>
+    <script src="../_static/js_lib/prettify.js?v=D560DBAE"></script>
+    <script src="../_static/js_lib/hammer.min.js?v=15E24CE5"></script>
+    <script src="../_static/parsons.js?v=C67A953C"></script>
+    <script src="../_static/timedparsons.js?v=4BB0E482"></script>
+    <script src="../_static/poll.js?v=C0A3DF52"></script>
+    <script src="../_static/reveal.js?v=83C3F10"></script>
+    <script src="../_static/shortanswer.js?v=BA091142"></script>
+    <script src="../_static/timed_shortanswer.js?v=90301BA9"></script>
+    <script src="../_static/showEval.js?v=2064C798"></script>
+    <script src="../_static/spreadsheet.js?v=9B995CB7"></script>
+    <script src="../_static/jexcel.js"></script>
+    <script src="../_static/japp.js"></script>
+    <script src="../_static/tabbedstuff.js?v=196A23BC"></script>
+    <script src="../_static/runestonevideo.js?v=255DE041"></script>
+    <script src="../_static/webglinteractive.js?v=7D80F988"></script>
+    <script src="../_static/FileSaver.min.js?v=8B232E7A"></script>
+    <script src="../_static/Blob.js?v=3D0C0929"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Variable Scope" href="variablescope.html" />
-    <link rel="prev" title="3. Drawing Primitives and Color" href="drawingbasics.html" />
+    <link rel="next" title="4. Pair Programming Lab" href="pairprogramming.html" />
+    <link rel="prev" title="2. The Basics of p5js" href="drawingbasics.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -283,12 +284,16 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">4. Loops - For and While</a><ul>
-<li><a class="reference internal" href="#while-loops">4.1. While Loops</a></li>
-<li><a class="reference internal" href="#for-loops">4.2. For Loops</a></li>
-<li><a class="reference internal" href="#refactoring-example-1">4.3. Refactoring Example 1</a></li>
-<li><a class="reference internal" href="#refactoring-example-2">4.4. Refactoring Example 2</a></li>
-<li><a class="reference internal" href="#loops-practice-quiz">4.5. Loops Practice Quiz</a></li>
+<li><a class="reference internal" href="#">3. Loops and Nested Loops</a><ul>
+<li><a class="reference internal" href="#while-loops">3.1. While Loops</a></li>
+<li><a class="reference internal" href="#for-loops">3.2. For Loops</a></li>
+<li><a class="reference internal" href="#class-demo">3.3. Class Demo</a></li>
+<li><a class="reference internal" href="#refactoring-example-1">3.4. Refactoring Example 1</a></li>
+<li><a class="reference internal" href="#id1">3.5. Class Demo</a></li>
+<li><a class="reference internal" href="#nested-loops">3.6. Nested Loops</a></li>
+<li><a class="reference internal" href="#your-turn">3.7. Your Turn</a></li>
+<li><a class="reference internal" href="#id3">3.8. Class Demo</a></li>
+<li><a class="reference internal" href="#loops-practice-quiz">3.9. Loops Practice Quiz</a></li>
 </ul>
 </li>
 </ul>
@@ -298,14 +303,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 3. Drawing Primitives and Color" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">2. </span>The Basics of p5js" data-toggle="tooltip">
     <a href="drawingbasics.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 5. Variable Scope' data-toggle="tooltip" >
-    <a href="variablescope.html" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">4. </span>Pair Programming Lab' data-toggle="tooltip" >
+    <a href="pairprogramming.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -335,14 +340,15 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="loops-for-and-while">
-<h1>4. Loops - For and While<a class="headerlink" href="#loops-for-and-while" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="loops-and-nested-loops">
+<h1><span class="section-number">3. </span>Loops and Nested Loops<a class="headerlink" href="#loops-and-nested-loops" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
-<p class="topic-title first">Quick Overview of Day</p>
-<p>For and while loops.</p>
+<p class="topic-title">Quick Overview of Day</p>
+<p>Explore for and while loops. Explore nested loops.</p>
 </div>
+<p>Remember that the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> loop is already an infinite loop.</p>
 <div class="section" id="while-loops">
-<h2>4.1. While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
 <p>While Loop Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
@@ -353,7 +359,7 @@
 </div>
 </div>
 <div class="section" id="for-loops">
-<h2>4.2. For Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>For Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h2>
 <p>For Loop Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
@@ -361,16 +367,77 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="class-demo">
+<h2><span class="section-number">3.3. </span>Class Demo<a class="headerlink" href="#class-demo" title="Permalink to this headline">¶</a></h2>
+<p>Create a sketch that draws something similar to the following (do it with both a for and while loop):</p>
+<img alt="../_images/line-of-circles.png" src="../_images/line-of-circles.png" />
+</div>
 <div class="section" id="refactoring-example-1">
-<h2>4.3. Refactoring Example 1<a class="headerlink" href="#refactoring-example-1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4. </span>Refactoring Example 1<a class="headerlink" href="#refactoring-example-1" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://editor.p5js.org/schellenberg/sketches/99xcneo7q">Open this code, and refactor it using a for loop and while loop</a></p>
 </div>
-<div class="section" id="refactoring-example-2">
-<h2>4.4. Refactoring Example 2<a class="headerlink" href="#refactoring-example-2" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://editor.p5js.org/schellenberg/sketches/thcEnD26l">Open this code, and refactor it using a for loop and an array</a></p>
+<div class="section" id="id1">
+<h2><span class="section-number">3.5. </span>Class Demo<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Adapt the code above to add color to each of the rings of the target (hint: count up from 0, and use an array of colors to fill in the circles).</p>
+</div>
+<div class="section" id="nested-loops">
+<h2><span class="section-number">3.6. </span>Nested Loops<a class="headerlink" href="#nested-loops" title="Permalink to this headline">¶</a></h2>
+<p>Loop in a loop. Can draw interesting things.</p>
+<p>Try to figure out what this will do <strong>without</strong> running it!</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">createCanvas</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">250</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">width</span><span class="p">;</span> <span class="nx">i</span><span class="o">+=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">j</span><span class="o">&lt;</span><span class="nx">height</span><span class="p">;</span> <span class="nx">j</span><span class="o">+=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">fill</span><span class="p">(</span><span class="kr">int</span><span class="p">(</span><span class="nx">random</span><span class="p">(</span><span class="mi">255</span><span class="p">)),</span> <span class="kr">int</span><span class="p">(</span><span class="nx">random</span><span class="p">(</span><span class="mi">255</span><span class="p">)),</span> <span class="kr">int</span><span class="p">(</span><span class="nx">random</span><span class="p">(</span><span class="mi">255</span><span class="p">)));</span>
+      <span class="nx">noStroke</span><span class="p">();</span>
+      <span class="nx">rect</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Once you thnk you know what it will do, you can <a class="reference external" href="https://editor.p5js.org/schellenberg/present/RpkErQVDV">check your guess by clicking here</a>.</p>
+<p>Try to figure out what this will do <strong>without</strong> running it!</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">createCanvas</span><span class="p">(</span><span class="nx">windowWidth</span><span class="p">,</span> <span class="nx">windowHeight</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">width</span><span class="p">;</span> <span class="nx">x</span> <span class="o">+=</span> <span class="mi">25</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">y</span> <span class="o">&lt;</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">y</span> <span class="o">+=</span> <span class="mi">25</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">fill</span><span class="p">(</span><span class="nx">dist</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">mouseX</span><span class="p">,</span> <span class="nx">mouseY</span><span class="p">));</span>
+      <span class="nx">circle</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<span class="docutils literal">C:\Users\schel\Documents\GitHub\cs30\_sources\gettingstarted\loops.rst</span>, line 2); <em><a href="#id2">backlink</a></em></p>
+<p>Duplicate explicit target name: “check your guess by clicking here”.</p>
+</div>
+<p>Once you thnk you know what it will do, you can <a class="reference external" href="https://editor.p5js.org/schellenberg/present/xsaxKiUw8">check your guess by clicking here</a>.</p>
+</div>
+<div class="section" id="your-turn">
+<h2><span class="section-number">3.7. </span>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
+<p>You should now attempt to create a sketch that draws a basic chess board (alternating black and white squares). After getting the basic functionality working, see if you can find any ways of making your code more efficient. If you aren’t familiar with chess, here’s what it should look like:</p>
+<img alt="../_images/Chess_Board.svg" src="../_images/Chess_Board.svg" /><p>If you finish before the rest of the class, see if you can draw this one:</p>
+<img alt="../_images/nested_loop_image.png" src="../_images/nested_loop_image.png" />
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">3.8. </span>Class Demo<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Create a grid. Store color data for the grid in a 2 dimensional array. When you click on a square, swap the colors of the current cell, and any cell orthogonally adjacent to it (NESW neighbors). It should be something like <a class="reference external" href="https://wmcicompsci.ca/makeitblue/">this former student project</a> , but just a static number of rows and columns.</p>
+<p>To talk about/include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">const</span></code> variables (for number of rows/columns)</p></li>
+<li><p>using functions to improve the readability of your code</p></li>
+</ul>
 </div>
 <div class="section" id="loops-practice-quiz">
-<h2>4.5. Loops Practice Quiz<a class="headerlink" href="#loops-practice-quiz" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.9. </span>Loops Practice Quiz<a class="headerlink" href="#loops-practice-quiz" title="Permalink to this headline">¶</a></h2>
 <p>Note that the same code fragments are used in each question below. You might find it useful to sketch out on paper what you think each code fragment will create, then match your answers with the images provided in the questions below.</p>
 
             <div class="runestone alert alert-warning">
@@ -777,19 +844,19 @@
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 3. Drawing Primitives and Color' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">2. </span>The Basics of p5js' data-toggle="tooltip">
     <a href="drawingbasics.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="drawingbasics.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 5. Variable Scope' data-toggle="tooltip" >
-    <a href="variablescope.html" >
+  <li id="relations-next" class="navLink" title='Next Section - <span class="section-number">4. </span>Pair Programming Lab' data-toggle="tooltip" >
+    <a href="pairprogramming.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="variablescope.html" >Next Section - 5. Variable Scope</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="pairprogramming.html" >Next Section - <span class="section-number">4. </span>Pair Programming Lab</a>
 
 <script type="text/javascript">
 

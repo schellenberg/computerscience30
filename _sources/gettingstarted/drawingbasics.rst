@@ -1,4 +1,4 @@
-Drawing Primitives and Color
+The Basics of p5js
 =============================
 
 .. topic:: Quick Overview of Day
@@ -6,7 +6,7 @@ Drawing Primitives and Color
     Draw primitive shapes in p5js. Explore storing color values.
 
 
-p5js Demo
+Class Demo
 ------------------
 
 p5js has a number of functions that get called automatically for you. The most important ones for now are ``setup()``, ``draw()``, ``keyTyped()`` and ``mousePressed()``.
@@ -15,6 +15,7 @@ Live code a demo that does the following:
 
 - displays a circle on the screen (talk about the coordinate plane)
 - update the location of the circle so that it goes wherever the mouse goes (``mouseX`` and ``mouseY``)
+- use ``console.log()`` to provide diagnostic messages (super useful when debugging your code)
 - make the circle start to move around the screen (global variables for x and y location, and x and y velocity; conditional statements to bounce when colliding with walls)
 - have the circle change to a random color every time it collides with a wall
 - whenever the mouse is pressed, choose new random values for x and y velocities

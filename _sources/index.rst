@@ -30,14 +30,11 @@ Getting Started
     :maxdepth: 1
     :numbered:
 
-    gettingstarted/setup.rst
-    gettingstarted/helloworld.rst
+    gettingstarted/webeditor.rst
     gettingstarted/drawingbasics.rst
     gettingstarted/loops.rst
-    gettingstarted/variablescope.rst
-    gettingstarted/booleanlogic.rst
+    gettingstarted/pairprogramming.rst
     gettingstarted/statevariables.rst
-    gettingstarted/nestedloops.rst
     gettingstarted/refactoring.rst
     gettingstarted/objectbasics.rst
     gettingstarted/builtinfunctions.rst
@@ -45,6 +42,14 @@ Getting Started
     gettingstarted/translationrotation.rst
     gettingstarted/generativeart.rst
     gettingstarted/perlin.rst
+
+Better Development Environment
+:::::::::::::::::::::::::::::::
+.. toctree::
+    :maxdepth: 1
+    :numbered:
+
+    ide/setup.rst
 
 
 Data Structures
