@@ -20,6 +20,7 @@ CS20 Review and JavaScript Intro
     :numbered:
 
     intro/cs20review.rst
+    intro/reeborg.rst
     intro/practicequiz.rst
 
 
