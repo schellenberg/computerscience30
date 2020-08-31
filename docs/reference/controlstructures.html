@@ -1,128 +1,128 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2. JavaScript Control Structures &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=341DBE1C" />
-    <link rel="stylesheet" type="text/css" href="../_static/activecode.css?v=78EE59F" />
-    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css?v=B28E0910" />
-    <link rel="stylesheet" type="text/css" href="../_static/clickable.css?v=343A135B" />
-    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css?v=D101CC50" />
-    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css?v=931EACB9" />
-    <link rel="stylesheet" type="text/css" href="../_static/datafile.css?v=BCD38BE" />
-    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css?v=A828DAB1" />
-    <link rel="stylesheet" type="text/css" href="../_static/fitb.css?v=71852D76" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=808B982A" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css?v=F471F95B" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css?v=1CE53237" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css?v=58C4E18A" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css?v=239FC54E" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css?v=8A1A42E4" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css?v=C184EB8A" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css?v=1FF7F927" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css?v=3BA0E63E" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=EA7C0F6C" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/p5.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/parsons.css?v=A1E2433E" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css?v=2F3E13EE" />
     <link rel="stylesheet" type="text/css" href="../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../_static/poll.css?v=431459C5" />
-    <link rel="stylesheet" type="text/css" href="../_static/reveal.css?v=7BF74A61" />
-    <link rel="stylesheet" type="text/css" href="../_static/showEval.css?v=F960C0B4" />
-    <link rel="stylesheet" type="text/css" href="../_static/spreadsheet.css?v=28549A88" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css?v=E220AC33" />
+    <link rel="stylesheet" type="text/css" href="../_static/reveal.css?v=4A81D381" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css?v=C6382F3" />
+    <link rel="stylesheet" type="text/css" href="../_static/spreadsheet.css?v=B5F018A" />
     <link rel="stylesheet" type="text/css" href="../_static/jexcel.css" />
     <link rel="stylesheet" type="text/css" href="../_static/japp.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css?v=8435FFC1" />
-    <link rel="stylesheet" type="text/css" href="../_static/video.css?v=E589DE38" />
-    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=4EB84728" />
-    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=21C88BC4" />
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css?v=424F1CC9" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css?v=E5385B3B" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/runestonebase.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/jquery.highlight.js?v=F48946A5"></script>
-    <script src="../_static/bookfuncs.js?v=99768D70"></script>
-    <script src="../_static/codemirror.js?v=77018329"></script>
-    <script src="../_static/xml.js?v=2D028995"></script>
-    <script src="../_static/css.js?v=DCA90274"></script>
-    <script src="../_static/python.js?v=24485A53"></script>
-    <script src="../_static/htmlmixed.js?v=372C094F"></script>
-    <script src="../_static/javascript.js?v=CEA7EE5E"></script>
-    <script src="../_static/sql.js?v=4CD470E6"></script>
-    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js?v=6F1F5263"></script>
-    <script src="../_static/jquery_i18n/jquery.i18n.js?v=998C78A1"></script>
-    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js?v=8EBB15E7"></script>
-    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=5824D9C3"></script>
-    <script src="../_static/jquery_i18n/jquery.i18n.language.js?v=98DF5447"></script>
-    <script src="../_static/jquery_i18n/jquery.i18n.parser.js?v=55219209"></script>
-    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js?v=4F0BEBCB"></script>
-    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=15D4678A"></script>
-    <script src="../_static/activecode-i18n.en.js?v=DA169A22"></script>
-    <script src="../_static/skulpt.min.js?v=EEB8131E"></script>
-    <script src="../_static/skulpt-stdlib.js?v=A9BBDEEE"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script src="../_static/activecode.js?v=DAEF8A8A"></script>
-    <script src="../_static/clike.js?v=B985002B"></script>
-    <script src="../_static/timed_activecode.js?v=C841A5EC"></script>
-    <script src="../_static/sql-wasm.js?v=DE2A0975"></script>
-    <script src="../_static/animationbase.js?v=B45130AE"></script>
-    <script src="../_static/mchoice.js?v=8BF4AC13"></script>
-    <script src="../_static/timedmc.js?v=9304523A"></script>
-    <script src="../_static/timed.js?v=9D71EDF0"></script>
-    <script src="../_static/clickable.js?v=6690DBCF"></script>
-    <script src="../_static/timedclickable.js?v=5BA90747"></script>
-    <script src="../_static/d3.v2.min.js?v=ADE5D104"></script>
-    <script src="../_static/jquery.ba-bbq.min.js?v=C6DC1D07"></script>
-    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script src="../_static/pytutor.js?v=DF08F5B7"></script>
-    <script src="../_static/codelens.js?v=68D45700"></script>
-    <script src="../_static/datafile.js?v=C14D6F8"></script>
-    <script src="../_static/dragndrop.js?v=84188863"></script>
-    <script src="../_static/timeddnd.js?v=1A222EDB"></script>
-    <script src="../_static/fitb.js?v=FA60A182"></script>
-    <script src="../_static/timedfitb.js?v=D4FEAAC3"></script>
-    <script src="../_static/lp.js?v=2701088E"></script>
-    <script src="../_static/gas.js?v=D2930CED"></script>
-    <script src="../_static/matrixeq.js?v=1FB22B23"></script>
-    <script src="../_static/p5-widget.js"></script>
-    <script src="../_static/js_lib/prettify.js?v=D560DBAE"></script>
-    <script src="../_static/js_lib/hammer.min.js?v=15E24CE5"></script>
-    <script src="../_static/parsons.js?v=C67A953C"></script>
-    <script src="../_static/timedparsons.js?v=4BB0E482"></script>
-    <script src="../_static/poll.js?v=C0A3DF52"></script>
-    <script src="../_static/reveal.js?v=83C3F10"></script>
-    <script src="../_static/shortanswer.js?v=BA091142"></script>
-    <script src="../_static/timed_shortanswer.js?v=90301BA9"></script>
-    <script src="../_static/showEval.js?v=2064C798"></script>
-    <script src="../_static/spreadsheet.js?v=9B995CB7"></script>
-    <script src="../_static/jexcel.js"></script>
-    <script src="../_static/japp.js"></script>
-    <script src="../_static/tabbedstuff.js?v=196A23BC"></script>
-    <script src="../_static/runestonevideo.js?v=255DE041"></script>
-    <script src="../_static/webglinteractive.js?v=7D80F988"></script>
-    <script src="../_static/FileSaver.min.js?v=8B232E7A"></script>
-    <script src="../_static/Blob.js?v=3D0C0929"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script src="../_static/jquery-fix.js"></script>
-    <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script src="../_static/bootstrap-sphinx.js"></script>
-    <script src="../_static/waypoints.min.js"></script>
-    <script src="../_static/rangy-core.js"></script>
-    <script src="../_static/rangy-textrange.js"></script>
-    <script src="../_static/rangy-cssclassapplier.js"></script>
-    <script src="../_static/user-highlights.js"></script>
-    <script src="../_static/jquery.idle-timer.js"></script>
-    <script src="../_static/processing-1.4.1.min.js"></script>
-    <script src="../_static/jquery.hotkey.js"></script>
-    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js?v=4AA8F078"></script>
+    <script type="text/javascript" src="../_static/codemirror.js?v=94F552C9"></script>
+    <script type="text/javascript" src="../_static/xml.js?v=236EDFF7"></script>
+    <script type="text/javascript" src="../_static/css.js?v=623153CE"></script>
+    <script type="text/javascript" src="../_static/python.js?v=14A28F1F"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js?v=33B91944"></script>
+    <script type="text/javascript" src="../_static/javascript.js?v=6F38CA04"></script>
+    <script type="text/javascript" src="../_static/sql.js?v=1B4587EC"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js?v=70E93DF2"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js?v=E7EA033F"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js?v=A9BBDEEE"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js?v=D7AAECEE"></script>
+    <script type="text/javascript" src="../_static/clike.js?v=2DCE0756"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js?v=5150FA78"></script>
+    <script type="text/javascript" src="../_static/sql-wasm.js?v=44FE0709"></script>
+    <script type="text/javascript" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script type="text/javascript" src="../_static/mchoice.js?v=6F3B51A7"></script>
+    <script type="text/javascript" src="../_static/timedmc.js?v=B010A457"></script>
+    <script type="text/javascript" src="../_static/timed.js?v=6789FE30"></script>
+    <script type="text/javascript" src="../_static/clickable.js?v=9560E65E"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js?v=93989C23"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js?v=836E01C"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
+    <script type="text/javascript" src="../_static/pytutor.js?v=82B022B9"></script>
+    <script type="text/javascript" src="../_static/codelens.js?v=CABECD49"></script>
+    <script type="text/javascript" src="../_static/datafile.js?v=3ED1A80C"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js?v=3984FD8D"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js?v=378F237E"></script>
+    <script type="text/javascript" src="../_static/fitb.js?v=8E40E713"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js?v=2AA17071"></script>
+    <script type="text/javascript" src="../_static/lp.js?v=F137FF7A"></script>
+    <script type="text/javascript" src="../_static/gas.js?v=F0D0F02E"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script type="text/javascript" src="../_static/p5-widget.js"></script>
+    <script type="text/javascript" src="../_static/js_lib/prettify.js?v=CA7E8928"></script>
+    <script type="text/javascript" src="../_static/js_lib/hammer.min.js?v=73056367"></script>
+    <script type="text/javascript" src="../_static/parsons.js?v=93EFFF39"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js?v=2EEA9E5A"></script>
+    <script type="text/javascript" src="../_static/poll.js?v=11AD6126"></script>
+    <script type="text/javascript" src="../_static/reveal.js?v=9C3AAF60"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js?v=BB0B99B1"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js?v=B3A117D7"></script>
+    <script type="text/javascript" src="../_static/showEval.js?v=C5CE0C81"></script>
+    <script type="text/javascript" src="../_static/spreadsheet.js?v=CFA364DA"></script>
+    <script type="text/javascript" src="../_static/jexcel.js"></script>
+    <script type="text/javascript" src="../_static/japp.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js?v=5BE6106"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js?v=53E888DE"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script type="text/javascript" src="../_static/Blob.js?v=AEC2447"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. String Formatting and Methods" href="strings.html" />
     <link rel="prev" title="1. JavaScript Data Types" href="datatypes.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -303,14 +303,18 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1. </span>JavaScript Data Types" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - 1. JavaScript Data Types" data-toggle="tooltip">
     <a href="datatypes.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-    <li class="divider-vertical"></li>
-  
+  <li id="relations-next" title='Next Chapter - 3. String Formatting and Methods' data-toggle="tooltip" >
+    <a href="strings.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -337,17 +341,17 @@
 <div class="container" id="main-content">
   
   <div class="section" id="javascript-control-structures">
-<h1><span class="section-number">2. </span>JavaScript Control Structures<a class="headerlink" href="#javascript-control-structures" title="Permalink to this headline">¶</a></h1>
+<h1>2. JavaScript Control Structures<a class="headerlink" href="#javascript-control-structures" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
-<p class="topic-title">Quick Overview of Day</p>
+<p class="topic-title first">Quick Overview of Day</p>
 <p>Discuss JavaScript control structures.</p>
 </div>
 <div class="section" id="comments">
-<h2><span class="section-number">2.1. </span>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
 <p>Anything after <code class="docutils literal notranslate"><span class="pre">//</span></code> will be a comment on that line. Not really a control structure, but you should know it.</p>
 </div>
 <div class="section" id="operators">
-<h2><span class="section-number">2.2. </span>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
 <p>JavaScript is odd when it comes to checking for equality (truthy/falsey problems with ==), so we use three equal signs when checking for equality.</p>
 <p>Relational</p>
 <ul class="simple">
@@ -369,7 +373,7 @@
 </ul>
 </div>
 <div class="section" id="if-else-if-else">
-<h2><span class="section-number">2.3. </span>If / Else If / Else<a class="headerlink" href="#if-else-if-else" title="Permalink to this headline">¶</a></h2>
+<h2>2.3. If / Else If / Else<a class="headerlink" href="#if-else-if-else" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">someNumber</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Pick a number&quot;</span><span class="p">);</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nx">someNumber</span> <span class="o">&lt;</span> <span class="mi">42</span><span class="p">)</span> <span class="p">{</span>
@@ -385,7 +389,7 @@
 </div>
 </div>
 <div class="section" id="while-loops">
-<h2><span class="section-number">2.4. </span>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
+<h2>2.4. While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
 <span class="k">while</span> <span class="p">(</span><span class="nx">number</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
@@ -396,7 +400,7 @@
 </div>
 </div>
 <div class="section" id="do-while-loops">
-<h2><span class="section-number">2.5. </span>Do-While Loops<a class="headerlink" href="#do-while-loops" title="Permalink to this headline">¶</a></h2>
+<h2>2.5. Do-While Loops<a class="headerlink" href="#do-while-loops" title="Permalink to this headline">¶</a></h2>
 <p>Guarantees the loop will happen at least once.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">answer</span><span class="p">;</span>
 <span class="k">do</span> <span class="p">{</span>
@@ -407,7 +411,7 @@
 </div>
 </div>
 <div class="section" id="for-loop">
-<h2><span class="section-number">2.6. </span>For Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
+<h2>2.6. For Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">number</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">);</span>
 <span class="p">}</span>
@@ -416,11 +420,11 @@
 </div>
 </div>
 <div class="section" id="break">
-<h2><span class="section-number">2.7. </span>Break<a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h2>
+<h2>2.7. Break<a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h2>
 <p>Forces a loop to end immediately. Just include a <code class="docutils literal notranslate"><span class="pre">break;</span></code> statement inside the loop somewhere.</p>
 </div>
 <div class="section" id="try-catch">
-<h2><span class="section-number">2.8. </span>Try/Catch<a class="headerlink" href="#try-catch" title="Permalink to this headline">¶</a></h2>
+<h2>2.8. Try/Catch<a class="headerlink" href="#try-catch" title="Permalink to this headline">¶</a></h2>
 <p>Useful if you are going to run code that might cause an error.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
     <span class="nx">somethingNotDefined</span><span class="p">();</span>
@@ -431,7 +435,7 @@
 </div>
 </div>
 <div class="section" id="functions">
-<h2><span class="section-number">2.9. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<h2>2.9. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">adder</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">theAnswer</span> <span class="o">=</span> <span class="nx">first</span> <span class="o">+</span> <span class="nx">second</span><span class="p">;</span>
     <span class="k">return</span> <span class="nx">theAnswer</span><span class="p">;</span>
@@ -441,7 +445,7 @@
 <p>Can return a value, or not. If not, result is <code class="docutils literal notranslate"><span class="pre">undefined</span></code>.</p>
 </div>
 <div class="section" id="throwing-exception">
-<h2><span class="section-number">2.10. </span>Throwing Exception<a class="headerlink" href="#throwing-exception" title="Permalink to this headline">¶</a></h2>
+<h2>2.10. Throwing Exception<a class="headerlink" href="#throwing-exception" title="Permalink to this headline">¶</a></h2>
 <p>If you want to create code that deals gracefully with possible errors. You can <a class="reference external" href="https://eloquentjavascript.net/3rd_edition/08_error.html#h_zT3755/aOp">read more about them here</a> . Consider:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">multiply</span><span class="p">(</span><span class="nx">firstNumber</span><span class="p">,</span> <span class="nx">secondNumber</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">firstNumber</span> <span class="o">!==</span> <span class="s2">&quot;number&quot;</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">secondNumber</span> <span class="o">!==</span> <span class="s2">&quot;number&quot;</span><span class="p">)</span> <span class="p">{</span>
@@ -470,13 +474,19 @@
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">1. </span>JavaScript Data Types' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - 1. JavaScript Data Types' data-toggle="tooltip">
     <a href="datatypes.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="datatypes.html" ></a>
   
+  <li id="relations-next" class="navLink" title='Next Section - 3. String Formatting and Methods' data-toggle="tooltip" >
+    <a href="strings.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="strings.html" >Next Section - 3. String Formatting and Methods</a>
 
 <script type="text/javascript">
 
