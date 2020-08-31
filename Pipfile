@@ -6,7 +6,6 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-runestonecomponents = {git = "https://github.com/schellenberg/RunestoneComponents.git"}
 
 [requires]
 python_version = "3.7"
