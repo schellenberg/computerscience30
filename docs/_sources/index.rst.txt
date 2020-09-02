@@ -72,7 +72,7 @@ External Files
     :maxdepth: 1
     :numbered:
 
-    externalfiles/loadstrings.rst
+    externalfiles/strings.rst
     externalfiles/localstorage.rst
 
 
