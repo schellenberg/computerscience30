@@ -21,3 +21,8 @@ First Demo
 
 Adapt the grid example to load a predefined 2D array (just defined as a variable in the code). Now convert that into a text file, removing all the square brackets and commas. Load the file in your sketch, and either convert each element into a number, or change the grid code to work with string characters.
 
+
+Completed Demo For Reference
+-----------------------------
+
+If you'd like to check out a completed version of the demo, take a look at `this sketch <https://editor.p5js.org/schellenberg/sketches/fNbUPq095>`_
