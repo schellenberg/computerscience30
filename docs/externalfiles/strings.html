@@ -297,6 +297,10 @@
 <li><p><a class="reference external" href="https://p5js.org/reference/#/p5/loadStrings">loadStrings()</a> to load a text file as an array of strings (one line per element). You should call this in a preload() function.</p></li>
 <li><p>either the <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split">split()</a> method or <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#94a3">spread syntax</a> to convert a string into an array of characters</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">[...&quot;abcdefg&quot;]</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;abcdefg&quot;.split(&quot;&quot;)</span></code> will both return the same array of <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">&quot;a&quot;,</span> <span class="pre">&quot;b&quot;,</span> <span class="pre">&quot;c&quot;,</span> <span class="pre">&quot;d&quot;,</span> <span class="pre">&quot;e&quot;,</span> <span class="pre">&quot;f&quot;,</span> <span class="pre">&quot;g&quot;</span> <span class="pre">]</span></code>.</p>
+</div>
 </div>
 <div class="section" id="first-demo">
 <h2>1.2. First Demo<a class="headerlink" href="#first-demo" title="Permalink to this headline">¶</a></h2>

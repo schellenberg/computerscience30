@@ -13,6 +13,8 @@ Important Functions to Know
 - `loadStrings() <https://p5js.org/reference/#/p5/loadStrings>`_ to load a text file as an array of strings (one line per element). You should call this in a preload() function.
 - either the `split() <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split>`_ method or `spread syntax <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#94a3>`_ to convert a string into an array of characters
 
+.. note:: ``[..."abcdefg"]`` and ``"abcdefg".split("")`` will both return the same array of ``[ "a", "b", "c", "d", "e", "f", "g" ]``.
+
 
 First Demo
 ----------------
