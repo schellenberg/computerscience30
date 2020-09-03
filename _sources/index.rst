@@ -73,6 +73,7 @@ External Files
     :numbered:
 
     externalfiles/strings.rst
+    externalfiles/loadtable.rst
     externalfiles/localstorage.rst
 
 
