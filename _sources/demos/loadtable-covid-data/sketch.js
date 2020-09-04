@@ -30,10 +30,10 @@ function setup() {
 
   let daysToRetrieve = [];
   for (let i = 0; i < numberOfDaysToRetrieve; i++) {
-    //format that the csv files uses is DD-MM-YYYY;
+    //format that the csv files uses is DD-MM-YYYY;  
+    now.subtract(1, "days");
     daysToRetrieve.push(now.format("DD-MM-YYYY"));
     displayDates.push(now.format("MMM Do"));
-    now.subtract(1, "days");
   }
 
   for (const d of daysToRetrieve) {
