@@ -51,6 +51,17 @@ In addition to what we've already done, here's a quick list of system variables 
 - ``mouseY`` - Current vertical location of the mouse
 
 
+Your Turn
+----------
+
+Create a sketch that makes the following happen:
+
+- displays an image of a character at some x and y location (save these in global variables)
+
+- make the character move according to WASD controls (if demo-ing, start with the function keyTyped, then convert it to boolean checks)
+
+
+
 .. Your Turn
 .. ----------
 
