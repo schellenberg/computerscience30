@@ -107,17 +107,6 @@ If you finish before the rest of the class, see if you can draw this one:
 .. image:: images/nested_loop_image.png
 
 
-Class Demo
------------
-
-Create a grid. Store color data for the grid in a 2 dimensional array. When you click on a square, swap the colors of the current cell, and any cell orthogonally adjacent to it (NESW neighbors). It should be something like `this former student project <https://wmcicompsci.ca/makeitblue/>`_ , but just a static number of rows and columns.
-
-To talk about/include:
-
-- ``const`` variables (for number of rows/columns)
-- using functions to improve the readability of your code
-
-
 .. Refactoring Example 2
 .. ----------------------
 

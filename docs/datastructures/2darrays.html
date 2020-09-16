@@ -240,9 +240,10 @@
 <li><a class="reference internal" href="#">2. JavaScript Two Dimensional Arrays</a><ul>
 <li><a class="reference internal" href="#p5js-array-examples">2.1. p5js Array Examples</a><ul>
 <li><a class="reference internal" href="#draw-grid">2.1.1. Draw Grid</a></li>
-<li><a class="reference internal" href="#conway-s-game-of-life">2.1.2. Conway’s Game of Life</a></li>
-<li><a class="reference internal" href="#platformer-example">2.1.3. Platformer Example</a></li>
-<li><a class="reference internal" href="#sudoku-example">2.1.4. Sudoku Example</a></li>
+<li><a class="reference internal" href="#grid-neighbors">2.1.2. Grid Neighbors</a></li>
+<li><a class="reference internal" href="#conway-s-game-of-life">2.1.3. Conway’s Game of Life</a></li>
+<li><a class="reference internal" href="#platformer-example">2.1.4. Platformer Example</a></li>
+<li><a class="reference internal" href="#sudoku-example">2.1.5. Sudoku Example</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#d-arrays-practice-quiz">2.2. 2-D Arrays Practice Quiz</a><ul>
@@ -358,17 +359,26 @@
 <h3>2.1.1. Draw Grid<a class="headerlink" href="#draw-grid" title="Permalink to this headline">¶</a></h3>
 <p>Generate a 2d array. Make every entry either a 0 or a 1. Loop through the cols and rows to draw a grid based on the size of the array. If the current location in the array is a 0, fill with black. If it is a 0, fill with white. Generate a new grid each time the mouse is pressed.</p>
 </div>
+<div class="section" id="grid-neighbors">
+<h3>2.1.2. Grid Neighbors<a class="headerlink" href="#grid-neighbors" title="Permalink to this headline">¶</a></h3>
+<p>Create a grid. Store color data for the grid in a 2 dimensional array. When you click on a square, swap the colors of the current cell, and any cell orthogonally adjacent to it (NESW neighbors). It should be something like <a class="reference external" href="https://wmcicompsci.ca/makeitblue/">this former student project</a> , but just a static number of rows and columns.</p>
+<p>To talk about/include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">const</span></code> variables (for number of rows/columns)</p></li>
+<li><p>using functions to improve the readability of your code</p></li>
+</ul>
+</div>
 <div class="section" id="conway-s-game-of-life">
-<h3>2.1.2. Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink to this headline">¶</a></h3>
+<h3>2.1.3. Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink to this headline">¶</a></h3>
 <p>Introduce the Game of Life (<a class="reference external" href="https://docs.google.com/presentation/d/1c3T1NS3HTJZfyx6o3RTOKx1vM-SApqSmMxigyOnU9l0/edit?usp=sharing">presentation</a> and <a class="reference download internal" download="" href="../_downloads/cb34d5f8028c9319c2672c7945adfae3/game-of-life-handout.pdf"><code class="xref download docutils literal notranslate"><span class="pre">handout</span></code></a>. Find some stable shapes. Be sure you completely understand how the game works <strong>before</strong> we attempt to code anything.</p>
 <p>After everyone can determine the “next state” of the game, given a scenario, it’s time to code it up.</p>
 </div>
 <div class="section" id="platformer-example">
-<h3>2.1.3. Platformer Example<a class="headerlink" href="#platformer-example" title="Permalink to this headline">¶</a></h3>
+<h3>2.1.4. Platformer Example<a class="headerlink" href="#platformer-example" title="Permalink to this headline">¶</a></h3>
 <p>Load starting grid from a text file. Put images in the appropriate spots, based on which character was in the text file grid.</p>
 </div>
 <div class="section" id="sudoku-example">
-<h3>2.1.4. Sudoku Example<a class="headerlink" href="#sudoku-example" title="Permalink to this headline">¶</a></h3>
+<h3>2.1.5. Sudoku Example<a class="headerlink" href="#sudoku-example" title="Permalink to this headline">¶</a></h3>
 <p>Hard code a 2d array sudoku initial grid, putting in 0’s wherever you want a blank. Also make a 2d array containing the completed grid. Adapt the game of life code (or just start over) to display the sudoku grid.</p>
 </div>
 </div>

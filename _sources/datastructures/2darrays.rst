@@ -85,6 +85,17 @@ Draw Grid
 Generate a 2d array. Make every entry either a 0 or a 1. Loop through the cols and rows to draw a grid based on the size of the array. If the current location in the array is a 0, fill with black. If it is a 0, fill with white. Generate a new grid each time the mouse is pressed.
 
 
+Grid Neighbors
+~~~~~~~~~~~~~~~
+
+Create a grid. Store color data for the grid in a 2 dimensional array. When you click on a square, swap the colors of the current cell, and any cell orthogonally adjacent to it (NESW neighbors). It should be something like `this former student project <https://wmcicompsci.ca/makeitblue/>`_ , but just a static number of rows and columns.
+
+To talk about/include:
+
+- ``const`` variables (for number of rows/columns)
+- using functions to improve the readability of your code
+
+
 Conway's Game of Life
 ~~~~~~~~~~~~~~~~~~~~~~~
 
