@@ -139,6 +139,15 @@ Terrain Generation
 
 Use Perlin noise. Push values into an array. Draw it.
 
+
+Basic demo of how to use Perlin noise is here:
+
+.. youtube:: yth7PAxep9s
+    :height: 315
+    :width: 560
+    :align: left
+    :http: https
+
 Bouncing Balls
 ~~~~~~~~~~~~~~~
 
