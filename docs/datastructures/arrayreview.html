@@ -1,125 +1,79 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1. JavaScript Arrays &#8212; Computer Science 30 - Schellenberg</title>
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css?v=1FF7F927" />
-    <link rel="stylesheet" type="text/css" href="../_static/fitb.css?v=3BA0E63E" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../_static/p5.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/parsons.css?v=2F3E13EE" />
-    <link rel="stylesheet" type="text/css" href="../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" type="text/css" href="../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../_static/spreadsheet.css?v=B5F018A" />
-    <link rel="stylesheet" type="text/css" href="../_static/jexcel.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/japp.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../_static/video.css?v=E5385B3B" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.6" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js?v=4AA8F078"></script>
-    <script type="text/javascript" src="../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../_static/sql.js?v=1B4587EC"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.en.js?v=70E93DF2"></script>
-    <script type="text/javascript" src="../_static/skulpt.min.js?v=E7EA033F"></script>
-    <script type="text/javascript" src="../_static/skulpt-stdlib.js?v=A9BBDEEE"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../_static/activecode.js?v=D7AAECEE"></script>
-    <script type="text/javascript" src="../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../_static/sql-wasm.js?v=44FE0709"></script>
-    <script type="text/javascript" src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../_static/mchoice.js?v=6F3B51A7"></script>
-    <script type="text/javascript" src="../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../_static/dragndrop.js?v=3984FD8D"></script>
-    <script type="text/javascript" src="../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../_static/lp.js?v=F137FF7A"></script>
-    <script type="text/javascript" src="../_static/gas.js?v=F0D0F02E"></script>
-    <script type="text/javascript" src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../_static/p5-widget.js"></script>
-    <script type="text/javascript" src="../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../_static/poll.js?v=11AD6126"></script>
-    <script type="text/javascript" src="../_static/reveal.js?v=9C3AAF60"></script>
-    <script type="text/javascript" src="../_static/shortanswer.js?v=BB0B99B1"></script>
-    <script type="text/javascript" src="../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../_static/spreadsheet.js?v=CFA364DA"></script>
-    <script type="text/javascript" src="../_static/jexcel.js"></script>
-    <script type="text/javascript" src="../_static/japp.js"></script>
-    <script type="text/javascript" src="../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../_static/Blob.js?v=AEC2447"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=EFD02956"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. JavaScript Two Dimensional Arrays" href="2darrays.html" />
@@ -142,7 +96,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '4.1.0';
+  eBookConfig.runestone_version = '5.5.6';
 </script>
 
 
@@ -260,13 +214,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 1. Setting Up a Work Environment" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1. </span>Setting Up a Work Environment" data-toggle="tooltip">
     <a href="../ide/setup.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 2. JavaScript Two Dimensional Arrays' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">2. </span>JavaScript Two Dimensional Arrays' data-toggle="tooltip" >
     <a href="2darrays.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -298,34 +252,44 @@
 <div class="container" id="main-content">
   
   <div class="section" id="javascript-arrays">
-<h1>1. JavaScript Arrays<a class="headerlink" href="#javascript-arrays" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span>JavaScript Arrays<a class="headerlink" href="#javascript-arrays" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="basic-array-operations">
-<h2>1.1. Basic Array Operations<a class="headerlink" href="#basic-array-operations" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>Basic Array Operations<a class="headerlink" href="#basic-array-operations" title="Permalink to this headline">¶</a></h2>
 <p>Very similar to lists in Python.</p>
 <p>To create an array:</p>
 
-<div data-childcomponent="js_arrays1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=js_arrays1 >
+<div id=js_arrays1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=js_arrays1 data-lang="javascript" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="javascript" id="js_arrays1_editor" data-question_label="1.1.1" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 let stuff = [42, 56, "hello", 13, true];
 </textarea>
 </div>
+</div>
 <p>To access a value in the array:</p>
 
-<div data-childcomponent="js_arrays2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=js_arrays2 >
+<div id=js_arrays2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=js_arrays2 data-lang="javascript" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="javascript" id="js_arrays2_editor" data-question_label="1.1.2" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 let stuff = [42, 56, "hello", 13, true];
 
 writeln(stuff[0]) // 42
 writeln(stuff[2]) // "hello"
 </textarea>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -345,18 +309,18 @@ writeln(stuff[2]) // "hello"
 <p>To add/remove from the front of the array, use <code class="docutils literal notranslate"><span class="pre">unshift(&quot;something&quot;)</span></code> and <code class="docutils literal notranslate"><span class="pre">shift()</span></code> respectively.</p>
 </div>
 <div class="section" id="making-a-copy-of-an-array">
-<h2>1.2. Making a Copy of an Array<a class="headerlink" href="#making-a-copy-of-an-array" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>Making a Copy of an Array<a class="headerlink" href="#making-a-copy-of-an-array" title="Permalink to this headline">¶</a></h2>
 <p>If you need to make a copy of an array, be aware that assigning the array to a new variable only adds a pointer to the same memory location (this is known as passing by reference). To make this clear, consider the following:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mi">52</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="s2">&quot;hey&quot;</span><span class="p">];</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mf">52</span><span class="p">,</span> <span class="mf">78</span><span class="p">,</span> <span class="s2">&quot;hey&quot;</span><span class="p">];</span>
 <span class="kd">let</span> <span class="nx">other</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">;</span>
-<span class="nx">other</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">35</span><span class="p">;</span>
+<span class="nx">other</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">35</span><span class="p">;</span>
 <span class="c1">// now, both other and stuff equal [52, 35, &quot;hey&quot;]</span>
 </pre></div>
 </div>
 <p>If you want to create a copy of an array that is <strong>not</strong> pointing to the same memory location, you can do the following:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mi">52</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="s2">&quot;hey&quot;</span><span class="p">];</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mf">52</span><span class="p">,</span> <span class="mf">78</span><span class="p">,</span> <span class="s2">&quot;hey&quot;</span><span class="p">];</span>
 <span class="kd">let</span> <span class="nx">other</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">stuff</span><span class="p">];</span>   <span class="c1">//or you can use stuff.slice();</span>
-<span class="nx">other</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">35</span><span class="p">;</span>
+<span class="nx">other</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">35</span><span class="p">;</span>
 <span class="c1">// now, other equals [52, 35, &quot;hey&quot;]</span>
 <span class="c1">// and stuff equals [52, 78, &quot;hey&quot;]</span>
 </pre></div>
@@ -367,27 +331,27 @@ writeln(stuff[2]) // "hello"
 </div>
 </div>
 <div class="section" id="creating-an-array-of-a-specific-size">
-<h2>1.3. Creating an Array of a Specific Size<a class="headerlink" href="#creating-an-array-of-a-specific-size" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>Creating an Array of a Specific Size<a class="headerlink" href="#creating-an-array-of-a-specific-size" title="Permalink to this headline">¶</a></h2>
 <p>Since JavaScript arrays allow you to add/remove values from them easily, it is unusual for you to create an array of a specific size. You can, however, simply create the array, then push a bunch of default values into it. This means your array will never be filled with empty elements (which can save you from <code class="docutils literal notranslate"><span class="pre">undefined</span></code> errors in your code).</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="p">[];</span>
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">emptyArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mf">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">emptyArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Another way of doing this is to call the <em>constructor</em> of the array data type. This creates an empty array (with no values in any of the element locations). You can fill it up with some default values using the <code class="docutils literal notranslate"><span class="pre">.fill()</span></code> method.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>    <span class="c1">// each value is currently empty</span>
-<span class="nx">emptyArray</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>                 <span class="c1">// now every element is a 0</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mf">100</span><span class="p">);</span>    <span class="c1">// each value is currently empty</span>
+<span class="nx">emptyArray</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>                 <span class="c1">// now every element is a 0</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="array-practice-questions">
-<h2>1.4. Array Practice Questions<a class="headerlink" href="#array-practice-questions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.4. </span>Array Practice Questions<a class="headerlink" href="#array-practice-questions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="no-looping-required">
-<h3>1.4.1. No Looping Required<a class="headerlink" href="#no-looping-required" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.1. </span>No Looping Required<a class="headerlink" href="#no-looping-required" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=firstLast6&amp;title=Array-1">firstLast6</a></p></li>
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=sameFirstLast&amp;title=Array-1">sameFirstLast</a></p></li>
@@ -404,7 +368,7 @@ writeln(stuff[2]) // "hello"
 </ul>
 </div>
 <div class="section" id="looping-required">
-<h3>1.4.2. Looping Required<a class="headerlink" href="#looping-required" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.2. </span>Looping Required<a class="headerlink" href="#looping-required" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=countEvens&amp;title=Array-2">countEvens</a></p></li>
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=has22&amp;title=Array-2">has22</a></p></li>
@@ -422,25 +386,29 @@ writeln(stuff[2]) // "hello"
 </div>
 </div>
 <div class="section" id="p5js-array-examples">
-<h2>1.5. p5js Array Examples<a class="headerlink" href="#p5js-array-examples" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.5. </span>p5js Array Examples<a class="headerlink" href="#p5js-array-examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="terrain-generation">
-<h3>1.5.1. Terrain Generation<a class="headerlink" href="#terrain-generation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.5.1. </span>Terrain Generation<a class="headerlink" href="#terrain-generation" title="Permalink to this headline">¶</a></h3>
 <p>Use Perlin noise. Push values into an array. Draw it.</p>
 <p>Basic demo of how to use Perlin noise is here:</p>
 
     <div class="runestone" style="margin-left: auto; margin-right:auto">
-        <div id="yth7PAxep9s" class="align-left youtube-video" data-video-height="315" data-video-width="560" data-video-videoid="yth7PAxep9s" data-video-divid="yth7PAxep9s" data-video-start="0" data-video-end="-1" ></div>
+        <div id="yth7PAxep9s" data-component="youtube" class="align-left youtube-video"
+            data-video-height="315" data-question_label="1.5.1.1"
+            data-video-width="560" data-video-videoid="yth7PAxep9s"
+            data-video-divid="yth7PAxep9s" data-video-start="0"
+            data-video-end="-1" ></div>
     </div>
     </div>
 <div class="section" id="bouncing-balls">
-<h3>1.5.2. Bouncing Balls<a class="headerlink" href="#bouncing-balls" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.5.2. </span>Bouncing Balls<a class="headerlink" href="#bouncing-balls" title="Permalink to this headline">¶</a></h3>
 <p>Make a bunch of balls move around. Start with an empty array. Push balls into it every time the mouse is clicked. Random sizes, random speeds, random colors. Use object notation for each ball, so it looks something like:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">newBall</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">x</span><span class="o">:</span> <span class="nx">random</span><span class="p">(</span><span class="nx">width</span><span class="p">),</span>
     <span class="nx">y</span><span class="o">:</span> <span class="nx">random</span><span class="p">(</span><span class="nx">height</span><span class="p">),</span>
-    <span class="nx">diameter</span><span class="o">:</span> <span class="nx">random</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
-    <span class="nx">dx</span><span class="o">:</span> <span class="nx">random</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
-    <span class="nx">dy</span><span class="o">:</span> <span class="nx">random</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="nx">diameter</span><span class="o">:</span> <span class="nx">random</span><span class="p">(</span><span class="mf">25</span><span class="p">,</span> <span class="mf">100</span><span class="p">),</span>
+    <span class="nx">dx</span><span class="o">:</span> <span class="nx">random</span><span class="p">(</span><span class="o">-</span><span class="mf">5</span><span class="p">,</span> <span class="mf">5</span><span class="p">),</span>
+    <span class="nx">dy</span><span class="o">:</span> <span class="nx">random</span><span class="p">(</span><span class="o">-</span><span class="mf">5</span><span class="p">,</span> <span class="mf">5</span><span class="p">),</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -451,19 +419,19 @@ writeln(stuff[2]) // "hello"
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 1. Setting Up a Work Environment' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">1. </span>Setting Up a Work Environment' data-toggle="tooltip">
     <a href="../ide/setup.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="../ide/setup.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 2. JavaScript Two Dimensional Arrays' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - <span class="section-number">2. </span>JavaScript Two Dimensional Arrays' data-toggle="tooltip" >
     <a href="2darrays.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="2darrays.html" >Next Section - 2. JavaScript Two Dimensional Arrays</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="2darrays.html" >Next Section - <span class="section-number">2. </span>JavaScript Two Dimensional Arrays</a>
 
 <script type="text/javascript">
 
@@ -482,7 +450,7 @@ writeln(stuff[2]) // "hello"
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 4.1.0.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.6.
     </p>
   </div>
 </footer>

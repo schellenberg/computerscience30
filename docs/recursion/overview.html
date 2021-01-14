@@ -1,125 +1,79 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1. Recursion Explanation and Demos &#8212; Computer Science 30 - Schellenberg</title>
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css?v=1FF7F927" />
-    <link rel="stylesheet" type="text/css" href="../_static/fitb.css?v=3BA0E63E" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../_static/p5.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/parsons.css?v=2F3E13EE" />
-    <link rel="stylesheet" type="text/css" href="../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" type="text/css" href="../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../_static/spreadsheet.css?v=B5F018A" />
-    <link rel="stylesheet" type="text/css" href="../_static/jexcel.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/japp.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../_static/video.css?v=E5385B3B" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.6" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js?v=4AA8F078"></script>
-    <script type="text/javascript" src="../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../_static/sql.js?v=1B4587EC"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.en.js?v=70E93DF2"></script>
-    <script type="text/javascript" src="../_static/skulpt.min.js?v=E7EA033F"></script>
-    <script type="text/javascript" src="../_static/skulpt-stdlib.js?v=A9BBDEEE"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../_static/activecode.js?v=D7AAECEE"></script>
-    <script type="text/javascript" src="../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../_static/sql-wasm.js?v=44FE0709"></script>
-    <script type="text/javascript" src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../_static/mchoice.js?v=6F3B51A7"></script>
-    <script type="text/javascript" src="../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../_static/dragndrop.js?v=3984FD8D"></script>
-    <script type="text/javascript" src="../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../_static/lp.js?v=F137FF7A"></script>
-    <script type="text/javascript" src="../_static/gas.js?v=F0D0F02E"></script>
-    <script type="text/javascript" src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../_static/p5-widget.js"></script>
-    <script type="text/javascript" src="../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../_static/poll.js?v=11AD6126"></script>
-    <script type="text/javascript" src="../_static/reveal.js?v=9C3AAF60"></script>
-    <script type="text/javascript" src="../_static/shortanswer.js?v=BB0B99B1"></script>
-    <script type="text/javascript" src="../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../_static/spreadsheet.js?v=CFA364DA"></script>
-    <script type="text/javascript" src="../_static/jexcel.js"></script>
-    <script type="text/javascript" src="../_static/japp.js"></script>
-    <script type="text/javascript" src="../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../_static/Blob.js?v=AEC2447"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=EFD02956"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. Bubble Sort" href="../sorting/bubble.html" />
@@ -142,7 +96,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '4.1.0';
+  eBookConfig.runestone_version = '5.5.6';
 </script>
 
 
@@ -252,13 +206,13 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - 3. Pair Programming with OOP (Object Oriented Programming)" data-toggle="tooltip">
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">3. </span>Pair Programming with OOP (Object Oriented Programming)" data-toggle="tooltip">
     <a href="../oop/pairprogramming.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - 1. Bubble Sort' data-toggle="tooltip" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">1. </span>Bubble Sort' data-toggle="tooltip" >
     <a href="../sorting/bubble.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -290,11 +244,15 @@
 <div class="container" id="main-content">
   
   <div class="section" id="recursion-explanation-and-demos">
-<h1>1. Recursion Explanation and Demos<a class="headerlink" href="#recursion-explanation-and-demos" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span>Recursion Explanation and Demos<a class="headerlink" href="#recursion-explanation-and-demos" title="Permalink to this headline">¶</a></h1>
 <p>Simply put, recursion is a function that calls itself.</p>
 
     <div class="runestone" style="margin-left: auto; margin-right:auto">
-        <div id="Mv9NEXX1VHc" class="align-left youtube-video" data-video-height="315" data-video-width="560" data-video-videoid="Mv9NEXX1VHc" data-video-divid="Mv9NEXX1VHc" data-video-start="0" data-video-end="-1" ></div>
+        <div id="Mv9NEXX1VHc" data-component="youtube" class="align-left youtube-video"
+            data-video-height="315" data-question_label="1.1"
+            data-video-width="560" data-video-videoid="Mv9NEXX1VHc"
+            data-video-divid="Mv9NEXX1VHc" data-video-start="0"
+            data-video-end="-1" ></div>
     </div>
     <p>Refresh your memory of factorials. Define factorials recursively (math, then code).</p>
 <p>Practice problems from <a class="reference external" href="https://codingjs.wmcicompsci.ca/">CodingJS Recursion-1</a> section. Be sure to do at least the following:</p>
@@ -306,7 +264,7 @@
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=bunnyEars2&amp;title=Recursion-1">bunnyEars2</a></p></li>
 </ul>
 <div class="section" id="sierpinski-triangle">
-<h2>1.1. Sierpinski Triangle<a class="headerlink" href="#sierpinski-triangle" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>Sierpinski Triangle<a class="headerlink" href="#sierpinski-triangle" title="Permalink to this headline">¶</a></h2>
 <p>Make a Sierpinski triangle drawing program in p5.</p>
 <img alt="../_images/sierpinski-triangle.gif" src="../_images/sierpinski-triangle.gif" />
 <p>Key ideas:</p>
@@ -317,19 +275,19 @@
 </ul>
 </div>
 <div class="section" id="fractal-circles">
-<h2>1.2. Fractal Circles<a class="headerlink" href="#fractal-circles" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>Fractal Circles<a class="headerlink" href="#fractal-circles" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://p5js.org/examples/structure-recursion.html">Check out the demo here</a>.</p>
 </div>
 <div class="section" id="fractal-tree">
-<h2>1.3. Fractal Tree<a class="headerlink" href="#fractal-tree" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>Fractal Tree<a class="headerlink" href="#fractal-tree" title="Permalink to this headline">¶</a></h2>
 <p>If students are interested in another demo, build something like this <a class="reference external" href="https://www.youtube.com/watch?v=0jjeOYMjmDU">Coding Train fractal tree demo</a>.</p>
 </div>
 <div class="section" id="practice-quiz">
-<h2>1.4. Practice Quiz<a class="headerlink" href="#practice-quiz" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.4. </span>Practice Quiz<a class="headerlink" href="#practice-quiz" title="Permalink to this headline">¶</a></h2>
 
         <div class="runestone">
-        <div data-component="fillintheblank" id="recursion_parsing_code_1">
-            <p>Q-1: What would the following code print?:</p>
+        <div data-component="fillintheblank" data-question_label="1.4.1" id="recursion_parsing_code_1"  style="visibility: hidden;">
+            <p>2darry-quiz2: What would the following code print?:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">mystery</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">){</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">){</span>
     <span class="k">return</span> <span class="n">y</span><span class="p">;</span>
@@ -351,8 +309,8 @@
         </div>
             
         <div class="runestone">
-        <div data-component="fillintheblank" id="recursion_parsing_code_2">
-            <p>Q-2: What would the following code print?:</p>
+        <div data-component="fillintheblank" data-question_label="1.4.2" id="recursion_parsing_code_2"  style="visibility: hidden;">
+            <p>2darry-quiz3: What would the following code print?:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">mystery</span><span class="p">(</span><span class="n">n</span><span class="p">){</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
@@ -374,8 +332,8 @@
         </div>
             
         <div class="runestone">
-        <div data-component="fillintheblank" id="recursion_parsing_code_3">
-            <p>Q-3: What would the following code print?:</p>
+        <div data-component="fillintheblank" data-question_label="1.4.3" id="recursion_parsing_code_3"  style="visibility: hidden;">
+            <p>2darry-quiz4: What would the following code print?:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">printInfo</span><span class="p">(</span><span class="n">n</span><span class="p">){</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
     <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
@@ -403,8 +361,8 @@
         </div>
             
         <div class="runestone">
-        <div data-component="fillintheblank" id="recursion_parsing_code_4">
-            <p>Q-4: What would the following code print?:</p>
+        <div data-component="fillintheblank" data-question_label="1.4.4" id="recursion_parsing_code_4"  style="visibility: hidden;">
+            <p>2darry-quiz5: What would the following code print?:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">mystery</span><span class="p">(</span><span class="n">n</span><span class="p">){</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
@@ -428,7 +386,7 @@
         </div>
         </div>
             
-    <div data-component="reveal" id="recursion_parsing_code_4_hint"   data-showtitle="Hint if You Are Stuck" data-hidetitle="Hide" >
+    <div data-component="reveal" id="recursion_parsing_code_4_hint"   data-showtitle="Hint if You Are Stuck" data-hidetitle="Hide"  style="visibility: hidden;">
     <p>5 x 2 = 10
 10 x 2 = 20
 20 x 2 = 40
@@ -438,8 +396,8 @@
     </div>
     
         <div class="runestone">
-        <div data-component="fillintheblank" id="recursion_parsing_code_5">
-            <p>Q-5: What would the following code print?:</p>
+        <div data-component="fillintheblank" data-question_label="1.4.5" id="recursion_parsing_code_5"  style="visibility: hidden;">
+            <p>2darry-quiz6: What would the following code print?:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">stringRecursion</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nb">str</span><span class="p">;</span>
@@ -466,7 +424,7 @@
         </div>
         </div>
             
-    <div data-component="reveal" id="recursion_parsing_code_5_hint"   data-showtitle="Hint if You Are Stuck" data-hidetitle="Hide" >
+    <div data-component="reveal" id="recursion_parsing_code_5_hint"   data-showtitle="Hint if You Are Stuck" data-hidetitle="Hide"  style="visibility: hidden;">
     <table class="docutils align-default">
 <colgroup>
 <col style="width: 73%" />
@@ -505,7 +463,7 @@
     </div>
     </div>
 <div class="section" id="extensions">
-<h2>1.5. Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.5. </span>Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h2>
 <p>Maze generator demo (already have a version built in my demos folder…). Warning – This is a much more involved/challenging demo.</p>
 </div>
 </div>
@@ -513,19 +471,19 @@
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - 3. Pair Programming with OOP (Object Oriented Programming)' data-toggle="tooltip">
+  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">3. </span>Pair Programming with OOP (Object Oriented Programming)' data-toggle="tooltip">
     <a href="../oop/pairprogramming.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="../oop/pairprogramming.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - 1. Bubble Sort' data-toggle="tooltip" >
+  <li id="relations-next" class="navLink" title='Next Section - <span class="section-number">1. </span>Bubble Sort' data-toggle="tooltip" >
     <a href="../sorting/bubble.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../sorting/bubble.html" >Next Section - 1. Bubble Sort</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../sorting/bubble.html" >Next Section - <span class="section-number">1. </span>Bubble Sort</a>
 
 <script type="text/javascript">
 
@@ -544,7 +502,7 @@
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 4.1.0.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.6.
     </p>
   </div>
 </footer>

@@ -155,6 +155,7 @@ Practice Quizzes
     :numbered:
 
     practicequiz/loops.rst
+    practicequiz/nestedloops.rst
 
 
 JavaScript Reference

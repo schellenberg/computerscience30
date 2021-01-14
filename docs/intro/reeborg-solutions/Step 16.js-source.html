@@ -10,11 +10,11 @@
 <body>
 <h2><title><no title></title></h2>
 
-<div class="highlight"><pre><span></span><span class="nx">think</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><span class="nx">think</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
 
 <span class="kd">function</span> <span class="nx">harvestColumn</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">turn_left</span><span class="p">();</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mf">8</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">move</span><span class="p">();</span>
         <span class="k">if</span> <span class="p">(</span><span class="nx">object_here</span><span class="p">())</span> <span class="p">{</span>
             <span class="nx">take</span><span class="p">();</span>
@@ -22,7 +22,7 @@
     <span class="p">}</span>
     <span class="nx">turn_left</span><span class="p">();</span>
     <span class="nx">turn_left</span><span class="p">();</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mf">8</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">move</span><span class="p">();</span>
     <span class="p">}</span>
     <span class="nx">turn_left</span><span class="p">();</span>
@@ -30,7 +30,7 @@
 
 <span class="nx">move</span><span class="p">();</span>
 <span class="nx">move</span><span class="p">();</span>
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">row</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">row</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">;</span> <span class="nx">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">row</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">row</span><span class="o">&lt;</span><span class="mf">6</span><span class="p">;</span> <span class="nx">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">harvestColumn</span><span class="p">();</span>
     <span class="nx">move</span><span class="p">();</span>
 <span class="p">}</span>

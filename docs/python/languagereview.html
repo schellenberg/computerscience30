@@ -1,125 +1,79 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Python Review &#8212; Computer Science 30 - Schellenberg</title>
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=808B982A" />
-    <link rel="stylesheet" type="text/css" href="../_static/activecode.css?v=F471F95B" />
-    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css?v=1CE53237" />
-    <link rel="stylesheet" type="text/css" href="../_static/clickable.css?v=58C4E18A" />
-    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css?v=239FC54E" />
-    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css?v=8A1A42E4" />
-    <link rel="stylesheet" type="text/css" href="../_static/datafile.css?v=C184EB8A" />
-    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css?v=1FF7F927" />
-    <link rel="stylesheet" type="text/css" href="../_static/fitb.css?v=3BA0E63E" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
-    <link rel="stylesheet" type="text/css" href="../_static/p5.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/parsons.css?v=2F3E13EE" />
-    <link rel="stylesheet" type="text/css" href="../_static/js_lib/prettify.css?v=2A364B6B" />
-    <link rel="stylesheet" type="text/css" href="../_static/poll.css?v=E220AC33" />
-    <link rel="stylesheet" type="text/css" href="../_static/reveal.css?v=4A81D381" />
-    <link rel="stylesheet" type="text/css" href="../_static/showEval.css?v=C6382F3" />
-    <link rel="stylesheet" type="text/css" href="../_static/spreadsheet.css?v=B5F018A" />
-    <link rel="stylesheet" type="text/css" href="../_static/jexcel.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/japp.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css?v=424F1CC9" />
-    <link rel="stylesheet" type="text/css" href="../_static/video.css?v=E5385B3B" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.6" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/runestonebase.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/jquery.highlight.js?v=F1C496C8"></script>
-    <script type="text/javascript" src="../_static/bookfuncs.js?v=4AA8F078"></script>
-    <script type="text/javascript" src="../_static/codemirror.js?v=94F552C9"></script>
-    <script type="text/javascript" src="../_static/xml.js?v=236EDFF7"></script>
-    <script type="text/javascript" src="../_static/css.js?v=623153CE"></script>
-    <script type="text/javascript" src="../_static/python.js?v=14A28F1F"></script>
-    <script type="text/javascript" src="../_static/htmlmixed.js?v=33B91944"></script>
-    <script type="text/javascript" src="../_static/javascript.js?v=6F38CA04"></script>
-    <script type="text/javascript" src="../_static/sql.js?v=1B4587EC"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js?v=599B42B0"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js?v=88A1430F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js?v=AE15A4A1"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js?v=8ABDFE7F"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js?v=747279FF"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js?v=7B020E13"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js?v=660E85C3"></script>
-    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js?v=54B21948"></script>
-    <script type="text/javascript" src="../_static/activecode-i18n.en.js?v=70E93DF2"></script>
-    <script type="text/javascript" src="../_static/skulpt.min.js?v=E7EA033F"></script>
-    <script type="text/javascript" src="../_static/skulpt-stdlib.js?v=A9BBDEEE"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
-    <script type="text/javascript" src="../_static/activecode.js?v=D7AAECEE"></script>
-    <script type="text/javascript" src="../_static/clike.js?v=2DCE0756"></script>
-    <script type="text/javascript" src="../_static/timed_activecode.js?v=5150FA78"></script>
-    <script type="text/javascript" src="../_static/sql-wasm.js?v=44FE0709"></script>
-    <script type="text/javascript" src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script type="text/javascript" src="../_static/mchoice.js?v=6F3B51A7"></script>
-    <script type="text/javascript" src="../_static/timedmc.js?v=B010A457"></script>
-    <script type="text/javascript" src="../_static/timed.js?v=6789FE30"></script>
-    <script type="text/javascript" src="../_static/clickable.js?v=9560E65E"></script>
-    <script type="text/javascript" src="../_static/timedclickable.js?v=93989C23"></script>
-    <script type="text/javascript" src="../_static/d3.v2.min.js?v=836E01C"></script>
-    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js?v=B64CF0A8"></script>
-    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js?v=42F9EBEA"></script>
-    <script type="text/javascript" src="../_static/pytutor.js?v=82B022B9"></script>
-    <script type="text/javascript" src="../_static/codelens.js?v=CABECD49"></script>
-    <script type="text/javascript" src="../_static/datafile.js?v=3ED1A80C"></script>
-    <script type="text/javascript" src="../_static/dragndrop.js?v=3984FD8D"></script>
-    <script type="text/javascript" src="../_static/timeddnd.js?v=378F237E"></script>
-    <script type="text/javascript" src="../_static/fitb.js?v=8E40E713"></script>
-    <script type="text/javascript" src="../_static/timedfitb.js?v=2AA17071"></script>
-    <script type="text/javascript" src="../_static/lp.js?v=F137FF7A"></script>
-    <script type="text/javascript" src="../_static/gas.js?v=F0D0F02E"></script>
-    <script type="text/javascript" src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script type="text/javascript" src="../_static/p5-widget.js"></script>
-    <script type="text/javascript" src="../_static/js_lib/prettify.js?v=CA7E8928"></script>
-    <script type="text/javascript" src="../_static/js_lib/hammer.min.js?v=73056367"></script>
-    <script type="text/javascript" src="../_static/parsons.js?v=93EFFF39"></script>
-    <script type="text/javascript" src="../_static/timedparsons.js?v=2EEA9E5A"></script>
-    <script type="text/javascript" src="../_static/poll.js?v=11AD6126"></script>
-    <script type="text/javascript" src="../_static/reveal.js?v=9C3AAF60"></script>
-    <script type="text/javascript" src="../_static/shortanswer.js?v=BB0B99B1"></script>
-    <script type="text/javascript" src="../_static/timed_shortanswer.js?v=B3A117D7"></script>
-    <script type="text/javascript" src="../_static/showEval.js?v=C5CE0C81"></script>
-    <script type="text/javascript" src="../_static/spreadsheet.js?v=CFA364DA"></script>
-    <script type="text/javascript" src="../_static/jexcel.js"></script>
-    <script type="text/javascript" src="../_static/japp.js"></script>
-    <script type="text/javascript" src="../_static/tabbedstuff.js?v=5BE6106"></script>
-    <script type="text/javascript" src="../_static/runestonevideo.js?v=53E888DE"></script>
-    <script type="text/javascript" src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script type="text/javascript" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script type="text/javascript" src="../_static/Blob.js?v=AEC2447"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
-    <script type="text/javascript" src="../_static/rangy-core.js"></script>
-    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
-    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
-    <script type="text/javascript" src="../_static/user-highlights.js"></script>
-    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
-    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
-    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
-    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=EFD02956"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <meta charset='utf-8'>
@@ -140,7 +94,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '4.1.0';
+  eBookConfig.runestone_version = '5.5.6';
 </script>
 
 
@@ -299,64 +253,64 @@
 <p><strong>Check Your Understanding</strong></p>
 
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_1">
-            <p>Q-1: What is the data type of <code class="docutils literal notranslate"><span class="pre">'what</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">name?'</span></code>?</p>
+            <ul data-component="multiplechoice" data-question_label="1" data-multipleanswers="false"  id="data_types_1_1"  style="visibility: hidden;">
+            <p>2darry-quiz1: What is the data type of <code class="docutils literal notranslate"><span class="pre">'what</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">name?'</span></code>?</p>
 
-            <li data-component="answer"  id="data_types_1_1_opt_a">boolean</li><li data-component="feedback" id="data_types_1_1_opt_a">It is not True or False.</li>
+            <li data-component="answer"  id="data_types_1_1_opt_a">boolean</li><li data-component="feedback">It is not True or False.</li>
             
-            <li data-component="answer"  id="data_types_1_1_opt_b">integer</li><li data-component="feedback" id="data_types_1_1_opt_b">The data is not numeric.</li>
+            <li data-component="answer"  id="data_types_1_1_opt_b">integer</li><li data-component="feedback">The data is not numeric.</li>
             
-            <li data-component="answer"  id="data_types_1_1_opt_c">float</li><li data-component="feedback" id="data_types_1_1_opt_c">The value is not numeric with a decimal point.</li>
+            <li data-component="answer"  id="data_types_1_1_opt_c">float</li><li data-component="feedback">The value is not numeric with a decimal point.</li>
             
-            <li data-component="answer" data-correct id="data_types_1_1_opt_d">string</li><li data-component="feedback" id="data_types_1_1_opt_d">Great! Strings are enclosed in quotes.</li>
-            
-
-            </ul>
-            </div>
-            
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_2">
-            <p>Q-2: What is the data type of <code class="docutils literal notranslate"><span class="pre">42</span></code>?</p>
-
-            <li data-component="answer"  id="data_types_1_2_opt_a">boolean</li><li data-component="feedback" id="data_types_1_2_opt_a">It is not True or False.</li>
-            
-            <li data-component="answer" data-correct id="data_types_1_2_opt_b">integer</li><li data-component="feedback" id="data_types_1_2_opt_b">Great! The data is numeric, without a decimal point.</li>
-            
-            <li data-component="answer"  id="data_types_1_2_opt_c">float</li><li data-component="feedback" id="data_types_1_2_opt_c">The value is not numeric with a decimal point.</li>
-            
-            <li data-component="answer"  id="data_types_1_2_opt_d">string</li><li data-component="feedback" id="data_types_1_2_opt_d">Strings are enclosed in quotes.</li>
+            <li data-component="answer" data-correct id="data_types_1_1_opt_d">string</li><li data-component="feedback">Great! Strings are enclosed in quotes.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_3">
-            <p>Q-3: What is the data type of <code class="docutils literal notranslate"><span class="pre">False</span></code>?</p>
+            <ul data-component="multiplechoice" data-question_label="2" data-multipleanswers="false"  id="data_types_1_2"  style="visibility: hidden;">
+            <p>2darry-quiz2: What is the data type of <code class="docutils literal notranslate"><span class="pre">42</span></code>?</p>
 
-            <li data-component="answer" data-correct id="data_types_1_3_opt_a">boolean</li><li data-component="feedback" id="data_types_1_3_opt_a">Great! Boolean is either True or False.</li>
+            <li data-component="answer"  id="data_types_1_2_opt_a">boolean</li><li data-component="feedback">It is not True or False.</li>
             
-            <li data-component="answer"  id="data_types_1_3_opt_b">integer</li><li data-component="feedback" id="data_types_1_3_opt_b">The data is not numeric.</li>
+            <li data-component="answer" data-correct id="data_types_1_2_opt_b">integer</li><li data-component="feedback">Great! The data is numeric, without a decimal point.</li>
             
-            <li data-component="answer"  id="data_types_1_3_opt_c">float</li><li data-component="feedback" id="data_types_1_3_opt_c">The value is not numeric with a decimal point.</li>
+            <li data-component="answer"  id="data_types_1_2_opt_c">float</li><li data-component="feedback">The value is not numeric with a decimal point.</li>
             
-            <li data-component="answer"  id="data_types_1_3_opt_d">string</li><li data-component="feedback" id="data_types_1_3_opt_d">Strings are enclosed in quotes.</li>
+            <li data-component="answer"  id="data_types_1_2_opt_d">string</li><li data-component="feedback">Strings are enclosed in quotes.</li>
             
 
             </ul>
             </div>
             
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-multipleanswers="false"  id="data_types_1_4">
-            <p>Q-4: What is the data type of <code class="docutils literal notranslate"><span class="pre">4.5</span></code>?</p>
+            <ul data-component="multiplechoice" data-question_label="3" data-multipleanswers="false"  id="data_types_1_3"  style="visibility: hidden;">
+            <p>2darry-quiz3: What is the data type of <code class="docutils literal notranslate"><span class="pre">False</span></code>?</p>
 
-            <li data-component="answer"  id="data_types_1_4_opt_a">boolean</li><li data-component="feedback" id="data_types_1_4_opt_a">It is not True or False.</li>
+            <li data-component="answer" data-correct id="data_types_1_3_opt_a">boolean</li><li data-component="feedback">Great! Boolean is either True or False.</li>
             
-            <li data-component="answer"  id="data_types_1_4_opt_b">integer</li><li data-component="feedback" id="data_types_1_4_opt_b">The data is not numeric.</li>
+            <li data-component="answer"  id="data_types_1_3_opt_b">integer</li><li data-component="feedback">The data is not numeric.</li>
             
-            <li data-component="answer" data-correct id="data_types_1_4_opt_c">float</li><li data-component="feedback" id="data_types_1_4_opt_c">Great! The value is numeric with a decimal point.</li>
+            <li data-component="answer"  id="data_types_1_3_opt_c">float</li><li data-component="feedback">The value is not numeric with a decimal point.</li>
             
-            <li data-component="answer"  id="data_types_1_4_opt_d">string</li><li data-component="feedback" id="data_types_1_4_opt_d">Strings are enclosed in quotes.</li>
+            <li data-component="answer"  id="data_types_1_3_opt_d">string</li><li data-component="feedback">Strings are enclosed in quotes.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="4" data-multipleanswers="false"  id="data_types_1_4"  style="visibility: hidden;">
+            <p>2darry-quiz4: What is the data type of <code class="docutils literal notranslate"><span class="pre">4.5</span></code>?</p>
+
+            <li data-component="answer"  id="data_types_1_4_opt_a">boolean</li><li data-component="feedback">It is not True or False.</li>
+            
+            <li data-component="answer"  id="data_types_1_4_opt_b">integer</li><li data-component="feedback">The data is not numeric.</li>
+            
+            <li data-component="answer" data-correct id="data_types_1_4_opt_c">float</li><li data-component="feedback">Great! The value is numeric with a decimal point.</li>
+            
+            <li data-component="answer"  id="data_types_1_4_opt_d">string</li><li data-component="feedback">Strings are enclosed in quotes.</li>
             
 
             </ul>
@@ -366,14 +320,19 @@
 <h2>Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this headline">¶</a></h2>
 <p>If you aren’t sure what the data type of something is, you can check it using the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function. This works on both values (a piece of data) and variables (a container that holds a value). What will the code below do? After you have pressed Run below, change the value inside the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to make sure you really understand what it is doing. Replace the <code class="docutils literal notranslate"><span class="pre">5</span></code> with <code class="docutils literal notranslate"><span class="pre">5.3</span></code>. What do you get? How about <code class="docutils literal notranslate"><span class="pre">&quot;5.3&quot;</span></code>?</p>
 
-<div data-childcomponent="checking_data_types" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=checking_data_types >
+<div id=checking_data_types_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=checking_data_types data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="checking_data_types_editor" data-question_label="5" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 print( type(5) )
 </textarea>
+</div>
 </div>
 </div>
 <div class="section" id="converting-between-data-types">
@@ -385,12 +344,16 @@ print( type(5) )
 <li><p><code class="docutils literal notranslate"><span class="pre">float(x)</span></code> to convert <em>x</em> to a floating point number</p></li>
 </ul>
 
-<div data-childcomponent="casting_data_types" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=casting_data_types >
+<div id=casting_data_types_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=casting_data_types data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="casting_data_types_editor" data-question_label="6" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 a = 4         #a is an int
 print( type(a) )
 
@@ -400,6 +363,7 @@ print( type(b) )
 c = float(b)  #c is the float 4.0
 print( type(c) )
 </textarea>
+</div>
 </div>
 </div>
 <div class="section" id="math-operators">
@@ -459,8 +423,8 @@ print( type(c) )
 </table>
 
         <div class="runestone">
-        <div data-component="fillintheblank" id="python_math_operators_review_1">
-            <p>Q-5: What would the following code print?:</p>
+        <div data-component="fillintheblank" data-question_label="7" id="python_math_operators_review_1"  style="visibility: hidden;">
+            <p>2darry-quiz7: What would the following code print?:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">12</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
@@ -474,8 +438,8 @@ print( type(c) )
         </div>
             
         <div class="runestone">
-        <div data-component="fillintheblank" id="python_math_operators_review_2">
-            <p>Q-6: What would the following code print?:</p>
+        <div data-component="fillintheblank" data-question_label="8" id="python_math_operators_review_2"  style="visibility: hidden;">
+            <p>2darry-quiz8: What would the following code print?:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">12</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
@@ -489,8 +453,8 @@ print( type(c) )
         </div>
             
         <div class="runestone">
-        <div data-component="fillintheblank" id="python_math_operators_review_3">
-            <p>Q-7: What would the following code print?:</p>
+        <div data-component="fillintheblank" data-question_label="9" id="python_math_operators_review_3"  style="visibility: hidden;">
+            <p>2darry-quiz9: What would the following code print?:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">42</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">number</span> <span class="o">//</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
@@ -504,8 +468,8 @@ print( type(c) )
         </div>
             
         <div class="runestone">
-        <div data-component="fillintheblank" id="python_math_operators_review_4">
-            <p>Q-8: What would the following code print?:</p>
+        <div data-component="fillintheblank" data-question_label="10" id="python_math_operators_review_4"  style="visibility: hidden;">
+            <p>2darry-quiz10: What would the following code print?:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span> <span class="n">number</span> <span class="o">**</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
@@ -526,12 +490,16 @@ print( type(c) )
 <p>A single equal sign <code class="docutils literal notranslate"><span class="pre">=</span></code> is used to <strong>assign</strong> a value. Two equal signs <code class="docutils literal notranslate"><span class="pre">==</span></code> are used when <strong>comparing</strong> a value.</p>
 </div>
 
-<div data-childcomponent="if_intro_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=if_intro_1 >
+<div id=if_intro_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=if_intro_1 data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="if_intro_1_editor" data-question_label="11" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 number = 42
 number = number // 4
 
@@ -543,16 +511,21 @@ else:
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="if-elif-else">
 <h2><code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code> control structure works in the exact same way it did when you were programming Reeborg. The important thing to remember is that <strong>only one of the branches can execute</strong>. Read the code below, and predict what you think the output will be. Then change it to <code class="docutils literal notranslate"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">25</span></code>. What will the output be now? How about if you change it to <code class="docutils literal notranslate"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">5</span></code>? What about <code class="docutils literal notranslate"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">15</span></code>?</p>
 
-<div data-childcomponent="if_elif_else_intro" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=if_elif_else_intro >
+<div id=if_elif_else_intro_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=if_elif_else_intro data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="if_elif_else_intro_editor" data-question_label="12" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 temp = -3
 
 if temp < -10:
@@ -564,16 +537,21 @@ else:
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="while-loop">
 <h2><code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop" title="Permalink to this headline">¶</a></h2>
 <p>Recall that we used a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop in Reeborg when we didn’t know the number of iterations ahead of time. In other words, the body of while will be repeated as long as the controlling boolean expression evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code>. Run the code below. Can you change the code so that it counts <strong>up</strong> from 1 to 10, then says “Here I come!”?</p>
 
-<div data-childcomponent="while_loop_intro" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=while_loop_intro >
+<div id=while_loop_intro_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=while_loop_intro data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="while_loop_intro_editor" data-question_label="13" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 counter = 10
 
 while counter > 0:
@@ -584,74 +562,100 @@ print("Blastoff!")
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="for-loop">
 <h2><code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
 <p>When we knew the exact number of iterations required in Reeborg, we used the <code class="docutils literal notranslate"><span class="pre">repeat</span></code> command. That command was not part of regular Python – it was added to keep Reeborg coding as simple as possible. Although I won’t explain all the details about it yet, I will introduce you to the Python version of a repeat loop. If we want something to repeat 10 times, we could do the following: (after running the code, change the <code class="docutils literal notranslate"><span class="pre">10</span></code> to some other number and try it again)</p>
 
-<div data-childcomponent="for_loop_intro_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=for_loop_intro_1 >
+<div id=for_loop_intro_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=for_loop_intro_1 data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="for_loop_intro_1_editor" data-question_label="14" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 for counter in range(10):
     print(counter)
 </textarea>
 </div>
+</div>
 <p>Notice that the loop above repeats 10 times, but begins counting at 0, so the last number is a 9. We can control the for loop even more by passing two arguments, like this:</p>
 
-<div data-childcomponent="for_loop_intro_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=for_loop_intro_2 >
+<div id=for_loop_intro_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=for_loop_intro_2 data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="for_loop_intro_2_editor" data-question_label="15" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 for counter in range(5, 11):
     print(counter)
 </textarea>
 </div>
+</div>
 <p>One last version of the for loop that we will introduce allows us to go through a <em>list</em> of values, as follows. <em>Please note that there are a bunch of things in this example that you don’t need to understand yet! We’ll get there!</em></p>
 
-<div data-childcomponent="for_loop_intro_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=for_loop_intro_3 >
+<div id=for_loop_intro_3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=for_loop_intro_3 data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="for_loop_intro_3_editor" data-question_label="16" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 grocery_list = ["apples", "carrots", "milk", "yogurt"]
 for item in grocery_list:
     print("Don't forget to buy the", item)
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <p>Just like you were able to teach Reeborg to do new things by creating a new function, we can create new functions in Python as well. Here are a couple examples:</p>
 
-<div data-childcomponent="functions_intro_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_intro_1 >
+<div id=functions_intro_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=functions_intro_1 data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="functions_intro_1_editor" data-question_label="17" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 def say_hello():
     print("Hello there!")
 
 say_hello()
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="functions_intro_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions_intro_2 >
+<div id=functions_intro_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=functions_intro_2 data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="functions_intro_2_editor" data-question_label="18" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 def say_hello(some_name):
     print("Hello there,", some_name)
 
 say_hello("Eli")
 </textarea>
+</div>
 </div>
 </div>
 <div class="section" id="taking-input-from-user">
@@ -662,23 +666,32 @@ say_hello("Eli")
 <p><code class="docutils literal notranslate"><span class="pre">input()</span></code> will always return a string. You will need to convert it to an int or a float if you are expecting a number.</p>
 </div>
 
-<div data-childcomponent="input_intro_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=input_intro_1 >
+<div id=input_intro_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=input_intro_1 data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="input_intro_1_editor" data-question_label="19" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 your_name = input("What is your name?")
 print(your_name)
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="input_intro_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=input_intro_2 >
+<div id=input_intro_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=input_intro_2 data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="input_intro_2_editor" data-question_label="20" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 def say_hello(some_name):
     print("Hello there, ", some_name)
 
@@ -686,14 +699,19 @@ your_name = input("What is your name?")
 say_hello(your_name)
 </textarea>
 </div>
+</div>
 <p>The following example is not going to work when you try to run it. Try entering in <code class="docutils literal notranslate"><span class="pre">16</span></code>, then <code class="docutils literal notranslate"><span class="pre">15</span></code>. Notice that nothing is printed either time, even though it looks like the conditional should be causing it to print. Can you figure out what is wrong and fix it? <em>Hint: think about data types!</em></p>
 
-<div data-childcomponent="input_intro_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=input_intro_3 >
+<div id=input_intro_3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=input_intro_3 data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="input_intro_3_editor" data-question_label="21" 
+      data-timelimit=25000     
     data-audio=''      
-         data-caption='Can you figure out what is wrong?' >
+         data-caption='Can you figure out what is wrong?'  data-wasm=/_static
+    style="visibility: hidden;">
 age = input("How old are you?")
 
 if age == 16:
@@ -703,46 +721,62 @@ elif age == 15:
 </textarea>
 </div>
 </div>
+</div>
 <div class="section" id="python-modules">
 <h2>Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this headline">¶</a></h2>
 <p>One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*`</span></code>, you made all of the functions in the library tab available to your program. Please note that although we could use the <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*</span></code> syntax, it can cause problems if you accidentally create a function that has the same name as something you have imported. See the second example below for the recommended way to import.</p>
 
-<div data-childcomponent="module_intro_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=module_intro_1 >
+<div id=module_intro_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=module_intro_1 data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="module_intro_1_editor" data-question_label="22" 
+      data-timelimit=25000     
     data-audio=''      
-         data-caption='This works, but is not recommended.' >
+         data-caption='This works, but is not recommended.'  data-wasm=/_static
+    style="visibility: hidden;">
 from math import *
 
 print( sqrt(16) )
 print( cos(0) )
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="module_intro_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=module_intro_2 >
+<div id=module_intro_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=module_intro_2 data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="module_intro_2_editor" data-question_label="23" 
+      data-timelimit=25000     
     data-audio=''      
-         data-caption='This is the better way to import a module.' >
+         data-caption='This is the better way to import a module.'  data-wasm=/_static
+    style="visibility: hidden;">
 import math
 
 print( math.sqrt(16) )
 print( math.cos(0) )
 </textarea>
 </div>
+</div>
 
-<div data-childcomponent="module_intro_3" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=module_intro_3 >
+<div id=module_intro_3_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=module_intro_3 data-lang="python" 
-      data-timelimit=25000    
+</div>
+<textarea data-lang="python" id="module_intro_3_editor" data-question_label="24" 
+      data-timelimit=25000     
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 import random
 
 print( random.randrange(1, 10) )
 </textarea>
+</div>
 </div>
 </div>
 <div class="section" id="drawing-images-practice">
@@ -750,26 +784,36 @@ print( random.randrange(1, 10) )
 <p>Draw the following image. Be sure to define and use at least one function as part of your solution.</p>
 <img alt="../_images/confusion-19.png" src="../_images/confusion-19.png" />
 
-<div data-childcomponent="drawing_images_review_1" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=drawing_images_review_1 >
+<div id=drawing_images_review_1_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=drawing_images_review_1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
+</div>
+<textarea data-lang="python" id="drawing_images_review_1_editor" data-question_label="25" 
+      data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 # first review shape
 </textarea>
+</div>
 </div>
 <p>Once you have completed the shape above, try the following. <em>Use the code you made above as a starting point.</em></p>
 <img alt="../_images/confusion-27.png" src="../_images/confusion-27.png" />
 
-<div data-childcomponent="drawing_images_review_2" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=drawing_images_review_2 >
+<div id=drawing_images_review_2_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=drawing_images_review_2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
+</div>
+<textarea data-lang="python" id="drawing_images_review_2_editor" data-question_label="26" 
+      data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-          >
+           data-wasm=/_static
+    style="visibility: hidden;">
 # second review shape
 </textarea>
+</div>
 </div>
 </div>
 <div class="section" id="number-guessing-game">
@@ -784,12 +828,16 @@ print( random.randrange(1, 10) )
 </ul>
 <p>We are going to try to implement this game in Python. <strong>Please note: you will likely run into many problems trying to create this game in Python.</strong> However, it can be really helpful to try problems that feel like they are above your skill level. Soon, you will be able to create programs like this on your own! Your teacher might choose to give you some time to try this on your own, then demonstrate a possible solution to the problem, or perhaps come back to this game in a couple of weeks.</p>
 
-<div data-childcomponent="number_guessing_game" class="runestone explainer ac_section alert alert-warning">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=number_guessing_game >
+<div id=number_guessing_game_question class="ac_question col-md-12">
 
-<textarea data-component="activecode" id=number_guessing_game data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
+</div>
+<textarea data-lang="python" id="number_guessing_game_editor" data-question_label="27" 
+      data-timelimit=25000  data-codelens="true"   
     data-audio=''      
-         data-caption='Create a number guessing game here!' >
+         data-caption='Create a number guessing game here!'  data-wasm=/_static
+    style="visibility: hidden;">
 # the algorithm for the game can be described as follows
 # your job is to try to convert the comments into real Python code!
 
@@ -821,6 +869,7 @@ user_guess = -1
 </div>
 </div>
 </div>
+</div>
 
 
   
@@ -843,7 +892,7 @@ user_guess = -1
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 4.1.0.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.6.
     </p>
   </div>
 </footer>
