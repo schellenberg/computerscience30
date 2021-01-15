@@ -34,7 +34,7 @@ Getting Started
     gettingstarted/webeditor.rst
     gettingstarted/drawingbasics.rst
     gettingstarted/loops.rst
-    gettingstarted/pairprogramming.rst
+    gettingstarted/parsingbooleans.rst
     gettingstarted/objectbasics.rst
 
 Better Development Environment
