@@ -1,3 +1,8 @@
+.. qnum::
+   :prefix: nestedloops-quiz
+   :start: 1
+
+.. _nested_loops_practice_quiz:
 
 
 Nested Loops Practice Quiz
