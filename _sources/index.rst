@@ -158,7 +158,7 @@ Practice Quizzes
     practicequiz/nestedloops.rst
     practicequiz/2darrays.rst
     practicequiz/maps.rst
-
+    practicequiz/recursion.rst
 
 
 JavaScript Reference
