@@ -250,13 +250,13 @@
 <div class="container" id="main-content">
   
   <div class="section" id="intro-to-javascript">
-<h1><span class="section-number">1. </span>Intro To JavaScript<a class="headerlink" href="#intro-to-javascript" title="Permalink to this headline">¶</a></h1>
+<h1>Intro To JavaScript<a class="headerlink" href="#intro-to-javascript" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Review programming control structures learned in CS20, translating them from Python into JavaScript. CodingBat practice problems.</p>
 </div>
 <div class="section" id="variables-and-data-types">
-<h2><span class="section-number">1.1. </span>Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
+<h2>Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
 <p>We use variables in our programs whenever we need to keep track of something that can change over time. Variables allow us to improve the reusability of our code.</p>
 <p>We have to be careful how we name variables, since they can’t be keywords like <cite>if</cite>, <cite>while</cite>, etc. A keyword is a word that already has a special meaning in the language we are programming in.</p>
 <p>JavaScript follows the camelCaseVariableNamingConvention, which means that your variables should start with a lowercase letter, and if they contain more than one word, you should capitalize each word that follows the first (like <cite>helpfulVariable</cite> or <cite>thisIsSomethingElse</cite>).</p>
@@ -267,7 +267,7 @@
 <div id=variableNames_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="variableNames_editor" data-question_label="1.1.1" 
+<textarea data-lang="javascript" id="variableNames_editor" data-question_label="1" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
@@ -290,7 +290,7 @@ let age = 17;
 </div>
 </div>
 <div class="section" id="math-operators">
-<h2><span class="section-number">1.2. </span>Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this headline">¶</a></h2>
+<h2>Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this headline">¶</a></h2>
 <p>We can do math with JavaScript, but we need to know the operators to use. The following table shows the most frequently used math operators in JavaScript.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -346,7 +346,7 @@ let age = 17;
 <div id=incrementingDemo_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="incrementingDemo_editor" data-question_label="1.2.1" 
+<textarea data-lang="javascript" id="incrementingDemo_editor" data-question_label="2" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
@@ -372,7 +372,7 @@ writeln(b);
 </div>
 </div>
 <div class="section" id="handy-math-functions">
-<h2><span class="section-number">1.3. </span>Handy Math Functions<a class="headerlink" href="#handy-math-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Handy Math Functions<a class="headerlink" href="#handy-math-functions" title="Permalink to this headline">¶</a></h2>
 <p>You can use some handy functions available through the <code class="docutils literal notranslate"><span class="pre">Math</span></code> object. Some that you will probably want to use are:</p>
 
 <div class="runestone explainer ac_section alert alert-warning">
@@ -380,7 +380,7 @@ writeln(b);
 <div id=mathFunctions_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="mathFunctions_editor" data-question_label="1.3.1" 
+<textarea data-lang="javascript" id="mathFunctions_editor" data-question_label="3" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
@@ -403,7 +403,7 @@ writeln(nextHighestInt);
 <div id=truncatingDivision_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="truncatingDivision_editor" data-question_label="1.3.2" 
+<textarea data-lang="javascript" id="truncatingDivision_editor" data-question_label="4" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
@@ -417,11 +417,11 @@ writeln(theQuotient);
 </div>
 </div>
 <div class="section" id="special-numerical-values">
-<h2><span class="section-number">1.4. </span>Special Numerical Values<a class="headerlink" href="#special-numerical-values" title="Permalink to this headline">¶</a></h2>
+<h2>Special Numerical Values<a class="headerlink" href="#special-numerical-values" title="Permalink to this headline">¶</a></h2>
 <p>There are certain situations where you will encounter special values, including <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, and <code class="docutils literal notranslate"><span class="pre">-Infinity</span></code>. <code class="docutils literal notranslate"><span class="pre">NaN</span></code> stands for Not a Number, and will show up if you attempt something like <code class="docutils literal notranslate"><span class="pre">let</span> <span class="pre">edge</span> <span class="pre">=</span> <span class="pre">&quot;Bono&quot;/2</span></code>. The Infinity values show up if you exceed 1.79769313486231570e+308 (very unlikely in practice), but don’t follow all the mathematical rules of infinity. It is, however, important to know about these values so that you can try to identify what has gone wrong if you encounter one while debugging one of your programs.</p>
 </div>
 <div class="section" id="operators">
-<h2><span class="section-number">1.5. </span>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>JavaScript is odd when it comes to checking for equality (uses truthy/falsey with ==), so we use three equal signs when checking for equality.</p>
@@ -446,7 +446,7 @@ writeln(theQuotient);
 </ul>
 </div>
 <div class="section" id="if-else-if-else">
-<h2><span class="section-number">1.6. </span>If / Else If / Else<a class="headerlink" href="#if-else-if-else" title="Permalink to this headline">¶</a></h2>
+<h2>If / Else If / Else<a class="headerlink" href="#if-else-if-else" title="Permalink to this headline">¶</a></h2>
 <p>In JavaScript, blocks of code start and end using <code class="docutils literal notranslate"><span class="pre">{</span></code> and <code class="docutils literal notranslate"><span class="pre">}</span></code>. <strong>You should still indent your code properly</strong> (to make your code readable), but the indentation doesn’t affect the way your program runs.</p>
 
 <div class="runestone explainer ac_section alert alert-warning">
@@ -454,7 +454,7 @@ writeln(theQuotient);
 <div id=conditionalDemo_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="conditionalDemo_editor" data-question_label="1.6.1" 
+<textarea data-lang="javascript" id="conditionalDemo_editor" data-question_label="5" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
@@ -479,14 +479,14 @@ else {
 </div>
 </div>
 <div class="section" id="while-loops">
-<h2><span class="section-number">1.7. </span>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
+<h2>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
 
 <div class="runestone explainer ac_section alert alert-warning">
 <div data-component="activecode" id=whileLoop >
 <div id=whileLoop_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="whileLoop_editor" data-question_label="1.7.1" 
+<textarea data-lang="javascript" id="whileLoop_editor" data-question_label="6" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
@@ -502,14 +502,14 @@ while (number < 10) {
 </div>
 </div>
 <div class="section" id="for-loop">
-<h2><span class="section-number">1.8. </span>For Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
+<h2>For Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
 
 <div class="runestone explainer ac_section alert alert-warning">
 <div data-component="activecode" id=forLoop >
 <div id=forLoop_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="forLoop_editor" data-question_label="1.8.1" 
+<textarea data-lang="javascript" id="forLoop_editor" data-question_label="7" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
@@ -523,14 +523,14 @@ writeln("Blastoff!");
 </div>
 </div>
 <div class="section" id="functions">
-<h2><span class="section-number">1.9. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 
 <div class="runestone explainer ac_section alert alert-warning">
 <div data-component="activecode" id=functions >
 <div id=functions_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="functions_editor" data-question_label="1.9.1" 
+<textarea data-lang="javascript" id="functions_editor" data-question_label="8" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
@@ -547,7 +547,7 @@ writeln(adder(2, 4));
 <p>Can return a value, or not. If not, result is <code class="docutils literal notranslate"><span class="pre">undefined</span></code>.</p>
 </div>
 <div class="section" id="arrays">
-<h2><span class="section-number">1.10. </span>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h2>
+<h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h2>
 <p>Very similar to lists in Python. <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Find out more from MDN reference</a></p>
 
 <div class="runestone explainer ac_section alert alert-warning">
@@ -555,7 +555,7 @@ writeln(adder(2, 4));
 <div id=arrayExample1_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="arrayExample1_editor" data-question_label="1.10.1" 
+<textarea data-lang="javascript" id="arrayExample1_editor" data-question_label="9" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
@@ -578,7 +578,7 @@ for (let item of groceryList) {
 <div id=arrayExample2_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="arrayExample2_editor" data-question_label="1.10.2" 
+<textarea data-lang="javascript" id="arrayExample2_editor" data-question_label="10" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
@@ -592,7 +592,7 @@ for (let i=0; i<groceryList.length; i++) {
 </div>
 </div>
 <div class="section" id="codingjs-practice-problems">
-<h2><span class="section-number">1.11. </span>CodingJS Practice Problems<a class="headerlink" href="#codingjs-practice-problems" title="Permalink to this headline">¶</a></h2>
+<h2>CodingJS Practice Problems<a class="headerlink" href="#codingjs-practice-problems" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=parrotTrouble&amp;title=Warmup-1">parrotTrouble</a></p></li>
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=diff21&amp;title=Warmup-1">diff21</a></p></li>

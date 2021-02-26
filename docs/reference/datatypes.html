@@ -77,7 +77,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. JavaScript Control Structures" href="controlstructures.html" />
-    <link rel="prev" title="1. Loops Practice Quiz" href="../practicequiz/loops.html" />
+    <link rel="prev" title="5. Recursion Practice Quiz" href="../practicequiz/recursion.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -209,8 +209,8 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1. </span>Loops Practice Quiz" data-toggle="tooltip">
-    <a href="../practicequiz/loops.html" >
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5. </span>Recursion Practice Quiz" data-toggle="tooltip">
+    <a href="../practicequiz/recursion.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -247,13 +247,13 @@
 <div class="container" id="main-content">
   
   <div class="section" id="javascript-data-types">
-<h1><span class="section-number">1. </span>JavaScript Data Types<a class="headerlink" href="#javascript-data-types" title="Permalink to this headline">¶</a></h1>
+<h1>JavaScript Data Types<a class="headerlink" href="#javascript-data-types" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Discuss JavaScript data types. Stick to primitive-ish types (number, string, boolean).</p>
 </div>
 <div class="section" id="checking-data-types">
-<h2><span class="section-number">1.1. </span>Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this headline">¶</a></h2>
+<h2>Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this headline">¶</a></h2>
 <p>If you aren’t sure what the data type of something is, you can check it using the <code class="docutils literal notranslate"><span class="pre">typeof</span></code> command. This works on both values (a piece of data) and variables (a container that holds a value).</p>
 
 <div class="runestone explainer ac_section alert alert-warning">
@@ -261,7 +261,7 @@
 <div id=checkingDataTypes_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="checkingDataTypes_editor" data-question_label="1.1.1" 
+<textarea data-lang="javascript" id="checkingDataTypes_editor" data-question_label="1" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
@@ -277,7 +277,7 @@ writeln(typeof "21")
 <p>Where did the result of the <code class="docutils literal notranslate"><span class="pre">console.log(typeof</span> <span class="pre">5)</span></code> go? Your web browser has a console built into it. Find it now, and you’ll see the missing console.log call. You may want to use <code class="docutils literal notranslate"><span class="pre">console.log()</span></code> when debugging your projects.</p>
 </div>
 <div class="section" id="special-number-values">
-<h2><span class="section-number">1.2. </span>Special Number Values<a class="headerlink" href="#special-number-values" title="Permalink to this headline">¶</a></h2>
+<h2>Special Number Values<a class="headerlink" href="#special-number-values" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">NaN</span></code>, which is the result doing something mathematically goofy, like dividing a string by a number. Try it in the console.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, which results when the value of a number is larger than 1.79769313486231570e+308. There’s going to be some weird math going on if you use it, so be careful… <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">MDN docs</a></p></li>
@@ -285,7 +285,7 @@ writeln(typeof "21")
 </ul>
 </div>
 <div class="section" id="converting-between-data-types">
-<h2><span class="section-number">1.3. </span>Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this headline">¶</a></h2>
+<h2>Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes you might need to convert from one data type to another. You can use the following functions to <strong>type cast</strong> data:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">String(x)</span></code> to convert <em>x</em> to a string</p></li>
@@ -298,7 +298,7 @@ writeln(typeof "21")
 <div id=castingDataTypes_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="castingDataTypes_editor" data-question_label="1.3.1" 
+<textarea data-lang="javascript" id="castingDataTypes_editor" data-question_label="2" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
@@ -319,14 +319,14 @@ writeln(typeof d);
 </div>
 </div>
 <div class="section" id="important-stuff">
-<h2><span class="section-number">1.4. </span>Important Stuff<a class="headerlink" href="#important-stuff" title="Permalink to this headline">¶</a></h2>
+<h2>Important Stuff<a class="headerlink" href="#important-stuff" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">number</span></code>, <code class="docutils literal notranslate"><span class="pre">string</span></code> and <code class="docutils literal notranslate"><span class="pre">boolean</span></code> are <em>mostly</em> primitive data types in JavaScript (only mostly, though, since they do have methods; they are immutable, though)</p></li>
 <li><p>all other data can be considered objects. We’ll get into what that means in a few weeks…</p></li>
 </ul>
 </div>
 <div class="section" id="number-data-type">
-<h2><span class="section-number">1.5. </span>Number Data Type<a class="headerlink" href="#number-data-type" title="Permalink to this headline">¶</a></h2>
+<h2>Number Data Type<a class="headerlink" href="#number-data-type" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>aren’t different types for <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">float</span></code>, everything numeric is just a <code class="docutils literal notranslate"><span class="pre">number</span></code></p></li>
 <li><dl class="simple">
@@ -346,7 +346,7 @@ writeln(typeof d);
 </ul>
 </div>
 <div class="section" id="string-data-type">
-<h2><span class="section-number">1.6. </span>String Data Type<a class="headerlink" href="#string-data-type" title="Permalink to this headline">¶</a></h2>
+<h2>String Data Type<a class="headerlink" href="#string-data-type" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>stick with double quotes (single works too, but convention is to use double)</p></li>
 <li><p>note that comparison is by value, not reference; so “S” + “a” + “s” + “k” === “Sask”</p></li>
@@ -354,7 +354,7 @@ writeln(typeof d);
 </ul>
 </div>
 <div class="section" id="objects">
-<span id="objects-as-containers-ref"></span><h2><span class="section-number">1.7. </span>Objects<a class="headerlink" href="#objects" title="Permalink to this headline">¶</a></h2>
+<span id="objects-as-containers-ref"></span><h2>Objects<a class="headerlink" href="#objects" title="Permalink to this headline">¶</a></h2>
 <p>Everything else in JS is an <strong>object</strong>. Think of an object as a container of properties. This will make more sense with an example or two:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">student</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Aaron&quot;</span><span class="p">,</span>
@@ -427,7 +427,7 @@ writeln(typeof d);
 </div>
 </div>
 <div class="section" id="arrays">
-<h2><span class="section-number">1.8. </span>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h2>
+<h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h2>
 <p>Very similar to lists in Python. <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Find out more from MDN reference</a></p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">groceryList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apples&quot;</span><span class="p">,</span> <span class="s2">&quot;oranges&quot;</span><span class="p">,</span> <span class="s2">&quot;peaches&quot;</span><span class="p">,</span> <span class="s2">&quot;milk&quot;</span><span class="p">];</span>
 <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">item</span> <span class="k">of</span> <span class="nx">groceryList</span><span class="p">)</span> <span class="p">{</span>
@@ -471,12 +471,12 @@ writeln(typeof d);
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">1. </span>Loops Practice Quiz' data-toggle="tooltip">
-    <a href="../practicequiz/loops.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - <span class="section-number">5. </span>Recursion Practice Quiz' data-toggle="tooltip">
+    <a href="../practicequiz/recursion.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="../practicequiz/loops.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="../practicequiz/recursion.html" ></a>
   
   <li id="relations-next" class="navLink" title='Next Section - <span class="section-number">2. </span>JavaScript Control Structures' data-toggle="tooltip" >
     <a href="controlstructures.html" >

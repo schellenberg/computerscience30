@@ -86,8 +86,7 @@ To practice iterating through a map, you should try the following questions from
 More In Depth Demo
 -------------------
 
-Mind reader demo -- perhaps have the students play this ahead of time (prior to ever introducing the Map data type).
-
+Try beating my `mind reader </_static/mindreader>`_ built in p5js. I won't tell you how it works yet, but I do use the Map data type.
 
 Assignment Idea
 -----------------

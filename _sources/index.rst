@@ -17,7 +17,6 @@ CS20 Review and JavaScript Intro
 
 .. toctree::
     :maxdepth: 1
-    :numbered:
 
     intro/cs20review.rst
     intro/reeborg.rst
@@ -29,7 +28,6 @@ Getting Started
 
 .. toctree::
     :maxdepth: 1
-    :numbered:
 
     gettingstarted/webeditor.rst
     gettingstarted/drawingbasics.rst
@@ -41,7 +39,6 @@ Better Development Environment
 :::::::::::::::::::::::::::::::
 .. toctree::
     :maxdepth: 1
-    :numbered:
 
     ide/setup.rst
 
@@ -51,18 +48,10 @@ Data Structures
 
 .. toctree::
     :maxdepth: 1
-    :numbered:
 
     datastructures/arrayreview.rst
     datastructures/2darrays.rst
     datastructures/maps.rst
-
-
-.. .. raw:: html
-
-..    <iframe id="conversionPractice" src="/_static/mindreader"> </iframe>
-
-Try beating my `mind reader </_static/mindreader>`_ built in p5js. 
 
 
 External Files
@@ -70,7 +59,6 @@ External Files
 
 .. toctree::
     :maxdepth: 1
-    :numbered:
 
     externalfiles/strings.rst
     externalfiles/loadtable.rst
@@ -82,7 +70,6 @@ Using Libraries
 
 .. toctree::
     :maxdepth: 1
-    :numbered:
 
     libraries/sound.rst
     libraries/scribble.rst
@@ -94,7 +81,6 @@ Object Oriented Programming
 
 .. toctree::
    :maxdepth: 1
-   :numbered:
 
    oop/overview.rst
    oop/inheritance.rst
@@ -105,7 +91,6 @@ Recursion
 
 .. toctree::
    :maxdepth: 1
-   :numbered:
 
    recursion/overview.rst
 
@@ -115,7 +100,6 @@ Sorting
 
 .. toctree::
     :maxdepth: 1
-    :numbered:
 
     sorting/bubble.rst
     sorting/selection.rst
@@ -126,7 +110,6 @@ Number Systems and Character Encoding
 
 .. toctree::
     :maxdepth: 1
-    :numbered:
 
     numbersystems/bits.rst
     numbersystems/binary.rst
@@ -141,7 +124,6 @@ Capstone Coding Project
 
 .. toctree::
     :maxdepth: 1
-    :numbered:
 
     capstoneproject/overview.rst
     capstoneproject/exemplars.rst
@@ -152,21 +134,19 @@ Practice Quizzes
 
 .. toctree::
     :maxdepth: 1
-    :numbered:
 
     practicequiz/loops.rst
     practicequiz/nestedloops.rst
     practicequiz/2darrays.rst
     practicequiz/maps.rst
     practicequiz/recursion.rst
-
+    Base Conversion Practice Quiz <../_static/baseconversion#http://>
 
 JavaScript Reference
 :::::::::::::::::::::
 
 .. toctree::
     :maxdepth: 1
-    :numbered:
 
     reference/datatypes.rst
     reference/controlstructures.rst

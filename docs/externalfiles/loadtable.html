@@ -242,23 +242,23 @@
 <div class="container" id="main-content">
   
   <div class="section" id="loadtable">
-<h1><span class="section-number">2. </span>loadTable<a class="headerlink" href="#loadtable" title="Permalink to this headline">¶</a></h1>
+<h1>loadTable<a class="headerlink" href="#loadtable" title="Permalink to this headline">¶</a></h1>
 <p><em>From the p5js reference page</em></p>
 <p>Reads the contents of a file or URL and creates a p5.Table object with its values. If a file is specified, it must be located in the sketch’s “data” folder. The filename parameter can also be a URL to a file found online. By default, the file is assumed to be comma-separated (in CSV format). Table only looks for a header row if the ‘header’ option is included.</p>
 <p>This method is asynchronous, meaning it may not finish before the next line in your sketch is executed. Calling loadTable() inside preload() guarantees to complete the operation before setup() and draw() are called. Outside of preload(), you may supply a callback function to handle the object.</p>
 <div class="section" id="important-functions-to-know">
-<h2><span class="section-number">2.1. </span>Important Functions to Know<a class="headerlink" href="#important-functions-to-know" title="Permalink to this headline">¶</a></h2>
+<h2>Important Functions to Know<a class="headerlink" href="#important-functions-to-know" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Table <a class="reference external" href="https://p5js.org/reference/#/p5.Table/findRows">findRows()</a> finds the rows in the Table that contain the value provided, and returns references to those rows. Returns an Array.</p></li>
 <li><p>TableRow <a class="reference external" href="https://p5js.org/reference/#/p5.TableRow/get">get()</a> retrieves a value from the TableRow’s specified column</p></li>
 </ul>
 </div>
 <div class="section" id="demo">
-<h2><span class="section-number">2.2. </span>Demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h2>
+<h2>Demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h2>
 <p>Get the .csv file of COVID cases from Health Canada <a class="reference external" href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html">from this page</a>. Find all the rows from the past two weeks for Saskatchewan. To make dealing with dates easier, import Moment.js in the index.html library.</p>
 </div>
 <div class="section" id="completed-demo-for-reference">
-<h2><span class="section-number">2.3. </span>Completed Demo For Reference<a class="headerlink" href="#completed-demo-for-reference" title="Permalink to this headline">¶</a></h2>
+<h2>Completed Demo For Reference<a class="headerlink" href="#completed-demo-for-reference" title="Permalink to this headline">¶</a></h2>
 <p>If you’d like to check out a completed version of the demo, take a look at <a class="reference external" href="https://editor.p5js.org/schellenberg/sketches/lT9ZmeV5aE">this sketch</a></p>
 </div>
 </div>
