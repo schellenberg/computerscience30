@@ -62,3 +62,9 @@ Once you have GitHub set up on more than one machine (it is a really nice way to
 #. Do **work**
 #. **Commit** your changes. Write a Summary message describing what you've added/changed, then click ``Commit to Master``.
 #. **Push** (from Repository menu, or the ``Fetch Origin`` button). This sends your new changes up to the GitHub servers.
+
+
+Template p5js Project Folder
+-----------------------------
+
+You should download a copy of my `p5js template folder <https://github.com/schellenberg/cs30-p5js-template/archive/refs/heads/main.zip>`_ and save it in your GitHub repository. From here on out, whenever you want to create a new project, just make a copy of this template folder and rename it to whatever you want to call your project. If your GitHub repository is ``whateverusernameyoupicked.github.io``, you should be able to see your project at ``whateverusernameyoupicked.github.io/projectname`` once you have pushed your code to GitHub.

@@ -22,7 +22,7 @@ Your first assignment of the semester will be to create a simple webpage that wi
 
 .. note:: 
 
-    Although it is helpful to understand all the moving parts in a website, you can `download a copy of our p5js template folder <https://github.com/schellenberg/cs30-p5js-template/archive/master.zip>`_, extract the .zip file, then make/download a copy of this each time you are creating a new project. This way, you only need to really change the ``sketch.js`` file when creating a project.
+    Although it is helpful to understand all the moving parts in a website, you can `download a copy of our p5js template folder <https://github.com/schellenberg/cs30-p5js-template/archive/refs/heads/main.zip>`_, extract the .zip file, then make/download a copy of this each time you are creating a new project. This way, you only need to really change the ``sketch.js`` file when creating a project.
 
 
 
