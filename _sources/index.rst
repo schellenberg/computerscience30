@@ -11,6 +11,8 @@ Computer Science 30 - Schellenberg
 ..   CP1 d) Refactor existing code to increase elegance
 ..   CP1 e) Critique third party code (e.g., student, teacher or textbook programs) and make suggestions for improvement
 
+.. pulled this out of the review -- intro/reeborg.rst
+
 
 CS20 Review and JavaScript Intro
 :::::::::::::::::::::::::::::::::
@@ -19,7 +21,6 @@ CS20 Review and JavaScript Intro
     :maxdepth: 1
 
     intro/cs20review.rst
-    intro/reeborg.rst
     intro/practicequiz.rst
 
 
