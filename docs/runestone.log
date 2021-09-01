@@ -3977,3 +3977,25 @@ Aborted!
 127.0.0.1 - - [01/Sep/2021 10:34:19] "GET /_static/bootstrap-3.4.1/js/bootstrap.min.js HTTP/1.1" 404 -
 
 Aborted!
+127.0.0.1 - - [01/Sep/2021 11:30:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2021 11:30:09] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2021 11:30:09] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2021 11:30:09] code 404, message File not found
+127.0.0.1 - - [01/Sep/2021 11:30:09] "GET /_static/bootstrap-3.4.1/css/bootstrap.min.css HTTP/1.1" 404 -
+127.0.0.1 - - [01/Sep/2021 11:30:09] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2021 11:30:09] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2021 11:30:09] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2021 11:30:09] code 404, message File not found
+127.0.0.1 - - [01/Sep/2021 11:30:09] "GET /_static/bootstrap-3.4.1/js/bootstrap.min.js HTTP/1.1" 404 -
+127.0.0.1 - - [01/Sep/2021 11:30:17] "GET /practicequiz/arrays.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2021 11:30:18] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/Sep/2021 11:30:18] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/Sep/2021 11:30:18] code 404, message File not found
+127.0.0.1 - - [01/Sep/2021 11:30:18] "GET /_static/bootstrap-3.4.1/css/bootstrap.min.css HTTP/1.1" 404 -
+127.0.0.1 - - [01/Sep/2021 11:30:18] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/Sep/2021 11:30:18] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [01/Sep/2021 11:30:18] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [01/Sep/2021 11:30:18] code 404, message File not found
+127.0.0.1 - - [01/Sep/2021 11:30:18] "GET /_static/bootstrap-3.4.1/js/bootstrap.min.js HTTP/1.1" 404 -
+
+Aborted!

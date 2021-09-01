@@ -41,6 +41,9 @@ Question 2
       :.*: Try again! Remember that otherPeople is created by reference.
 
 
+Question 3
+~~~~~~~~~~~
+
 .. fillintheblank:: arrays-practice-quiz-3
 
     What will the following program print?::
@@ -53,6 +56,10 @@ Question 2
 
     - :Blake: Great!
       :.*: Try again! Remember that otherPeople is created by value (that's what the [...] does).
+
+
+Question 4
+~~~~~~~~~~~
 
 .. mchoice:: arrays-practice-quiz-4
   :random:
@@ -92,6 +99,9 @@ Question 2
     - Try again!
 
 
+Question 5
+~~~~~~~~~~~
+
 .. mchoice:: arrays-practice-quiz-5
   :random:
 
@@ -124,4 +134,16 @@ Question 2
   - [0, 0, 0, 0, 0, 0]
 
     - Try again!
+
+
+Question 6
+~~~~~~~~~~~
+
+Solve the `maxEnd3 CodingJS array problem <https://codingjs.wmcicompsci.ca/exercise.html?name=maxEnd3&title=Array-1>`_. 
+
+
+Question 7
+~~~~~~~~~~~
+
+Solve the `has12 CodingJS array problem <https://codingjs.wmcicompsci.ca/exercise.html?name=has12&title=Array-2>`_.
 
