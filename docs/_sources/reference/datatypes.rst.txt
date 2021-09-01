@@ -17,10 +17,7 @@ If you aren't sure what the data type of something is, you can check it using th
     :nocodelens:
 
     console.log(typeof 5)
-    
-    // you will likely not use writeln, but it is helpful 
-    // for me to simply output a value you can see
-    writeln(typeof "21")
+    console.log(typeof "21")
 
 
 Where did the result of the ``console.log(typeof 5)`` go? Your web browser has a console built into it. Find it now, and you'll see the missing console.log call. You may want to use ``console.log()`` when debugging your projects.
@@ -49,16 +46,16 @@ Sometimes you might need to convert from one data type to another. You can use t
     :nocodelens:
 
     let a = 4;
-    writeln( typeof a );
+    console.log( typeof a );
 
     let b = String(a);
-    writeln( typeof b );
+    console.log( typeof b );
    
     let c = Number(b);
-    writeln( typeof c );
+    console.log( typeof c );
 
     let d = Boolean(c);
-    writeln(typeof d);
+    console.log(typeof d);
 
 
 

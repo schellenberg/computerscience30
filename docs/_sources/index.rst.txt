@@ -138,6 +138,7 @@ Practice Quizzes
 
     practicequiz/loops.rst
     practicequiz/nestedloops.rst
+    practicequiz/arrays.rst
     practicequiz/2darrays.rst
     practicequiz/maps.rst
     practicequiz/recursion.rst

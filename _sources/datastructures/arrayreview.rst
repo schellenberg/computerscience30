@@ -8,24 +8,18 @@ Very similar to lists in Python.
 
 To create an array:
 
-.. activecode:: js_arrays1
-    :language: javascript
-    :nocodelens:
+.. code-block:: javascript
 
     let stuff = [42, 56, "hello", 13, true];
 
 To access a value in the array:
 
-.. activecode:: js_arrays2
-    :language: javascript
-    :nocodelens:
+.. code-block:: javascript
 
     let stuff = [42, 56, "hello", 13, true];
 
-    writeln(stuff[0]) // 42
-    writeln(stuff[2]) // "hello"
-
-.. note:: You can think of ``writeln`` as similar to Python and p5's ``print`` command for the purposes of these demos. If you use code similar to this in your projects, you should instead use either ``console.log()`` or ``print()`` (if using p5js).
+    console.log(stuff[0]) // 42
+    console.log(stuff[2]) // "hello"
 
 
 To add a value at the end of the array:

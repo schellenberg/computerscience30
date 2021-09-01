@@ -60,14 +60,10 @@ If you are increasing or decreasing a variable by one, you can use the following
     let b = 4;
     
     a++;    // a is now 5
-    writeln(a);
 
     b--;    // b is now 3
-    writeln(b);
 
 .. note:: JavaScript uses ``//`` to indicate that everything that follows on that line will be a comment.
-
-.. caution:: Although I use ``writeln()`` in these examples, it is not really the way to output text in JS. I'm doing it here to make it simple to output values to the little output box that shows up when you run the code, but in real-world usage, we will use the ``console.log()`` function.
 
 Handy Math Functions
 ---------------------
@@ -79,13 +75,13 @@ You can use some handy functions available through the ``Math`` object. Some tha
     :nocodelens:
 
     let nearestInt = Math.round(1.55);
-    writeln(nearestInt);
+    console.log(nearestInt);
 
     let nextLowestInt = Math.floor(1.55);
-    writeln(nextLowestInt);
+    console.log(nextLowestInt);
 
     let nextHighestInt = Math.ceil(1.2);
-    writeln(nextHighestInt);
+    console.log(nextHighestInt);
 
 
 If you want to divide, but only keep the integer portion of the result, you could do that using something like:
@@ -97,7 +93,7 @@ If you want to divide, but only keep the integer portion of the result, you coul
     let someNumber = 42;
     let theQuotient = Math.floor(someNumber / 10);
 
-    writeln(theQuotient);
+    console.log(theQuotient);
 
 Special Numerical Values
 --------------------------
@@ -140,13 +136,13 @@ In JavaScript, blocks of code start and end using ``{`` and ``}``. **You should 
     let someNumber = prompt("Pick a number");
 
     if (someNumber < 42) {
-        writeln("Small number.");
+        console.log("Small number.");
     }
     else if (someNumber === 42) {
-        writeln("The answer. To life, the universe, and everything.");
+        console.log("The answer. To life, the universe, and everything.");
     }
     else {
-        writeln("Large number.");
+        console.log("Large number.");
     }
 
 
@@ -163,7 +159,7 @@ While Loops
 
     while (number < 10) {
         number = number + 1;
-        writeln(number);
+        console.log(number);
     }
 
 
@@ -175,9 +171,9 @@ For Loop
     :nocodelens:
 
     for (let number = 1; number <= 10; number++) {
-        writeln(number);
+        console.log(number);
     }
-    writeln("Blastoff!");
+    console.log("Blastoff!");
 
 Functions
 ----------
@@ -191,7 +187,7 @@ Functions
         return theAnswer;
     }
 
-    writeln(adder(2, 4));
+    console.log(adder(2, 4));
 
 Can return a value, or not. If not, result is ``undefined``.
 
@@ -207,7 +203,7 @@ Very similar to lists in Python. `Find out more from MDN reference <https://deve
 
     let groceryList = ["apples", "oranges", "peaches", "milk"];
     for (let item of groceryList) {
-        writeln("Don't forget to buy " + item);
+        console.log("Don't forget to buy " + item);
     }
 
 .. note:: You can use ``for...of`` to iterate over characters in a string as well.
@@ -220,7 +216,7 @@ Can also iterate using the length property of the array:
 
     let groceryList = ["apples", "oranges", "peaches", "milk"];
     for (let i=0; i<groceryList.length; i++) {
-        writeln("Don't forget to buy " + groceryList[i]);
+        console.log("Don't forget to buy " + groceryList[i]);
     }
 
 

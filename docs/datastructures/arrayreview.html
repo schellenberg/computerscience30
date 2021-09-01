@@ -257,43 +257,15 @@
 <h2>Basic Array Operations<a class="headerlink" href="#basic-array-operations" title="Permalink to this headline">¶</a></h2>
 <p>Very similar to lists in Python.</p>
 <p>To create an array:</p>
-
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=js_arrays1 >
-<div id=js_arrays1_question class="ac_question col-md-12">
-
-</div>
-<textarea data-lang="javascript" id="js_arrays1_editor" data-question_label="1" 
-      data-timelimit=25000     
-    data-audio=''      
-           data-wasm=/_static
-    style="visibility: hidden;">
-let stuff = [42, 56, "hello", 13, true];
-</textarea>
-</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mf">42</span><span class="p">,</span> <span class="mf">56</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="mf">13</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
+</pre></div>
 </div>
 <p>To access a value in the array:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mf">42</span><span class="p">,</span> <span class="mf">56</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="mf">13</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
 
-<div class="runestone explainer ac_section alert alert-warning">
-<div data-component="activecode" id=js_arrays2 >
-<div id=js_arrays2_question class="ac_question col-md-12">
-
-</div>
-<textarea data-lang="javascript" id="js_arrays2_editor" data-question_label="2" 
-      data-timelimit=25000     
-    data-audio=''      
-           data-wasm=/_static
-    style="visibility: hidden;">
-let stuff = [42, 56, "hello", 13, true];
-
-writeln(stuff[0]) // 42
-writeln(stuff[2]) // "hello"
-</textarea>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can think of <code class="docutils literal notranslate"><span class="pre">writeln</span></code> as similar to Python and p5’s <code class="docutils literal notranslate"><span class="pre">print</span></code> command for the purposes of these demos. If you use code similar to this in your projects, you should instead use either <code class="docutils literal notranslate"><span class="pre">console.log()</span></code> or <code class="docutils literal notranslate"><span class="pre">print()</span></code> (if using p5js).</p>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">stuff</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span> <span class="c1">// 42</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">stuff</span><span class="p">[</span><span class="mf">2</span><span class="p">])</span> <span class="c1">// &quot;hello&quot;</span>
+</pre></div>
 </div>
 <p>To add a value at the end of the array:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">stuff</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;another&quot;</span><span class="p">)</span>
@@ -394,7 +366,7 @@ writeln(stuff[2]) // "hello"
 
     <div class="runestone" style="margin-left: auto; margin-right:auto">
         <div id="yth7PAxep9s" data-component="youtube" class="align-left youtube-video"
-            data-video-height="315" data-question_label="3"
+            data-video-height="315" data-question_label="1"
             data-video-width="560" data-video-videoid="yth7PAxep9s"
             data-video-divid="yth7PAxep9s" data-video-start="0"
             data-video-end="-1" ></div>
