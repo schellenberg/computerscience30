@@ -11,7 +11,9 @@ String Concatenation
 
 Just like in Python, we can concatenate two strings together using a `+` sign.
 
-Concatenation Example::
+Concatenation Example:
+
+.. code-block:: javascript
 
   let name = "Dan";
   let message = "My name is " + name + ".";
@@ -23,7 +25,9 @@ Template Literals
 Similar to f-strings in Python. You can evaluate variables (or anything, really) inside a template literal. Consider the examples below:
 `MDN Template Literal Reference Page <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals>`_ 
 
-Template Literal Example::
+Template Literal Example:
+
+.. code-block:: javascript
 
   let name = "Dan";
   let message = `My name is ${name}.`;

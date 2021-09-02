@@ -247,9 +247,9 @@
 <h2>String Concatenation<a class="headerlink" href="#string-concatenation" title="Permalink to this headline">¶</a></h2>
 <p>Just like in Python, we can concatenate two strings together using a <cite>+</cite> sign.</p>
 <p>Concatenation Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Dan&quot;</span><span class="p">;</span>
-<span class="n">let</span> <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;My name is &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="p">;</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>    <span class="o">//</span> <span class="n">will</span> <span class="n">output</span> <span class="s2">&quot;My name is Dan.&quot;</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Dan&quot;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">message</span> <span class="o">=</span> <span class="s2">&quot;My name is &quot;</span> <span class="o">+</span> <span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>    <span class="c1">// will output &quot;My name is Dan.&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -258,13 +258,13 @@
 <p>Similar to f-strings in Python. You can evaluate variables (or anything, really) inside a template literal. Consider the examples below:
 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">MDN Template Literal Reference Page</a></p>
 <p>Template Literal Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>let name = &quot;Dan&quot;;
-let message = `My name is ${name}.`;
-console.log(message);    // will output &quot;My name is Dan.&quot;
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Dan&quot;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">message</span> <span class="o">=</span> <span class="sb">`My name is </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">.`</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>    <span class="c1">// will output &quot;My name is Dan.&quot;</span>
 
-let age = 16;
-let future = `In twenty years, I&#39;ll be ${age + 20} years old.`;
-console.log(future);
+<span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="mf">16</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">future</span> <span class="o">=</span> <span class="sb">`In twenty years, I&#39;ll be </span><span class="si">${</span><span class="nx">age</span> <span class="o">+</span> <span class="mf">20</span><span class="si">}</span><span class="sb"> years old.`</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">future</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>

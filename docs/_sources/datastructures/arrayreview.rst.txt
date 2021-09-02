@@ -177,3 +177,7 @@ Make a bunch of balls move around. Start with an empty array. Push balls into it
 .. - threshold filter (if brightness > some number, make it white; else make it black)
 
 
+Arrays Practice Quiz
+-------------------------
+
+To confirm that you understand arrays, you should try the :ref:`arrays_practice_quiz`.

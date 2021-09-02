@@ -1,8 +1,8 @@
 .. qnum::
-   :prefix: 2darry-quiz
+   :prefix: 2darray-quiz
    :start: 1
 
-.. _2darrys_practice_quiz:
+.. _2darrays_practice_quiz:
 
 2-D Arrays Practice Quiz
 -------------------------
