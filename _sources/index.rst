@@ -36,6 +36,7 @@ Getting Started
     gettingstarted/loops.rst
     gettingstarted/objectbasics.rst
 
+
 Better Development Environment
 :::::::::::::::::::::::::::::::
 .. toctree::
@@ -87,6 +88,7 @@ Object Oriented Programming
    oop/inheritance.rst
    oop/pairprogramming.rst
 
+
 Recursion
 ::::::::::
 
@@ -137,6 +139,7 @@ Practice Quizzes
     :maxdepth: 1
 
     practicequiz/booleans.rst
+    practicequiz/variablescope.rst
     practicequiz/loops.rst
     practicequiz/nestedloops.rst
     practicequiz/arrays.rst
@@ -144,6 +147,7 @@ Practice Quizzes
     practicequiz/maps.rst
     practicequiz/recursion.rst
     Base Conversion Practice Quiz <../_static/baseconversion#http://>
+
 
 JavaScript Reference
 :::::::::::::::::::::
@@ -154,6 +158,7 @@ JavaScript Reference
     reference/datatypes.rst
     reference/controlstructures.rst
     reference/strings.rst
+
 
 Helpful Links
 ::::::::::::::
