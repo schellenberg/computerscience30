@@ -119,4 +119,4 @@ Hard code a 2d array sudoku initial grid, putting in 0's wherever you want a bla
 2-D Arrays Practice Quiz
 -------------------------
 
-To confirm that you understand the 2d arrays, you should try the :ref:`2darrays_practice_quiz`.
+To confirm that you understand 2d arrays, you should try the :ref:`2darrays_practice_quiz`.

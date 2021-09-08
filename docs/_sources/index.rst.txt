@@ -32,8 +32,8 @@ Getting Started
 
     gettingstarted/webeditor.rst
     gettingstarted/drawingbasics.rst
-    gettingstarted/loops.rst
     gettingstarted/parsingbooleans.rst
+    gettingstarted/loops.rst
     gettingstarted/objectbasics.rst
 
 Better Development Environment
@@ -136,6 +136,7 @@ Practice Quizzes
 .. toctree::
     :maxdepth: 1
 
+    practicequiz/booleans.rst
     practicequiz/loops.rst
     practicequiz/nestedloops.rst
     practicequiz/arrays.rst
