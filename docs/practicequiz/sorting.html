@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Selection Sort &#8212; Computer Science 30 - Schellenberg</title>
+    <title>Sorting Practice Quiz &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -76,8 +76,6 @@
     <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Bits and Bytes" href="../numbersystems/bits.html" />
-    <link rel="prev" title="Bubble Sort" href="bubble.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -176,7 +174,7 @@
             <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=CS30&page=selection'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS30&page=sorting'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -191,11 +189,10 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Selection Sort</a><ul>
-<li><a class="reference internal" href="#visualization">Visualization</a></li>
-<li><a class="reference internal" href="#algorithm">Algorithm</a></li>
-<li><a class="reference internal" href="#pencil-and-paper-practice">Pencil and Paper Practice</a></li>
-<li><a class="reference internal" href="#code-the-algorithm">Code the Algorithm</a></li>
+<li><a class="reference internal" href="#">Sorting Practice Quiz</a><ul>
+<li><a class="reference internal" href="#question-1">Question 1</a></li>
+<li><a class="reference internal" href="#question-2">Question 2</a></li>
+<li><a class="reference internal" href="#question-4">Question 4</a></li>
 </ul>
 </li>
 </ul>
@@ -205,18 +202,6 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - Bubble Sort" data-toggle="tooltip">
-    <a href="bubble.html" >
-      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  
-  <li id="relations-next" title='Next Chapter - Bits and Bytes' data-toggle="tooltip" >
-    <a href="../numbersystems/bits.html" >
-      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
-    </a>
-  </li>
-  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -242,72 +227,76 @@
 
 <div class="container" id="main-content">
   
-  <div class="section" id="selection-sort">
-<h1>Selection Sort<a class="headerlink" href="#selection-sort" title="Permalink to this headline">¶</a></h1>
-<p>Use the visualization below to figure out how selection sort works.</p>
-<div class="section" id="visualization">
-<h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h2>
-<script type="text/javascript" src="../_static/sortmodels.js"></script>
-<script type="text/javascript" src="../_static/sortviewers.js"></script>
+  <div class="section" id="sorting-practice-quiz">
+<span id="id1"></span><h1>Sorting Practice Quiz<a class="headerlink" href="#sorting-practice-quiz" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="question-1">
+<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
 
-<div id="selection_anim">
-<canvas id="selection_anim_canvas" width="400" height="400" style="border:4px solid blue"></canvas>
-<br />
-<button onclick="selection_anim_anim = selection_anim_init('selection_anim')">Initialize</button>
-<button onclick="selection_anim_anim.run('selection_anim_anim')">Run</button>
-<button onclick="selection_anim_anim.stop()">Stop</button> </br>
-<button onclick="selection_anim_anim.begin()">Beginning</button>
-<button onclick="selection_anim_anim.forward()">Step Forward</button>
-<button onclick="selection_anim_anim.backward()">Step Backward</button>
-<button onclick="selection_anim_anim.end()">End</button>
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="1" id="sorting-practice-quiz-1"      data-language="javascript"   style="visibility: hidden;">
+        <span data-question>sorting-quiz1 Rearrange the following to show the result of one pass of the bubble sort algorithm.</span>[7, 11, 3, 14, 8, 6, 9, 2]
+[7, 11, 3, 14, 8, 6, 9, 2]
+        </pre>
+        </div>
+    </div>
+<div class="section" id="question-2">
+<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
 
-<script type="text/javascript">
-selection_anim_init = function(divid)
-{
-   var a = new Animator(new SelectionSortModel(), new BarViewer(), divid)
-   a.init()
-   return a
-}
-</script>
+        <div class="runestone">
+        <div data-component="fillintheblank" data-question_label="2" id="sorting-practice-quiz-2"  style="visibility: hidden;">
+            <p>sorting-quiz2: What will the following program print?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">people</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ali&quot;</span><span class="p">,</span> <span class="s2">&quot;Samin&quot;</span><span class="p">,</span> <span class="s2">&quot;Blake&quot;</span><span class="p">,</span> <span class="s2">&quot;Athiela&quot;</span><span class="p">,</span> <span class="s2">&quot;Monica&quot;</span><span class="p">];</span>
+<span class="n">let</span> <span class="n">otherPeople</span> <span class="o">=</span> <span class="n">people</span><span class="p">;</span>
+<span class="n">otherPeople</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Vrajesh&quot;</span><span class="p">;</span>
+<span class="n">otherPeople</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Hannah&quot;</span><span class="p">;</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+<input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*Hannah\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! Remember that otherPeople is created by reference.</p>\n"}]]
+        </script>
 
+        </div>
+        </div>
+            </div>
+<div class="section" id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h2>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="3" data-multipleanswers="false" data-random id="sorting-practice-quiz-4"  style="visibility: hidden;">
+            <p>sorting-quiz3: What will the following program print?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">];</span>
+<span class="n">let</span> <span class="n">newNums</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">let</span> <span class="n">thisNumber</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">newNums</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">thisNumber</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">newNums</span><span class="p">);</span>
+</pre></div>
 </div>
-<p>Or you can check out bubble (and other sorting algorithms) <a class="reference external" href="https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html">using this sorting visualizer</a></p>
-</div>
-<div class="section" id="algorithm">
-<h2>Algorithm<a class="headerlink" href="#algorithm" title="Permalink to this headline">¶</a></h2>
-<p>The <strong>selection sort</strong> improves on the bubble sort by making only one exchange for every pass through the list. In order to do this, a selection sort looks for the largest value as it makes a pass and, after completing the pass, places it in the proper location. As with a bubble sort, after the first pass, the largest item is in the correct place. After the second pass, the next largest is in place. This process continues and requires <span class="math notranslate nohighlight">\(n-1\)</span> passes to sort <span class="math notranslate nohighlight">\(n\)</span> items, since the final item must be in place after the <span class="math notranslate nohighlight">\((n-1)\)</span> st pass.</p>
-<p>The following image shows the entire sorting process. On each pass, the largest remaining item is selected and then placed in its proper location. The first pass places 93, the second pass places 77, the third places 55, and so on.</p>
-<div class="figure align-center" id="id1">
-<img alt="../_images/selectionsort.png" src="../_images/selectionsort.png" />
-<p class="caption"><span class="caption-text">Selection Sort: Complete</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="pencil-and-paper-practice">
-<h2>Pencil and Paper Practice<a class="headerlink" href="#pencil-and-paper-practice" title="Permalink to this headline">¶</a></h2>
-<p>On a piece of paper, show the iterations done by selection sort for the list {5,15,3,8,9,1,20,7}</p>
-</div>
-<div class="section" id="code-the-algorithm">
-<h2>Code the Algorithm<a class="headerlink" href="#code-the-algorithm" title="Permalink to this headline">¶</a></h2>
-<p>See if you can implement an algorithm for selection sort. You may want to begin by adapting the bubble sort code you created.</p>
-</div>
+<li data-component="answer" data-correct id="sorting-practice-quiz-4_opt_a"><p>[8, 10, 12]</p>
+</li><li data-component="feedback" id="sorting-practice-quiz-4_opt_a">
+<p>Yes! Nicely done!</p></li><li data-component="answer"  id="sorting-practice-quiz-4_opt_b"><p>[12, 10, 8]</p>
+</li><li data-component="feedback" id="sorting-practice-quiz-4_opt_b">
+<p>Try again!</p></li><li data-component="answer"  id="sorting-practice-quiz-4_opt_c"><p>[4, 5, 6]</p>
+</li><li data-component="feedback" id="sorting-practice-quiz-4_opt_c">
+<p>Try again!</p></li><li data-component="answer"  id="sorting-practice-quiz-4_opt_d"><p>[6, 5, 4]</p>
+</li><li data-component="feedback" id="sorting-practice-quiz-4_opt_d">
+<p>Try again!</p></li><li data-component="answer"  id="sorting-practice-quiz-4_opt_e"><p>[4, 4, 5, 5, 6, 6]</p>
+</li><li data-component="feedback" id="sorting-practice-quiz-4_opt_e">
+<p>Try again!</p></li><li data-component="answer"  id="sorting-practice-quiz-4_opt_f"><p>[6, 6, 5, 5, 4, 4]</p>
+</li><li data-component="feedback" id="sorting-practice-quiz-4_opt_f">
+<p>Try again!</p></li>
+
+            </ul>
+            </div>
+            </div>
 </div>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - Bubble Sort' data-toggle="tooltip">
-    <a href="bubble.html" >
-      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
-    </a>
-  </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="bubble.html" ></a>
-  
-  <li id="relations-next" class="navLink" title='Next Section - Bits and Bytes' data-toggle="tooltip" >
-    <a href="../numbersystems/bits.html" >
-      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
-    </a>
-  </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../numbersystems/bits.html" >Next Section - Bits and Bytes</a>
 
 <script type="text/javascript">
 

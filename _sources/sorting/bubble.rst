@@ -1,16 +1,16 @@
 Bubble Sort
 ===============
 
-Intro video 
-------------
+.. Intro video 
+.. ------------
 
-Bubble sort vs merge sort -- skip the big-O notation part
+.. Bubble sort vs merge sort -- skip the big-O notation part
 
-.. youtube:: kgBjXUE_Nwc
-    :height: 315
-    :width: 560
-    :align: left
-    :http: https
+.. .. youtube:: kgBjXUE_Nwc
+..     :height: 315
+..     :width: 560
+..     :align: left
+..     :http: https
 
 .. `YouTube Link to Video <https://www.youtube.com/watch?v=kgBjXUE_Nwc>`_
 
@@ -18,7 +18,28 @@ Bubble sort vs merge sort -- skip the big-O notation part
 Visualization
 ---------------
 
-`Check out the sorting visualizer here <https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html>`_ 
+The following animation shows ``bubble_sort`` in action.
+
+.. animation:: bubble_anim
+   :modelfile: sortmodels.js
+   :viewerfile: sortviewers.js
+   :model: BubbleSortModel
+   :viewer: BarViewer
+
+
+
+Or you can check out bubble (and other sorting algorithms) `using this sorting visualizer <https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html>`_ 
+
+Algorithm
+-----------
+
+The **bubble sort** makes multiple passes through a list. It compares adjacent items and exchanges those that are out of order. Each pass through the list places the next largest value in its proper place. In essence, each item “bubbles” up to the location where it belongs. The following image shows the first pass over a list:
+
+
+.. figure:: images/bubblepass.png
+   :align: center
+
+   Bubble Sort: The First Pass
 
 
 Pencil and Paper Practice
