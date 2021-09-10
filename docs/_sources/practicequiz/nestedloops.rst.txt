@@ -10,6 +10,10 @@ Nested Loops Practice Quiz
 
 Note that the same code fragments are used in each question below. You might find it useful to sketch out on paper what you think each code fragment will create, then match your answers with the images provided in the questions below. **You can assume that for each code fragment, a 200 by 200 canvas has been created, the background has been filled in as white, and the stroke is black.**
 
+
+Question 1
+~~~~~~~~~~~
+
 .. mchoice:: nested-loops-practice-quiz-1
   :random:
 
@@ -78,6 +82,8 @@ Note that the same code fragments are used in each question below. You might fin
     - Try again!
 
 
+Question 2
+~~~~~~~~~~~
 
 .. mchoice:: nested-loops-practice-quiz-2
   :random:
@@ -147,6 +153,9 @@ Note that the same code fragments are used in each question below. You might fin
     - Try again!
 
 
+Question 3
+~~~~~~~~~~~
+
 .. mchoice:: nested-loops-practice-quiz-3
   :random:
 
@@ -215,6 +224,8 @@ Note that the same code fragments are used in each question below. You might fin
     - Try again!
 
 
+Question 4
+~~~~~~~~~~~
 
 .. mchoice:: nested-loops-practice-quiz-4
   :random:
@@ -284,6 +295,9 @@ Note that the same code fragments are used in each question below. You might fin
     - Try again!
 
 
+Question 5
+~~~~~~~~~~~
+
 .. mchoice:: nested-loops-practice-quiz-5
   :random:
 
@@ -351,6 +365,9 @@ Note that the same code fragments are used in each question below. You might fin
 
     - Try again!
 
+
+Question 6
+~~~~~~~~~~~
 
 .. mchoice:: nested-loops-practice-quiz-6
   :random:

@@ -7,6 +7,9 @@
 Maps Practice Quiz
 -------------------
 
+Question 1
+~~~~~~~~~~~
+
 .. fillintheblank:: maps_1
 
     What would the following code print?::
@@ -24,6 +27,9 @@ Maps Practice Quiz
       :.*: Try again!
 
 
+Question 2
+~~~~~~~~~~~
+
 .. fillintheblank:: maps_2
 
     What would the following code print?::
@@ -40,6 +46,9 @@ Maps Practice Quiz
     - :8: Great!
       :.*: Try again!
 
+
+Question 3
+~~~~~~~~~~~
 
 .. fillintheblank:: maps_3
 
@@ -65,6 +74,9 @@ Maps Practice Quiz
       :.*: Try again!
 
 
+Question 4
+~~~~~~~~~~~
+
 .. fillintheblank:: maps_4
 
     What would the following code print?::
@@ -87,6 +99,9 @@ Maps Practice Quiz
     - :sad: Great!
       :.*: Try again!
 
+
+Question 5
+~~~~~~~~~~~
 
 .. fillintheblank:: maps_5
 
@@ -111,6 +126,9 @@ Maps Practice Quiz
       :.*: Try again! What does JavaScript send back if you try to access something that doesn't exist?
 
 
+Question 6
+~~~~~~~~~~~
+
 .. fillintheblank:: maps_6
 
     What would the following code print?::
@@ -134,6 +152,9 @@ Maps Practice Quiz
     - :happysad: Great!
       :.*: Try again!
 
+
+Question 7
+~~~~~~~~~~~
 
 .. fillintheblank:: maps_7
 

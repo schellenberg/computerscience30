@@ -145,6 +145,7 @@ Practice Quizzes
     practicequiz/arrays.rst
     practicequiz/2darrays.rst
     practicequiz/maps.rst
+    practicequiz/sorting.rst
     practicequiz/recursion.rst
     Base Conversion Practice Quiz <../_static/baseconversion#http://>
 

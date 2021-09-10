@@ -5,6 +5,9 @@ Loops Practice Quiz
 
 Note that the same code fragments are used in each question below. You might find it useful to sketch out on paper what you think each code fragment will create, then match your answers with the images provided in the questions below.
 
+Question 1
+~~~~~~~~~~~
+
 .. mchoice:: loops-practice-quiz-1
   :random:
 
@@ -74,6 +77,9 @@ Note that the same code fragments are used in each question below. You might fin
 
     - Try again!
 
+
+Question 2
+~~~~~~~~~~~
 
 .. mchoice:: loops-practice-quiz-2
   :random:
@@ -145,6 +151,9 @@ Note that the same code fragments are used in each question below. You might fin
     - Try again!
 
 
+Question 3
+~~~~~~~~~~~
+
 .. mchoice:: loops-practice-quiz-3
   :random:
 
@@ -214,6 +223,9 @@ Note that the same code fragments are used in each question below. You might fin
 
     - Try again!
 
+
+Question 4
+~~~~~~~~~~~
 
 .. mchoice:: loops-practice-quiz-4
   :random:
@@ -285,6 +297,9 @@ Note that the same code fragments are used in each question below. You might fin
     - Try again!
 
 
+Question 5
+~~~~~~~~~~~
+
 .. mchoice:: loops-practice-quiz-5
   :random:
 
@@ -355,6 +370,8 @@ Note that the same code fragments are used in each question below. You might fin
     - Try again!
 
 
+Question 6
+~~~~~~~~~~~
 
 .. mchoice:: loops-practice-quiz-6
   :random:
@@ -425,6 +442,9 @@ Note that the same code fragments are used in each question below. You might fin
 
     - Try again!
 
+
+Question 7
+~~~~~~~~~~~
 
 .. mchoice:: loops-practice-quiz-7
   :random:

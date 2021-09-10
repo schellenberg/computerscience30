@@ -8,6 +8,9 @@
 Recursion Practice Quiz
 ---------------------------
 
+Question 1
+~~~~~~~~~~~
+
 .. fillintheblank:: recursion_practice_1
 
     What would the following code print?::
@@ -27,6 +30,9 @@ Recursion Practice Quiz
       :.*: Try again!
 
 
+Question 2
+~~~~~~~~~~~
+
 .. fillintheblank:: recursion_practice_2
 
     What would the following code print?::
@@ -45,6 +51,9 @@ Recursion Practice Quiz
     - :64: Great!
       :.*: Try again!
 
+
+Question 3
+~~~~~~~~~~~
 
 .. fillintheblank:: recursion_practice_3
 
@@ -71,6 +80,9 @@ Recursion Practice Quiz
     - :1 101 201 301 401: Great!
       :.*: Try again!
 
+
+Question 4
+~~~~~~~~~~~
 
 .. fillintheblank:: recursion_practice_4
 
@@ -101,6 +113,10 @@ Recursion Practice Quiz
     20 x 2 = 40
     40 x 2 = 80
     80 x 3 = 240
+
+
+Question 5
+~~~~~~~~~~~
 
 .. fillintheblank:: recursion_practice_5
 
