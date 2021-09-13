@@ -34,6 +34,7 @@ Getting Started
     gettingstarted/drawingbasics.rst
     gettingstarted/parsingbooleans.rst
     gettingstarted/loops.rst
+    gettingstarted/statevariables.rst
     gettingstarted/objectbasics.rst
 
 
