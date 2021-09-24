@@ -22,9 +22,8 @@ To make VSCode into something better than just a plain text editor, we can insta
 
 .. image:: images/extensions-icon.png
 
-The packages you should add to your VSCode installation include:
+You can explore many different extensions for VS Code, but the primary one we will use is:
 
-- ``p5js Snippets`` (allows VSCode to auto-expand p5js keywords/commands)
 - ``Live Server`` (lets you run your code on your local machine for testing, by adding a "Go Live" button to the bottom of your VS Code window)
 
 
@@ -39,6 +38,7 @@ Install Node.js from `https://nodejs.org <https://nodejs.org>`_ (which also inst
 - if you have installation problems with eslint, you can try updating npm [in VS Code, open Terminal and type ``npm install npm@latest -g``]
 
 - Install the ``ESLint`` extension in VS Code (allows VS Code to use ESLint, which helps you write better formatted JavaScript, and warns you of errors as you type your code)
+
 
 GitHub
 -------

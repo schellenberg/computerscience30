@@ -7,19 +7,6 @@ Translation and Rotation
 
 
 
-Translations
----------------
-
-https://processing.org/tutorials/transform2d/
-
-
-Rotations
-----------
-
-https://processing.org/tutorials/transform2d/
-
-
-
 Demo
 -----
 
