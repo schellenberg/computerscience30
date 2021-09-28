@@ -115,6 +115,18 @@ Sudoku Example
 Hard code a 2d array sudoku initial grid, putting in 0's wherever you want a blank. Also make a 2d array containing the completed grid. Adapt the game of life code (or just start over) to display the sudoku grid.
 
 
+2D Array CodingJS Practice Questions
+-------------------------------------
+
+- `count5in2x2 <https://codingjs.wmcicompsci.ca/exercise.html?name=count5in2x2&title=2dArray>`_
+- `findLargest3x3 <https://codingjs.wmcicompsci.ca/exercise.html?name=findLargest3x3&title=2dArray>`_
+- `count2d <https://codingjs.wmcicompsci.ca/exercise.html?name=count2d&title=2dArray>`_
+- `count2d5s <https://codingjs.wmcicompsci.ca/exercise.html?name=count2d5s&title=2dArray>`_
+- `findLargest2d <https://codingjs.wmcicompsci.ca/exercise.html?name=findLargest2d&title=2dArray>`_
+- `notFive <https://codingjs.wmcicompsci.ca/exercise.html?name=notFive&title=2dArray>`_
+- `lastSum <https://codingjs.wmcicompsci.ca/exercise.html?name=lastSum&title=2dArray>`_
+- `neighborNESW <https://codingjs.wmcicompsci.ca/exercise.html?name=neighborNESW&title=2dArray>`_
+- `neighborNESW2 <https://codingjs.wmcicompsci.ca/exercise.html?name=neighborNESW2&title=2dArray>`_
 
 2-D Arrays Practice Quiz
 -------------------------
