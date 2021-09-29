@@ -14,15 +14,13 @@ Question 1
 .. parsonsprob:: 2d-arrays-practice-quiz-1
     :language: javascript
 
-    Rearrange the given code to create a 2 dimensional array.</p>
+    Rearrange the given code to create a 2 dimensional array. You can assume that the rows and cols variables have already been set as global variables.</p>
     -----
-    let rows = 20;
-    let cols = 20;
     let someArray = [];
-    for (let i = 0; i < cols; i++) {
+    for (let y = 0; y < rows; i++) {
         someArray.push([])
-        for (let j = 0; j < rows; j++) {
-            someArray[i].push(0);
+        for (let x = 0; x < cols; x++) {
+            someArray[y].push(0);
         }
     }
 

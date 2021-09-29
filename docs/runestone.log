@@ -4922,3 +4922,27 @@ Aborted!
 127.0.0.1 - - [29/Sep/2021 09:22:09] "GET /_static/bootstrap-3.4.1/js/bootstrap.min.js HTTP/1.1" 404 -
 
 Aborted!
+127.0.0.1 - - [29/Sep/2021 13:19:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2021 13:19:58] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2021 13:19:58] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2021 13:19:58] code 404, message File not found
+127.0.0.1 - - [29/Sep/2021 13:19:58] "GET /_static/bootstrap-3.4.1/css/bootstrap.min.css HTTP/1.1" 404 -
+127.0.0.1 - - [29/Sep/2021 13:19:58] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2021 13:19:58] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2021 13:19:58] "GET /_static/language_data.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2021 13:19:58] code 404, message File not found
+127.0.0.1 - - [29/Sep/2021 13:19:58] "GET /_static/bootstrap-3.4.1/js/bootstrap.min.js HTTP/1.1" 404 -
+127.0.0.1 - - [29/Sep/2021 13:19:59] code 404, message File not found
+127.0.0.1 - - [29/Sep/2021 13:19:59] "GET /runestone/static/favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [29/Sep/2021 13:20:03] "GET /practicequiz/2darrays.html HTTP/1.1" 200 -
+127.0.0.1 - - [29/Sep/2021 13:20:03] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Sep/2021 13:20:03] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Sep/2021 13:20:03] code 404, message File not found
+127.0.0.1 - - [29/Sep/2021 13:20:03] "GET /_static/bootstrap-3.4.1/css/bootstrap.min.css HTTP/1.1" 404 -
+127.0.0.1 - - [29/Sep/2021 13:20:03] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Sep/2021 13:20:03] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Sep/2021 13:20:03] "GET /_static/language_data.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Sep/2021 13:20:03] code 404, message File not found
+127.0.0.1 - - [29/Sep/2021 13:20:03] "GET /_static/bootstrap-3.4.1/js/bootstrap.min.js HTTP/1.1" 404 -
+
+Aborted!
