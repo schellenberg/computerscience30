@@ -14,12 +14,11 @@ Question 1
 .. parsonsprob:: arrays-practice-quiz-1
     :language: javascript
 
-    Rearrange the given code to create an array with elements [10, 3, 42]. Note that you will need to use EVERY line of code.
+    Rearrange the given code to create an array that has elements [10, 3, 42] at the end of this code.
     -----
-    let nums = [];
-    nums.push(10);
-    nums.push(7);
+    let nums = [7];
     nums.pop();
+    nums.push(10);
     nums.push(3);
     nums.push(42);
 
@@ -139,11 +138,11 @@ Question 5
 Question 6
 ~~~~~~~~~~~
 
-Solve the `maxEnd3 CodingJS array problem <https://codingjs.wmcicompsci.ca/exercise.html?name=maxEnd3&title=Array-1>`_. 
+Solve the `fix23 CodingJS array problem <https://codingjs.wmcicompsci.ca/exercise.html?name=fix23&title=Array-1>`_. *You do not need a loop for this problem.*
 
 
 Question 7
 ~~~~~~~~~~~
 
-Solve the `has12 CodingJS array problem <https://codingjs.wmcicompsci.ca/exercise.html?name=has12&title=Array-2>`_.
+Solve the `has12 CodingJS array problem <https://codingjs.wmcicompsci.ca/exercise.html?name=has12&title=Array-2>`_. *You will need to use a loop to solve this problem.*
 
