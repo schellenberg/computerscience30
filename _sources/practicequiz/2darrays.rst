@@ -113,7 +113,7 @@ Question 5
         }
         console.log(counter);
 
-    - :7: Great!
+    - :3: Great!
       :.*: Try again! Look at the conditionals in the for loops, and then what is being added to the counter variable.
 
 
