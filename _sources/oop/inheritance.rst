@@ -70,3 +70,10 @@ We use extends to inherit from another class and the super keyword to call the p
     console.log(car.getType()); // car
 
 
+
+
+Tutorial Video
+---------------
+
+Daniel Shiffman does an excellent job of explaining this idea using p5js. `Check out his tutorial video here <https://www.youtube.com/watch?v=MfxBfRD0FVU&t=982s>`_ 
+
