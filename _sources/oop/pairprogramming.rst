@@ -1,7 +1,7 @@
 Pair Programming with OOP (Object Oriented Programming)
 ========================================================
 
-Given the :download:`following starter code <../handouts/oop-starter-code.zip>`, work with a partner to fill in the methods for the Ship class. You should use booleans to allow the ship to move "nicely" (without stuttering when you press a new key). 
+Given the :download:`following starter code <../handouts/shipbullet-starter-code.zip>`, work with a partner to fill in the methods for the Ship class. You should use booleans to allow the ship to move "nicely" (without stuttering when you press a new key). 
 
 Extensions
 -----------
