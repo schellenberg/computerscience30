@@ -96,4 +96,4 @@ Give :download:`starter code <../handouts/sentiment-analysis-starter-code.zip>` 
 Practice Quiz
 --------------
 
-add link
+To confirm that you understand maps, you should try the :ref:`maps_practice_quiz`.
