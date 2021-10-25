@@ -17,7 +17,7 @@ let lines;
 
 function preload() {
   //load level data
-  levelToLoad = "assets/levels/1.txt";
+  levelToLoad = "assets/levels/0.txt";
   lines = loadStrings(levelToLoad);
 
   //load background
@@ -49,7 +49,7 @@ function setup() {
   for (let y = 0; y < tilesHigh; y++) {
     for (let x = 0; x < tilesWide; x++) {
       let tileType = lines[y][x];
-      tiles[x][y] = tileType;
+      tiles[y][x] = tileType;
     }
   }
 }
@@ -63,7 +63,7 @@ function display() {
 
   for (let y = 0; y < tilesHigh; y++) {
     for (let x = 0; x < tilesWide; x++) {
-      showTile(tiles[x][y], x, y);
+      showTile(tiles[y][x], x, y);
     }
   }
 }
@@ -94,10 +94,10 @@ function showTile(location, x, y) {
 
 function createEmpty2dArray(cols, rows) {
   let randomGrid = [];
-  for (let x = 0; x < cols; x++) {
+  for (let y = 0; y < rows; y++) {
     randomGrid.push([]);
-    for (let y = 0; y < rows; y++) {
-      randomGrid[x].push(0);
+    for (let x = 0; x < cols; x++) {
+      randomGrid[y].push(0);
     }
   }
   return randomGrid;
