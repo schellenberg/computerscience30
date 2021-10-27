@@ -2,6 +2,7 @@
 // Dan Schellenberg
 // May 18, 2018
 // icon feedback added March 29, 2019
+// added x to each provided hex value on Oct 25, 2021
 
 // this is indented to show two major ideas:
 // - how to use some of the DOM manipulation functions in p5js
@@ -40,6 +41,10 @@ function createQuestion(baseFrom, baseTo) {
   // start with the random number in base 10, then convert it to required bases
   let randomDecimalNumber = int(random(17, 255));
   let displayValue = convert(randomDecimalNumber, 10, baseFrom);
+
+  if (baseFrom === 16) {
+    displayValue = "x" + displayValue;
+  }
 
   // keep track of the answer and the base, to help when interpreting user input
   let answerData = {
