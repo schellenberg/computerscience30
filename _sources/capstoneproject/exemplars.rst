@@ -22,6 +22,10 @@ Previous Projects
     - `Angry Birds Clone game <https://wmcics30.github.io/cs30/>`_ 
     - `Angry Birds Clone repo <https://github.com/wmcics30/cs30>`_ 
 
+- Tetris (Alex)
+    - `Tetris game <https://wmcics30.github.io/cs30-major-project-3/>`_ 
+    - `Tetris repo <https://github.com/wmcics30/cs30-major-project-3>`_ 
+
 - Pacman Clone (Anurag)
     - `Pacman Clone game <https://wmcics30.github.io/Major_Project/>`_ 
     - `Pacman Clone repo <https://github.com/wmcics30/Major_Project>`_ 
@@ -30,6 +34,10 @@ Previous Projects
     - `Chamber of Echoes Card Game <https://wmcics30.github.io/majorproject-2/>`_ 
     - `Chamber of Echoes Card Game repo <https://github.com/wmcics30/majorproject-2/>`_ 
 
+- Asteroids (Umair)
+    - `Asteroids game <https://wmcics30.github.io/cs30-major-project-4/>`_ 
+    - `Asteroids repo <https://github.com/wmcics30/cs30-major-project-4>`_ 
+
 - Roguelike (Ehsan)
     - `Roguelike game <https://wmcics30.github.io/cs30-major-project-2/>`_ 
     - `Roguelike repo <https://github.com/wmcics30/cs30-major-project-2>`_ 
@@ -37,6 +45,10 @@ Previous Projects
 - Escape Room (Katie)
     - `Escape Room game <https://wmcics30.github.io/liu-liuz.github.io/majorproject/escape/>`_ 
     - `Escape Room repo <https://github.com/wmcics30/liu-liuz.github.io/tree/master/majorproject/escape>`_ 
+
+- Atari Adventure Clone (Peter)
+    - `Atari Adventure Clone game <https://wmcics30.github.io/cs30-major-project-5/>`_ 
+    - `Atari Adventure Clone repo <https://github.com/wmcics30/cs30-major-project-5>`_ 
 
 - Diving Game (Tyler)
     - `Diving Game game <https://wmcics30.github.io/Tylerdives.github.io/majorproject/diving>`_ 
@@ -57,7 +69,6 @@ Previous Projects
 - 3D Snake (Jordie) 
     - `3D Snake Game <https://wmcics30.github.io/Major-Project-6/>`_ 
     - `3D Snake Game repo <https://github.com/wmcics30/Major-Project-6>`_ 
-
 
 - Alien Shooter (Mueez) 
     - `Alien Shooter Game <https://wmcics30.github.io/major-project-7/>`_ 
