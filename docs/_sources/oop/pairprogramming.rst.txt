@@ -3,6 +3,11 @@ Pair Programming with OOP (Object Oriented Programming)
 
 Given the :download:`following starter code <../handouts/shipbullet-starter-code.zip>`, work with a partner to fill in the methods for the Ship class. You should use booleans to allow the ship to move "nicely" (without stuttering when you press a new key). 
 
+If you get it working properly, it should look something like the following:
+
+.. image:: images/ship-movement.gif
+
+
 Extensions
 -----------
 
@@ -10,3 +15,6 @@ If you finish early, you should fill in the Bullet class as well. When the space
 
 For those that complete this, instead of a single Bullet, create a Bullet array, so that you can fire multiple bullets at the same time. Try to figure out how you would deal with bullets that are off screen.
 
+If you get it working properly, it should look something like the following:
+
+.. image:: images/ship-movement-with-bullets.gif
