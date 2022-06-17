@@ -6,6 +6,8 @@ Intro To JavaScript
     Review programming control structures learned in CS20, translating them from Python into JavaScript. CodingBat practice problems.
 
 
+.. note:: To students: You can (and will) find a lot of outdated JavaScript tutorials on the web. Because JavaScript tries really hard to "work" no matter what, there are many things that work, but are not best practice. The biggest thing you need to keep in mind is that we won't ever use the ``var`` keyword (use ``let`` instead). When looking for a tutorial/help, you might find it useful to include the word ``es6`` in your search (chances are better that you'll get to a modern tutorial).
+
 Variables and Data Types
 ------------------------
 

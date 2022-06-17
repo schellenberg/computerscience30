@@ -1,4 +1,6 @@
 {
     "restructuredtext.confPath": "${workspaceFolder}",
-    "restructuredtext.linter.run": "off"
+    "restructuredtext.linter.run": "off",
+    "restructuredtext.preview.docutils.disabled": true,
+    "esbonio.sphinx.confDir": "${workspaceFolder}"
 }

@@ -1,17 +1,20 @@
 Computer Science 30 - Schellenberg
 ----------------------------------
 
-.. warning:: This is just a place for me to house content for my students while we experiment with using `p5js <https://p5js.org/>`_ in our Comp Sci 30 course. I'm not creating it to be suitable for others to use, but rather just a testing ground for my course.
-
-
-.. note:: To students: You can (and will) find a lot of outdated JavaScript tutorials on the web. Because JavaScript tries really hard to "work" no matter what, there are many things that work, but are not best practice. The biggest thing you need to keep in mind is that we won't ever use the ``var`` keyword (use ``let`` instead). When looking for a tutorial/help, you might find it useful to include the word ``es6`` in your search (chances are better that you'll get to a modern tutorial).
-
+.. .. warning:: This is just a place for me to house content for my students while we experiment with using `p5js <https://p5js.org/>`_ in our Comp Sci 30 course. I'm not creating it to be suitable for others to use, but rather just a testing ground for my course.
 
 .. things i need to add throughout:
 ..   CP1 d) Refactor existing code to increase elegance
 ..   CP1 e) Critique third party code (e.g., student, teacher or textbook programs) and make suggestions for improvement
 
 .. pulled this out of the review -- intro/reeborg.rst
+
+Frequently Used
+::::::::::::::::
+
+- `p5js Reference <https://p5js.org/reference/>`_ -- explains all the p5js functions available to you
+- `CodingJS <https://codingjs.wmcicompsci.ca/>`_ -- practice small JavaScript programming problems
+- `p5js template project <https://github.com/schellenberg/cs30-p5js-template/archive/refs/heads/main.zip>`_ -- extract the .zip file, then make/download a copy of this each time you are creating a new project
 
 
 CS20 Review and JavaScript Intro
@@ -166,9 +169,6 @@ JavaScript Reference
 Helpful Links
 ::::::::::::::
 
-- `p5js template folder <https://github.com/schellenberg/cs30-p5js-template/archive/refs/heads/main.zip>`_ -- extract the .zip file, then make/download a copy of this each time you are creating a new project
-- `CodingJS <https://codingjs.wmcicompsci.ca/>`_ -- practice small JavaScript programming problems
-- `p5js Reference <https://p5js.org/reference/>`_ -- explains all the p5js functions available to you
 - `The Coding Train Tutorials <http://thecodingtrain.com/Tutorials/>`_ -- great stuff from Daniel Shiffman
 - `MDN JavaScript Web Docs <https://developer.mozilla.org/en-US/docs/Web/JavaScript>`_ -- general JavaScript help (not p5js specific)
 - `Open Game Art <https://opengameart.org/>`_ -- provides a variety of high quality, freely licensed art, so that free/open source game developers can use it in their games
