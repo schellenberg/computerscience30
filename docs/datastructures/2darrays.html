@@ -3,38 +3,64 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Two Dimensional Arrays &#8212; Computer Science 30 - Schellenberg</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.6" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/runestonebase.js"></script>
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
-    <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=EFD02956"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +96,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '5.5.6';
 </script>
 
 
@@ -222,7 +248,7 @@
 
 <div class="container" id="main-content">
   
-  <section id="javascript-two-dimensional-arrays">
+  <div class="section" id="javascript-two-dimensional-arrays">
 <h1>JavaScript Two Dimensional Arrays<a class="headerlink" href="#javascript-two-dimensional-arrays" title="Permalink to this headline">¶</a></h1>
 <p>Think of 2d arrays as rows and columns of a spreadsheet.</p>
 <p>To create an two dimensional array:</p>
@@ -278,13 +304,13 @@
 <span class="kd">let</span> <span class="nx">myArray</span> <span class="o">=</span> <span class="nx">create2dArray</span><span class="p">(</span><span class="mf">20</span><span class="p">,</span> <span class="mf">20</span><span class="p">);</span>
 </pre></div>
 </div>
-<section id="p5js-array-examples">
+<div class="section" id="p5js-array-examples">
 <h2>p5js Array Examples<a class="headerlink" href="#p5js-array-examples" title="Permalink to this headline">¶</a></h2>
-<section id="draw-grid">
+<div class="section" id="draw-grid">
 <h3>Draw Grid<a class="headerlink" href="#draw-grid" title="Permalink to this headline">¶</a></h3>
 <p>Generate a 2d array. Make every entry either a 0 or a 1. Loop through the cols and rows to draw a grid based on the size of the array. If the current location in the array is a 0, fill with black. If it is a 0, fill with white. Generate a new grid each time the mouse is pressed.</p>
-</section>
-<section id="grid-neighbors">
+</div>
+<div class="section" id="grid-neighbors">
 <h3>Grid Neighbors<a class="headerlink" href="#grid-neighbors" title="Permalink to this headline">¶</a></h3>
 <p>Create a grid. Store color data for the grid in a 2 dimensional array. When you click on a square, swap the colors of the current cell, and any cell orthogonally adjacent to it (NESW neighbors). It should be something like <a class="reference external" href="https://wmcicompsci.ca/makeitblue/">this former student project</a> , but just a static number of rows and columns.</p>
 <p>To talk about/include:</p>
@@ -292,22 +318,22 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">const</span></code> variables (for number of rows/columns)</p></li>
 <li><p>using functions to improve the readability of your code</p></li>
 </ul>
-</section>
-<section id="conway-s-game-of-life">
+</div>
+<div class="section" id="conway-s-game-of-life">
 <h3>Conway’s Game of Life<a class="headerlink" href="#conway-s-game-of-life" title="Permalink to this headline">¶</a></h3>
-<p>Introduce the Game of Life (<a class="reference external" href="https://docs.google.com/presentation/d/1c3T1NS3HTJZfyx6o3RTOKx1vM-SApqSmMxigyOnU9l0/edit?usp=sharing">presentation</a> and <a class="reference download internal" download="" href="../_downloads/1e32a1ff25a3e4a742838c9d931a026c/game-of-life-handout.pdf"><code class="xref download docutils literal notranslate"><span class="pre">handout</span></code></a>. Find some stable shapes. Be sure you completely understand how the game works <strong>before</strong> we attempt to code anything.</p>
+<p>Introduce the Game of Life (<a class="reference external" href="https://docs.google.com/presentation/d/1c3T1NS3HTJZfyx6o3RTOKx1vM-SApqSmMxigyOnU9l0/edit?usp=sharing">presentation</a> and <a class="reference download internal" download="" href="../_downloads/cb34d5f8028c9319c2672c7945adfae3/game-of-life-handout.pdf"><code class="xref download docutils literal notranslate"><span class="pre">handout</span></code></a>. Find some stable shapes. Be sure you completely understand how the game works <strong>before</strong> we attempt to code anything.</p>
 <p>After everyone can determine the “next state” of the game, given a scenario, it’s time to code it up.</p>
-</section>
-<section id="platformer-example">
+</div>
+<div class="section" id="platformer-example">
 <h3>Platformer Example<a class="headerlink" href="#platformer-example" title="Permalink to this headline">¶</a></h3>
 <p>Load starting grid from a text file. Put images in the appropriate spots, based on which character was in the text file grid.</p>
-</section>
-<section id="sudoku-example">
+</div>
+<div class="section" id="sudoku-example">
 <h3>Sudoku Example<a class="headerlink" href="#sudoku-example" title="Permalink to this headline">¶</a></h3>
 <p>Hard code a 2d array sudoku initial grid, putting in 0’s wherever you want a blank. Also make a 2d array containing the completed grid. Adapt the game of life code (or just start over) to display the sudoku grid.</p>
-</section>
-</section>
-<section id="d-array-codingjs-practice-questions">
+</div>
+</div>
+<div class="section" id="d-array-codingjs-practice-questions">
 <h2>2D Array CodingJS Practice Questions<a class="headerlink" href="#d-array-codingjs-practice-questions" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=count5in2x2&amp;title=2dArray">count5in2x2</a></p></li>
@@ -320,12 +346,12 @@
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=neighborNESW&amp;title=2dArray">neighborNESW</a></p></li>
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=neighborNESW2&amp;title=2dArray">neighborNESW2</a></p></li>
 </ul>
-</section>
-<section id="d-arrays-practice-quiz">
+</div>
+<div class="section" id="d-arrays-practice-quiz">
 <h2>2-D Arrays Practice Quiz<a class="headerlink" href="#d-arrays-practice-quiz" title="Permalink to this headline">¶</a></h2>
 <p>To confirm that you understand 2d arrays, you should try the <a class="reference internal" href="../practicequiz/2darrays.html#darrays-practice-quiz"><span class="std std-ref">2-D Arrays Practice Quiz</span></a>.</p>
-</section>
-</section>
+</div>
+</div>
 
 
   
@@ -361,7 +387,7 @@
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.2.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.6.
     </p>
   </div>
 </footer>

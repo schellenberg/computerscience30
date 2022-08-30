@@ -3,39 +3,64 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The General Accumulator Pattern &#8212; Computer Science 30 - Schellenberg</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.6" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/runestonebase.js"></script>
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
-    <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=EFD02956"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -69,7 +94,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '5.5.6';
 </script>
 
 
@@ -201,7 +226,7 @@
 <div class="container" id="main-content">
   
   <p>Template Stuff that might be useful sometime…</p>
-<section id="the-general-accumulator-pattern">
+<div class="section" id="the-general-accumulator-pattern">
 <h1>The General Accumulator Pattern<a class="headerlink" href="#the-general-accumulator-pattern" title="Permalink to this headline">¶</a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">initialize</span> <span class="n">the</span> <span class="n">accumulator</span> <span class="n">variable</span>
 <span class="n">repeat</span><span class="p">:</span>
@@ -210,12 +235,12 @@
 <span class="c1"># when the loop terminates the accumulator has the correct value</span>
 </pre></div>
 </div>
-<section id="check-your-understanding">
+<div class="section" id="check-your-understanding">
 <h2>Check Your Understanding<a class="headerlink" href="#check-your-understanding" title="Permalink to this headline">¶</a></h2>
 
-    <div class="runestone ">
-    <ul data-component="multiplechoice" data-question_label="1" data-multipleanswers="false"  id="test_question5_4_1"  style="visibility: hidden;">
-    <p>Q-1: Consider the following code:</p>
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="1" data-multipleanswers="false"  id="test_question5_4_1"  style="visibility: hidden;">
+            <p>Q-1: Consider the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">running_total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">counter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -227,26 +252,21 @@
 line running_total = 0) inside the for loop as the first
 instruction in the loop?</p>
 
-    <li data-component="answer" data-correct='yes' id="test_question5_4_1_opt_a">The square function will return x instead of x * x</li><li data-component="feedback">The variable running_total will be reset to 0 each time through the loop.   However because this assignment happens as the first instruction, the next instruction in the loop will set it back to x.   When the loop finishes, it will have the value x, which is what is returned.</li>
-    
-    <li data-component="answer"  id="test_question5_4_1_opt_b">The square function will cause an error</li><li data-component="feedback">Assignment statements are perfectly legal inside loops and will not cause an error.</li>
-    
-    <li data-component="answer"  id="test_question5_4_1_opt_c">The square function will work as expected and return x * x</li><li data-component="feedback">By putting the statement that sets running_total to 0 inside the loop, that statement gets executed every time through the loop, instead of once before the loop begins.  The result is that running_total is 'cleared' (reset to 0) each time through the loop.</li>
-    
-    <li data-component="answer"  id="test_question5_4_1_opt_d">The square function will return 0 instead of x * x</li><li data-component="feedback">The line running_total = 0 is the first line in the for loop, but immediately after this line, the line running_total = running_total + x will execute, giving running_total a non-zero value  (assuming x is non-zero).</li>
-    
+            <li data-component="answer" data-correct id="test_question5_4_1_opt_a">The square function will return x instead of x * x</li><li data-component="feedback">The variable running_total will be reset to 0 each time through the loop.   However because this assignment happens as the first instruction, the next instruction in the loop will set it back to x.   When the loop finishes, it will have the value x, which is what is returned.</li>
+            
+            <li data-component="answer"  id="test_question5_4_1_opt_b">The square function will cause an error</li><li data-component="feedback">Assignment statements are perfectly legal inside loops and will not cause an error.</li>
+            
+            <li data-component="answer"  id="test_question5_4_1_opt_c">The square function will work as expected and return x * x</li><li data-component="feedback">By putting the statement that sets running_total to 0 inside the loop, that statement gets executed every time through the loop, instead of once before the loop begins.  The result is that running_total is 'cleared' (reset to 0) each time through the loop.</li>
+            
+            <li data-component="answer"  id="test_question5_4_1_opt_d">The square function will return 0 instead of x * x</li><li data-component="feedback">The line running_total = 0 is the first line in the for loop, but immediately after this line, the line running_total = running_total + x will execute, giving running_total a non-zero value  (assuming x is non-zero).</li>
+            
 
-    </ul>
-    </div>
-    
-        <div class="runestone parsons-container ">
-        <div data-component="parsons" id="question5_4_1p" class="parsons" >
-        <div class="parsons_question parsons-text" >
-    <p>Rearrange the code statements so that the program will add up the first n odd numbers where n is provided by the user.</p>
-
-        </div>
-        <pre  class="parsonsblocks" data-question_label="2"          style="visibility: hidden;">
-        n = int(input('How many odd numbers would
+            </ul>
+            </div>
+            
+        <div class="runestone" style="max-width: none;">
+        <pre data-component="parsons" data-question_label="2" id="question5_4_1p"        style="visibility: hidden;">
+        <span data-question>Q-2 Rearrange the code statements so that the program will add up the first n odd numbers where n is provided by the user.</span>n = int(input('How many odd numbers would
 you like to add together?'))
 the_sum = 0
 odd_number = 1
@@ -259,7 +279,6 @@ for counter in range(n):
 print(the_sum)
         </pre>
         </div>
-        </div>
     <p>Dividing by 2:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">the_sum</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="mi">101</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
 </pre></div>
@@ -269,43 +288,43 @@ print(the_sum)
 \[S=\frac{n(n+1)}{2}\]</div>
 <p>Now that you understand Gauss’ pattern for finding the sum of a series, rewrite the <code class="docutils literal notranslate"><span class="pre">sum_to(n)</span></code> function you created above, this time using the formula!</p>
 
-<div class="runestone explainer ac_section ">
-<div data-component="activecode" id=sum_to_formula data-question_label="3">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=sum_to_formula >
 <div id=sum_to_formula_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="python" id="sum_to_formula_editor" 
+<textarea data-lang="python" id="sum_to_formula_editor" data-question_label="3" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
            data-wasm=/_static
-     style="visibility: hidden;">
+    style="visibility: hidden;">
 # use the formula given above
 </textarea>
 </div>
 </div>
 
-<div class="runestone explainer ac_section ">
-<div data-component="activecode" id=my-sqrt data-question_label="4">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=my-sqrt >
 <div id=my-sqrt_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="python" id="my-sqrt_editor" 
+<textarea data-lang="python" id="my-sqrt_editor" data-question_label="4" 
       data-timelimit=25000  data-codelens="true"   
     data-audio=''      
            data-wasm=/_static
-     style="visibility: hidden;">
+    style="visibility: hidden;">
 def my_sqrt(n, number_of_guesses):
     # your code here
 </textarea>
 </div>
 </div>
 
-    <div data-component="reveal" class="runestone " id="reveal_my_sqrt_hint"   data-showtitle="Need a hint?" data-hidetitle="Hide Hint"  style="visibility: hidden;">
+    <div data-component="reveal" id="reveal_my_sqrt_hint"   data-showtitle="Need a hint?" data-hidetitle="Hide Hint"  style="visibility: hidden;">
     <p>Don’t forget to update the value of old_guess within your loop!</p>
 
     </div>
-    </section>
-</section>
+    </div>
+</div>
 
 
   
@@ -328,7 +347,7 @@ def my_sqrt(n, number_of_guesses):
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.2.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.6.
     </p>
   </div>
 </footer>

@@ -3,38 +3,64 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Basics of p5js &#8212; Computer Science 30 - Schellenberg</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.6" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/runestonebase.js"></script>
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
-    <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=EFD02956"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +96,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '5.5.6';
 </script>
 
 
@@ -217,13 +243,13 @@
 
 <div class="container" id="main-content">
   
-  <section id="the-basics-of-p5js">
+  <div class="section" id="the-basics-of-p5js">
 <h1>The Basics of p5js<a class="headerlink" href="#the-basics-of-p5js" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Draw primitive shapes in p5js. Explore storing color values.</p>
 </div>
-<section id="class-demo">
+<div class="section" id="class-demo">
 <h2>Class Demo<a class="headerlink" href="#class-demo" title="Permalink to this headline">¶</a></h2>
 <p>p5js has a number of functions that get called automatically for you. The most important ones for now are <code class="docutils literal notranslate"><span class="pre">setup()</span></code>, <code class="docutils literal notranslate"><span class="pre">draw()</span></code>, <code class="docutils literal notranslate"><span class="pre">keyTyped()</span></code> and <code class="docutils literal notranslate"><span class="pre">mousePressed()</span></code>.</p>
 <p>Live code a demo that does the following:</p>
@@ -238,15 +264,15 @@
 <li><p>if time/inclination allows, use the scroll wheel to change the size of the image moving around</p></li>
 <li><p>clean up the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> loop so that it calls other user-defined functions</p></li>
 </ul>
-</section>
-<section id="to-remember">
+</div>
+<div class="section" id="to-remember">
 <h2>To Remember<a class="headerlink" href="#to-remember" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>use <code class="docutils literal notranslate"><span class="pre">keyTyped()</span></code> instead of keyPressed()  <strong>in keyTyped(), the key variable is case sensitive!</strong></p></li>
 <li><p>can return false; to override default behaviour of that key (like space key scrolling…)</p></li>
 </ul>
-</section>
-<section id="p5js-helpful-variables">
+</div>
+<div class="section" id="p5js-helpful-variables">
 <h2>p5js helpful variables<a class="headerlink" href="#p5js-helpful-variables" title="Permalink to this headline">¶</a></h2>
 <p>In addition to what we’ve already done, here’s a quick list of system variables that you will likely find useful. You may want to look up more information about these using the <a class="reference external" href="https://p5js.org/reference/">p5js.org reference</a>.</p>
 <ul class="simple">
@@ -264,8 +290,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">mouseX</span></code> - Current horizontal location of the mouse</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mouseY</span></code> - Current vertical location of the mouse</p></li>
 </ul>
-</section>
-<section id="your-turn">
+</div>
+<div class="section" id="your-turn">
 <h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
 <p>Create a sketch that makes the following happen:</p>
 <ul class="simple">
@@ -276,13 +302,13 @@
 <p class="admonition-title">Note</p>
 <p>If you want to use the right mouse button as an input for your sketch, you will want to disable the normal right mouse button behaviour of your browser. To do that, include the following in your <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function: <code class="docutils literal notranslate"><span class="pre">document.addEventListener(&quot;contextmenu&quot;,</span> <span class="pre">event</span> <span class="pre">=&gt;</span> <span class="pre">event.preventDefault())</span></code>. If you are curious how this works, you’d need to look up arrow functions.</p>
 </div>
-</section>
-<section id="references-check-for-more-info">
+</div>
+<div class="section" id="references-check-for-more-info">
 <h2>References (check for more info):<a class="headerlink" href="#references-check-for-more-info" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://p5js.org/learn/coordinate-system-and-shapes.html">p5js basic drawing tutorial</a> – Coordinate System and Shapes</p>
 <p><a class="reference external" href="https://p5js.org/learn/color.html">p5js color tutorial</a> – we’ll mostly use RGB</p>
-</section>
-</section>
+</div>
+</div>
 
 
   
@@ -318,7 +344,7 @@
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.2.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.6.
     </p>
   </div>
 </footer>

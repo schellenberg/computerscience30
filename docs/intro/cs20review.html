@@ -3,38 +3,64 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intro To JavaScript &#8212; Computer Science 30 - Schellenberg</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.6" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/runestonebase.js"></script>
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
-    <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=EFD02956"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +96,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '5.5.6';
 </script>
 
 
@@ -223,7 +249,7 @@
 
 <div class="container" id="main-content">
   
-  <section id="intro-to-javascript">
+  <div class="section" id="intro-to-javascript">
 <h1>Intro To JavaScript<a class="headerlink" href="#intro-to-javascript" title="Permalink to this headline">¶</a></h1>
 <div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
@@ -233,23 +259,23 @@
 <p class="admonition-title">Note</p>
 <p>To students: You can (and will) find a lot of outdated JavaScript tutorials on the web. Because JavaScript tries really hard to “work” no matter what, there are many things that work, but are not best practice. The biggest thing you need to keep in mind is that we won’t ever use the <code class="docutils literal notranslate"><span class="pre">var</span></code> keyword (use <code class="docutils literal notranslate"><span class="pre">let</span></code> instead). When looking for a tutorial/help, you might find it useful to include the word <code class="docutils literal notranslate"><span class="pre">es6</span></code> in your search (chances are better that you’ll get to a modern tutorial).</p>
 </div>
-<section id="variables-and-data-types">
+<div class="section" id="variables-and-data-types">
 <h2>Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
 <p>We use variables in our programs whenever we need to keep track of something that can change over time. Variables allow us to improve the reusability of our code.</p>
 <p>We have to be careful how we name variables, since they can’t be keywords like <cite>if</cite>, <cite>while</cite>, etc. A keyword is a word that already has a special meaning in the language we are programming in.</p>
 <p>JavaScript follows the camelCaseVariableNamingConvention, which means that your variables should start with a lowercase letter, and if they contain more than one word, you should capitalize each word that follows the first (like <cite>helpfulVariable</cite> or <cite>thisIsSomethingElse</cite>).</p>
 <p>When declaring a new variable to be used in JavaScript, you should always write <code class="docutils literal notranslate"><span class="pre">let</span></code> before the name of the variable. For example, you might say:</p>
 
-<div class="runestone explainer ac_section ">
-<div data-component="activecode" id=variableNames data-question_label="1">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=variableNames >
 <div id=variableNames_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="variableNames_editor" 
+<textarea data-lang="javascript" id="variableNames_editor" data-question_label="1" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-     style="visibility: hidden;">
+    style="visibility: hidden;">
 let name = "John Doe";
 let age = 17;
 </textarea>
@@ -266,8 +292,8 @@ let age = 17;
 <p class="admonition-title">Note</p>
 <p>Notice that at the end of each statement, we use a semicolon (<code class="docutils literal notranslate"><span class="pre">;</span></code>) to tell JavaScript that the statement is complete.</p>
 </div>
-</section>
-<section id="math-operators">
+</div>
+<div class="section" id="math-operators">
 <h2>Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this headline">¶</a></h2>
 <p>We can do math with JavaScript, but we need to know the operators to use. The following table shows the most frequently used math operators in JavaScript.</p>
 <table class="docutils align-default">
@@ -319,16 +345,16 @@ let age = 17;
 </table>
 <p>If you are increasing or decreasing a variable by one, you can use the following shorthand:</p>
 
-<div class="runestone explainer ac_section ">
-<div data-component="activecode" id=incrementingDemo data-question_label="2">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=incrementingDemo >
 <div id=incrementingDemo_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="incrementingDemo_editor" 
+<textarea data-lang="javascript" id="incrementingDemo_editor" data-question_label="2" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-     style="visibility: hidden;">
+    style="visibility: hidden;">
 let a = 4;
 let b = 4;
 
@@ -342,21 +368,21 @@ b--;    // b is now 3
 <p class="admonition-title">Note</p>
 <p>JavaScript uses <code class="docutils literal notranslate"><span class="pre">//</span></code> to indicate that everything that follows on that line will be a comment.</p>
 </div>
-</section>
-<section id="handy-math-functions">
+</div>
+<div class="section" id="handy-math-functions">
 <h2>Handy Math Functions<a class="headerlink" href="#handy-math-functions" title="Permalink to this headline">¶</a></h2>
 <p>You can use some handy functions available through the <code class="docutils literal notranslate"><span class="pre">Math</span></code> object. Some that you will probably want to use are:</p>
 
-<div class="runestone explainer ac_section ">
-<div data-component="activecode" id=mathFunctions data-question_label="3">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=mathFunctions >
 <div id=mathFunctions_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="mathFunctions_editor" 
+<textarea data-lang="javascript" id="mathFunctions_editor" data-question_label="3" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-     style="visibility: hidden;">
+    style="visibility: hidden;">
 let nearestInt = Math.round(1.55);
 console.log(nearestInt);
 
@@ -370,16 +396,16 @@ console.log(nextHighestInt);
 </div>
 <p>If you want to divide, but only keep the integer portion of the result, you could do that using something like:</p>
 
-<div class="runestone explainer ac_section ">
-<div data-component="activecode" id=truncatingDivision data-question_label="4">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=truncatingDivision >
 <div id=truncatingDivision_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="truncatingDivision_editor" 
+<textarea data-lang="javascript" id="truncatingDivision_editor" data-question_label="4" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-     style="visibility: hidden;">
+    style="visibility: hidden;">
 let someNumber = 42;
 let theQuotient = Math.floor(someNumber / 10);
 
@@ -387,12 +413,12 @@ console.log(theQuotient);
 </textarea>
 </div>
 </div>
-</section>
-<section id="special-numerical-values">
+</div>
+<div class="section" id="special-numerical-values">
 <h2>Special Numerical Values<a class="headerlink" href="#special-numerical-values" title="Permalink to this headline">¶</a></h2>
 <p>There are certain situations where you will encounter special values, including <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, and <code class="docutils literal notranslate"><span class="pre">-Infinity</span></code>. <code class="docutils literal notranslate"><span class="pre">NaN</span></code> stands for Not a Number, and will show up if you attempt something like <code class="docutils literal notranslate"><span class="pre">let</span> <span class="pre">edge</span> <span class="pre">=</span> <span class="pre">&quot;Bono&quot;/2</span></code>. The Infinity values show up if you exceed 1.79769313486231570e+308 (very unlikely in practice), but don’t follow all the mathematical rules of infinity. It is, however, important to know about these values so that you can try to identify what has gone wrong if you encounter one while debugging one of your programs.</p>
-</section>
-<section id="operators">
+</div>
+<div class="section" id="operators">
 <h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -416,21 +442,21 @@ console.log(theQuotient);
 <li><p><code class="docutils literal notranslate"><span class="pre">||</span></code> or</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">!</span></code> not</p></li>
 </ul>
-</section>
-<section id="if-else-if-else">
+</div>
+<div class="section" id="if-else-if-else">
 <h2>If / Else If / Else<a class="headerlink" href="#if-else-if-else" title="Permalink to this headline">¶</a></h2>
 <p>In JavaScript, blocks of code start and end using <code class="docutils literal notranslate"><span class="pre">{</span></code> and <code class="docutils literal notranslate"><span class="pre">}</span></code>. <strong>You should still indent your code properly</strong> (to make your code readable), but the indentation doesn’t affect the way your program runs.</p>
 
-<div class="runestone explainer ac_section ">
-<div data-component="activecode" id=conditionalDemo data-question_label="5">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=conditionalDemo >
 <div id=conditionalDemo_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="conditionalDemo_editor" 
+<textarea data-lang="javascript" id="conditionalDemo_editor" data-question_label="5" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-     style="visibility: hidden;">
+    style="visibility: hidden;">
 let someNumber = prompt("Pick a number");
 
 if (someNumber < 42) {
@@ -449,20 +475,20 @@ else {
 <p class="admonition-title">Note</p>
 <p>Try entering 42 above. Can you fix the problem?</p>
 </div>
-</section>
-<section id="while-loops">
+</div>
+<div class="section" id="while-loops">
 <h2>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
 
-<div class="runestone explainer ac_section ">
-<div data-component="activecode" id=whileLoop data-question_label="6">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=whileLoop >
 <div id=whileLoop_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="whileLoop_editor" 
+<textarea data-lang="javascript" id="whileLoop_editor" data-question_label="6" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-     style="visibility: hidden;">
+    style="visibility: hidden;">
 let number = 0;
 
 while (number < 10) {
@@ -472,20 +498,20 @@ while (number < 10) {
 </textarea>
 </div>
 </div>
-</section>
-<section id="for-loop">
+</div>
+<div class="section" id="for-loop">
 <h2>For Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
 
-<div class="runestone explainer ac_section ">
-<div data-component="activecode" id=forLoop data-question_label="7">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=forLoop >
 <div id=forLoop_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="forLoop_editor" 
+<textarea data-lang="javascript" id="forLoop_editor" data-question_label="7" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-     style="visibility: hidden;">
+    style="visibility: hidden;">
 for (let number = 1; number <= 10; number++) {
     console.log(number);
 }
@@ -493,20 +519,20 @@ console.log("Blastoff!");
 </textarea>
 </div>
 </div>
-</section>
-<section id="functions">
+</div>
+<div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 
-<div class="runestone explainer ac_section ">
-<div data-component="activecode" id=functions data-question_label="8">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=functions >
 <div id=functions_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="functions_editor" 
+<textarea data-lang="javascript" id="functions_editor" data-question_label="8" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-     style="visibility: hidden;">
+    style="visibility: hidden;">
 function adder(first, second) {
     let theAnswer = first + second;
     return theAnswer;
@@ -517,21 +543,21 @@ console.log(adder(2, 4));
 </div>
 </div>
 <p>Can return a value, or not. If not, result is <code class="docutils literal notranslate"><span class="pre">undefined</span></code>.</p>
-</section>
-<section id="arrays">
+</div>
+<div class="section" id="arrays">
 <h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h2>
 <p>Very similar to lists in Python. <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Find out more from MDN reference</a></p>
 
-<div class="runestone explainer ac_section ">
-<div data-component="activecode" id=arrayExample1 data-question_label="9">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=arrayExample1 >
 <div id=arrayExample1_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="arrayExample1_editor" 
+<textarea data-lang="javascript" id="arrayExample1_editor" data-question_label="9" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-     style="visibility: hidden;">
+    style="visibility: hidden;">
 let groceryList = ["apples", "oranges", "peaches", "milk"];
 for (let item of groceryList) {
     console.log("Don't forget to buy " + item);
@@ -545,16 +571,16 @@ for (let item of groceryList) {
 </div>
 <p>Can also iterate using the length property of the array:</p>
 
-<div class="runestone explainer ac_section ">
-<div data-component="activecode" id=arrayExample2 data-question_label="10">
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=arrayExample2 >
 <div id=arrayExample2_question class="ac_question col-md-12">
 
 </div>
-<textarea data-lang="javascript" id="arrayExample2_editor" 
+<textarea data-lang="javascript" id="arrayExample2_editor" data-question_label="10" 
       data-timelimit=25000     
     data-audio=''      
            data-wasm=/_static
-     style="visibility: hidden;">
+    style="visibility: hidden;">
 let groceryList = ["apples", "oranges", "peaches", "milk"];
 for (let i=0; i<groceryList.length; i++) {
     console.log("Don't forget to buy " + groceryList[i]);
@@ -562,8 +588,8 @@ for (let i=0; i<groceryList.length; i++) {
 </textarea>
 </div>
 </div>
-</section>
-<section id="codingjs-practice-problems">
+</div>
+<div class="section" id="codingjs-practice-problems">
 <h2>CodingJS Practice Problems<a class="headerlink" href="#codingjs-practice-problems" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=parrotTrouble&amp;title=Warmup-1">parrotTrouble</a></p></li>
@@ -578,8 +604,8 @@ for (let i=0; i<groceryList.length; i++) {
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=love6&amp;title=Logic-1">love6</a></p></li>
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=nearTen&amp;title=Logic-1">nearTen</a></p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
   
@@ -615,7 +641,7 @@ for (let i=0; i<groceryList.length; i++) {
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.2.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.6.
     </p>
   </div>
 </footer>

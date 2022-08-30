@@ -3,38 +3,64 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Arrays &#8212; Computer Science 30 - Schellenberg</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/presenter_mode.css?v=9FF1320F" />
+    <link rel="stylesheet" type="text/css" href="../_static/jquery-ui-1.10.3.custom.min.css?v=97E0178A" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/user-highlights.css?v=A2326E52" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone-custom-sphinx-bootstrap.css?v=5.5.6" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme-overrides.css?v=2DAFE138" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
     <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/runestonebase.js"></script>
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
-    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
-    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
-    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
-    <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/jquery.highlight.js?v=F1C496C8"></script>
+    <script src="../_static/sql-wasm.js?v=D71B5933"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@7.2.2/dist/handsontable.full.js"></script>
+    <script src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script src="../_static/pytutor-embed.bundle.js?v=268B5C04"></script>
+    <script src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="../_static/Blob.js?v=AEC2447"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.bidi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.emitter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.fallbacks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.messagestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.parser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2/build/vega.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2.5.0/build/vega-lite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.14.0/build/vega-embed.js"></script>
+    <script src="../_static/runestone.js?v=EFD02956"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js?v=2B07FE4F"></script>
+    <script src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="../_static/jquery-fix.js?v=1226591B"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/jquery.idle-timer.js?v=E942DAF1"></script>
+    <script src="../_static/presenter_mode.js?v=2DF16FB4"></script>
+    <script src="../_static/theme.js?v=D899FB97"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +96,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '5.5.6';
 </script>
 
 
@@ -226,9 +252,9 @@
 
 <div class="container" id="main-content">
   
-  <section id="javascript-arrays">
+  <div class="section" id="javascript-arrays">
 <h1>JavaScript Arrays<a class="headerlink" href="#javascript-arrays" title="Permalink to this headline">¶</a></h1>
-<section id="basic-array-operations">
+<div class="section" id="basic-array-operations">
 <h2>Basic Array Operations<a class="headerlink" href="#basic-array-operations" title="Permalink to this headline">¶</a></h2>
 <p>Very similar to lists in Python.</p>
 <p>To create an array:</p>
@@ -254,8 +280,8 @@
 </pre></div>
 </div>
 <p>To add/remove from the front of the array, use <code class="docutils literal notranslate"><span class="pre">unshift(&quot;something&quot;)</span></code> and <code class="docutils literal notranslate"><span class="pre">shift()</span></code> respectively.</p>
-</section>
-<section id="making-a-copy-of-an-array">
+</div>
+<div class="section" id="making-a-copy-of-an-array">
 <h2>Making a Copy of an Array<a class="headerlink" href="#making-a-copy-of-an-array" title="Permalink to this headline">¶</a></h2>
 <p>If you need to make a copy of an array, be aware that assigning the array to a new variable only adds a pointer to the same memory location (this is known as passing by reference). To make this clear, consider the following:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mf">52</span><span class="p">,</span> <span class="mf">78</span><span class="p">,</span> <span class="s2">&quot;hey&quot;</span><span class="p">];</span>
@@ -276,8 +302,8 @@
 <p class="admonition-title">Note</p>
 <p>Be aware that this method only creates a completely new array for single-dimensional arrays!</p>
 </div>
-</section>
-<section id="creating-an-array-of-a-specific-size">
+</div>
+<div class="section" id="creating-an-array-of-a-specific-size">
 <h2>Creating an Array of a Specific Size<a class="headerlink" href="#creating-an-array-of-a-specific-size" title="Permalink to this headline">¶</a></h2>
 <p>Since JavaScript arrays allow you to add/remove values from them easily, it is unusual for you to create an array of a specific size. You can, however, simply create the array, then push a bunch of default values into it. This means your array will never be filled with empty elements (which can save you from <code class="docutils literal notranslate"><span class="pre">undefined</span></code> errors in your code).</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="p">[];</span>
@@ -289,15 +315,15 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Another way of doing this is to call the <em>constructor</em> of the array data type. This creates an empty array (with no values in any of the element locations). You can fill it up with some default values using the <code class="docutils literal notranslate"><span class="pre">.fill()</span></code> method.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="ow">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mf">100</span><span class="p">);</span>    <span class="c1">// each value is currently empty</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">emptyArray</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mf">100</span><span class="p">);</span>    <span class="c1">// each value is currently empty</span>
 <span class="nx">emptyArray</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>                 <span class="c1">// now every element is a 0</span>
 </pre></div>
 </div>
 </div>
-</section>
-<section id="array-practice-questions">
+</div>
+<div class="section" id="array-practice-questions">
 <h2>Array Practice Questions<a class="headerlink" href="#array-practice-questions" title="Permalink to this headline">¶</a></h2>
-<section id="no-looping-required">
+<div class="section" id="no-looping-required">
 <h3>No Looping Required<a class="headerlink" href="#no-looping-required" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=firstLast6&amp;title=Array-1">firstLast6</a></p></li>
@@ -313,8 +339,8 @@
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=makeMiddle&amp;title=Array-1">makeMiddle</a></p></li>
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=midThree&amp;title=Array-1">midThree</a></p></li>
 </ul>
-</section>
-<section id="looping-required">
+</div>
+<div class="section" id="looping-required">
 <h3>Looping Required<a class="headerlink" href="#looping-required" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=countEvens&amp;title=Array-2">countEvens</a></p></li>
@@ -330,24 +356,24 @@
 <li><p><a class="reference external" href="https://codingjs.wmcicompsci.ca/exercise.html?name=withoutTen&amp;title=Array-2">withoutTen</a></p></li>
 </ul>
 <p>When you finish the questions listed above, just pick any of the questions from Array-1, Array-2 or Array-3. If you want a few more, check out the AP-1 secion (problems sourced from previous AP Computer Science exams).</p>
-</section>
-</section>
-<section id="p5js-array-examples">
+</div>
+</div>
+<div class="section" id="p5js-array-examples">
 <h2>p5js Array Examples<a class="headerlink" href="#p5js-array-examples" title="Permalink to this headline">¶</a></h2>
-<section id="terrain-generation">
+<div class="section" id="terrain-generation">
 <h3>Terrain Generation<a class="headerlink" href="#terrain-generation" title="Permalink to this headline">¶</a></h3>
 <p>Use Perlin noise. Push values into an array. Draw it.</p>
 <p>Basic demo of how to use Perlin noise is here:</p>
 
-    <div class="runestone " style="margin-left: auto; margin-right:auto">
+    <div class="runestone" style="margin-left: auto; margin-right:auto">
         <div id="yth7PAxep9s" data-component="youtube" class="align-left youtube-video"
             data-video-height="315" data-question_label="1"
             data-video-width="560" data-video-videoid="yth7PAxep9s"
             data-video-divid="yth7PAxep9s" data-video-start="0"
             data-video-end="-1" ></div>
     </div>
-    </section>
-<section id="bouncing-balls">
+    </div>
+<div class="section" id="bouncing-balls">
 <h3>Bouncing Balls<a class="headerlink" href="#bouncing-balls" title="Permalink to this headline">¶</a></h3>
 <p>Make a bunch of balls move around. Start with an empty array. Push balls into it every time the mouse is clicked. Random sizes, random speeds, random colors. Use object notation for each ball, so it looks something like:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">newBall</span> <span class="o">=</span> <span class="p">{</span>
@@ -359,13 +385,13 @@
 <span class="p">};</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="arrays-practice-quiz">
+</div>
+</div>
+<div class="section" id="arrays-practice-quiz">
 <h2>Arrays Practice Quiz<a class="headerlink" href="#arrays-practice-quiz" title="Permalink to this headline">¶</a></h2>
 <p>To confirm that you understand arrays, you should try the <a class="reference internal" href="../practicequiz/arrays.html#arrays-practice-quiz"><span class="std std-ref">Arrays Practice Quiz</span></a>.</p>
-</section>
-</section>
+</div>
+</div>
 
 
   
@@ -401,7 +427,7 @@
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.2.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 5.5.6.
     </p>
   </div>
 </footer>

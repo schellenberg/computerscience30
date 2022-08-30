@@ -14,7 +14,6 @@ Frequently Used
 
 - `p5js Reference <https://p5js.org/reference/>`_ -- explains all the p5js functions available to you
 - `CodingJS <https://codingjs.wmcicompsci.ca/>`_ -- practice small JavaScript programming problems
-- `p5js template project <https://github.com/schellenberg/cs30-p5js-template/archive/refs/heads/main.zip>`_ -- extract the .zip file, then make/download a copy of this each time you are creating a new project
 
 
 CS20 Review and JavaScript Intro
