@@ -14,9 +14,22 @@ Previous Projects
     - `Cookie Clicker game <https://wmcics30.github.io/major-project-2/>`_ 
     - `Cookie Clicker repo <https://github.com/wmcics30/major-project-2>`_ 
 
+- Sudoku (Amy)
+    - `Sudoku game <https://wmcics30.github.io/cs30major-project/>`_ 
+    - `Sudoku repo <https://github.com/wmcics30/cs30major-project>`_ 
+
+- Ascii Renderer (Declan)
+    - `AR5 Example Projects <https://wmcics30.github.io/ar5/examples/directory>`_ 
+    - `AR5 Documentation <https://wmcics30.github.io/ar5/documentation>`_ 
+    - `AR5 repo <https://github.com/wmcics30/ar5>`_ 
+
 - Legend of the Fallen Angel (Kyle)
     - `Legend of the Fallen Angel game <https://wmcics30.github.io/cs30-major-project-1/>`_ 
     - `Legend of the Fallen Angel repo <https://github.com/wmcics30/cs30-major-project-1/>`_ 
+
+- Animal Crossing Clone (Monica)
+    - `Animal Crossing game <https://wmcics30.github.io/animal-crossing-major-project/>`_ 
+    - `Animal Crossing repo <https://github.com/wmcics30/animal-crossing-major-project>`_ 
 
 - Angry Birds Clone (Navaneeth) 
     - `Angry Birds Clone game <https://wmcics30.github.io/cs30/>`_ 
@@ -25,6 +38,10 @@ Previous Projects
 - Tetris (Alex)
     - `Tetris game <https://wmcics30.github.io/cs30-major-project-3/>`_ 
     - `Tetris repo <https://github.com/wmcics30/cs30-major-project-3>`_ 
+
+- Escape Room (Katie)
+    - `Escape Room game <https://wmcics30.github.io/liu-liuz.github.io/majorproject/escape/>`_ 
+    - `Escape Room repo <https://github.com/wmcics30/liu-liuz.github.io/tree/master/majorproject/escape>`_ 
 
 - Pacman Clone (Anurag)
     - `Pacman Clone game <https://wmcics30.github.io/Major_Project/>`_ 
@@ -41,10 +58,6 @@ Previous Projects
 - Roguelike (Ehsan)
     - `Roguelike game <https://wmcics30.github.io/cs30-major-project-2/>`_ 
     - `Roguelike repo <https://github.com/wmcics30/cs30-major-project-2>`_ 
-
-- Escape Room (Katie)
-    - `Escape Room game <https://wmcics30.github.io/liu-liuz.github.io/majorproject/escape/>`_ 
-    - `Escape Room repo <https://github.com/wmcics30/liu-liuz.github.io/tree/master/majorproject/escape>`_ 
 
 - Atari Adventure Clone (Peter)
     - `Atari Adventure Clone game <https://wmcics30.github.io/cs30-major-project-5/>`_ 
