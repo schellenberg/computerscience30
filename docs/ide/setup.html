@@ -172,7 +172,6 @@
 </li>
 <li><a class="reference internal" href="#github">GitHub</a></li>
 <li><a class="reference internal" href="#basic-github-workflow">Basic GitHub Workflow</a></li>
-<li><a class="reference internal" href="#template-p5js-project-folder">Template p5js Project Folder</a></li>
 </ul>
 </li>
 </ul>
@@ -241,16 +240,14 @@
 <img alt="../_images/extensions-icon.png" src="../_images/extensions-icon.png" />
 <p>You can explore many different extensions for VS Code, but the primary one we will use is:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Live</span> <span class="pre">Server</span></code> (lets you run your code on your local machine for testing, by adding a “Go Live” button to the bottom of your VS Code window)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cs30-p5</span></code>, which helps create and manage p5.js projects in VS Code. This will also include two other extensions (Live Server and ESLint). Live Server lets you run your code on your local machine for testing, by adding a “Go Live” button to the bottom of your VS Code window. ESLint will provide warnings when you make coding/convention errors.</p></li>
 </ul>
 <section id="optional-additional-feature">
 <h3>Optional Additional Feature<a class="headerlink" href="#optional-additional-feature" title="Permalink to this headline">¶</a></h3>
-<p>There is a configuration file in our template folder called <cite>.eslintrc.js</cite> that helps provide instant feedback about possible problems in your code using a tool called ESLint (for example, warning you that you didn’t declare a variable before using it, or that your indentation is incorrect). Setting up your machine to use this may not be feasible in a computer lab scenario, as it requires admin rights to install Node.js. If you cannot install Node.js, the VS Code setup  will still work just fine, but you will not get instant feedback from ESLint about possible problems in your code.</p>
-<p>Install Node.js from <a class="reference external" href="https://nodejs.org">https://nodejs.org</a> (which also installs npm – node package manager)</p>
+<p>There is a configuration file in our template folder called <cite>project.json</cite> that helps provide instant feedback about possible problems in your code using a tool called ESLint (for example, warning you that you didn’t declare a variable before using it, or that your indentation is incorrect). Setting up your machine to use this may not be feasible in a computer lab scenario, as it requires admin rights to install <a class="reference external" href="https://nodejs.org">https://nodejs.org</a>. <em>I have pre-installed Node.js on our machines at WMCI.</em> If you cannot install Node.js, the VS Code setup  will still work just fine, but you will not get instant feedback from ESLint about possible problems in your code.</p>
 <ul class="simple">
 <li><p>in VS Code, open Terminal and type <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">-g</span> <span class="pre">eslint</span></code></p></li>
 <li><p>if you have installation problems with eslint, you can try updating npm [in VS Code, open Terminal and type <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">npm&#64;latest</span> <span class="pre">-g</span></code>]</p></li>
-<li><p>Install the <code class="docutils literal notranslate"><span class="pre">ESLint</span></code> extension in VS Code (allows VS Code to use ESLint, which helps you write better formatted JavaScript, and warns you of errors as you type your code)</p></li>
 </ul>
 </section>
 </section>
@@ -273,10 +270,6 @@
 <li><p><strong>Commit</strong> your changes. Write a Summary message describing what you’ve added/changed, then click <code class="docutils literal notranslate"><span class="pre">Commit</span> <span class="pre">to</span> <span class="pre">Master</span></code>.</p></li>
 <li><p><strong>Push</strong> (from Repository menu, or the <code class="docutils literal notranslate"><span class="pre">Fetch</span> <span class="pre">Origin</span></code> button). This sends your new changes up to the GitHub servers.</p></li>
 </ol>
-</section>
-<section id="template-p5js-project-folder">
-<h2>Template p5js Project Folder<a class="headerlink" href="#template-p5js-project-folder" title="Permalink to this headline">¶</a></h2>
-<p>You should download a copy of my <a class="reference external" href="https://github.com/schellenberg/cs30-p5js-template/archive/refs/heads/main.zip">p5js template folder</a> and save it in your GitHub repository. From here on out, whenever you want to create a new project, just make a copy of this template folder and rename it to whatever you want to call your project. If your GitHub repository is <code class="docutils literal notranslate"><span class="pre">whateverusernameyoupicked.github.io</span></code>, you should be able to see your project at <code class="docutils literal notranslate"><span class="pre">whateverusernameyoupicked.github.io/projectname</span></code> once you have pushed your code to GitHub.</p>
 </section>
 </section>
 

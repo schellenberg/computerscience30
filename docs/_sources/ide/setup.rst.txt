@@ -24,20 +24,16 @@ To make VSCode into something better than just a plain text editor, we can insta
 
 You can explore many different extensions for VS Code, but the primary one we will use is:
 
-- ``Live Server`` (lets you run your code on your local machine for testing, by adding a "Go Live" button to the bottom of your VS Code window)
+- ``cs30-p5``, which helps create and manage p5.js projects in VS Code. This will also include two other extensions (Live Server and ESLint). Live Server lets you run your code on your local machine for testing, by adding a "Go Live" button to the bottom of your VS Code window. ESLint will provide warnings when you make coding/convention errors.
 
 
 Optional Additional Feature
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There is a configuration file in our template folder called `.eslintrc.js` that helps provide instant feedback about possible problems in your code using a tool called ESLint (for example, warning you that you didn't declare a variable before using it, or that your indentation is incorrect). Setting up your machine to use this may not be feasible in a computer lab scenario, as it requires admin rights to install Node.js. If you cannot install Node.js, the VS Code setup  will still work just fine, but you will not get instant feedback from ESLint about possible problems in your code.
-
-Install Node.js from `https://nodejs.org <https://nodejs.org>`_ (which also installs npm -- node package manager)
+There is a configuration file in our template folder called `project.json` that helps provide instant feedback about possible problems in your code using a tool called ESLint (for example, warning you that you didn't declare a variable before using it, or that your indentation is incorrect). Setting up your machine to use this may not be feasible in a computer lab scenario, as it requires admin rights to install `https://nodejs.org <https://nodejs.org>`_. *I have pre-installed Node.js on our machines at WMCI.* If you cannot install Node.js, the VS Code setup  will still work just fine, but you will not get instant feedback from ESLint about possible problems in your code.
 
 - in VS Code, open Terminal and type ``npm install -g eslint``
 - if you have installation problems with eslint, you can try updating npm [in VS Code, open Terminal and type ``npm install npm@latest -g``]
-
-- Install the ``ESLint`` extension in VS Code (allows VS Code to use ESLint, which helps you write better formatted JavaScript, and warns you of errors as you type your code)
 
 
 GitHub
@@ -62,9 +58,3 @@ Once you have GitHub set up on more than one machine (it is a really nice way to
 #. Do **work**
 #. **Commit** your changes. Write a Summary message describing what you've added/changed, then click ``Commit to Master``.
 #. **Push** (from Repository menu, or the ``Fetch Origin`` button). This sends your new changes up to the GitHub servers.
-
-
-Template p5js Project Folder
------------------------------
-
-You should download a copy of my `p5js template folder <https://github.com/schellenberg/cs30-p5js-template/archive/refs/heads/main.zip>`_ and save it in your GitHub repository. From here on out, whenever you want to create a new project, just make a copy of this template folder and rename it to whatever you want to call your project. If your GitHub repository is ``whateverusernameyoupicked.github.io``, you should be able to see your project at ``whateverusernameyoupicked.github.io/projectname`` once you have pushed your code to GitHub.
