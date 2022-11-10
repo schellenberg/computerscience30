@@ -122,7 +122,7 @@ Looping Required
 - `tenRun <https://codingjs.wmcicompsci.ca/exercise.html?name=tenRun&title=Array-2>`_
 - `withoutTen <https://codingjs.wmcicompsci.ca/exercise.html?name=withoutTen&title=Array-2>`_
   
-When you finish the questions listed above, just pick any of the questions from Array-1, Array-2 or Array-3. If you want a few more, check out the AP-1 secion (problems sourced from previous AP Computer Science exams).
+When you finish the questions listed above, just pick any of the questions from Array-1, Array-2 or Array-3. If you want a few more, check out the AP-1 section (problems sourced from previous AP Computer Science exams).
 
 
 p5js Array Examples

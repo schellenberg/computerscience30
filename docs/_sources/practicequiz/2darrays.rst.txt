@@ -17,7 +17,7 @@ Question 1
     Rearrange the given code to create a 2 dimensional array. You can assume that the rows and cols variables have already been set as global variables.</p>
     -----
     let someArray = [];
-    for (let y = 0; y < rows; i++) {
+    for (let y = 0; y < rows; y++) {
         someArray.push([])
         for (let x = 0; x < cols; x++) {
             someArray[y].push(0);
