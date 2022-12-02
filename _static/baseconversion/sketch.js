@@ -9,6 +9,17 @@
 // - using bootstrap (https://getbootstrap.com/) to style a page, instead of
 //    using our own CSS (note that bootstrap's css is linked to in index.html)
 
+// stop enter key from reloading page due to submitting form -- instead, check answers
+window.addEventListener("keydown", function(e){
+  if (e.keyIdentifier === "U+000A" || e.keyIdentifier === "Enter" || e.code === "Enter" || e.keyCode === 13){
+    if (e.target.nodeName === "INPUT" && e.target.type === "text"){
+      e.preventDefault();
+      answerCheck();
+      return false;
+    }
+  }
+},true);
+
 let questionInputs;
 let answers;
 
@@ -63,26 +74,26 @@ function createQuestion(baseFrom, baseTo) {
   let label = createElement("label", message);
   label.parent(container);
 
-  let qustion;
+  let question;
   question = createInput("");
   question.class("form-control mb-3 question");
   question.parent(container);
   questionInputs.push(question);
 
   //add divs for icon feedback
-  valid = createElement("div");
+  let valid = createElement("div");
   valid.class("valid-feedback feedback-icon");
   valid.parent(container);
 
-  validIcon = createElement("i");
+  let validIcon = createElement("i");
   validIcon.class("fa fa-check");
   validIcon.parent(valid);
 
-  invalid = createElement("div");
+  let invalid = createElement("div");
   invalid.class("invalid-feedback feedback-icon");
   invalid.parent(container);
 
-  invalidIcon = createElement("i");
+  let invalidIcon = createElement("i");
   invalidIcon.class("fa fa-times");
   invalidIcon.parent(invalid);
 }
