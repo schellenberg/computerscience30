@@ -14,7 +14,7 @@ Visualization
 
 
 
-Or you can check out bubble (and other sorting algorithms) `using this sorting visualizer <https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html>`_ 
+Or you can check out bubble (and other sorting algorithms) `using this sorting visualizer <https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html>`_. Just be careful with selection sort, as this external visualizer selects the smallest value instead of the largest. Although the logic is the same, we'll implement this by selecting the largest value (as shown in the visualizer above).
 
 
 Algorithm
