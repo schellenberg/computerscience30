@@ -62,38 +62,38 @@ Create a sketch that makes the following happen:
 
 
 
-.. Your Turn
-.. ----------
+Start of Class Mini-Challenge
+----------------------------------
 
-.. Create a sketch that makes the following happen:
+Create a sketch that makes the following happen:
 
-.. - when the user clicks on the sketch AND is holding down the ``r`` key, draw a rectangle there
+- when the user clicks on the sketch AND is holding down the ``r`` key, draw a rectangle there
 
-.. - when the user clicks on the sketch AND is holding down the ``e`` key, draw a circle there
+- when the user clicks on the sketch AND is holding down the ``e`` key, draw a circle there
 
-.. - when the user hits the "w" key, reset the sketch with a white background
+- when the user hits the "w" key, reset the sketch with a white background
 
-.. - when the user hits the "b" key, reset the sketch with a black background
+- when the user hits the "b" key, reset the sketch with a black background
 
-.. You'll want to look up the ``mouseClicked()`` function in the  `p5js.org reference <https://p5js.org/reference/>`_.
+You'll want to look up the ``mouseClicked()`` function in the  `p5js.org reference <https://p5js.org/reference/>`_.
 
-.. Take it Further
-.. ----------------
+Take it Further
+----------------
 
-.. - see if you can use the up/down arrow keys to adjust the size of the rectangle and circle that your program draws
-.. - use some other key(s) to change the color used for the shapes
+- see if you can use the up/down arrow keys to adjust the size of the rectangle and circle that your program draws
+- use some other key(s) to change the color used for the shapes
 
 .. note:: If you want to use the right mouse button as an input for your sketch, you will want to disable the normal right mouse button behaviour of your browser. To do that, include the following in your ``setup()`` function: ``document.addEventListener("contextmenu", event => event.preventDefault())``. If you are curious how this works, you'd need to look up arrow functions.
 
 
 
-.. Your Turn
-.. ----------
+Another Mini-Challenge
+------------------------
 
-.. Create a sketch to make the following happen:
+Create a sketch to make the following happen:
 
-.. - when the mouse is on the left-hand side of your screen, rectangles should be drawn (all over the screen). The rectangles should be various shades of grey.
-.. - when the mouse is on the right-hand side of the screen, circles should still be drawn all over the screen (in random colours).
+- when the mouse is on the left-hand side of your screen, rectangles should be drawn (all over the screen). The rectangles should be various shades of grey.
+- when the mouse is on the right-hand side of the screen, circles should still be drawn all over the screen (in random colours).
 
 
 .. .. p5:: drawingBasicsYourTurn3

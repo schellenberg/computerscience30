@@ -170,6 +170,9 @@
 <li><a class="reference internal" href="#to-remember">To Remember</a></li>
 <li><a class="reference internal" href="#p5js-helpful-variables">p5js helpful variables</a></li>
 <li><a class="reference internal" href="#your-turn">Your Turn</a></li>
+<li><a class="reference internal" href="#start-of-class-mini-challenge">Start of Class Mini-Challenge</a></li>
+<li><a class="reference internal" href="#take-it-further">Take it Further</a></li>
+<li><a class="reference internal" href="#another-mini-challenge">Another Mini-Challenge</a></li>
 <li><a class="reference internal" href="#references-check-for-more-info">References (check for more info):</a></li>
 </ul>
 </li>
@@ -272,10 +275,36 @@
 <li><p>displays an image of a character at some x and y location (save these in global variables)</p></li>
 <li><p>make the character move according to WASD controls (if demo-ing, start with the function keyTyped, then convert it to boolean checks)</p></li>
 </ul>
+</section>
+<section id="start-of-class-mini-challenge">
+<h2>Start of Class Mini-Challenge<a class="headerlink" href="#start-of-class-mini-challenge" title="Permalink to this headline">¶</a></h2>
+<p>Create a sketch that makes the following happen:</p>
+<ul class="simple">
+<li><p>when the user clicks on the sketch AND is holding down the <code class="docutils literal notranslate"><span class="pre">r</span></code> key, draw a rectangle there</p></li>
+<li><p>when the user clicks on the sketch AND is holding down the <code class="docutils literal notranslate"><span class="pre">e</span></code> key, draw a circle there</p></li>
+<li><p>when the user hits the “w” key, reset the sketch with a white background</p></li>
+<li><p>when the user hits the “b” key, reset the sketch with a black background</p></li>
+</ul>
+<p>You’ll want to look up the <code class="docutils literal notranslate"><span class="pre">mouseClicked()</span></code> function in the  <a class="reference external" href="https://p5js.org/reference/">p5js.org reference</a>.</p>
+</section>
+<section id="take-it-further">
+<h2>Take it Further<a class="headerlink" href="#take-it-further" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>see if you can use the up/down arrow keys to adjust the size of the rectangle and circle that your program draws</p></li>
+<li><p>use some other key(s) to change the color used for the shapes</p></li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you want to use the right mouse button as an input for your sketch, you will want to disable the normal right mouse button behaviour of your browser. To do that, include the following in your <code class="docutils literal notranslate"><span class="pre">setup()</span></code> function: <code class="docutils literal notranslate"><span class="pre">document.addEventListener(&quot;contextmenu&quot;,</span> <span class="pre">event</span> <span class="pre">=&gt;</span> <span class="pre">event.preventDefault())</span></code>. If you are curious how this works, you’d need to look up arrow functions.</p>
 </div>
+</section>
+<section id="another-mini-challenge">
+<h2>Another Mini-Challenge<a class="headerlink" href="#another-mini-challenge" title="Permalink to this headline">¶</a></h2>
+<p>Create a sketch to make the following happen:</p>
+<ul class="simple">
+<li><p>when the mouse is on the left-hand side of your screen, rectangles should be drawn (all over the screen). The rectangles should be various shades of grey.</p></li>
+<li><p>when the mouse is on the right-hand side of the screen, circles should still be drawn all over the screen (in random colours).</p></li>
+</ul>
 </section>
 <section id="references-check-for-more-info">
 <h2>References (check for more info):<a class="headerlink" href="#references-check-for-more-info" title="Permalink to this headline">¶</a></h2>
