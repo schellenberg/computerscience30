@@ -93,7 +93,7 @@ Another Mini-Challenge
 Create a sketch to make the following happen:
 
 - when the mouse is on the left-hand side of your screen, rectangles should be drawn (all over the screen). The rectangles should be various shades of grey.
-- when the mouse is on the right-hand side of the screen, circles should still be drawn all over the screen (in random colours).
+- when the mouse is on the right-hand side of the screen, circles should be drawn all over the screen (in random colours).
 
 
 .. .. p5:: drawingBasicsYourTurn3
