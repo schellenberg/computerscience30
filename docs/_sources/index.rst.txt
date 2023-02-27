@@ -37,7 +37,6 @@ Getting Started
     gettingstarted/parsingbooleans.rst
     gettingstarted/loops.rst
     gettingstarted/statevariables.rst
-    gettingstarted/objectbasics.rst
 
 
 Better Development Environment
@@ -55,6 +54,7 @@ Data Structures
     :maxdepth: 1
 
     datastructures/arrayreview.rst
+    datastructures/objectbasics.rst
     datastructures/2darrays.rst
     datastructures/maps.rst
 

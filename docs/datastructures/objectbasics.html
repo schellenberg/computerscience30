@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Object Basics &#8212; Computer Science 30 - Schellenberg</title>
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script src="../_static/runestonebase.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JavaScript Two Dimensional Arrays" href="2darrays.html" />
+    <link rel="prev" title="JavaScript Arrays" href="arrayreview.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CS30';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'CS30';
+  eBookConfig.runestone_version = '6.2.2';
+</script>
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Computer Science 30 - Schellenberg</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CS30/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CS30/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS30&page=objectbasics'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Object Basics</a><ul>
+<li><a class="reference internal" href="#class-demo">Class Demo</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - JavaScript Arrays" data-toggle="tooltip">
+    <a href="arrayreview.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - JavaScript Two Dimensional Arrays' data-toggle="tooltip" >
+    <a href="2darrays.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <section id="object-basics">
+<h1>Object Basics<a class="headerlink" href="#object-basics" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title">Quick Overview of Day</p>
+<p>Understanding object properties.</p>
+</div>
+<p>For now, you can think of an object as a container of properties. This will make more sense with an example or two:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">student</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Aaron&quot;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mf">17</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>     <span class="c1">// &quot;Aaron&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>      <span class="c1">// 17</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">);</span> <span class="c1">// undefined</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although you can use <code class="docutils literal notranslate"><span class="pre">.</span></code> or <code class="docutils literal notranslate"><span class="pre">[]</span></code> to access properties of an object, the <code class="docutils literal notranslate"><span class="pre">.</span></code> syntax is preferred.</p>
+</div>
+<p>Another example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">circle</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">x</span><span class="o">:</span> <span class="mf">200</span><span class="p">,</span>
+    <span class="nx">y</span><span class="o">:</span> <span class="mf">300</span><span class="p">,</span>
+    <span class="nx">radius</span><span class="o">:</span> <span class="mf">50</span>
+<span class="p">};</span>
+
+<span class="nx">ellipse</span><span class="p">(</span><span class="nx">circle</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">circle</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">circle</span><span class="p">.</span><span class="nx">radius</span><span class="o">*</span><span class="mf">2</span><span class="p">,</span> <span class="nx">circle</span><span class="p">.</span><span class="nx">radius</span><span class="o">*</span><span class="mf">2</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To update or add a value to an object:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">student</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Aaron&quot;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mf">17</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>  <span class="c1">// 17</span>
+<span class="nx">student</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mf">18</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>  <span class="c1">// 18</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">)</span> <span class="c1">// undefined</span>
+<span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span> <span class="o">=</span> <span class="s2">&quot;Jan 1&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">)</span> <span class="c1">// &quot;Jan 1&quot;</span>
+</pre></div>
+</div>
+<p>Objects are passed by reference, not copied (time for a memory drawing on the whiteboard!). Consider:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">student</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Aaron&quot;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mf">17</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">anotherStudent</span> <span class="o">=</span> <span class="nx">student</span><span class="p">;</span>
+<span class="nx">anotherStudent</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Catherine&quot;</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="c1">// Catherine</span>
+</pre></div>
+</div>
+<p>Notice that this is very different than how a primitive (immutable) data type works. These are copied, not passed by reference:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mf">42</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">anotherNumber</span> <span class="o">=</span> <span class="nx">number</span><span class="p">;</span>
+
+<span class="nx">anotherNumber</span> <span class="o">=</span> <span class="nx">number</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>           <span class="c1">// 42</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">anotherNumber</span><span class="p">)</span>    <span class="c1">// 42</span>
+
+<span class="nx">anotherNumber</span> <span class="o">=</span> <span class="mf">15</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>           <span class="c1">// 42</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">anotherNumber</span><span class="p">)</span>    <span class="c1">// 15</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Other than Number, String, and Boolean, everything you use in JavaScript will be an object. In other words, they will all be passed by reference, not copied. Be careful to make a <strong>deep copy</strong> yourself if you want a separate version of an array, for example.</p>
+</div>
+<section id="class-demo">
+<h2>Class Demo<a class="headerlink" href="#class-demo" title="Permalink to this headline">¶</a></h2>
+<p>Create a bubble object. It should have x, y, diameter, and color properties. Spawn 20 bubbles in setup, and <code class="docutils literal notranslate"><span class="pre">push()</span></code> them all into an array (use a <code class="docutils literal notranslate"><span class="pre">spawnBubble()</span></code> function to create and push a bubble object into the array). Use a <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">...</span> <span class="pre">of</span></code> loop inside the draw loop to display each of the bubbles in the array, and move each bubble randomly each frame. Use <code class="docutils literal notranslate"><span class="pre">window.setInterval(spawnBubble,</span> <span class="pre">500)</span></code> in the setup function to automatically call the spawnBubble function every half second (500 milliseconds).</p>
+<p>The demo should look <a class="reference external" href="https://editor.p5js.org/schellenberg/present/AqvisFhH1">something like this</a>.</p>
+<p>Change the bubble motion to use Perlin noise. The resulting demo should <a class="reference external" href="https://editor.p5js.org/schellenberg/present/L1JYDY2zE">now look something like this</a>.</p>
+</section>
+</section>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - JavaScript Arrays' data-toggle="tooltip">
+    <a href="arrayreview.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="arrayreview.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - JavaScript Two Dimensional Arrays' data-toggle="tooltip" >
+    <a href="2darrays.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="2darrays.html" >Next Section - JavaScript Two Dimensional Arrays</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018 Dan Schellenberg.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.2.
+    </p>
+  </div>
+</footer>
+
+
+
+  </body>
+</html>
