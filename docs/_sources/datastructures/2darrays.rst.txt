@@ -103,6 +103,13 @@ Introduce the Game of Life (`presentation <https://docs.google.com/presentation/
 
 After everyone can determine the "next state" of the game, given a scenario, it's time to code it up.
 
+
+Moving Character in Grid
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Move a character around a 2d grid using the arrow keys. Display the cells as terrain -- opengameart is good for this.
+
+
 Platformer Example
 ~~~~~~~~~~~~~~~~~~~
 
