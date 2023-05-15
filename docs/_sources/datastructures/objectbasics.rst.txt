@@ -84,7 +84,7 @@ Notice that this is very different than how a primitive (immutable) data type wo
 
 .. note::
 
-  Other than Number, String, and Boolean, everything you use in JavaScript will be an object. In other words, they will all be passed by reference, not copied. Be careful to make a **deep copy** yourself if you want a separate version of an array, for example.
+  Other than Number, String, and Boolean, everything you use in JavaScript will be an object. In other words, they will all be passed by reference, not copied. Be careful to make a **deep copy** yourself if you want a separate version of an array, for example. Use structuredClone() for this.
 
 
 Class Demo

@@ -50,7 +50,7 @@
     <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="JavaScript Two Dimensional Arrays" href="2darrays.html" />
+    <link rel="next" title="Object Basics" href="objectbasics.html" />
     <link rel="prev" title="Setting Up a Work Environment" href="../ide/setup.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -195,8 +195,8 @@
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - JavaScript Two Dimensional Arrays' data-toggle="tooltip" >
-    <a href="2darrays.html" >
+  <li id="relations-next" title='Next Chapter - Object Basics' data-toggle="tooltip" >
+    <a href="objectbasics.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -264,17 +264,13 @@
 <span class="c1">// now, both other and stuff equal [52, 35, &quot;hey&quot;]</span>
 </pre></div>
 </div>
-<p>If you want to create a copy of an array that is <strong>not</strong> pointing to the same memory location, you can do the following:</p>
+<p>If you want to create a copy of an array that is <strong>not</strong> pointing to the same memory location, you can create a <a class="reference external" href="https://stackoverflow.com/questions/728360/how-do-i-correctly-clone-a-javascript-object">structured clone of the object</a>:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mf">52</span><span class="p">,</span> <span class="mf">78</span><span class="p">,</span> <span class="s2">&quot;hey&quot;</span><span class="p">];</span>
-<span class="kd">let</span> <span class="nx">other</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">stuff</span><span class="p">];</span>   <span class="c1">//or you can use stuff.slice();</span>
+<span class="kd">let</span> <span class="nx">other</span> <span class="o">=</span> <span class="nx">structuredClone</span><span class="p">(</span><span class="nx">stuff</span><span class="p">);</span>
 <span class="nx">other</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">35</span><span class="p">;</span>
 <span class="c1">// now, other equals [52, 35, &quot;hey&quot;]</span>
 <span class="c1">// and stuff equals [52, 78, &quot;hey&quot;]</span>
 </pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Be aware that this method only creates a completely new array for single-dimensional arrays!</p>
 </div>
 </section>
 <section id="creating-an-array-of-a-specific-size">
@@ -377,12 +373,12 @@
   </li>
   <a class="navLinkBg" id="navLinkBgLeft"  href="../ide/setup.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - JavaScript Two Dimensional Arrays' data-toggle="tooltip" >
-    <a href="2darrays.html" >
+  <li id="relations-next" class="navLink" title='Next Section - Object Basics' data-toggle="tooltip" >
+    <a href="objectbasics.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="2darrays.html" >Next Section - JavaScript Two Dimensional Arrays</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="objectbasics.html" >Next Section - Object Basics</a>
 
 <script type="text/javascript">
 

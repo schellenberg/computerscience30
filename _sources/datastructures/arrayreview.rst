@@ -51,17 +51,15 @@ If you need to make a copy of an array, be aware that assigning the array to a n
     other[1] = 35;
     // now, both other and stuff equal [52, 35, "hey"]
 
-If you want to create a copy of an array that is **not** pointing to the same memory location, you can do the following:
+If you want to create a copy of an array that is **not** pointing to the same memory location, you can create a `structured clone of the object <https://stackoverflow.com/questions/728360/how-do-i-correctly-clone-a-javascript-object>`_:
 
 .. code-block:: javascript
 
     let stuff = [52, 78, "hey"];
-    let other = [...stuff];   //or you can use stuff.slice();
+    let other = structuredClone(stuff);
     other[1] = 35;
     // now, other equals [52, 35, "hey"]
     // and stuff equals [52, 78, "hey"]
-
-.. note:: Be aware that this method only creates a completely new array for single-dimensional arrays!
 
 
 Creating an Array of a Specific Size
