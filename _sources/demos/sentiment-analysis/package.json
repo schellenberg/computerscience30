@@ -1,41 +1,27 @@
-//save this file as .eslintrc.js in the root of your project folder
-module.exports = {
+{
+  "eslintConfig": {
     "env": {
-        "es6": true
+      "es2021": true,
+      "browser": true
     },
     "extends": "eslint:recommended",
-    "ecmaFeatures": {
-      "blockBindings": true,
-      "defaultParams": true,
-      "forOf": true
-    },
     "rules": {
-        // enable additional rules
-        "indent": ["warn", 2],
-        "quotes": ["warn", "double"],
-        "semi": ["error", "always"],
-        "no-extra-parens": ["warn", "all"],
-        "curly": ["error", "all"],
-        "eqeqeq": ["warn", "always"],
-        "no-floating-decimal": ["warn"],
-        "brace-style": ["warn", "stroustrup"],
-        "no-var": ["warn"],
-
-        // override default options for rules from base configurations
-        //"comma-dangle": ["warn", "always"],
-        "no-cond-assign": ["error", "always"],
-
-        // disable rules from base configurations
-        "no-console": "off",
-        "no-unused-vars": "off"
+      "indent": ["warn", 2],
+      "quotes": ["warn", "double"],
+      "semi": ["warn", "always"],
+      "no-extra-parens": ["warn", "all"],
+      "curly": ["warn", "all"],
+      "eqeqeq": ["warn", "always"],
+      "no-floating-decimal": ["warn"],
+      "brace-style": ["warn", "stroustrup"],
+      "no-var": ["error"],
+  
+      "no-cond-assign": ["error", "always"],
+  
+      "no-unused-vars": "off"
     },
     "globals": {
-      //allow direct access to the DOM without errors
-      "document": true,
-      "window": true,  
-      //p5js globals
-      "remove": true,
-      "canvas": true,
+
       "width": true,
       "height": true,
       "drawingContext": true,
@@ -239,6 +225,8 @@ module.exports = {
       "blendMode": true,
       "arc": true,
       "ellipse": true,
+      "circle": true,
+      "square": true,
       "line": true,
       "point": true,
       "quad": true,
@@ -405,8 +393,13 @@ module.exports = {
       "QUADRATIC": true,
       "BEZIER": true,
       "CURVE": true,
-
-      //p5js sound globals
+      "remove": true,
+      "canvas": true,
+      "storeItem": true,
+      "getItem": true,
+      "clearStorage": true,
+      "removeItem": true,
+  
       "getAudioContext": true,
       "isSupported": true,
       "isFileSupported": true,
@@ -421,8 +414,9 @@ module.exports = {
       "createConvolver": true,
       "setBPM": true,
       "saveSound": true,
-
-      //p5js dom globals
+      "userStartAudio": true,
+      "soundOut": true,
+  
       "select": true,
       "selectAll": true,
       "removeElements": true,
@@ -442,6 +436,28 @@ module.exports = {
       "VIDEO": true,
       "AUDIO": true,
       "createCapture": true,
-      "createElement": true
-  },
+      "createElement": true,
+  
+      "collidePointPoint": true,
+      "collidePointCircle": true,
+      "collidePointEllipse": true,
+      "collidePointRect": true,
+      "collidePointLine": true,
+      "collidePointArc": true,
+      "collideRectRect": true,
+      "collideCircleCircle": true,
+      "collideRectCircle": true,
+      "collideLineLine": true,
+      "collideLineCircle": true,
+      "collideLineRect": true,
+      "collidePointPoly": true,
+      "collideCirclePoly": true,
+      "collideRectPoly": true,
+      "collideLinePoly": true,
+      "collidePolyPoly": true,
+      "collidePointTriangle": true,
+
+      "deltaTime": true
+    }
+  }
 }

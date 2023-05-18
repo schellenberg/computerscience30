@@ -3,24 +3,26 @@
 // Put the Date Here
 
 let reviewData; //used to load data from text file
-let wordScores; //you need to make this a Map that contains the score for each word
+let wordScores; //the Map that contains the score for each word
 let phraseInput, analyseButton;
 let result;
 
 function preload() {
-  reviewData = loadStrings("assets/movieReviews.txt");
+  reviewData = loadStrings("movieReviews.txt");
 }
 
 
 function setup() {
   //you shouldn't have to change anything in the setup function...
   phraseInput = createInput("");
-  phraseInput.attribute("placeholder", "Enter a phrase to be analyzed...");
+  phraseInput.attribute("placeholder", "Enter a phrase to analyze");
+  phraseInput.class("form-control");
   phraseInput.parent("phrase");
 
   analyseButton = createButton("Analyse Now");
   analyseButton.attribute("type", "button");  // note to self: button type instead of submit type
   analyseButton.parent("phrase");
+  analyseButton.class("btn btn-primary");
   analyseButton.mousePressed(runAnalysis);
 
   result = createP();
@@ -41,7 +43,30 @@ function learnWordScores() {
   //need to loop through the information from the text file, and assign appropriate scores to each word
   // you will want to use the .split function built into JS (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)
 
-  
+  for (let review of reviewData) {
+    let theWords = review.split(" ");
+    let sentimentScore = int(theWords[0]);
+    for (let i = 1; i < theWords.length; i++) {
+      let word = theWords[i];
+      if (wordScores.has(word)) {
+        //add current score to average calculation
+        let theScore = wordScores.get(word);
+        theScore.timesSeen++;
+        theScore.totalSum += sentimentScore;
+        theScore.average = theScore.totalSum / theScore.timesSeen;
+        wordScores.set(word, theScore);
+      }
+      else {
+        //first time it's been seen
+        let theScore = {
+          timesSeen: 1,
+          totalSum: sentimentScore,
+          average: sentimentScore
+        };
+        wordScores.set(word, theScore);
+      }
+    }
+  }
 }
 
 function runAnalysis() {
@@ -49,7 +74,15 @@ function runAnalysis() {
   // you need to look up each word typed in, which is given in the array above.
   // use those to calculate whether the average sentiment of all the words put together 
 
-
+  let totalSentiment = 0;
+  let relevantWordCount = 0;
+  for (let word of wordsToLookup) {
+    if (wordScores.has(word)) {
+      totalSentiment += wordScores.get(word).average;
+      relevantWordCount++;
+    }
+  }
+  let averageSentiment = totalSentiment / relevantWordCount;
 
   // leave the function call below in your code so that your results will be automatically displayed
   // note that you will need to use a variable called averageSentiment for this to work.
