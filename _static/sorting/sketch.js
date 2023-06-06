@@ -170,8 +170,8 @@ function answerCheck() {
       let numbers = usersValue.split(/(\s+)/).filter( e => e.trim().length > 0);
       if (int(numbers[0]) === theAnswer.first && int(numbers[1]) === theAnswer.second ||
           int(numbers[1]) === theAnswer.first && int(numbers[0]) === theAnswer.second) {
-            answerIsRight = true;
-          }
+        answerIsRight = true;
+      }
     }
     else if (answers[i].type === "pass") {
       // convert hexadecimal value to lowercase
@@ -264,12 +264,11 @@ function selectionSort({theList, howManySwaps = undefined, howManyPasses = undef
   let swapNumber = 0;
   let passNumber = 0;
 
-
-
   let swapLocation = localList.length-1;
+  let largestLocation = 0;
   
   while (swapLocation > 0) {
-    let largestLocation = 0;
+    largestLocation = 0;
     
     //one pass
     for (let i = 0; i < swapLocation; i++) {
@@ -283,10 +282,6 @@ function selectionSort({theList, howManySwaps = undefined, howManyPasses = undef
     localList[swapLocation] = localList[largestLocation];
     localList[largestLocation] = temp;
     
-    swapLocation--;
-  }
-
-
     passNumber++;
     if (passNumber === howManyPasses) {
       return localList;
@@ -294,8 +289,10 @@ function selectionSort({theList, howManySwaps = undefined, howManyPasses = undef
     
     swapNumber++;
     if (swapNumber === howManySwaps) {
-      return {first: localList[swapLocation], second: localList[smallestLocation]};
+      return {first: localList[swapLocation], second: localList[largestLocation]};
     }
+    
+    swapLocation--;
   }
 
   if (totalPasses) {
