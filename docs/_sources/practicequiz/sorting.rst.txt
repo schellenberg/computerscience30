@@ -84,3 +84,8 @@ Question 4
     [2, 3, 6, 7, 8, 9, 11, 14]
 
   
+Randomized Practice Questions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can practice sorting by hand using bubble and selection sort here:
+ `Randomized Sorting Practice Quiz </_static/sorting>`_ 
