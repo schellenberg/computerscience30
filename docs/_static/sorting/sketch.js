@@ -264,24 +264,28 @@ function selectionSort({theList, howManySwaps = undefined, howManyPasses = undef
   let swapNumber = 0;
   let passNumber = 0;
 
-  let swapLocation = 0;
 
-  while (swapLocation < localList.length) {
-    let smallestLocation = swapLocation;
 
-    // one pass
-    for (let i = swapLocation; i < localList.length; i++) {
-      if (localList[i] < localList[smallestLocation]) {
-        smallestLocation = i;
+  let swapLocation = localList.length-1;
+  
+  while (swapLocation > 0) {
+    let largestLocation = 0;
+    
+    //one pass
+    for (let i = 0; i < swapLocation; i++) {
+      if (localList[i] > localList[largestLocation]) {
+        largestLocation = i;
       }
     }
-
-    // swap
+    
+    //swap
     let temp = localList[swapLocation];
-    localList[swapLocation] = localList[smallestLocation];
-    localList[smallestLocation] = temp;
+    localList[swapLocation] = localList[largestLocation];
+    localList[largestLocation] = temp;
+    
+    swapLocation--;
+  }
 
-    swapLocation++;
 
     passNumber++;
     if (passNumber === howManyPasses) {
