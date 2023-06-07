@@ -14,7 +14,7 @@ Question 1
 .. parsonsprob:: sorting-practice-quiz-1
     :language: javascript
 
-    Rearrange the following to show the swaps that occur during one pass of the bubble sort algorithm. The initial order of the list is [11, 7, 3, 14, 8, 6, 9, 2].
+    Rearrange the following to show the appropriate steps that occur during one pass of the bubble sort algorithm. The initial order of the list is [11, 7, 3, 14, 8, 6, 9, 2].
     -----
     [11, 7, 3, 14, 8, 6, 9, 2]
     [7, 11, 3, 14, 8, 6, 9, 2]
