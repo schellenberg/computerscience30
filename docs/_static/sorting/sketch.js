@@ -271,7 +271,7 @@ function selectionSort({theList, howManySwaps = undefined, howManyPasses = undef
     largestLocation = 0;
     
     //one pass
-    for (let i = 0; i < swapLocation; i++) {
+    for (let i = 0; i <= swapLocation; i++) {
       if (localList[i] > localList[largestLocation]) {
         largestLocation = i;
       }
