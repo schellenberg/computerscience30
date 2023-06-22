@@ -10,13 +10,37 @@ You may want to take a look at some of the following projects, which were create
 Previous Projects
 ------------------
 
+- Dungeon Crawler (Riley) 
+    - `Dungeon Crawler game <https://wmcics30.github.io/cs30-final/>`_ 
+    - `Dungeon Crawler repo <https://github.com/wmcics30/cs30-final>`_ 
+
 - Cookie Clicker (Aric) 
     - `Cookie Clicker game <https://wmcics30.github.io/major-project-2/>`_ 
     - `Cookie Clicker repo <https://github.com/wmcics30/major-project-2>`_ 
 
+- Minecraft (Kevin) 
+    - `Minecraft clone game <https://wmcics30.github.io/didactic-adventure/>`_ 
+    - `Minecraft clone repo <https://github.com/wmcics30/didactic-adventure>`_ 
+
+- Monkey Type (Jerry)
+    - `Monkey Type live <https://wmcics30.github.io/Cs30-major-project-typing/>`_ 
+    - `Monkey Type repo <https://github.com/wmcics30/Cs30-major-project-typing>`_ 
+
 - Sudoku (Amy)
     - `Sudoku game <https://wmcics30.github.io/cs30major-project/>`_ 
     - `Sudoku repo <https://github.com/wmcics30/cs30major-project>`_ 
+
+- Weather Forecaster (Eszter)
+    - `Weather History/Predictor <https://wmcics30.github.io/cs30-MajorProject/>`_ 
+    - `Weather History/Predictor repo <https://github.com/wmcics30/cs30-MajorProject>`_ 
+
+- Plants vs Zombies (Elijah) 
+    - `Plants vs Zombies game <https://wmcics30.github.io/CS30-MajorProject-plants-vs-zombies/>`_ 
+    - `Plants vs Zombies repo <https://github.com/wmcics30/CS30-MajorProject-plants-vs-zombies>`_ 
+
+- Sokoban (Ethan) 
+    - `Sokoban game <https://wmcics30.github.io/CS30-MAJOR-project-1-puzzle/>`_ 
+    - `Sokoban repo <https://github.com/wmcics30/CS30-MAJOR-project-1-puzzle>`_ 
 
 - Ascii Renderer (Declan)
     - `AR5 Example Projects <https://wmcics30.github.io/ar5/examples/directory>`_ 
