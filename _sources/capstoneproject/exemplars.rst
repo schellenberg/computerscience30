@@ -18,6 +18,10 @@ Previous Projects
     - `Cookie Clicker game <https://wmcics30.github.io/major-project-2/>`_ 
     - `Cookie Clicker repo <https://github.com/wmcics30/major-project-2>`_ 
 
+- Sudoku (Faith)
+    - `Flower Shop game <https://wmcics30.github.io/cs30-majorproject-flowers/>`_ 
+    - `Flower Shop repo <https://github.com/wmcics30/cs30-majorproject-flowers>`_ 
+
 - Minecraft (Kevin) 
     - `Minecraft clone game <https://wmcics30.github.io/didactic-adventure/>`_ 
     - `Minecraft clone repo <https://github.com/wmcics30/didactic-adventure>`_ 
