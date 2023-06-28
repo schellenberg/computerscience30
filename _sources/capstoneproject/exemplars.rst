@@ -22,6 +22,10 @@ Previous Projects
     - `Flower Shop game <https://wmcics30.github.io/cs30-majorproject-flowers/>`_ 
     - `Flower Shop repo <https://github.com/wmcics30/cs30-majorproject-flowers>`_ 
 
+- 4 Pics 1 Word (Katherine)
+    - `4 Pics 1 Word game <https://wmcics30.github.io/cs30-major-project-4pics/>`_ 
+    - `4 Pics 1 Word repo <https://github.com/wmcics30/cs30-major-project-4pics>`_ 
+
 - Minecraft (Kevin) 
     - `Minecraft clone game <https://wmcics30.github.io/didactic-adventure/>`_ 
     - `Minecraft clone repo <https://github.com/wmcics30/didactic-adventure>`_ 
@@ -41,6 +45,10 @@ Previous Projects
 - Plants vs Zombies (Elijah) 
     - `Plants vs Zombies game <https://wmcics30.github.io/CS30-MajorProject-plants-vs-zombies/>`_ 
     - `Plants vs Zombies repo <https://github.com/wmcics30/CS30-MajorProject-plants-vs-zombies>`_ 
+
+- Two Player Sea Battle (Taran) [might be fragile if free server goes down]
+    - `Two Player Sea Battle game <https://wmcics30.github.io/Major-Project-2player/>`_ 
+    - `Two Player Sea Battle repo <https://github.com/wmcics30/Major-Project-2player>`_ 
 
 - Sokoban (Ethan) 
     - `Sokoban game <https://wmcics30.github.io/CS30-MAJOR-project-1-puzzle/>`_ 
@@ -114,3 +122,4 @@ Previous Projects
 - Alien Shooter (Mueez) 
     - `Alien Shooter Game <https://wmcics30.github.io/major-project-7/>`_ 
     - `Alien Shooter Game repo <https://github.com/wmcics30/major-project-7>`_ 
+
