@@ -172,7 +172,7 @@ Helpful Links
 - `MDN JavaScript Web Docs <https://developer.mozilla.org/en-US/docs/Web/JavaScript>`_ -- general JavaScript help (not p5js specific)
 - `Open Game Art <https://opengameart.org/>`_ -- provides a variety of high quality, freely licensed art, so that free/open source game developers can use it in their games
 - `Collision Detection Library <https://github.com/bmoren/p5.collide2D>`_ -- p5.collide2D provides tools for calculating collision detection for 2D geometry with p5.js
-- `The Nature of Code <https://natureofcode.com/book/>`_ -- Goes beyond what we do in class. Written in Processing, not p5js, so you need to do a bit of code conversion. Ask me for help, if needed.
+- `The Nature of Code <https://nature-of-code-2nd-edition.netlify.app//>`_ -- Goes beyond what we do in class. This is the preview of the 2nd edition (using p5js instead of Processing), which is currently being written, so please let me know if this link breaks.
 - `Eloquent JavaScript book <https://eloquentjavascript.net/3rd_edition/>`_ -- though I will not follow all the same conventions, it's a good read
 
 

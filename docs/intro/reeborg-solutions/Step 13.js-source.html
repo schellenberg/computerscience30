@@ -12,26 +12,26 @@
 
 <div class="highlight"><pre><span></span><span class="nx">think</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">turn_right</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">turn_left</span><span class="p">();</span>
-    <span class="nx">turn_left</span><span class="p">();</span>
-    <span class="nx">turn_left</span><span class="p">();</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">turn_right</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">turn_left</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">turn_left</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">turn_left</span><span class="p">();</span>
 <span class="p">}</span>
 
-<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="nx">at_goal</span><span class="p">())</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">front_is_clear</span><span class="p">())</span> <span class="p">{</span>
-        <span class="nx">move</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="k">else</span> <span class="p">{</span>
-        <span class="c1">//jump hurdle</span>
-        <span class="nx">turn_left</span><span class="p">();</span>
-        <span class="nx">move</span><span class="p">();</span>
-        <span class="nx">turn_right</span><span class="p">();</span>
-        <span class="nx">move</span><span class="p">();</span>
-        <span class="nx">turn_right</span><span class="p">();</span>
-        <span class="nx">move</span><span class="p">();</span>
-        <span class="nx">turn_left</span><span class="p">();</span>
-    <span class="p">}</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">at_goal</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">front_is_clear</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">move</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">//jump hurdle</span>
+<span class="w">        </span><span class="nx">turn_left</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">move</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">turn_right</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">move</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">turn_right</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">move</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">turn_left</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </body>

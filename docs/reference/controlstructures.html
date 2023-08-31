@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>JavaScript Control Structures &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.0fa6cababf056764.css?v=F9484CEF" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,15 +26,18 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
     <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script defer="" src="../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -70,7 +73,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '6.2.2';
+  eBookConfig.runestone_version = '6.6.2';
 </script>
 
 
@@ -223,17 +226,17 @@
 <div class="container" id="main-content">
   
   <section id="javascript-control-structures">
-<h1>JavaScript Control Structures<a class="headerlink" href="#javascript-control-structures" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
+<h1>JavaScript Control Structures<a class="headerlink" href="#javascript-control-structures" title="Permalink to this heading">¶</a></h1>
+<aside class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Discuss JavaScript control structures.</p>
-</div>
+</aside>
 <section id="comments">
-<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this heading">¶</a></h2>
 <p>Anything after <code class="docutils literal notranslate"><span class="pre">//</span></code> will be a comment on that line. Not really a control structure, but you should know it.</p>
 </section>
 <section id="operators">
-<h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<h2>Operators<a class="headerlink" href="#operators" title="Permalink to this heading">¶</a></h2>
 <p>JavaScript is odd when it comes to checking for equality (truthy/falsey problems with ==), so we use three equal signs when checking for equality.</p>
 <p>Relational</p>
 <ul class="simple">
@@ -255,99 +258,99 @@
 </ul>
 </section>
 <section id="if-else-if-else">
-<h2>If / Else If / Else<a class="headerlink" href="#if-else-if-else" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">someNumber</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Pick a number&quot;</span><span class="p">);</span>
+<h2>If / Else If / Else<a class="headerlink" href="#if-else-if-else" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">someNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Pick a number&quot;</span><span class="p">);</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nx">someNumber</span> <span class="o">&lt;</span> <span class="mf">42</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// do something</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">someNumber</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">42</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// do something</span>
 <span class="p">}</span>
-<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">someNumber</span> <span class="o">===</span> <span class="mf">42</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// do something else</span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">someNumber</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">42</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// do something else</span>
 <span class="p">}</span>
-<span class="k">else</span> <span class="p">{</span>
-    <span class="c1">// do some default action</span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// do some default action</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="while-loops">
-<h2>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<h2>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
 
-<span class="k">while</span> <span class="p">(</span><span class="nx">number</span> <span class="o">&lt;</span> <span class="mf">10</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">);</span>
-    <span class="nx">number</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">number</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="do-while-loops">
-<h2>Do-While Loops<a class="headerlink" href="#do-while-loops" title="Permalink to this headline">¶</a></h2>
+<h2>Do-While Loops<a class="headerlink" href="#do-while-loops" title="Permalink to this heading">¶</a></h2>
 <p>Guarantees the loop will happen at least once.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">answer</span><span class="p">;</span>
-<span class="k">do</span> <span class="p">{</span>
-    <span class="nx">answer</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Best NBA team?&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">answer</span><span class="p">;</span>
+<span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">answer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Best NBA team?&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="k">while</span> <span class="p">(</span><span class="nx">answer</span> <span class="o">!==</span> <span class="s2">&quot;Spurs&quot;</span><span class="p">);</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">answer</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s2">&quot;Spurs&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
 <section id="for-loop">
-<h2>For Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mf">10</span><span class="p">;</span> <span class="nx">number</span> <span class="o">&gt;</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">number</span> <span class="o">=</span> <span class="nx">number</span> <span class="o">-</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">);</span>
+<h2>For Loop<a class="headerlink" href="#for-loop" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Blastoff!&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
 <section id="break">
-<h2>Break<a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h2>
+<h2>Break<a class="headerlink" href="#break" title="Permalink to this heading">¶</a></h2>
 <p>Forces a loop to end immediately. Just include a <code class="docutils literal notranslate"><span class="pre">break;</span></code> statement inside the loop somewhere.</p>
 </section>
 <section id="try-catch">
-<h2>Try/Catch<a class="headerlink" href="#try-catch" title="Permalink to this headline">¶</a></h2>
+<h2>Try/Catch<a class="headerlink" href="#try-catch" title="Permalink to this heading">¶</a></h2>
 <p>Useful if you are going to run code that might cause an error.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-    <span class="nx">somethingNotDefined</span><span class="p">();</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">theError</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Uh oh. You just had the following error: &quot;</span> <span class="o">+</span> <span class="nx">theError</span><span class="p">);</span>    <span class="c1">// console.log() is the same as print()</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">somethingNotDefined</span><span class="p">();</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">theError</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Uh oh. You just had the following error: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">theError</span><span class="p">);</span><span class="w">    </span><span class="c1">// console.log() is the same as print()</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">adder</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">second</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">theAnswer</span> <span class="o">=</span> <span class="nx">first</span> <span class="o">+</span> <span class="nx">second</span><span class="p">;</span>
-    <span class="k">return</span> <span class="nx">theAnswer</span><span class="p">;</span>
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">adder</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span><span class="w"> </span><span class="nx">second</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">theAnswer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">second</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">theAnswer</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Can return a value, or not. If not, result is <code class="docutils literal notranslate"><span class="pre">undefined</span></code>.</p>
 </section>
 <section id="throwing-exception">
-<h2>Throwing Exception<a class="headerlink" href="#throwing-exception" title="Permalink to this headline">¶</a></h2>
+<h2>Throwing Exception<a class="headerlink" href="#throwing-exception" title="Permalink to this heading">¶</a></h2>
 <p>If you want to create code that deals gracefully with possible errors. You can <a class="reference external" href="https://eloquentjavascript.net/3rd_edition/08_error.html#h_zT3755/aOp">read more about them here</a> . Consider:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">multiply</span><span class="p">(</span><span class="nx">firstNumber</span><span class="p">,</span> <span class="nx">secondNumber</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="ow">typeof</span> <span class="nx">firstNumber</span> <span class="o">!==</span> <span class="s2">&quot;number&quot;</span> <span class="o">||</span> <span class="ow">typeof</span> <span class="nx">secondNumber</span> <span class="o">!==</span> <span class="s2">&quot;number&quot;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">throw</span> <span class="s2">&quot;You cannot multiply unless both arguments are numbers!&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">multiply</span><span class="p">(</span><span class="nx">firstNumber</span><span class="p">,</span><span class="w"> </span><span class="nx">secondNumber</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">firstNumber</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">secondNumber</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="s2">&quot;You cannot multiply unless both arguments are numbers!&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-    <span class="k">return</span> <span class="nx">firstNumber</span> <span class="o">*</span> <span class="nx">secondNumber</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">firstNumber</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">secondNumber</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="nx">multiply</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span> <span class="mf">3</span><span class="p">))</span>       <span class="c1">// 12</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">multiply</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span> <span class="s2">&quot;foo&quot;</span><span class="p">))</span>   <span class="c1">// Error in console: &quot;You cannot multiply unless both arguments are numbers!&quot;</span>
-                            <span class="c1">// also crashes the program, since the there was no code to catch the exception</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">multiply</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">))</span><span class="w">       </span><span class="c1">// 12</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">multiply</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">))</span><span class="w">   </span><span class="c1">// Error in console: &quot;You cannot multiply unless both arguments are numbers!&quot;</span>
+<span class="w">                            </span><span class="c1">// also crashes the program, since the there was no code to catch the exception</span>
 
 
-<span class="k">try</span> <span class="p">{</span>
-    <span class="nx">multiply</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span> <span class="s2">&quot;foo&quot;</span><span class="p">);</span>
+<span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">multiply</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>         <span class="c1">// printed in console: &quot;You cannot multiply unless both arguments are numbers!&quot;</span>
-<span class="p">}</span>                           <span class="c1">//   doesn&#39;t crash the program, since the exception was caught!</span>
+<span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span><span class="w">         </span><span class="c1">// printed in console: &quot;You cannot multiply unless both arguments are numbers!&quot;</span>
+<span class="p">}</span><span class="w">                           </span><span class="c1">//   doesn&#39;t crash the program, since the exception was caught!</span>
 </pre></div>
 </div>
 </section>
@@ -387,7 +390,7 @@
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.2.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.6.2.
     </p>
   </div>
 </footer>
