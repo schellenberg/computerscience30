@@ -8,7 +8,8 @@ Topics To Know
 - conditionals (if/else if/else)
 - loops (while and/or for)
 - functions
-- boolean logic/logical operators - `CodingJS <https://codingjs.wmcicompsci.ca/>`_  practice is probably the best choice for getting this nailed down...
+- boolean logic/logical operators 
+- solving `CodingJS problems <https://codingjs.wmcicompsci.ca/>`_  to practice these ideas
 
 
 Question 1
@@ -260,5 +261,15 @@ Question 11
         console.log( mysteriousThing(3, 14) )
 
 
+Question 12
+-----------
+
+First, turn on the Practice Quiz Mode of CodingJS. This will hide the test cases that are used when checking your code. Now solve the `loneTeen CodingJS practice problem <https://codingjs.wmcicompsci.ca/exercise.html?name=loneTeen&title=Warmup-1>`_.
+
+
+Question 13
+-----------
+
+Make sure the Practice Quiz Mode of CodingJS is turned on. Now solve the `in1to10 CodingJS practice problem <https://codingjs.wmcicompsci.ca/exercise.html?name=in1To10&title=Logic-1>`_.
 
 

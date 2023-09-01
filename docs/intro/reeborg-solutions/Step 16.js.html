@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>&lt;no title&gt; &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/637.0fa6cababf056764.css?v=F9484CEF" />
-    <link rel="stylesheet" type="text/css" href="../../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
+    <link rel="stylesheet" type="text/css" href="../../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,18 +26,15 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
     <script defer="" src="../../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
+    <script defer="" src="../../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
     <script defer="" src="../../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="" src="../../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../../_static/jquery-fix.js"></script>
     <script src="../../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -71,7 +68,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -200,31 +197,31 @@
   
   <script type="text/javascript">function CodeChat_doStyle(element) {function walk_tree(elements,func_walk,func_child) {let walk_children = [];for (let index = 0; index < elements.length; ++index) {let that = elements[index];while (that && !func_walk(that)) {that = that.parentElement;}if (that) {that = func_walk(that);walk_children.push(that);while (that && func_child(that)) {that = func_child(that);walk_children.push(that);}}}return walk_children;};element = (typeof element !== 'undefined') ? element : document;let code = element.getElementsByClassName("fenced-code");walk_tree(code, x => x.nextElementSibling, x => x.firstElementChild).map(x =>x.classList.add('CodeChat_noTop'));walk_tree(code, x => x.previousElementSibling, x => x.lastElementChild).map(x =>x.classList.add('CodeChat_noBottom'));}document.addEventListener("DOMContentLoaded", function(event) { CodeChat_doStyle(); });</script><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-39" name="CodeChat-39" href="#CodeChat-39"></a><span class="nx">think</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
 <a id="CodeChat-40" name="CodeChat-40" href="#CodeChat-40"></a>
-<a id="CodeChat-41" name="CodeChat-41" href="#CodeChat-41"></a><span class="kd">function</span><span class="w"> </span><span class="nx">harvestColumn</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="CodeChat-42" name="CodeChat-42" href="#CodeChat-42"></a><span class="w">    </span><span class="nx">turn_left</span><span class="p">();</span>
-<a id="CodeChat-43" name="CodeChat-43" href="#CodeChat-43"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="mf">8</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="CodeChat-44" name="CodeChat-44" href="#CodeChat-44"></a><span class="w">        </span><span class="nx">move</span><span class="p">();</span>
-<a id="CodeChat-45" name="CodeChat-45" href="#CodeChat-45"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">object_here</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="CodeChat-46" name="CodeChat-46" href="#CodeChat-46"></a><span class="w">            </span><span class="nx">take</span><span class="p">();</span>
-<a id="CodeChat-47" name="CodeChat-47" href="#CodeChat-47"></a><span class="w">        </span><span class="p">}</span>
-<a id="CodeChat-48" name="CodeChat-48" href="#CodeChat-48"></a><span class="w">    </span><span class="p">}</span>
-<a id="CodeChat-49" name="CodeChat-49" href="#CodeChat-49"></a><span class="w">    </span><span class="nx">turn_left</span><span class="p">();</span>
-<a id="CodeChat-50" name="CodeChat-50" href="#CodeChat-50"></a><span class="w">    </span><span class="nx">turn_left</span><span class="p">();</span>
-<a id="CodeChat-51" name="CodeChat-51" href="#CodeChat-51"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="mf">8</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="CodeChat-52" name="CodeChat-52" href="#CodeChat-52"></a><span class="w">        </span><span class="nx">move</span><span class="p">();</span>
-<a id="CodeChat-53" name="CodeChat-53" href="#CodeChat-53"></a><span class="w">    </span><span class="p">}</span>
-<a id="CodeChat-54" name="CodeChat-54" href="#CodeChat-54"></a><span class="w">    </span><span class="nx">turn_left</span><span class="p">();</span>
+<a id="CodeChat-41" name="CodeChat-41" href="#CodeChat-41"></a><span class="kd">function</span> <span class="nx">harvestColumn</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-42" name="CodeChat-42" href="#CodeChat-42"></a>    <span class="nx">turn_left</span><span class="p">();</span>
+<a id="CodeChat-43" name="CodeChat-43" href="#CodeChat-43"></a>    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mf">8</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-44" name="CodeChat-44" href="#CodeChat-44"></a>        <span class="nx">move</span><span class="p">();</span>
+<a id="CodeChat-45" name="CodeChat-45" href="#CodeChat-45"></a>        <span class="k">if</span> <span class="p">(</span><span class="nx">object_here</span><span class="p">())</span> <span class="p">{</span>
+<a id="CodeChat-46" name="CodeChat-46" href="#CodeChat-46"></a>            <span class="nx">take</span><span class="p">();</span>
+<a id="CodeChat-47" name="CodeChat-47" href="#CodeChat-47"></a>        <span class="p">}</span>
+<a id="CodeChat-48" name="CodeChat-48" href="#CodeChat-48"></a>    <span class="p">}</span>
+<a id="CodeChat-49" name="CodeChat-49" href="#CodeChat-49"></a>    <span class="nx">turn_left</span><span class="p">();</span>
+<a id="CodeChat-50" name="CodeChat-50" href="#CodeChat-50"></a>    <span class="nx">turn_left</span><span class="p">();</span>
+<a id="CodeChat-51" name="CodeChat-51" href="#CodeChat-51"></a>    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mf">8</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-52" name="CodeChat-52" href="#CodeChat-52"></a>        <span class="nx">move</span><span class="p">();</span>
+<a id="CodeChat-53" name="CodeChat-53" href="#CodeChat-53"></a>    <span class="p">}</span>
+<a id="CodeChat-54" name="CodeChat-54" href="#CodeChat-54"></a>    <span class="nx">turn_left</span><span class="p">();</span>
 <a id="CodeChat-55" name="CodeChat-55" href="#CodeChat-55"></a><span class="p">}</span>
 <a id="CodeChat-56" name="CodeChat-56" href="#CodeChat-56"></a>
 <a id="CodeChat-57" name="CodeChat-57" href="#CodeChat-57"></a><span class="nx">move</span><span class="p">();</span>
 <a id="CodeChat-58" name="CodeChat-58" href="#CodeChat-58"></a><span class="nx">move</span><span class="p">();</span>
-<a id="CodeChat-59" name="CodeChat-59" href="#CodeChat-59"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">row</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">row</span><span class="o">&lt;</span><span class="mf">6</span><span class="p">;</span><span class="w"> </span><span class="nx">row</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="CodeChat-60" name="CodeChat-60" href="#CodeChat-60"></a><span class="w">    </span><span class="nx">harvestColumn</span><span class="p">();</span>
-<a id="CodeChat-61" name="CodeChat-61" href="#CodeChat-61"></a><span class="w">    </span><span class="nx">move</span><span class="p">();</span>
+<a id="CodeChat-59" name="CodeChat-59" href="#CodeChat-59"></a><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">row</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">row</span><span class="o">&lt;</span><span class="mf">6</span><span class="p">;</span> <span class="nx">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-60" name="CodeChat-60" href="#CodeChat-60"></a>    <span class="nx">harvestColumn</span><span class="p">();</span>
+<a id="CodeChat-61" name="CodeChat-61" href="#CodeChat-61"></a>    <span class="nx">move</span><span class="p">();</span>
 <a id="CodeChat-62" name="CodeChat-62" href="#CodeChat-62"></a><span class="p">}</span>
 <a id="CodeChat-63" name="CodeChat-63" href="#CodeChat-63"></a>
-<a id="CodeChat-64" name="CodeChat-64" href="#CodeChat-64"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">carries_object</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="CodeChat-65" name="CodeChat-65" href="#CodeChat-65"></a><span class="w">    </span><span class="nx">put</span><span class="p">();</span>
+<a id="CodeChat-64" name="CodeChat-64" href="#CodeChat-64"></a><span class="k">while</span> <span class="p">(</span><span class="nx">carries_object</span><span class="p">())</span> <span class="p">{</span>
+<a id="CodeChat-65" name="CodeChat-65" href="#CodeChat-65"></a>    <span class="nx">put</span><span class="p">();</span>
 <a id="CodeChat-66" name="CodeChat-66" href="#CodeChat-66"></a><span class="p">}</span>
 </pre></div>
 </div>
@@ -250,7 +247,7 @@
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.6.2.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.2.
     </p>
   </div>
 </footer>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Helpful Built In JS Functions &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.0fa6cababf056764.css?v=F9484CEF" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,18 +26,15 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
+    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
     <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -71,7 +68,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -204,25 +201,25 @@
 <div class="container" id="main-content">
   
   <section id="helpful-built-in-js-functions">
-<h1>Helpful Built In JS Functions<a class="headerlink" href="#helpful-built-in-js-functions" title="Permalink to this heading">¶</a></h1>
-<aside class="topic">
+<h1>Helpful Built In JS Functions<a class="headerlink" href="#helpful-built-in-js-functions" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Listing a few built in JS functions, and where to find documentation for them.</p>
-</aside>
+</div>
 <p>While we will mostly be spending our time learning functions that are specific to p5js, it is helpful to realize that any built in JS function will also work while using the p5js library. One example of a helpful built in function is the <code class="docutils literal notranslate"><span class="pre">setInterval</span></code> and <code class="docutils literal notranslate"><span class="pre">setTimeout</span></code> functions. These functions allow you to run a specific function every <em>x</em> milliseconds, or after <em>x</em> milliseconds have gone by. Consider the following example, which would print <em>Hello</em> into your console every two seconds:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">sayHi</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">sayHi</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">sayHi</span><span class="p">,</span><span class="w"> </span><span class="mf">2000</span><span class="p">);</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">sayHi</span><span class="p">,</span> <span class="mf">2000</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>If you want want the function to repeat at a specifc interval for awhile, but then to stop, you need to keep track of the ID that the function returns. Consider the following:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">sayHi</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">sayHi</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kd">let</span><span class="w"> </span><span class="nx">intervalID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">sayHi</span><span class="p">,</span><span class="w"> </span><span class="mf">2000</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">intervalID</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">sayHi</span><span class="p">,</span> <span class="mf">2000</span><span class="p">);</span>
 
 <span class="c1">// assume that the following is triggered by</span>
 <span class="c1">// something else happening in your program...</span>
@@ -230,23 +227,23 @@
 </pre></div>
 </div>
 <p>If you only want the function to occur <strong>once</strong>, you can use <code class="docutils literal notranslate"><span class="pre">setTimeout</span></code> instead:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">sayHi</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">sayHi</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">sayHi</span><span class="p">,</span><span class="w"> </span><span class="mf">2000</span><span class="p">);</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">sayHi</span><span class="p">,</span> <span class="mf">2000</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can keep track of the id that <code class="docutils literal notranslate"><span class="pre">setTimeout</span></code> returns as well, if there is a chance you will cancel the event.</p>
 <section id="more-information">
-<h2>More Information<a class="headerlink" href="#more-information" title="Permalink to this heading">¶</a></h2>
+<h2>More Information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h2>
 <p>A great place to look for information about built in functions is the <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN Web Docs for JavaScript</a>.</p>
 <p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout docs</a></p>
 <p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval docs</a></p>
 </section>
 <section id="p5js-example">
-<h2>p5js Example<a class="headerlink" href="#p5js-example" title="Permalink to this heading">¶</a></h2>
-<aside class="system-message">
+<h2>p5js Example<a class="headerlink" href="#p5js-example" title="Permalink to this headline">¶</a></h2>
+<div class="system-message">
 <p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\schellenbergd\OneDrive - Saskatoon Public Schools\Documents\computerscience30\_sources\gettingstarted\builtinfunctions.rst</span>, line 57)</p>
 <p>Unknown directive type “p5”.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">p5</span><span class="p">::</span> <span class="n">builtInFunctionsDemo</span>
@@ -287,7 +284,7 @@
   <span class="p">}</span>
 </pre></div>
 </div>
-</aside>
+</div>
 </section>
 </section>
 
@@ -312,7 +309,7 @@
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.6.2.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.2.
     </p>
   </div>
 </footer>

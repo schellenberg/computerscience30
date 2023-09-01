@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Python Review &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.0fa6cababf056764.css?v=F9484CEF" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,18 +26,15 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
+    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
     <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -71,7 +68,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -215,9 +212,9 @@
 <div class="container" id="main-content">
   
   <section id="python-review">
-<h1>Python Review<a class="headerlink" href="#python-review" title="Permalink to this heading">¶</a></h1>
+<h1>Python Review<a class="headerlink" href="#python-review" title="Permalink to this headline">¶</a></h1>
 <section id="variables-and-data-types">
-<h2>Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this heading">¶</a></h2>
+<h2>Variables and Data Types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h2>
 <p>You hopefully remember using variables to keep track of things when we were using Scratch. For example, we used a variable called <cite>number of sides</cite> when we began to draw regular polygons. In Python, we can create variables as well. In the example above, we made a variable called <cite>some_number</cite>. We have to be careful how we name variables, since they can’t be keywords like <cite>if</cite>, <cite>not</cite>, etc. A keyword is a word that already has a special meaning in Python. Variables should start with a letter, and if they contain more than one word, you should put an underscore between the words (like <cite>helpful_variable</cite> or <cite>something_else</cite>).</p>
 <p>The fundamental data types that we are concerned about in Python include:</p>
 <ul class="simple">
@@ -294,12 +291,12 @@
     </div>
     </section>
 <section id="checking-data-types">
-<h2>Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this heading">¶</a></h2>
+<h2>Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this headline">¶</a></h2>
 <p>If you aren’t sure what the data type of something is, you can check it using the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function. This works on both values (a piece of data) and variables (a container that holds a value). What will the code below do? After you have pressed Run below, change the value inside the <code class="docutils literal notranslate"><span class="pre">type()</span></code> function to make sure you really understand what it is doing. Replace the <code class="docutils literal notranslate"><span class="pre">5</span></code> with <code class="docutils literal notranslate"><span class="pre">5.3</span></code>. What do you get? How about <code class="docutils literal notranslate"><span class="pre">&quot;5.3&quot;</span></code>?</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=checking_data_types data-question_label="5">
-<div id=checking_data_types_question class="ac_question">
+<div id=checking_data_types_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="checking_data_types_editor" 
@@ -313,7 +310,7 @@ print( type(5) )
 </div>
 </section>
 <section id="converting-between-data-types">
-<span id="type-casting-functions"></span><h2>Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this heading">¶</a></h2>
+<span id="type-casting-functions"></span><h2>Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes you might need to convert from one data type to another. You can use the following functions to <strong>type cast</strong> data:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">str(x)</span></code> to convert <em>x</em> to a string</p></li>
@@ -323,7 +320,7 @@ print( type(5) )
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=casting_data_types data-question_label="6">
-<div id=casting_data_types_question class="ac_question">
+<div id=casting_data_types_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="casting_data_types_editor" 
@@ -344,9 +341,15 @@ print( type(c) )
 </div>
 </section>
 <section id="math-operators">
-<span id="math-operator-list"></span><h2>Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this heading">¶</a></h2>
+<span id="math-operator-list"></span><h2>Math Operators<a class="headerlink" href="#math-operators" title="Permalink to this headline">¶</a></h2>
 <p>We can do math with Python, but we need to know the operators to use. The following table shows the most frequently used math operators in Python.</p>
 <table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 52%" />
+<col style="width: 26%" />
+<col style="width: 10%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Symbols</p></th>
 <th class="head"><p>Operations</p></th>
@@ -454,7 +457,7 @@ print( type(c) )
         </div>
             </section>
 <section id="if">
-<h2><code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Permalink to this heading">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">if</span></code> control structure works the same way it did with Reeborg. Run the example given below. What happens if you change it to <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">=</span> <span class="pre">23</span></code>. How about <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">=</span> <span class="pre">10</span></code>?</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -463,7 +466,7 @@ print( type(c) )
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=if_intro_1 data-question_label="11">
-<div id=if_intro_1_question class="ac_question">
+<div id=if_intro_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="if_intro_1_editor" 
@@ -484,12 +487,12 @@ else:
 </div>
 </section>
 <section id="if-elif-else">
-<h2><code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this heading">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code><a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">if/elif/else</span></code> control structure works in the exact same way it did when you were programming Reeborg. The important thing to remember is that <strong>only one of the branches can execute</strong>. Read the code below, and predict what you think the output will be. Then change it to <code class="docutils literal notranslate"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">25</span></code>. What will the output be now? How about if you change it to <code class="docutils literal notranslate"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">5</span></code>? What about <code class="docutils literal notranslate"><span class="pre">temp</span> <span class="pre">=</span> <span class="pre">15</span></code>?</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=if_elif_else_intro data-question_label="12">
-<div id=if_elif_else_intro_question class="ac_question">
+<div id=if_elif_else_intro_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="if_elif_else_intro_editor" 
@@ -510,12 +513,12 @@ else:
 </div>
 </section>
 <section id="while-loop">
-<h2><code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop" title="Permalink to this heading">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">while</span></code> loop<a class="headerlink" href="#while-loop" title="Permalink to this headline">¶</a></h2>
 <p>Recall that we used a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop in Reeborg when we didn’t know the number of iterations ahead of time. In other words, the body of while will be repeated as long as the controlling boolean expression evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code>. Run the code below. Can you change the code so that it counts <strong>up</strong> from 1 to 10, then says “Here I come!”?</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=while_loop_intro data-question_label="13">
-<div id=while_loop_intro_question class="ac_question">
+<div id=while_loop_intro_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="while_loop_intro_editor" 
@@ -535,12 +538,12 @@ print("Blastoff!")
 </div>
 </section>
 <section id="for-loop">
-<h2><code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this heading">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
 <p>When we knew the exact number of iterations required in Reeborg, we used the <code class="docutils literal notranslate"><span class="pre">repeat</span></code> command. That command was not part of regular Python – it was added to keep Reeborg coding as simple as possible. Although I won’t explain all the details about it yet, I will introduce you to the Python version of a repeat loop. If we want something to repeat 10 times, we could do the following: (after running the code, change the <code class="docutils literal notranslate"><span class="pre">10</span></code> to some other number and try it again)</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=for_loop_intro_1 data-question_label="14">
-<div id=for_loop_intro_1_question class="ac_question">
+<div id=for_loop_intro_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="for_loop_intro_1_editor" 
@@ -557,7 +560,7 @@ for counter in range(10):
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=for_loop_intro_2 data-question_label="15">
-<div id=for_loop_intro_2_question class="ac_question">
+<div id=for_loop_intro_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="for_loop_intro_2_editor" 
@@ -574,7 +577,7 @@ for counter in range(5, 11):
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=for_loop_intro_3 data-question_label="16">
-<div id=for_loop_intro_3_question class="ac_question">
+<div id=for_loop_intro_3_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="for_loop_intro_3_editor" 
@@ -590,12 +593,12 @@ for item in grocery_list:
 </div>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">¶</a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <p>Just like you were able to teach Reeborg to do new things by creating a new function, we can create new functions in Python as well. Here are a couple examples:</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=functions_intro_1 data-question_label="17">
-<div id=functions_intro_1_question class="ac_question">
+<div id=functions_intro_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="functions_intro_1_editor" 
@@ -613,7 +616,7 @@ say_hello()
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=functions_intro_2 data-question_label="18">
-<div id=functions_intro_2_question class="ac_question">
+<div id=functions_intro_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="functions_intro_2_editor" 
@@ -630,7 +633,7 @@ say_hello("Eli")
 </div>
 </section>
 <section id="taking-input-from-user">
-<h2>Taking Input from User<a class="headerlink" href="#taking-input-from-user" title="Permalink to this heading">¶</a></h2>
+<h2>Taking Input from User<a class="headerlink" href="#taking-input-from-user" title="Permalink to this headline">¶</a></h2>
 <p>If you want the user to type something, you can use the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function. Here are a couple examples:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -639,7 +642,7 @@ say_hello("Eli")
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=input_intro_1 data-question_label="19">
-<div id=input_intro_1_question class="ac_question">
+<div id=input_intro_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="input_intro_1_editor" 
@@ -655,7 +658,7 @@ print(your_name)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=input_intro_2 data-question_label="20">
-<div id=input_intro_2_question class="ac_question">
+<div id=input_intro_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="input_intro_2_editor" 
@@ -675,7 +678,7 @@ say_hello(your_name)
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=input_intro_3 data-question_label="21">
-<div id=input_intro_3_question class="ac_question">
+<div id=input_intro_3_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="input_intro_3_editor" 
@@ -694,12 +697,12 @@ elif age == 15:
 </div>
 </section>
 <section id="python-modules">
-<h2>Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this heading">¶</a></h2>
+<h2>Python Modules<a class="headerlink" href="#python-modules" title="Permalink to this headline">¶</a></h2>
 <p>One of the great things about Python is that there are a lot of modules that extend the basic functionality of Python. A module is simply a file (or folder) containing Python functions and variables. You have created your own module when you were exploring Reeborg. When you typed <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*`</span></code>, you made all of the functions in the library tab available to your program. Please note that although we could use the <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">library</span> <span class="pre">import</span> <span class="pre">*</span></code> syntax, it can cause problems if you accidentally create a function that has the same name as something you have imported. See the second example below for the recommended way to import.</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=module_intro_1 data-question_label="22">
-<div id=module_intro_1_question class="ac_question">
+<div id=module_intro_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="module_intro_1_editor" 
@@ -717,7 +720,7 @@ print( cos(0) )
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=module_intro_2 data-question_label="23">
-<div id=module_intro_2_question class="ac_question">
+<div id=module_intro_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="module_intro_2_editor" 
@@ -735,7 +738,7 @@ print( math.cos(0) )
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=module_intro_3 data-question_label="24">
-<div id=module_intro_3_question class="ac_question">
+<div id=module_intro_3_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="module_intro_3_editor" 
@@ -751,13 +754,13 @@ print( random.randrange(1, 10) )
 </div>
 </section>
 <section id="drawing-images-practice">
-<h2>Drawing Images Practice<a class="headerlink" href="#drawing-images-practice" title="Permalink to this heading">¶</a></h2>
+<h2>Drawing Images Practice<a class="headerlink" href="#drawing-images-practice" title="Permalink to this headline">¶</a></h2>
 <p>Draw the following image. Be sure to define and use at least one function as part of your solution.</p>
 <img alt="../_images/confusion-19.png" src="../_images/confusion-19.png" />
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=drawing_images_review_1 data-question_label="25">
-<div id=drawing_images_review_1_question class="ac_question">
+<div id=drawing_images_review_1_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="drawing_images_review_1_editor" 
@@ -774,7 +777,7 @@ print( random.randrange(1, 10) )
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=drawing_images_review_2 data-question_label="26">
-<div id=drawing_images_review_2_question class="ac_question">
+<div id=drawing_images_review_2_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="drawing_images_review_2_editor" 
@@ -788,7 +791,7 @@ print( random.randrange(1, 10) )
 </div>
 </section>
 <section id="number-guessing-game">
-<h2>Number Guessing Game<a class="headerlink" href="#number-guessing-game" title="Permalink to this heading">¶</a></h2>
+<h2>Number Guessing Game<a class="headerlink" href="#number-guessing-game" title="Permalink to this headline">¶</a></h2>
 <p>Remember the number guessing game we created in Scratch? The basic premise was as follows:</p>
 <ul class="simple">
 <li><p>generates a random number from 1 to 100 and stores it in a variable</p></li>
@@ -801,7 +804,7 @@ print( random.randrange(1, 10) )
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=number_guessing_game data-question_label="27">
-<div id=number_guessing_game_question class="ac_question">
+<div id=number_guessing_game_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="python" id="number_guessing_game_editor" 
@@ -863,7 +866,7 @@ user_guess = -1
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.6.2.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.2.
     </p>
   </div>
 </footer>

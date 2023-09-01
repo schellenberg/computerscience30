@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>JavaScript Data Types &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/637.0fa6cababf056764.css?v=F9484CEF" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.3eb60bc006ae9a54.css?v=3A5A250C" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
@@ -26,18 +26,15 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
     <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
     <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
     <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
-    <script defer="" src="../_static/runtime.66b619f51b746382.bundle.js?v=C3F69EE5"></script>
+    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
     <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
-    <script defer="" src="../_static/runestone.ecc6dff5cad8b815.bundle.js?v=AE959292"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
@@ -73,7 +70,7 @@
   eBookConfig.useRunestoneServices = false;
   eBookConfig.python3 = true;
   eBookConfig.basecourse = 'CS30';
-  eBookConfig.runestone_version = '6.6.2';
+  eBookConfig.runestone_version = '6.2.2';
 </script>
 
 
@@ -224,18 +221,18 @@
 <div class="container" id="main-content">
   
   <section id="javascript-data-types">
-<h1>JavaScript Data Types<a class="headerlink" href="#javascript-data-types" title="Permalink to this heading">¶</a></h1>
-<aside class="topic">
+<h1>JavaScript Data Types<a class="headerlink" href="#javascript-data-types" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
 <p class="topic-title">Quick Overview of Day</p>
 <p>Discuss JavaScript data types. Stick to primitive-ish types (number, string, boolean).</p>
-</aside>
+</div>
 <section id="checking-data-types">
-<h2>Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this heading">¶</a></h2>
+<h2>Checking Data Types<a class="headerlink" href="#checking-data-types" title="Permalink to this headline">¶</a></h2>
 <p>If you aren’t sure what the data type of something is, you can check it using the <code class="docutils literal notranslate"><span class="pre">typeof</span></code> command. This works on both values (a piece of data) and variables (a container that holds a value).</p>
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=checkingDataTypes data-question_label="1">
-<div id=checkingDataTypes_question class="ac_question">
+<div id=checkingDataTypes_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="javascript" id="checkingDataTypes_editor" 
@@ -251,7 +248,7 @@ console.log(typeof "21")
 <p>Where did the result of the <code class="docutils literal notranslate"><span class="pre">console.log(typeof</span> <span class="pre">5)</span></code> go? Your web browser has a console built into it. Find it now, and you’ll see the missing console.log call. You may want to use <code class="docutils literal notranslate"><span class="pre">console.log()</span></code> when debugging your projects.</p>
 </section>
 <section id="special-number-values">
-<h2>Special Number Values<a class="headerlink" href="#special-number-values" title="Permalink to this heading">¶</a></h2>
+<h2>Special Number Values<a class="headerlink" href="#special-number-values" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">NaN</span></code>, which is the result doing something mathematically goofy, like dividing a string by a number. Try it in the console.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, which results when the value of a number is larger than 1.79769313486231570e+308. There’s going to be some weird math going on if you use it, so be careful… <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">MDN docs</a></p></li>
@@ -259,7 +256,7 @@ console.log(typeof "21")
 </ul>
 </section>
 <section id="converting-between-data-types">
-<h2>Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this heading">¶</a></h2>
+<h2>Converting Between Data Types<a class="headerlink" href="#converting-between-data-types" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes you might need to convert from one data type to another. You can use the following functions to <strong>type cast</strong> data:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">String(x)</span></code> to convert <em>x</em> to a string</p></li>
@@ -269,7 +266,7 @@ console.log(typeof "21")
 
 <div class="runestone explainer ac_section ">
 <div data-component="activecode" id=castingDataTypes data-question_label="2">
-<div id=castingDataTypes_question class="ac_question">
+<div id=castingDataTypes_question class="ac_question col-md-12">
 
 </div>
 <textarea data-lang="javascript" id="castingDataTypes_editor" 
@@ -293,14 +290,14 @@ console.log(typeof d);
 </div>
 </section>
 <section id="important-stuff">
-<h2>Important Stuff<a class="headerlink" href="#important-stuff" title="Permalink to this heading">¶</a></h2>
+<h2>Important Stuff<a class="headerlink" href="#important-stuff" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">number</span></code>, <code class="docutils literal notranslate"><span class="pre">string</span></code> and <code class="docutils literal notranslate"><span class="pre">boolean</span></code> are <em>mostly</em> primitive data types in JavaScript (only mostly, though, since they do have methods; they are immutable, though)</p></li>
 <li><p>all other data can be considered objects. We’ll get into what that means in a few weeks…</p></li>
 </ul>
 </section>
 <section id="number-data-type">
-<h2>Number Data Type<a class="headerlink" href="#number-data-type" title="Permalink to this heading">¶</a></h2>
+<h2>Number Data Type<a class="headerlink" href="#number-data-type" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>aren’t different types for <code class="docutils literal notranslate"><span class="pre">int</span></code> and <code class="docutils literal notranslate"><span class="pre">float</span></code>, everything numeric is just a <code class="docutils literal notranslate"><span class="pre">number</span></code></p></li>
 <li><dl class="simple">
@@ -320,7 +317,7 @@ console.log(typeof d);
 </ul>
 </section>
 <section id="string-data-type">
-<h2>String Data Type<a class="headerlink" href="#string-data-type" title="Permalink to this heading">¶</a></h2>
+<h2>String Data Type<a class="headerlink" href="#string-data-type" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>stick with double quotes (single works too, but convention is to use double)</p></li>
 <li><p>note that comparison is by value, not reference; so “S” + “a” + “s” + “k” === “Sask”</p></li>
@@ -328,71 +325,71 @@ console.log(typeof d);
 </ul>
 </section>
 <section id="objects">
-<span id="objects-as-containers-ref"></span><h2>Objects<a class="headerlink" href="#objects" title="Permalink to this heading">¶</a></h2>
+<span id="objects-as-containers-ref"></span><h2>Objects<a class="headerlink" href="#objects" title="Permalink to this headline">¶</a></h2>
 <p>Everything else in JS is an <strong>object</strong>. Think of an object as a container of properties. This will make more sense with an example or two:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">student</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Aaron&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">17</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">student</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Aaron&quot;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mf">17</span>
 <span class="p">};</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span><span class="w">         </span><span class="c1">// &quot;Aaron&quot;</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span><span class="w">      </span><span class="c1">// &quot;Aaron&quot;</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span><span class="w">          </span><span class="c1">// 17</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">])</span><span class="w">       </span><span class="c1">// 17</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">)</span><span class="w"> </span><span class="c1">// undefined</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>         <span class="c1">// &quot;Aaron&quot;</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>      <span class="c1">// &quot;Aaron&quot;</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>          <span class="c1">// 17</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">])</span>       <span class="c1">// 17</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">)</span> <span class="c1">// undefined</span>
 </pre></div>
 </div>
 <p>Although you can use <code class="docutils literal notranslate"><span class="pre">.</span></code> or <code class="docutils literal notranslate"><span class="pre">[]</span></code> to access properties of an object, the <code class="docutils literal notranslate"><span class="pre">.</span></code> syntax is preferred.</p>
 <p>Another example:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">circle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">radius</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">circle</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">x</span><span class="o">:</span> <span class="mf">200</span><span class="p">,</span>
+    <span class="nx">y</span><span class="o">:</span> <span class="mf">300</span><span class="p">,</span>
+    <span class="nx">radius</span><span class="o">:</span> <span class="mf">50</span>
 <span class="p">};</span>
 
-<span class="nx">circle</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mouseX</span><span class="p">;</span>
-<span class="nx">circle</span><span class="p">.</span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mouseY</span><span class="p">;</span>
-<span class="nx">ellipse</span><span class="p">(</span><span class="nx">circle</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">circle</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span><span class="w"> </span><span class="nx">circle</span><span class="p">.</span><span class="nx">radius</span><span class="p">,</span><span class="w"> </span><span class="nx">circle</span><span class="p">.</span><span class="nx">radius</span><span class="p">);</span>
+<span class="nx">circle</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">mouseX</span><span class="p">;</span>
+<span class="nx">circle</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="nx">mouseY</span><span class="p">;</span>
+<span class="nx">ellipse</span><span class="p">(</span><span class="nx">circle</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">circle</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">circle</span><span class="p">.</span><span class="nx">radius</span><span class="p">,</span> <span class="nx">circle</span><span class="p">.</span><span class="nx">radius</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>To update or add a value to an object:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">student</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Aaron&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">17</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">student</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Aaron&quot;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mf">17</span>
 <span class="p">};</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span><span class="w">  </span><span class="c1">// 17</span>
-<span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">18</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span><span class="w">  </span><span class="c1">// 18</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>  <span class="c1">// 17</span>
+<span class="nx">student</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mf">18</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>  <span class="c1">// 18</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">)</span><span class="w"> </span><span class="c1">// undefined</span>
-<span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Jan 1&quot;</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">)</span><span class="w"> </span><span class="c1">// &quot;Jan 1&quot;</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">)</span> <span class="c1">// undefined</span>
+<span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span> <span class="o">=</span> <span class="s2">&quot;Jan 1&quot;</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">)</span> <span class="c1">// &quot;Jan 1&quot;</span>
 </pre></div>
 </div>
 <p>Objects are passed by reference, not copied (time for a memory drawing on the whiteboard!). Consider:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">student</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Aaron&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">17</span><span class="p">,</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">student</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Aaron&quot;</span><span class="p">,</span>
+    <span class="nx">age</span><span class="o">:</span> <span class="mf">17</span><span class="p">,</span>
 <span class="p">};</span>
 
-<span class="nx">anotherStudent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">student</span><span class="p">;</span>
-<span class="nx">anotherStudent</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Catherine&quot;</span><span class="p">;</span>
+<span class="nx">anotherStudent</span> <span class="o">=</span> <span class="nx">student</span><span class="p">;</span>
+<span class="nx">anotherStudent</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;Catherine&quot;</span><span class="p">;</span>
 
-<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="c1">// Catherine</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span> <span class="c1">// Catherine</span>
 </pre></div>
 </div>
 <p>Notice that this is very different than how a primitive (immutable) data type works. These are copied, not passed by reference:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">42</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">anotherNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">number</span><span class="p">;</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mf">42</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">anotherNumber</span> <span class="o">=</span> <span class="nx">number</span><span class="p">;</span>
 
-<span class="nx">anotherNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">number</span><span class="p">;</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w">           </span><span class="c1">// 42</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">anotherNumber</span><span class="p">)</span><span class="w">    </span><span class="c1">// 42</span>
+<span class="nx">anotherNumber</span> <span class="o">=</span> <span class="nx">number</span><span class="p">;</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>           <span class="c1">// 42</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">anotherNumber</span><span class="p">)</span>    <span class="c1">// 42</span>
 
-<span class="nx">anotherNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span><span class="p">;</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span><span class="w">           </span><span class="c1">// 42</span>
-<span class="nx">print</span><span class="p">(</span><span class="nx">anotherNumber</span><span class="p">)</span><span class="w">    </span><span class="c1">// 15</span>
+<span class="nx">anotherNumber</span> <span class="o">=</span> <span class="mf">15</span><span class="p">;</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>           <span class="c1">// 42</span>
+<span class="nx">print</span><span class="p">(</span><span class="nx">anotherNumber</span><span class="p">)</span>    <span class="c1">// 15</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -401,31 +398,31 @@ console.log(typeof d);
 </div>
 </section>
 <section id="arrays">
-<h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading">¶</a></h2>
+<h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h2>
 <p>Very similar to lists in Python. <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Find out more from MDN reference</a></p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">groceryList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;apples&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;oranges&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;peaches&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;milk&quot;</span><span class="p">];</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">groceryList</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Don&#39;t forget to buy &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">item</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">groceryList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apples&quot;</span><span class="p">,</span> <span class="s2">&quot;oranges&quot;</span><span class="p">,</span> <span class="s2">&quot;peaches&quot;</span><span class="p">,</span> <span class="s2">&quot;milk&quot;</span><span class="p">];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">item</span> <span class="k">of</span> <span class="nx">groceryList</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Don&#39;t forget to buy &quot;</span> <span class="o">+</span> <span class="nx">item</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Can also iterate using the length property of the array:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">groceryList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;apples&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;oranges&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;peaches&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;milk&quot;</span><span class="p">];</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">groceryList</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Don&#39;t forget to buy &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">groceryList</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">groceryList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apples&quot;</span><span class="p">,</span> <span class="s2">&quot;oranges&quot;</span><span class="p">,</span> <span class="s2">&quot;peaches&quot;</span><span class="p">,</span> <span class="s2">&quot;milk&quot;</span><span class="p">];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">groceryList</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">print</span><span class="p">(</span><span class="s2">&quot;Don&#39;t forget to buy &quot;</span> <span class="o">+</span> <span class="nx">groceryList</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Add to end of array with <code class="docutils literal notranslate"><span class="pre">push()</span></code>:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">groceryList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;apples&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;oranges&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;peaches&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;milk&quot;</span><span class="p">];</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">groceryList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apples&quot;</span><span class="p">,</span> <span class="s2">&quot;oranges&quot;</span><span class="p">,</span> <span class="s2">&quot;peaches&quot;</span><span class="p">,</span> <span class="s2">&quot;milk&quot;</span><span class="p">];</span>
 <span class="nx">groceryList</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;bananas&quot;</span><span class="p">);</span>
 
 <span class="c1">// [&quot;apples&quot;, &quot;oranges&quot;, &quot;peaches&quot;, &quot;milk&quot;, &quot;bananas&quot;]</span>
 </pre></div>
 </div>
 <p>Remove from end of array with <code class="docutils literal notranslate"><span class="pre">pop()</span></code>:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">groceryList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;apples&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;oranges&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;peaches&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;milk&quot;</span><span class="p">];</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">lastItem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">groceryList</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">groceryList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apples&quot;</span><span class="p">,</span> <span class="s2">&quot;oranges&quot;</span><span class="p">,</span> <span class="s2">&quot;peaches&quot;</span><span class="p">,</span> <span class="s2">&quot;milk&quot;</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">lastItem</span> <span class="o">=</span> <span class="nx">groceryList</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
 
 <span class="c1">// [&quot;apples&quot;, &quot;oranges&quot;, &quot;peaches&quot;]</span>
 <span class="c1">// lastItem == &quot;milk&quot;</span>
@@ -433,10 +430,10 @@ console.log(typeof d);
 </div>
 <p>You can also remove from the front of the array with <code class="docutils literal notranslate"><span class="pre">shift()</span></code>, and add to the front of the array with <code class="docutils literal notranslate"><span class="pre">unshift()</span></code>.</p>
 <p>Make a copy of an array using:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">groceryList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;apples&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;oranges&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;peaches&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;milk&quot;</span><span class="p">];</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">otherList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">groceryList</span><span class="p">.</span><span class="nx">slice</span><span class="p">()</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">groceryList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apples&quot;</span><span class="p">,</span> <span class="s2">&quot;oranges&quot;</span><span class="p">,</span> <span class="s2">&quot;peaches&quot;</span><span class="p">,</span> <span class="s2">&quot;milk&quot;</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">otherList</span> <span class="o">=</span> <span class="nx">groceryList</span><span class="p">.</span><span class="nx">slice</span><span class="p">()</span>
 
-<span class="nx">otherList</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;pears&quot;</span><span class="p">;</span>
+<span class="nx">otherList</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;pears&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
 </section>
@@ -476,7 +473,7 @@ console.log(typeof d);
     </p>
     <p>
         &copy; Copyright 2018 Dan Schellenberg.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.6.2.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.2.
     </p>
   </div>
 </footer>

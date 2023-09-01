@@ -5468,3 +5468,19 @@ Aborted!
 127.0.0.1 - - [06/Jun/2023 13:00:50] "GET /_static/documentation_options.js HTTP/1.1" 304 -
 
 Aborted!
+127.0.0.1 - - [01/Sep/2023 14:08:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2023 14:08:51] "GET /_static/pygments.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2023 14:08:51] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2023 14:08:51] "GET /_static/basic.css HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2023 14:08:51] "GET /_static/documentation_options.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2023 14:08:52] code 404, message File not found
+127.0.0.1 - - [01/Sep/2023 14:08:52] "GET /runestone/static/favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [01/Sep/2023 14:08:57] "GET /intro/practicequiz.html HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2023 14:08:57] "GET /_static/pygments.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/Sep/2023 14:08:58] "GET /_static/basic.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/Sep/2023 14:08:58] "GET /_static/bootstrap-sphinx.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/Sep/2023 14:08:58] "GET /_static/documentation_options.js HTTP/1.1" 304 -
+127.0.0.1 - - [01/Sep/2023 14:08:58] "GET /_static/338.08c248974d8e2a30.bundle.js HTTP/1.1" 200 -
+127.0.0.1 - - [01/Sep/2023 14:08:58] "GET /_static/106.e36ae7ea63317cae.bundle.js HTTP/1.1" 200 -
+
+Aborted!
