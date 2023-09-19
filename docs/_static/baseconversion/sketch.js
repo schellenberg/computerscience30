@@ -111,6 +111,12 @@ function addButtons() {
   let resetButton = createButton("Generate New Questions");
   resetButton.parent("quiz");
   resetButton.class("btn btn-primary d-block");
+  resetButton.mousePressed(makeNew);
+}
+
+function makeNew() {
+  location.reload();
+  return false;
 }
 
 function answerCheck() {

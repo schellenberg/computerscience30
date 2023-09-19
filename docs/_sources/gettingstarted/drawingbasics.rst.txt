@@ -58,7 +58,7 @@ Create a sketch that makes the following happen:
 
 - displays an image of a character at some x and y location (save these in global variables)
 
-- make the character move according to WASD controls (if demo-ing, start with the function keyTyped, then convert it to boolean checks)
+- make the character move according to WASD controls (keyIsDown will be your friend here...)
 
 
 
