@@ -35,6 +35,7 @@ Getting Started
     gettingstarted/webeditor.rst
     gettingstarted/drawingbasics.rst
     gettingstarted/parsingbooleans.rst
+    gettingstarted/variablescope.rst
     gettingstarted/loops.rst
     gettingstarted/statevariables.rst
 

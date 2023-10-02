@@ -15,39 +15,40 @@ When we use ``let`` and ``const`` assignment statements, JavaScript uses block b
 
 Can you figure out what the image the following code will create?
 
-.. p5:: scopeDemo
-  :width: 400
+.. code-block:: javascript
 
   let a = 80;
 
-    function setup() {
-      createCanvas(700, 400);
-      background(0);
-      stroke(255);
-      noLoop();
-    }
+  function setup() {
+    createCanvas(700, 400);
+    background(0);
+    stroke(255);
+    noLoop();
+  }
 
-    function draw() {
-      line(a, 0, a, height);
+  function draw() {
+    line(a, 0, a, height);
 
-      for (let a = 120; a < 200; a += 2) {
-        line(a, 0, a, height);
-      }
-
-      drawAnotherLine();
-
-      drawYetAnotherLine();
-
-    }
-
-    function drawAnotherLine() {
-      let a = 320;
+    for (let a = 120; a < 200; a += 2) {
       line(a, 0, a, height);
     }
 
-    function drawYetAnotherLine() {
-      line(a + 5, 0, a + 5, height);
-    }
+    drawAnotherLine();
+
+    drawYetAnotherLine();
+
+  }
+
+  function drawAnotherLine() {
+    let a = 320;
+    line(a, 0, a, height);
+  }
+
+  function drawYetAnotherLine() {
+    line(a + 5, 0, a + 5, height);
+  }
+
+Once you thnk you know what it will do, you can `check your guess by opening this code in the p5js web editor <https://editor.p5js.org/schellenberg/sketches/nisJsUpx_>`_.
 
 
 Things to try:
@@ -57,9 +58,3 @@ Things to try:
 - try both of the above again, but this time remove the ``let``, so it simply reads ``a = 50;``
 
 Be sure you understand exactly why each of the results of the situations above happen! You may want to open up the Chrome (or whatever browser you are using) console (F12, or Ctrl-Opt/Alt-J).
-
-
-Practice Quiz
---------------
-
-Needs to be created...

@@ -50,6 +50,8 @@
     <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Loops and Nested Loops" href="loops.html" />
+    <link rel="prev" title="Parsing Booleans" href="parsingbooleans.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -165,7 +167,6 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">Variable Scope</a><ul>
 <li><a class="reference internal" href="#local-vs-global-scope">Local vs Global Scope</a></li>
-<li><a class="reference internal" href="#practice-quiz">Practice Quiz</a></li>
 </ul>
 </li>
 </ul>
@@ -175,6 +176,18 @@
         
         
           
+  <li id="relations-prev" title="Previous Chapter - Parsing Booleans" data-toggle="tooltip">
+    <a href="parsingbooleans.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Loops and Nested Loops' data-toggle="tooltip" >
+    <a href="loops.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
 
 <script type="text/javascript">
   opts = {'placement':'bottom',
@@ -211,46 +224,39 @@
 <p>Use <code class="docutils literal notranslate"><span class="pre">let</span></code> and <code class="docutils literal notranslate"><span class="pre">const</span></code> instead of <code class="docutils literal notranslate"><span class="pre">var</span></code>. <code class="docutils literal notranslate"><span class="pre">let</span></code> gives block based scoping, which is much better (and more consistent with every other language you will learn). If you are using example code that uses <code class="docutils literal notranslate"><span class="pre">var</span></code>, you can <em>usually</em> just look at the example and use <code class="docutils literal notranslate"><span class="pre">let</span></code> anywhere you see <code class="docutils literal notranslate"><span class="pre">var</span></code>.</p>
 <p>When we use <code class="docutils literal notranslate"><span class="pre">let</span></code> and <code class="docutils literal notranslate"><span class="pre">const</span></code> assignment statements, JavaScript uses block based scope. A block begins with a <code class="docutils literal notranslate"><span class="pre">{</span></code>, and ends with a <code class="docutils literal notranslate"><span class="pre">}</span></code>.</p>
 <p>Can you figure out what the image the following code will create?</p>
-<div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">C:\Users\schellenbergd\OneDrive - Saskatoon Public Schools\Documents\computerscience30\_sources\gettingstarted\variablescope.rst</span>, line 18)</p>
-<p>Unknown directive type “p5”.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">p5</span><span class="p">::</span> <span class="n">scopeDemo</span>
-  <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">400</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">80</span><span class="p">;</span>
 
-  <span class="n">let</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">80</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">700</span><span class="p">,</span> <span class="mf">400</span><span class="p">);</span>
+  <span class="nx">background</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+  <span class="nx">stroke</span><span class="p">(</span><span class="mf">255</span><span class="p">);</span>
+  <span class="nx">noLoop</span><span class="p">();</span>
+<span class="p">}</span>
 
-    <span class="n">function</span> <span class="n">setup</span><span class="p">()</span> <span class="p">{</span>
-      <span class="n">createCanvas</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>
-      <span class="n">background</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-      <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
-      <span class="n">noLoop</span><span class="p">();</span>
-    <span class="p">}</span>
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">line</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
 
-    <span class="n">function</span> <span class="n">draw</span><span class="p">()</span> <span class="p">{</span>
-      <span class="n">line</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">120</span><span class="p">;</span> <span class="nx">a</span> <span class="o">&lt;</span> <span class="mf">200</span><span class="p">;</span> <span class="nx">a</span> <span class="o">+=</span> <span class="mf">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">line</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
+  <span class="p">}</span>
 
-      <span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">120</span><span class="p">;</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">;</span> <span class="n">a</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">line</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
-      <span class="p">}</span>
+  <span class="nx">drawAnotherLine</span><span class="p">();</span>
 
-      <span class="n">drawAnotherLine</span><span class="p">();</span>
+  <span class="nx">drawYetAnotherLine</span><span class="p">();</span>
 
-      <span class="n">drawYetAnotherLine</span><span class="p">();</span>
+<span class="p">}</span>
 
-    <span class="p">}</span>
+<span class="kd">function</span> <span class="nx">drawAnotherLine</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">320</span><span class="p">;</span>
+  <span class="nx">line</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
+<span class="p">}</span>
 
-    <span class="n">function</span> <span class="n">drawAnotherLine</span><span class="p">()</span> <span class="p">{</span>
-      <span class="n">let</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">320</span><span class="p">;</span>
-      <span class="n">line</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="n">function</span> <span class="n">drawYetAnotherLine</span><span class="p">()</span> <span class="p">{</span>
-      <span class="n">line</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">5</span><span class="p">,</span> <span class="n">height</span><span class="p">);</span>
-    <span class="p">}</span>
-
+<span class="kd">function</span> <span class="nx">drawYetAnotherLine</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">line</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="mf">5</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">a</span> <span class="o">+</span> <span class="mf">5</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-</div>
+<p>Once you thnk you know what it will do, you can <a class="reference external" href="https://editor.p5js.org/schellenberg/sketches/nisJsUpx_">check your guess by opening this code in the p5js web editor</a>.</p>
 <p>Things to try:</p>
 <ul class="simple">
 <li><p>add a <code class="docutils literal notranslate"><span class="pre">let</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">50;</span></code> as the first line inside of the draw() loop</p></li>
@@ -259,15 +265,24 @@
 </ul>
 <p>Be sure you understand exactly why each of the results of the situations above happen! You may want to open up the Chrome (or whatever browser you are using) console (F12, or Ctrl-Opt/Alt-J).</p>
 </section>
-<section id="practice-quiz">
-<h2>Practice Quiz<a class="headerlink" href="#practice-quiz" title="Permalink to this headline">¶</a></h2>
-<p>Needs to be created…</p>
-</section>
 </section>
 
 
   
       
+  <li id="relations-prev" class="navLink" title='Previous Section - Parsing Booleans' data-toggle="tooltip">
+    <a href="parsingbooleans.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="parsingbooleans.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - Loops and Nested Loops' data-toggle="tooltip" >
+    <a href="loops.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="loops.html" >Next Section - Loops and Nested Loops</a>
 
 <script type="text/javascript">
 
