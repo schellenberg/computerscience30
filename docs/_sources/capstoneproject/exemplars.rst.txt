@@ -18,7 +18,7 @@ Previous Projects
     - `Cookie Clicker game <https://wmcics30.github.io/major-project-2/>`_ 
     - `Cookie Clicker repo <https://github.com/wmcics30/major-project-2>`_ 
 
-- Sudoku (Faith)
+- Flower Shop (Faith)
     - `Flower Shop game <https://wmcics30.github.io/cs30-majorproject-flowers/>`_ 
     - `Flower Shop repo <https://github.com/wmcics30/cs30-majorproject-flowers>`_ 
 
@@ -112,8 +112,8 @@ Previous Projects
     - `Top Down Flying Game repo <https://github.com/wmcics30/CharlieMurph.github.io/tree/master/majorproject>`_ 
 
 - Dungeon Crawler Game (Nick)
-    - `Dungeon Crawler Game <https://wmcics30.github.io/major-project-5/>`_ 
-    - `Dungeon Crawler Game repo <https://github.com/wmcics30/major-project-5/>`_ 
+    - `Dungeon Crawler Style Game <https://wmcics30.github.io/major-project-5/>`_ 
+    - `Dungeon Crawler Style Game repo <https://github.com/wmcics30/major-project-5/>`_ 
 
 - 3D Snake (Jordie) 
     - `3D Snake Game <https://wmcics30.github.io/Major-Project-6/>`_ 
