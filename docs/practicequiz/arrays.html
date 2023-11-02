@@ -268,7 +268,7 @@ nums.push(42);
         <div data-component="fillintheblank" data-question_label="3" id="arrays-practice-quiz-3"  style="visibility: hidden;">
             <p>array-quiz3: What will the following program print?:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">people</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ali&quot;</span><span class="p">,</span> <span class="s2">&quot;Samin&quot;</span><span class="p">,</span> <span class="s2">&quot;Blake&quot;</span><span class="p">,</span> <span class="s2">&quot;Athiela&quot;</span><span class="p">,</span> <span class="s2">&quot;Monica&quot;</span><span class="p">];</span>
-<span class="n">let</span> <span class="n">otherPeople</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="n">people</span><span class="p">];</span>
+<span class="n">let</span> <span class="n">otherPeople</span> <span class="o">=</span> <span class="n">structuredClone</span><span class="p">(</span><span class="n">people</span><span class="p">);</span>
 <span class="n">otherPeople</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Vrajesh&quot;</span><span class="p">;</span>
 <span class="n">otherPeople</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Hannah&quot;</span><span class="p">;</span>
 <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
@@ -276,7 +276,7 @@ nums.push(42);
 </div>
 <input type="text">
         <script type="application/json">
-            [[{"regex": "^\\s*Blake\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! Remember that otherPeople is created by value (that\u2019s what the [\u2026] does).</p>\n"}]]
+            [[{"regex": "^\\s*Blake\\s*$", "regexFlags": "", "feedback": "<p>Great!</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Try again! Remember that otherPeople is created by value (that\u2019s what the structuredClone does).</p>\n"}]]
         </script>
 
         </div>

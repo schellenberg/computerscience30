@@ -48,13 +48,13 @@ Question 3
     What will the following program print?::
 
         let people = ["Ali", "Samin", "Blake", "Athiela", "Monica"];
-        let otherPeople = [...people];
+        let otherPeople = structuredClone(people);
         otherPeople[0] = "Vrajesh";
         otherPeople[2] = "Hannah";
         console.log(people[2])
 
     - :Blake: Great!
-      :.*: Try again! Remember that otherPeople is created by value (that's what the [...] does).
+      :.*: Try again! Remember that otherPeople is created by value (that's what the structuredClone does).
 
 
 Question 4
