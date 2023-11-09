@@ -111,7 +111,6 @@ Fireworks / particle system thing
 - adjust the initial demo to delete Particles that are no longer used
     - iterate backwards through the array so that you do not miss any elements... whiteboard explanation of this idea
 
-
 Ball Bouncing Demo
 --------------------
 
@@ -119,6 +118,16 @@ Ball Bouncing Demo
 - instantiate a bunch of Balls, and have them all bounce around the screen at the same time
 - show how you can make them detect each other, and do a basic collision detection thing. Make the initial collision resolution super simple (maybe just swap dx and dy with the ball you collided with).
 
+
+Connected Nodes Demo
+---------------------
+
+- create a MovingPoint class that makes a circle move around the screen randomly
+    - use Perlin noise for the dx and dy values
+    - make it wrap around the screen
+    - increase the size of the point if the mouse is nearby
+    - instantiate new points wherever the mouse is clicked
+- now have the points connect to each other. If they are "close enough", draw a line between the points
 
 More Demos
 -----------------
