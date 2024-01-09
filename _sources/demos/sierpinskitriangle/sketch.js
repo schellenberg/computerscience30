@@ -50,8 +50,7 @@ function sierpinski(points, degree) {
 }
 
 function getMidpoint(point1, point2) {
-  let xDiff = point1.x + point2.x;
-  let yDiff = point1.y + point2.y;
-  let theMidpoint = {x: xDiff/2, y: yDiff/2};
-  return theMidpoint;
+  let newX = (point1.x + point2.x)/2;
+  let newY = (point1.y + point2.y)/2;
+  return {x: newX, y: newY};
 }
