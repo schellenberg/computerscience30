@@ -92,8 +92,10 @@ Another Mini-Challenge
 
 Create a sketch to make the following happen:
 
-- when the mouse is on the left-hand side of your screen, rectangles should be drawn (all over the screen). The rectangles should be various shades of grey.
-- when the mouse is on the right-hand side of the screen, circles should be drawn all over the screen (in random colours).
+- when the mouse is on the left-hand side of your screen, rectangles should be drawn (on the left half of the screen). The rectangles should be various shades of grey.
+- when the mouse is on the right-hand side of the screen, circles should be drawn on the right side of the screen (in random colours).
+
+It should look something like `this sketch <https://editor.p5js.org/schellenberg/full/T6hYFKDM6>`_.
 
 
 .. .. p5:: drawingBasicsYourTurn3
