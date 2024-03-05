@@ -14,13 +14,25 @@ Previous Projects
     - `Dungeon Crawler game <https://wmcics30.github.io/cs30-final/>`_ 
     - `Dungeon Crawler repo <https://github.com/wmcics30/cs30-final>`_ 
 
+- Just Shapes and Beats Remix (Tareen)
+    - `Shapes and Beats game <https://wmcics30.github.io/CS30-Major-Project-Rythmn/>`_
+    - `Shapes and Beats repo <https://github.com/wmcics30/CS30-Major-Project-Rythmn>`_
+
 - Cookie Clicker (Aric) 
     - `Cookie Clicker game <https://wmcics30.github.io/major-project-2/>`_ 
     - `Cookie Clicker repo <https://github.com/wmcics30/major-project-2>`_ 
 
+- Dungeon Exploration (Robert and Alexander) 
+    - `Dungeon Exploration game <https://wmcics30.github.io/Dungeon-Exploration/>`_ 
+    - `Dungeon Exploration repo <https://github.com/wmcics30/Dungeon-Exploration>`_ 
+
 - Flower Shop (Faith)
     - `Flower Shop game <https://wmcics30.github.io/cs30-majorproject-flowers/>`_ 
     - `Flower Shop repo <https://github.com/wmcics30/cs30-majorproject-flowers>`_ 
+
+- Battle Royale (Dhyan)
+    - `Battle Royale game <https://wmcics30.github.io/cs30-major-project-battle-royale/rough-sketch/>`_
+    - `Battle Royale repo <https://github.com/wmcics30/cs30-major-project-battle-royale>`_
 
 - 4 Pics 1 Word (Katherine)
     - `4 Pics 1 Word game <https://wmcics30.github.io/cs30-major-project-4pics/>`_ 
