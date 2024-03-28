@@ -56,5 +56,5 @@ Once you have GitHub set up on more than one machine (it is a really nice way to
 
 #. **Pull** (from the Repository menu, or the ``Fetch Origin`` button). This gets the most up to date version of your code on the GitHub server, and downloads it onto your machine.
 #. Do **work**
-#. **Commit** your changes. Write a Summary message describing what you've added/changed, then click ``Commit to Master``.
+#. **Commit** your changes. Write a Summary message describing what you've added/changed, then click ``Commit to Main``.
 #. **Push** (from Repository menu, or the ``Fetch Origin`` button). This sends your new changes up to the GitHub servers.
