@@ -95,3 +95,10 @@ Create a bubble object. It should have x, y, diameter, and color properties. Spa
 The demo should look `something like this <https://editor.p5js.org/schellenberg/present/AqvisFhH1>`_.
 
 Change the bubble motion to use Perlin noise. The resulting demo should `now look something like this <https://editor.p5js.org/schellenberg/present/L1JYDY2zE>`_.
+
+
+Class Demo
+-----------------
+
+Create a ``spawnTile(x, y)`` function. It should randomly choose between creating a negative or positive sloped line, with it's length based on a global variable called ``tileSize``. Call this from a nested loop in the setup() function, and ``push()`` tiles all over the screen. It should `look something like this <https://editor.p5js.org/schellenberg/full/t8gkVC15I>`_.
+

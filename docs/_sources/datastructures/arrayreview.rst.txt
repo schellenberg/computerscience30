@@ -39,6 +39,41 @@ To remove a value from end of array:
 
 To add/remove from the front of the array, use ``unshift("something")`` and ``shift()`` respectively.
 
+Removing Values From Anywhere in an Array
+------------------------------------------
+
+To remove a value from any spot within the array, you need to know it's index value. You can use:
+
+.. code-block:: javascript
+
+    let stuff = [42, 56, "hello", 13, true];
+    stuff.splice(2, 1); //remove the element at index 2, just remove 1 element
+    // stuff now equals [42, 56, 13, true]
+
+If you are looping through an array of objects, and you don't know in advance which elements you are going to eliminate (perhaps they are removed after leaving the screen), you can do that using a classic backwards for loop (to avoid index value issues when removing an element from the array -- whiteboard drawing!):
+
+.. code-block:: javascript
+
+    //assume the stuff array is already created, and holds objects that have an isDead property
+    for (let i = stuff.length - 1; i >= 0; i--) {
+        if (stuff[i].isDead) {
+            stuff.splice(i, 1);
+        }
+    }
+
+You can also do this using a ``for-of`` loop, and using the ``.indexOf`` method.
+
+.. code-block:: javascript
+
+    //assume the stuff array is already created, and holds objects that have an isDead property
+    for (let thing of stuff) {
+        if (thing.isDead) {
+            let theIndex = stuff.indexOf(thing);
+            stuff.splice(theIndex, 1);
+        }
+    }
+
+
 Making a Copy of an Array
 --------------------------
 

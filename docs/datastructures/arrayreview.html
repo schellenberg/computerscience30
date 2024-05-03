@@ -167,6 +167,7 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">JavaScript Arrays</a><ul>
 <li><a class="reference internal" href="#basic-array-operations">Basic Array Operations</a></li>
+<li><a class="reference internal" href="#removing-values-from-anywhere-in-an-array">Removing Values From Anywhere in an Array</a></li>
 <li><a class="reference internal" href="#making-a-copy-of-an-array">Making a Copy of an Array</a></li>
 <li><a class="reference internal" href="#creating-an-array-of-a-specific-size">Creating an Array of a Specific Size</a></li>
 <li><a class="reference internal" href="#array-practice-questions">Array Practice Questions</a><ul>
@@ -254,6 +255,34 @@
 </pre></div>
 </div>
 <p>To add/remove from the front of the array, use <code class="docutils literal notranslate"><span class="pre">unshift(&quot;something&quot;)</span></code> and <code class="docutils literal notranslate"><span class="pre">shift()</span></code> respectively.</p>
+</section>
+<section id="removing-values-from-anywhere-in-an-array">
+<h2>Removing Values From Anywhere in an Array<a class="headerlink" href="#removing-values-from-anywhere-in-an-array" title="Permalink to this headline">¶</a></h2>
+<p>To remove a value from any spot within the array, you need to know it’s index value. You can use:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mf">42</span><span class="p">,</span> <span class="mf">56</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="mf">13</span><span class="p">,</span> <span class="kc">true</span><span class="p">];</span>
+<span class="nx">stuff</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span> <span class="c1">//remove the element at index 2, just remove 1 element</span>
+<span class="c1">// stuff now equals [42, 56, 13, true]</span>
+</pre></div>
+</div>
+<p>If you are looping through an array of objects, and you don’t know in advance which elements you are going to eliminate (perhaps they are removed after leaving the screen), you can do that using a classic backwards for loop (to avoid index value issues when removing an element from the array – whiteboard drawing!):</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//assume the stuff array is already created, and holds objects that have an isDead property</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mf">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">stuff</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">isDead</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">stuff</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can also do this using a <code class="docutils literal notranslate"><span class="pre">for-of</span></code> loop, and using the <code class="docutils literal notranslate"><span class="pre">.indexOf</span></code> method.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//assume the stuff array is already created, and holds objects that have an isDead property</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">thing</span> <span class="k">of</span> <span class="nx">stuff</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">thing</span><span class="p">.</span><span class="nx">isDead</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">theIndex</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">thing</span><span class="p">);</span>
+        <span class="nx">stuff</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">theIndex</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 <section id="making-a-copy-of-an-array">
 <h2>Making a Copy of an Array<a class="headerlink" href="#making-a-copy-of-an-array" title="Permalink to this headline">¶</a></h2>
