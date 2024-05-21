@@ -178,3 +178,14 @@ Question 7
     - :undefined: Great!
       :.*: Try again! What does JavaScript send back if you try to access something that doesn't exist?
 
+
+Question 8
+~~~~~~~~~~~
+
+Solve the `mapAB5 CodingJS array problem <https://codingjs.wmcicompsci.ca/exercise.html?name=mapAB5&title=Map-1>`_. 
+
+
+Question 9
+~~~~~~~~~~~
+
+Solve the `pairs2 CodingJS array problem <https://codingjs.wmcicompsci.ca/exercise.html?name=pairs2&title=Map-2>`_. 
