@@ -69,7 +69,7 @@ Create a sketch that makes the following happen:
 
 - when the user clicks on the sketch AND is holding down the ``r`` key, draw a rectangle there
 
-- when the user clicks on the sketch AND is holding down the ``e`` key, draw a circle there
+- when the user clicks on the sketch AND is holding down the ``c`` key, draw a circle there
 
 - when the user hits the "w" key, reset the sketch with a white background
 
