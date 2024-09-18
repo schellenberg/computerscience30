@@ -15,7 +15,10 @@ Create a sketch that accomplishes the following:
 
 You can `open a live version of this here <https://editor.p5js.org/schellenberg/present/-4DTtO-om>`_ 
 
-Have students attempt this first, *before* introducing the idea of a state variable.
+Have students attempt this first, *before* introducing the idea of a state variable. 
+
+.. note:: 
+	This works well as a pair programming exercise. Swap the driver and navigator roles every 5 minutes.
 
 State Variables
 ----------------
