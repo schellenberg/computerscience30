@@ -5,6 +5,7 @@ You may want to take a look at some of the following projects, which were create
 
 - some of the more complicated/impressive projects were started near the beginning of the semester, and worked on throughout the semester
 - some projects have better variable naming conventions, whitespace, comments, meaningful commit messages, etc. than others
+- these are listed in no particular order
 
 
 Previous Projects
@@ -26,9 +27,17 @@ Previous Projects
     - `Dungeon Exploration game <https://wmcics30.github.io/Dungeon-Exploration/>`_ 
     - `Dungeon Exploration repo <https://github.com/wmcics30/Dungeon-Exploration>`_ 
 
+- Physics Engine (Bennett) 
+    - `Physics Engine example game <https://wmcics30.github.io/CS30-physics-engine/public/index.html>`_ 
+    - `Physics Engine repo <https://github.com/wmcics30/CS30-physics-engine>`_
+
 - Flower Shop (Faith)
     - `Flower Shop game <https://wmcics30.github.io/cs30-majorproject-flowers/>`_ 
     - `Flower Shop repo <https://github.com/wmcics30/cs30-majorproject-flowers>`_ 
+
+- Wave Defense Game (Alliam) 
+    - `Wave Defense game <https://wmcics30.github.io/cs30-sds-waves/>`_ 
+    - `Wave Defense repo <https://github.com/wmcics30/cs30-sds-waves>`_
 
 - Battle Royale (Dhyan)
     - `Battle Royale game <https://wmcics30.github.io/cs30-major-project-battle-royale/rough-sketch/>`_
@@ -53,6 +62,10 @@ Previous Projects
 - Weather Forecaster (Eszter)
     - `Weather History/Predictor <https://wmcics30.github.io/cs30-MajorProject/>`_ 
     - `Weather History/Predictor repo <https://github.com/wmcics30/cs30-MajorProject>`_ 
+
+- Offline Dinosaur Game (Yassmin)
+    - `Offline Dinosaur Game <https://wmcics30.github.io/cs30---Major-Project/>`_ 
+    - `Offline Dinosaur Game repo <https://github.com/wmcics30/cs30---Major-Project>`_
 
 - Plants vs Zombies (Elijah) 
     - `Plants vs Zombies game <https://wmcics30.github.io/CS30-MajorProject-plants-vs-zombies/>`_ 

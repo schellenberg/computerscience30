@@ -51,6 +51,7 @@ You can use a traditional for loop like this:
         console.log(`This element is ${stuff[i]}`);
     }
 
+
 There is also a ``for-of`` loop to make this simpler:
 
 .. code-block:: javascript

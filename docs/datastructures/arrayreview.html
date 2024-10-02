@@ -167,6 +167,7 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">JavaScript Arrays</a><ul>
 <li><a class="reference internal" href="#basic-array-operations">Basic Array Operations</a></li>
+<li><a class="reference internal" href="#iterating-through-an-array">Iterating Through an Array</a></li>
 <li><a class="reference internal" href="#removing-values-from-anywhere-in-an-array">Removing Values From Anywhere in an Array</a></li>
 <li><a class="reference internal" href="#making-a-copy-of-an-array">Making a Copy of an Array</a></li>
 <li><a class="reference internal" href="#creating-an-array-of-a-specific-size">Creating an Array of a Specific Size</a></li>
@@ -255,6 +256,23 @@
 </pre></div>
 </div>
 <p>To add/remove from the front of the array, use <code class="docutils literal notranslate"><span class="pre">unshift(&quot;something&quot;)</span></code> and <code class="docutils literal notranslate"><span class="pre">shift()</span></code> respectively.</p>
+</section>
+<section id="iterating-through-an-array">
+<h2>Iterating Through an Array<a class="headerlink" href="#iterating-through-an-array" title="Permalink to this headline">¶</a></h2>
+<p>You can use a traditional for loop like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mf">42</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="mf">15</span><span class="p">,</span> <span class="s2">&quot;bye&quot;</span><span class="p">];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">stuff</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`This element is </span><span class="si">${</span><span class="nx">stuff</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>There is also a <code class="docutils literal notranslate"><span class="pre">for-of</span></code> loop to make this simpler:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">stuff</span> <span class="o">=</span> <span class="p">[</span><span class="mf">42</span><span class="p">,</span> <span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="mf">15</span><span class="p">,</span> <span class="s2">&quot;bye&quot;</span><span class="p">];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">thing</span> <span class="k">of</span> <span class="nx">stuff</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`This element is </span><span class="si">${</span><span class="nx">thing</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 <section id="removing-values-from-anywhere-in-an-array">
 <h2>Removing Values From Anywhere in an Array<a class="headerlink" href="#removing-values-from-anywhere-in-an-array" title="Permalink to this headline">¶</a></h2>
