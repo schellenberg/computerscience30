@@ -39,6 +39,29 @@ To remove a value from end of array:
 
 To add/remove from the front of the array, use ``unshift("something")`` and ``shift()`` respectively.
 
+Iterating Through an Array
+---------------------------
+
+You can use a traditional for loop like this:
+
+.. code-block:: javascript
+
+    let stuff = [42, "hello", 15, "bye"];
+    for (let i = 0; i < stuff.length; i++) {
+        console.log(`This element is ${stuff[i]}`);
+    }
+
+There is also a ``for-of`` loop to make this simpler:
+
+.. code-block:: javascript
+
+    let stuff = [42, "hello", 15, "bye"];
+    for (let thing of stuff) {
+        console.log(`This element is ${thing}`);
+    }
+
+
+
 Removing Values From Anywhere in an Array
 ------------------------------------------
 
