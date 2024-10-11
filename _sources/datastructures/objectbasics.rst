@@ -44,13 +44,13 @@ To update or add a value to an object:
         age: 17
     };
 
-    console.log(student.age)  // 17
-    student.age = 18
-    console.log(student.age)  // 18
+    console.log(student.age);  // 17
+    student.age = 18;
+    console.log(student.age);  // 18
 
-    console.log(student.birthday) // undefined
-    student.birthday = "Jan 1"
-    console.log(student.birthday) // "Jan 1"
+    console.log(student.birthday); // undefined
+    student.birthday = "Jan 1";
+    console.log(student.birthday); // "Jan 1"
 
 Objects are passed by reference, not copied (time for a memory drawing on the whiteboard!). Consider:
 
@@ -74,12 +74,12 @@ Notice that this is very different than how a primitive (immutable) data type wo
     let anotherNumber = number;
 
     anotherNumber = number;
-    console.log(number)           // 42
-    console.log(anotherNumber)    // 42
+    console.log(number);           // 42
+    console.log(anotherNumber);    // 42
 
     anotherNumber = 15;
-    console.log(number)           // 42
-    console.log(anotherNumber)    // 15
+    console.log(number);           // 42
+    console.log(anotherNumber);    // 15
 
 
 .. note::
@@ -90,15 +90,15 @@ Notice that this is very different than how a primitive (immutable) data type wo
 Class Demo
 -----------------
 
-Create a bubble object. It should have x, y, diameter, and color properties. Spawn 20 bubbles in setup, and ``push()`` them all into an array (use a ``spawnBubble()`` function to create and push a bubble object into the array). Use a ``for ... of`` loop inside the draw loop to display each of the bubbles in the array, and move each bubble randomly each frame. Use ``window.setInterval(spawnBubble, 500)`` in the setup function to automatically call the spawnBubble function every half second (500 milliseconds). 
+Create a ``spawnTile(x, y)`` function. It should randomly choose between creating a negative or positive sloped line, with it's length based on a global variable called ``tileSize``. Call this from a nested loop in the setup() function, and ``push()`` tiles all over the screen. It should `look something like this <https://editor.p5js.org/schellenberg/full/t8gkVC15I>`_.
 
-The demo should look `something like this <https://editor.p5js.org/schellenberg/present/AqvisFhH1>`_.
-
-Change the bubble motion to use Perlin noise. The resulting demo should `now look something like this <https://editor.p5js.org/schellenberg/present/L1JYDY2zE>`_.
 
 
 Class Demo
 -----------------
 
-Create a ``spawnTile(x, y)`` function. It should randomly choose between creating a negative or positive sloped line, with it's length based on a global variable called ``tileSize``. Call this from a nested loop in the setup() function, and ``push()`` tiles all over the screen. It should `look something like this <https://editor.p5js.org/schellenberg/full/t8gkVC15I>`_.
+Create a bubble object. It should have x, y, diameter, and color properties. Spawn 20 bubbles in setup, and ``push()`` them all into an array (use a ``spawnBubble()`` function to create and push a bubble object into the array). Use a ``for ... of`` loop inside the draw loop to display each of the bubbles in the array, and move each bubble randomly each frame. Use ``window.setInterval(spawnBubble, 500)`` in the setup function to automatically call the spawnBubble function every half second (500 milliseconds). 
 
+The demo should look `something like this <https://editor.p5js.org/schellenberg/present/AqvisFhH1>`_.
+
+Change the bubble motion to use Perlin noise. The resulting demo should `now look something like this <https://editor.p5js.org/schellenberg/present/L1JYDY2zE>`_.
