@@ -251,13 +251,13 @@
     <span class="nx">age</span><span class="o">:</span> <span class="mf">17</span>
 <span class="p">};</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>  <span class="c1">// 17</span>
-<span class="nx">student</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mf">18</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>  <span class="c1">// 18</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>  <span class="c1">// 17</span>
+<span class="nx">student</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mf">18</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>  <span class="c1">// 18</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">)</span> <span class="c1">// undefined</span>
-<span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span> <span class="o">=</span> <span class="s2">&quot;Jan 1&quot;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">)</span> <span class="c1">// &quot;Jan 1&quot;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">);</span> <span class="c1">// undefined</span>
+<span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span> <span class="o">=</span> <span class="s2">&quot;Jan 1&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">birthday</span><span class="p">);</span> <span class="c1">// &quot;Jan 1&quot;</span>
 </pre></div>
 </div>
 <p>Objects are passed by reference, not copied (time for a memory drawing on the whiteboard!). Consider:</p>
@@ -277,12 +277,12 @@
 <span class="kd">let</span> <span class="nx">anotherNumber</span> <span class="o">=</span> <span class="nx">number</span><span class="p">;</span>
 
 <span class="nx">anotherNumber</span> <span class="o">=</span> <span class="nx">number</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>           <span class="c1">// 42</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">anotherNumber</span><span class="p">)</span>    <span class="c1">// 42</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">);</span>           <span class="c1">// 42</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">anotherNumber</span><span class="p">);</span>    <span class="c1">// 42</span>
 
 <span class="nx">anotherNumber</span> <span class="o">=</span> <span class="mf">15</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span>           <span class="c1">// 42</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">anotherNumber</span><span class="p">)</span>    <span class="c1">// 15</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">);</span>           <span class="c1">// 42</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">anotherNumber</span><span class="p">);</span>    <span class="c1">// 15</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -291,13 +291,13 @@
 </div>
 <section id="class-demo">
 <h2>Class Demo<a class="headerlink" href="#class-demo" title="Permalink to this headline">¶</a></h2>
-<p>Create a bubble object. It should have x, y, diameter, and color properties. Spawn 20 bubbles in setup, and <code class="docutils literal notranslate"><span class="pre">push()</span></code> them all into an array (use a <code class="docutils literal notranslate"><span class="pre">spawnBubble()</span></code> function to create and push a bubble object into the array). Use a <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">...</span> <span class="pre">of</span></code> loop inside the draw loop to display each of the bubbles in the array, and move each bubble randomly each frame. Use <code class="docutils literal notranslate"><span class="pre">window.setInterval(spawnBubble,</span> <span class="pre">500)</span></code> in the setup function to automatically call the spawnBubble function every half second (500 milliseconds).</p>
-<p>The demo should look <a class="reference external" href="https://editor.p5js.org/schellenberg/present/AqvisFhH1">something like this</a>.</p>
-<p>Change the bubble motion to use Perlin noise. The resulting demo should <a class="reference external" href="https://editor.p5js.org/schellenberg/present/L1JYDY2zE">now look something like this</a>.</p>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">spawnTile(x,</span> <span class="pre">y)</span></code> function. It should randomly choose between creating a negative or positive sloped line, with it’s length based on a global variable called <code class="docutils literal notranslate"><span class="pre">tileSize</span></code>. Call this from a nested loop in the setup() function, and <code class="docutils literal notranslate"><span class="pre">push()</span></code> tiles all over the screen. It should <a class="reference external" href="https://editor.p5js.org/schellenberg/full/t8gkVC15I">look something like this</a>.</p>
 </section>
 <section id="id1">
 <h2>Class Demo<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Create a <code class="docutils literal notranslate"><span class="pre">spawnTile(x,</span> <span class="pre">y)</span></code> function. It should randomly choose between creating a negative or positive sloped line, with it’s length based on a global variable called <code class="docutils literal notranslate"><span class="pre">tileSize</span></code>. Call this from a nested loop in the setup() function, and <code class="docutils literal notranslate"><span class="pre">push()</span></code> tiles all over the screen. It should <a class="reference external" href="https://editor.p5js.org/schellenberg/full/t8gkVC15I">look something like this</a>.</p>
+<p>Create a bubble object. It should have x, y, diameter, and color properties. Spawn 20 bubbles in setup, and <code class="docutils literal notranslate"><span class="pre">push()</span></code> them all into an array (use a <code class="docutils literal notranslate"><span class="pre">spawnBubble()</span></code> function to create and push a bubble object into the array). Use a <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">...</span> <span class="pre">of</span></code> loop inside the draw loop to display each of the bubbles in the array, and move each bubble randomly each frame. Use <code class="docutils literal notranslate"><span class="pre">window.setInterval(spawnBubble,</span> <span class="pre">500)</span></code> in the setup function to automatically call the spawnBubble function every half second (500 milliseconds).</p>
+<p>The demo should look <a class="reference external" href="https://editor.p5js.org/schellenberg/present/AqvisFhH1">something like this</a>.</p>
+<p>Change the bubble motion to use Perlin noise. The resulting demo should <a class="reference external" href="https://editor.p5js.org/schellenberg/present/L1JYDY2zE">now look something like this</a>.</p>
 </section>
 </section>
 
