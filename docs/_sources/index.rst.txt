@@ -46,6 +46,7 @@ Better Development Environment
     :maxdepth: 1
 
     ide/setup.rst
+    ide/debugging.rst
 
 
 Data Structures
