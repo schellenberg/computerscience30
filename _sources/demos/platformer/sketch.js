@@ -4,12 +4,12 @@
 //  - loading platformer level data
 //  - WARNING: You do NOT want to have players/enemies as simply elements in a
 //     grid, if you try to convert this into a functional game. They would move
-//     in a really goofy way...
+//     like characters from a 1980's game.
 //  - tiles are from https://opengameart.org/content/platformer-art-deluxe
 
 let tiles;
 let levelBackground;
-let platform, coin, box, fly, p1, slime, empty;
+let platform, coin, exclamationBox, fly, p1, slime, empty;
 let tilesHigh, tilesWide;
 let tileWidth, tileHeight;
 let levelToLoad;
@@ -26,7 +26,7 @@ function preload() {
   //load tile images
   platform = loadImage("images/platform.png");
   coin = loadImage("images/coin.png");
-  box = loadImage("images/boxItem.png");
+  exclamationBox = loadImage("images/boxItem.png");
   fly = loadImage("images/flyFly1.png");
   p1 = loadImage("images/p1_front.png");
   slime = loadImage("images/slimeWalk1.png");
@@ -76,7 +76,7 @@ function showTile(location, x, y) {
     image(coin, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
   }
   else if (location === "B") {
-    image(box, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
+    image(exclamationBox, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
   }
   else if (location === "F") {
     image(fly, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
