@@ -117,3 +117,13 @@ Question 5
       :.*: Try again! Look at the conditionals in the for loops, and then what is being added to the counter variable.
 
 
+Question 6
+~~~~~~~~~~~
+
+Solve the `rowsWith5 CodingJS array problem <https://codingjs.wmcicompsci.ca/exercise.html?name=rowsWith5&title=2dArray>`_. 
+
+
+Question 7
+~~~~~~~~~~~
+
+Solve the `largestCol3x3 CodingJS array problem <https://codingjs.wmcicompsci.ca/exercise.html?name=largestCol3x3&title=2dArray>`_. 

@@ -128,6 +128,7 @@ Hard code a 2d array sudoku initial grid, putting in 0's wherever you want a bla
 - `count5in2x2 <https://codingjs.wmcicompsci.ca/exercise.html?name=count5in2x2&title=2dArray>`_
 - `findLargest3x3 <https://codingjs.wmcicompsci.ca/exercise.html?name=findLargest3x3&title=2dArray>`_
 - `count2d <https://codingjs.wmcicompsci.ca/exercise.html?name=count2d&title=2dArray>`_
+- `sum2dArray <https://codingjs.wmcicompsci.ca/exercise.html?name=sum2dArray&title=2dArray>`_
 - `count2d5s <https://codingjs.wmcicompsci.ca/exercise.html?name=count2d5s&title=2dArray>`_
 - `findLargest2d <https://codingjs.wmcicompsci.ca/exercise.html?name=findLargest2d&title=2dArray>`_
 - `notFive <https://codingjs.wmcicompsci.ca/exercise.html?name=notFive&title=2dArray>`_
