@@ -29,6 +29,12 @@ To check if a key exists inside a map:
 		console.log(englishToFrench.get("goodbye"));
 	}
 
+To remove a key/value pair from the map:
+
+.. code-block:: javascript
+
+	englishToFrench.delete("goodbye")
+
 
 Note that we can save any type of data inside the value, not just a string. It can be a number, an object, an array, etc. A simple example would be to save coordinates (an x, y pair) into a map as an object...
 
