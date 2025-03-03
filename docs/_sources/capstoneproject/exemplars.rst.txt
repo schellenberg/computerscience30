@@ -27,9 +27,21 @@ Previous Projects
     - `Dungeon Exploration game <https://wmcics30.github.io/Dungeon-Exploration/>`_ 
     - `Dungeon Exploration repo <https://github.com/wmcics30/Dungeon-Exploration>`_ 
 
+- Fire Emblem Clone (Michael)
+    - `Fire Emblem game <https://wmcics30.github.io/major-project-fire-emblem/>`_ 
+    - `Fire Emblem repo <https://github.com/wmcics30/major-project-fire-emblem>`_ 
+
 - Physics Engine (Bennett) 
     - `Physics Engine example game <https://wmcics30.github.io/CS30-physics-engine/public/index.html>`_ 
     - `Physics Engine repo <https://github.com/wmcics30/CS30-physics-engine>`_
+
+- Ping-Ball with Matter.js (Amy)
+    - `Ping-Ball with Matter.js game <https://wmcics30.github.io/major-project-pingball/>`_ 
+    - `Physics Engine repo <https://github.com/wmcics30/major-project-pingball>`_
+
+- Platformer Game with p5play (Angadveer)
+    - `Platformer game <https://wmcics30.github.io/major-project-platformer/>`_ 
+    - `Platformer repo <https://github.com/wmcics30/major-project-platformer>`_
 
 - Flower Shop (Faith)
     - `Flower Shop game <https://wmcics30.github.io/cs30-majorproject-flowers/>`_ 
@@ -38,6 +50,10 @@ Previous Projects
 - Wave Defense Game (Alliam) 
     - `Wave Defense game <https://wmcics30.github.io/cs30-sds-waves/>`_ 
     - `Wave Defense repo <https://github.com/wmcics30/cs30-sds-waves>`_
+
+- Glap.io Clone with Matter.js (Albert)
+    - `Glap.io Clone game <https://wmcics30.github.io/cs30-major-project-glapio/>`_ 
+    - `Glap.io Clone repo <https://github.com/wmcics30/cs30-major-project-glapio>`_
 
 - Battle Royale (Dhyan)
     - `Battle Royale game <https://wmcics30.github.io/cs30-major-project-battle-royale/rough-sketch/>`_
@@ -62,6 +78,10 @@ Previous Projects
 - Weather Forecaster (Eszter)
     - `Weather History/Predictor <https://wmcics30.github.io/cs30-MajorProject/>`_ 
     - `Weather History/Predictor repo <https://github.com/wmcics30/cs30-MajorProject>`_ 
+
+- Procedurally Generated Game (Dmitrii and Oleh)
+    - `Procedurally Generated game <https://wmcics30.github.io/CS30MajorProject//>`_ 
+    - `Procedurally Generated repo <https://github.com/wmcics30/CS30MajorProject>`_ 
 
 - Offline Dinosaur Game (Yassmin)
     - `Offline Dinosaur Game <https://wmcics30.github.io/cs30---Major-Project/>`_ 
