@@ -37,7 +37,7 @@ Previous Projects
 
 - Ping-Ball with Matter.js (Amy)
     - `Ping-Ball with Matter.js game <https://wmcics30.github.io/major-project-pingball/>`_ 
-    - `Physics Engine repo <https://github.com/wmcics30/major-project-pingball>`_
+    - `Ping-Ball with Matter.jsrepo <https://github.com/wmcics30/major-project-pingball>`_
 
 - Platformer Game with p5play (Angadveer)
     - `Platformer game <https://wmcics30.github.io/major-project-platformer/>`_ 
