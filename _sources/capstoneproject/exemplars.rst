@@ -168,3 +168,7 @@ Previous Projects
     - `Alien Shooter Game <https://wmcics30.github.io/major-project-7/>`_ 
     - `Alien Shooter Game repo <https://github.com/wmcics30/major-project-7>`_ 
 
+- WMCI Grade 9 Map Guide (Catherine and Csaba) 
+    - `WMCI Grade 9 Map Guide <https://wmcicompsci.ca/map/>`_ 
+    - no repo available (this was from before we used GitHub)
+
