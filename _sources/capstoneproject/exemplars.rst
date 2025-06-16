@@ -19,6 +19,10 @@ Previous Projects
     - `Shapes and Beats game <https://wmcics30.github.io/CS30-Major-Project-Rythmn/>`_
     - `Shapes and Beats repo <https://github.com/wmcics30/CS30-Major-Project-Rythmn>`_
 
+- Mini-Games Collection (Arbe and Sam)
+    - `Mini Games game <https://wmcics30.github.io/cs30-mini-games/>`_
+    - `Mini Games repo <https://github.com/wmcics30/cs30-mini-games>`_
+
 - Cookie Clicker (Aric) 
     - `Cookie Clicker game <https://wmcics30.github.io/major-project-2/>`_ 
     - `Cookie Clicker repo <https://github.com/wmcics30/major-project-2>`_ 
@@ -46,6 +50,10 @@ Previous Projects
 - Flower Shop (Faith)
     - `Flower Shop game <https://wmcics30.github.io/cs30-majorproject-flowers/>`_ 
     - `Flower Shop repo <https://github.com/wmcics30/cs30-majorproject-flowers>`_ 
+
+- 3D Puzzle Game [using just p5.js] (Judah)
+    - `3D Puzzle game <https://wmcics30.github.io/3d-puzzle-game/>`_ 
+    - `3D Puzzle repo <https://github.com/wmcics30/3d-puzzle-game>`_ 
 
 - Wave Defense Game (Alliam) 
     - `Wave Defense game <https://wmcics30.github.io/cs30-sds-waves/>`_ 
@@ -116,9 +124,9 @@ Previous Projects
     - `Angry Birds Clone game <https://wmcics30.github.io/cs30/>`_ 
     - `Angry Birds Clone repo <https://github.com/wmcics30/cs30>`_ 
 
-- Tetris (Alex)
-    - `Tetris game <https://wmcics30.github.io/cs30-major-project-3/>`_ 
-    - `Tetris repo <https://github.com/wmcics30/cs30-major-project-3>`_ 
+- Tetris (Luke)
+    - `Tetris game <https://wmcics30.github.io/tetris-p5js/>`_ 
+    - `Tetris repo <https://github.com/wmcics30/tetris-p5js>`_ 
 
 - Escape Room (Katie)
     - `Escape Room game <https://wmcics30.github.io/liu-liuz.github.io/majorproject/escape/>`_ 
