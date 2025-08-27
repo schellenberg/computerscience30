@@ -38,6 +38,7 @@ There is a configuration file in our template folder called `project.json` that 
   - other installation options are available on the `Node.js website <https://nodejs.org/en/download>`_ 
 - once Node.js is installed:
   - in VS Code, open Terminal and type ``npm install -g eslint``
+  - if you get an error, you may need to allow scripts to run. Type ``Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser``, hit enter, then try installing eslint again.
   - if you have installation problems with eslint, you can try updating npm [in VS Code, open Terminal and type ``npm install npm@latest -g``]
 
 
