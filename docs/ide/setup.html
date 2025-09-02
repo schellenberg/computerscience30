@@ -246,13 +246,20 @@
 <h3>Optional Additional Feature<a class="headerlink" href="#optional-additional-feature" title="Permalink to this headline">¶</a></h3>
 <p>There is a configuration file in our template folder called <cite>project.json</cite> that helps provide instant feedback about possible problems in your code using a tool called ESLint (for example, warning you that you didn’t declare a variable before using it, or that your indentation is incorrect). Setting up your machine to use this may not be feasible in a computer lab scenario, as it requires admin rights to install <a class="reference external" href="https://nodejs.org">https://nodejs.org</a>. <em>I have pre-installed Node.js on our machines at WMC.</em> If you cannot install Node.js, the VS Code setup  will still work just fine, but you will not get instant feedback from ESLint about possible problems in your code.</p>
 <ul class="simple">
-<li><p>if you haven’t installed Node.js, and are
-- on Windows: in VS Code, open Terminal and type <code class="docutils literal notranslate"><span class="pre">winget</span> <span class="pre">install</span> <span class="pre">Schniz.fnm</span></code>, then once that has completed, type <code class="docutils literal notranslate"><span class="pre">fnm</span> <span class="pre">install</span> <span class="pre">22</span></code>
-- on Mac: in VS Code, open Terminal and type <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">-o-</span> <span class="pre">https://fnm.vercel.app/install</span> <span class="pre">|</span> <span class="pre">bash</span></code>, then once that has completed, type <code class="docutils literal notranslate"><span class="pre">fnm</span> <span class="pre">install</span> <span class="pre">22</span></code>
-- other installation options are available on the <a class="reference external" href="https://nodejs.org/en/download">Node.js website</a></p></li>
-<li><p>once Node.js is installed:
-- in VS Code, open Terminal and type <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">-g</span> <span class="pre">eslint</span></code>
-- if you have installation problems with eslint, you can try updating npm [in VS Code, open Terminal and type <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">npm&#64;latest</span> <span class="pre">-g</span></code>]</p></li>
+<li><p>if you haven’t installed Node.js, and are:</p>
+<ul>
+<li><p>on Windows: in VS Code, open Terminal and type <code class="docutils literal notranslate"><span class="pre">winget</span> <span class="pre">install</span> <span class="pre">Schniz.fnm</span></code>, then once that has completed, type <code class="docutils literal notranslate"><span class="pre">fnm</span> <span class="pre">install</span> <span class="pre">22</span></code></p></li>
+<li><p>on Mac: in VS Code, open Terminal and type <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">-o-</span> <span class="pre">https://fnm.vercel.app/install</span> <span class="pre">|</span> <span class="pre">bash</span></code>, then once that has completed, type <code class="docutils literal notranslate"><span class="pre">fnm</span> <span class="pre">install</span> <span class="pre">22</span></code></p></li>
+<li><p>other installation options are available on the <a class="reference external" href="https://nodejs.org/en/download">Node.js website</a></p></li>
+</ul>
+</li>
+<li><p>once Node.js is installed:</p>
+<ul>
+<li><p>in VS Code, open Terminal and type <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">-g</span> <span class="pre">eslint</span></code></p></li>
+<li><p>if you get an error, you may need to allow scripts to run. Type <code class="docutils literal notranslate"><span class="pre">Set-ExecutionPolicy</span> <span class="pre">-ExecutionPolicy</span> <span class="pre">RemoteSigned</span> <span class="pre">-Scope</span> <span class="pre">CurrentUser</span></code>, hit enter, then try installing eslint again.</p></li>
+<li><p>if you have installation problems with eslint, you can try updating npm [in VS Code, open Terminal and type <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">npm&#64;latest</span> <span class="pre">-g</span></code>]</p></li>
+</ul>
+</li>
 </ul>
 </section>
 </section>
