@@ -18,6 +18,7 @@
   ``cd "C:\Users\schellenbergd\Github no sync\computerscience30"``
   ``poetry env use py -3.10`` (if this fails, get the full path with ``py -3.10 -c "import sys; print(sys.executable)"``, and then point poetry to that -- ask AI for help if needed)
 - run ``poetry install --no-root`` in the cs30 repo folder
+- run ``poetry run pip install --upgrade pip setuptools wheel`` (maybe pick a specific version later?)
 
 ## Build Instructions
 - ``cd`` to cs30 repo folder, something like ``C:\Users\schellenbergd\Github no sync\computerscience30``
