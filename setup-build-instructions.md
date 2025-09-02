@@ -17,7 +17,7 @@
 - tell Poetry to use Python 3.10
   ``cd "C:\Users\schellenbergd\Github no sync\computerscience30"``
   ``poetry env use py -3.10`` (if this fails, get the full path with ``py -3.10 -c "import sys; print(sys.executable)"``, and then point poetry to that -- ask AI for help if needed)
-- run ``poetry install`` in the cs30 repo folder
+- run ``poetry install --no-root`` in the cs30 repo folder
 
 ## Build Instructions
 - ``cd`` to cs30 repo folder, something like ``C:\Users\schellenbergd\Github no sync\computerscience30``
