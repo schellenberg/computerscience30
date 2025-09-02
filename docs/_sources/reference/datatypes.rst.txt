@@ -75,9 +75,13 @@ Number Data Type
 	- ``Infinity``, which results when the value of a number is larger than 1.79769313486231570e+308. There's going to be some weird math going on if you use it, so be careful... `MDN docs <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity>`_
 	- can use exponential/scientific notation if you'd like: ``5e3`` === ``5000``, and ``6e-4`` === ``0.0006``
 - you can use some handy functions available through the ``Math`` object. Some that you will probably want to use are:
+
   - ``let nearestInt = Math.round(1.55); // nearestInt is now 2``
+
   - ``let nextLowestInt = Math.floor(1.55); // nextLowestInt is now 1``
+
   - ``let nextHighestInt = Math.ceil(1.2); //nextHighestInt is now 2``
+
 - if you want to divide, but only keep the integer portion of the result, you could do that using something like ``Math.floor(42 / 10);``
 
 String Data Type
