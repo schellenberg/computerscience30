@@ -232,9 +232,11 @@
 
 <span class="k">if</span> <span class="p">(</span><span class="n">beta</span> <span class="o">&amp;&amp;</span> <span class="n">epsilon</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;boat&quot;</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">gamma</span> <span class="o">||</span> <span class="n">delta</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">gamma</span> <span class="o">||</span> <span class="n">delta</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;car&quot;</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
     <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;train&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -260,9 +262,11 @@ let epsilon = false;
 
 if (beta &amp;&amp; !epsilon) {
     console.log(&quot;boat&quot;);
-} else if (!gamma || delta) {
+}
+else if (!gamma || delta) {
     console.log(&quot;car&quot;);
-} else {
+}
+else {
     console.log(&quot;train&quot;);
 }
 </pre></div>
@@ -288,9 +292,11 @@ let epsilon = false;
 
 if (!beta &amp;&amp; delta || gamma) {
     console.log(&quot;boat&quot;);
-} else if (!gamma || delta &amp;&amp; epsilon) {
+}
+else if (!gamma || delta &amp;&amp; epsilon) {
     console.log(&quot;car&quot;);
-} else {
+}
+else {
     console.log(&quot;train&quot;);
 }
 </pre></div>
@@ -316,9 +322,11 @@ let epsilon = false;
 
 if (gamma &amp;&amp; !epsilon || beta &amp;&amp; !delta) {
     console.log(&quot;boat&quot;);
-} else if (!gamma &amp;&amp; epsilon || delta &amp;&amp; gamma) {
+}
+else if (!gamma &amp;&amp; epsilon || delta &amp;&amp; gamma) {
     console.log(&quot;car&quot;);
-} else {
+}
+else {
     console.log(&quot;train&quot;);
 }
 </pre></div>
@@ -344,9 +352,11 @@ let epsilon = false;
 
 if (!gamma || (epsilon &amp;&amp; !epsilon || beta &amp;&amp; !delta &amp;&amp; gamma || !delta)) {
     console.log(&quot;boat&quot;);
-} else if (gamma || !epsilon) {
+}
+else if (gamma || !epsilon) {
     console.log(&quot;car&quot;);
-} else {
+}
+else {
     console.log(&quot;train&quot;);
 }
 </pre></div>

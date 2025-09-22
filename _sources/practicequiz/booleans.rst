@@ -23,9 +23,11 @@ Question 1
 
         if (beta && epsilon) {
             console.log("boat");
-        } else if (gamma || delta) {
+        } 
+        else if (gamma || delta) {
             console.log("car");
-        } else {
+        } 
+        else {
             console.log("train");
         }
 
@@ -47,9 +49,11 @@ Question 2
 
         if (beta && !epsilon) {
             console.log("boat");
-        } else if (!gamma || delta) {
+        } 
+        else if (!gamma || delta) {
             console.log("car");
-        } else {
+        } 
+        else {
             console.log("train");
         }
 
@@ -71,9 +75,11 @@ Question 3
 
         if (!beta && delta || gamma) {
             console.log("boat");
-        } else if (!gamma || delta && epsilon) {
+        } 
+        else if (!gamma || delta && epsilon) {
             console.log("car");
-        } else {
+        } 
+        else {
             console.log("train");
         }
 
@@ -95,9 +101,11 @@ Question 4
 
         if (gamma && !epsilon || beta && !delta) {
             console.log("boat");
-        } else if (!gamma && epsilon || delta && gamma) {
+        } 
+        else if (!gamma && epsilon || delta && gamma) {
             console.log("car");
-        } else {
+        } 
+        else {
             console.log("train");
         }
 
@@ -119,9 +127,11 @@ Question 5
 
         if (!gamma || (epsilon && !epsilon || beta && !delta && gamma || !delta)) {
             console.log("boat");
-        } else if (gamma || !epsilon) {
+        } 
+        else if (gamma || !epsilon) {
             console.log("car");
-        } else {
+        } 
+        else {
             console.log("train");
         }
 
