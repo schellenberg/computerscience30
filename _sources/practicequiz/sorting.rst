@@ -37,8 +37,8 @@ Question 2
     :answer_d: [1, 9, 19, 7, 3, 10, 13, 15, 8, 12]
     :feedback_a:  This answer represents three swaps.  A pass means that you continue swapping all the way to the end of the list.
     :feedback_b:  Very Good
-    :feedback_c: A bubble sort contines to swap numbers up to index position passnum.  But remember that passnum starts at the length of the list - 1.
-    :feedback_d: You have been doing an insertion sort, not a bubble sort.
+    :feedback_c: Try again.
+    :feedback_d: Try again.
 
     Suppose you have the following list of numbers to sort:
     [19, 1, 9, 7, 3, 10, 13, 15, 8, 12] 
@@ -51,17 +51,17 @@ Question 3
 
 .. mchoice:: sorting-practice-quiz-3
     :correct: d
-    :answer_a: [7, 11, 12, 1, 6, 14, 8, 18, 19, 20]
-    :answer_b: [7, 11, 12, 14, 19, 1, 6, 18, 8, 20]
+    :answer_a: [7, 11, 1, 6, 12, 8, 14, 18, 19, 20]
+    :answer_b: [7, 11, 12, 14, 19, 1, 6, 20, 8, 18]
     :answer_c: [11, 7, 12, 14, 1, 6, 8, 18, 19, 20]
     :answer_d: [11, 7, 12, 14, 8, 1, 6, 18, 19, 20]
-    :feedback_a: Selection sort is similar to bubble sort (which you appear to have done) but uses fewer swaps
-    :feedback_b: This looks like an insertion sort.
+    :feedback_a: Selection sort is similar to bubble sort (which you appear to have done) but uses fewer swaps.
+    :feedback_b: Try again.
     :feedback_c: This one looks similar to the correct answer but instead of swapping the numbers have been shifted to the left to make room for the correct numbers.
     :feedback_d: Selection sort improves upon bubble sort by making fewer swaps.
 
     Suppose you have the following list of numbers to sort:
-    [11, 7, 12, 14, 19, 1, 6, 18, 8, 20] 
+    [11, 7, 12, 14, 19, 1, 6, 20, 8, 18] 
     Which list represents the partially sorted list after three complete **passes** of selection sort?
 
 
