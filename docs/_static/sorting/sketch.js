@@ -1,11 +1,7 @@
 // DOM demo with sorting
 // Dan Schellenberg
 // Dec 11, 2019
-
-// this is indented to show two major ideas:
-// - how to use some of the DOM manipulation functions in p5js
-// - using bootstrap (https://getbootstrap.com/) to style a page, instead of
-//    using our own CSS (note that bootstrap's css is linked to in index.html)
+// added removing spaces from the answer
 
 let questionInputs;
 let answers;
@@ -67,7 +63,7 @@ function createQuestion(whichAlgorithm, swapOrPass) {
       };
       answers.push(answerData);
 
-      message = "Given the array <code>[" + str(theArray) + "]</code>, what is the state of the array after pass number " + thingToFind + " when using <strong>bubble</strong> sort?<br>Write your answer in the form <code>[3,7,12,4,8,5]</code> (with no spaces between the values of the array).";
+      message = "Given the array <code>[" + str(theArray) + "]</code>, what is the state of the array after pass number " + thingToFind + " when using <strong>bubble</strong> sort?<br>Write your answer in the form <code>[3,7,12,4,8,5]</code>.";
     }
   }
 
@@ -105,7 +101,7 @@ function createQuestion(whichAlgorithm, swapOrPass) {
       };
       answers.push(answerData);
 
-      message = "Given the array <code>[" + str(theArray) + "]</code>, what is the state of the array after pass number " + thingToFind + " when using <strong>selection</strong> sort?<br>Write your answer in the form <code>[3,7,12,4,8,5]</code> (with no spaces between the values of the array).";
+      message = "Given the array <code>[" + str(theArray) + "]</code>, what is the state of the array after pass number " + thingToFind + " when using <strong>selection</strong> sort?<br>Write your answer in the form <code>[3,7,12,4,8,5]</code>.";
     }
   }
 
@@ -180,8 +176,8 @@ function answerCheck() {
       }
     }
     else if (answers[i].type === "pass") {
-      // convert hexadecimal value to lowercase
-      if (usersValue === stringVersionOfArray(theAnswer)) {
+      // normalize both values to ignore spacing differences
+      if (normalizeArrayString(usersValue) === normalizeArrayString(stringVersionOfArray(theAnswer))) {
         answerIsRight = true;
       }
     }
@@ -211,6 +207,11 @@ function stringVersionOfArray(someArray) {
   }
   let cleanedString = theString.slice(0, -1) + "]";
   return cleanedString;
+}
+
+function normalizeArrayString(input) {
+  // Remove all whitespace from the input string
+  return input.replace(/\s/g, '');
 }
 
 function generateRandomArray(howManyNumbers, maxSize) {

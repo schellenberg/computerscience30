@@ -56,7 +56,7 @@ Question 3
     :answer_c: [11, 7, 12, 14, 1, 6, 8, 18, 19, 20]
     :answer_d: [11, 7, 12, 14, 8, 1, 6, 18, 19, 20]
     :feedback_a: Selection sort is similar to bubble sort (which you appear to have done) but uses fewer swaps.
-    :feedback_b: This looks like an insertion sort.
+    :feedback_b: Try again.
     :feedback_c: This one looks similar to the correct answer but instead of swapping the numbers have been shifted to the left to make room for the correct numbers.
     :feedback_d: Selection sort improves upon bubble sort by making fewer swaps.
 
