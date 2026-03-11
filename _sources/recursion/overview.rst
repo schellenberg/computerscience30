@@ -20,6 +20,7 @@ Practice problems from `CodingJS Recursion-1 <https://codingjs.wmcicompsci.ca/>`
 - `fibonacci <https://codingjs.wmcicompsci.ca/exercise.html?name=fibonacci&title=Recursion-1>`_ 
 - `triangle <https://codingjs.wmcicompsci.ca/exercise.html?name=triangle&title=Recursion-1>`_ 
 - `bunnyEars2 <https://codingjs.wmcicompsci.ca/exercise.html?name=bunnyEars2&title=Recursion-1>`_ 
+- `sumDigits1 <https://codingjs.wmcicompsci.ca/exercise.html?name=sumDigits1&title=Recursion-1>`_ 
 
 
 Sierpinski Triangle
