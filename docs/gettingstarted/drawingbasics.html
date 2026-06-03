@@ -169,6 +169,7 @@
 <li><a class="reference internal" href="#class-demo">Class Demo</a></li>
 <li><a class="reference internal" href="#to-remember">To Remember</a></li>
 <li><a class="reference internal" href="#p5js-helpful-variables">p5js helpful variables</a></li>
+<li><a class="reference internal" href="#async-and-await-for-loading-images">Async and Await (for Loading Images)</a></li>
 <li><a class="reference internal" href="#your-turn">Your Turn</a></li>
 <li><a class="reference internal" href="#start-of-class-mini-challenge">Start of Class Mini-Challenge</a></li>
 <li><a class="reference internal" href="#take-it-further">Take it Further</a></li>
@@ -233,6 +234,7 @@
 <ul class="simple">
 <li><p>displays a circle on the screen (talk about the coordinate plane)</p></li>
 <li><p>update the location of the circle so that it goes wherever the mouse goes (<code class="docutils literal notranslate"><span class="pre">mouseX</span></code> and <code class="docutils literal notranslate"><span class="pre">mouseY</span></code>)</p></li>
+<li><p>talk about why we use <code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">function</span> <span class="pre">setup()</span></code> (ensures any <code class="docutils literal notranslate"><span class="pre">await</span></code> calls in setup are completed before the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> loop starts)</p></li>
 <li><p>use <code class="docutils literal notranslate"><span class="pre">console.log()</span></code> to provide diagnostic messages (super useful when debugging your code)</p></li>
 <li><p>make the circle start to move around the screen (global variables for x and y location, and x and y velocity; conditional statements to bounce when colliding with walls)</p></li>
 <li><p>have the circle change to a random color every time it collides with a wall</p></li>
@@ -267,6 +269,34 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">mouseX</span></code> - Current horizontal location of the mouse</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mouseY</span></code> - Current vertical location of the mouse</p></li>
 </ul>
+</section>
+<section id="async-and-await-for-loading-images">
+<h2>Async and Await (for Loading Images)<a class="headerlink" href="#async-and-await-for-loading-images" title="Permalink to this headline">¶</a></h2>
+<p>When we load an image on the web, it can take a little time. Your program does not want to freeze while waiting, so loading is asynchronous (happens in the background).</p>
+<p>Think of it like this:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">async</span></code> means “this function might need to wait for something”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">await</span></code> means “pause here until this one thing is ready”.</p></li>
+</ul>
+<p>In p5, this is useful when you want your image (or other data) to be fully loaded before the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> loop starts using it.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">someImage</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mf">100</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="mf">100</span><span class="p">;</span>
+
+<span class="k">async</span> <span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">createCanvas</span><span class="p">(</span><span class="nx">windowWidth</span><span class="p">,</span> <span class="nx">windowHeight</span><span class="p">);</span>
+
+    <span class="c1">// wait until the random image finishes loading.</span>
+    <span class="nx">someImage</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">loadImage</span><span class="p">(</span><span class="s2">&quot;https://picsum.photos/200&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">background</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">);</span>
+    <span class="nx">image</span><span class="p">(</span><span class="nx">someImage</span><span class="p">,</span> <span class="nx">mouseX</span><span class="p">,</span> <span class="nx">mouseY</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Here is a <a class="reference external" href="https://editor.p5js.org/schellenberg/sketches/4TVRJrn-P">live version of that image loading sketch</a>.</p>
 </section>
 <section id="your-turn">
 <h2>Your Turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>

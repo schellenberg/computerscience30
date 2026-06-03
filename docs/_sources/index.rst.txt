@@ -68,8 +68,8 @@ External Files
     :maxdepth: 1
 
     externalfiles/strings.rst
-    externalfiles/loadtable.rst
     externalfiles/localstorage.rst
+    .. externalfiles/loadtable.rst
 
 
 Using Libraries
@@ -79,8 +79,9 @@ Using Libraries
     :maxdepth: 1
 
     libraries/sound.rst
-    libraries/scribble.rst
-    libraries/dom.rst
+    libraries/collide2d.rst
+    .. libraries/scribble.rst
+    .. libraries/dom.rst
 
 
 Object Oriented Programming

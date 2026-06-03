@@ -19,7 +19,7 @@ Can you figure out what the image the following code will create?
 
   let a = 80;
 
-  function setup() {
+  async function setup() {
     createCanvas(700, 400);
     background(0);
     stroke(255);

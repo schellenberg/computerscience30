@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>State Variables &#8212; Computer Science 30 - Schellenberg</title>
+    <title>collide2d Library &#8212; Computer Science 30 - Schellenberg</title>
     <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
@@ -50,8 +50,8 @@
     <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Setting Up a Work Environment" href="../ide/setup.html" />
-    <link rel="prev" title="Loops and Nested Loops" href="loops.html" />
+    <link rel="next" title="Object Oriented Programming" href="../oop/overview.html" />
+    <link rel="prev" title="p5.sound Library" href="sound.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
@@ -150,7 +150,7 @@
             <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=CS30&page=statevariables'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS30&page=collide2d'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -165,13 +165,10 @@
           <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">State Variables</a><ul>
-<li><a class="reference internal" href="#square-moving-around-screen">Square Moving Around Screen</a></li>
-<li><a class="reference internal" href="#id1">State Variables</a></li>
-<li><a class="reference internal" href="#timing-millis">Timing – <code class="docutils literal notranslate"><span class="pre">millis()</span></code></a></li>
+<li><a class="reference internal" href="#">collide2d Library</a><ul>
+<li><a class="reference internal" href="#installing-the-library-in-vs-code">Installing the Library in VS Code</a></li>
+<li><a class="reference internal" href="#using-collide2d-in-p5">Using collide2d in p5</a></li>
 <li><a class="reference internal" href="#try-this">Try This</a></li>
-<li><a class="reference internal" href="#practice-problem">Practice Problem</a></li>
-<li><a class="reference internal" href="#id2">Practice Problem</a></li>
 </ul>
 </li>
 </ul>
@@ -181,14 +178,14 @@
         
         
           
-  <li id="relations-prev" title="Previous Chapter - Loops and Nested Loops" data-toggle="tooltip">
-    <a href="loops.html" >
+  <li id="relations-prev" title="Previous Chapter - p5.sound Library" data-toggle="tooltip">
+    <a href="sound.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - Setting Up a Work Environment' data-toggle="tooltip" >
-    <a href="../ide/setup.html" >
+  <li id="relations-next" title='Next Chapter - Object Oriented Programming' data-toggle="tooltip" >
+    <a href="../oop/overview.html" >
       <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -218,112 +215,80 @@
 
 <div class="container" id="main-content">
   
-  <section id="state-variables">
-<h1>State Variables<a class="headerlink" href="#state-variables" title="Permalink to this headline">¶</a></h1>
-<div class="topic">
-<p class="topic-title">Quick Overview of Day</p>
-<p>Use state variables to control the flow of a program.</p>
-</div>
-<section id="square-moving-around-screen">
-<h2>Square Moving Around Screen<a class="headerlink" href="#square-moving-around-screen" title="Permalink to this headline">¶</a></h2>
-<p>Create a sketch that accomplishes the following:</p>
-<img alt="../_images/moving_rectangle.gif" src="../_images/moving_rectangle.gif" />
-<p>You can <a class="reference external" href="https://editor.p5js.org/schellenberg/present/-4DTtO-om">open a live version of this here</a></p>
-<p>Have students attempt this first, <em>before</em> introducing the idea of a state variable.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This works well as a pair programming exercise. Swap the driver and navigator roles every 5 minutes.</p>
-</div>
+  <section id="collide2d-library">
+<h1>collide2d Library<a class="headerlink" href="#collide2d-library" title="Permalink to this headline">¶</a></h1>
+<section id="installing-the-library-in-vs-code">
+<h2>Installing the Library in VS Code<a class="headerlink" href="#installing-the-library-in-vs-code" title="Permalink to this headline">¶</a></h2>
+<p>With the cs30-p5 extension installed, you can add collide2d directly from the Command Palette:</p>
+<ol class="arabic simple">
+<li><p>Open the Command Palette (Ctrl+Shift+P).</p></li>
+<li><p>Run Install p5 Contributor Library.</p></li>
+<li><p>Choose collide2d from the list.</p></li>
+</ol>
+<p>This downloads the collide2d JavaScript library into your libraries project folder, and adds a link to it from your index.html file so collision helper functions (such as <code class="docutils literal notranslate"><span class="pre">collideRectCircle()</span></code>) are available in your sketch.</p>
 </section>
-<section id="id1">
-<h2>State Variables<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>What are they?
-Why bother?</p>
-</section>
-<section id="timing-millis">
-<h2>Timing – <code class="docutils literal notranslate"><span class="pre">millis()</span></code><a class="headerlink" href="#timing-millis" title="Permalink to this headline">¶</a></h2>
-<p>You can find out how many milliseconds (thousands of a second) have elapsed since the run of the program began.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">someTime</span><span class="p">;</span>
+<section id="using-collide2d-in-p5">
+<h2>Using collide2d in p5<a class="headerlink" href="#using-collide2d-in-p5" title="Permalink to this headline">¶</a></h2>
+<p>The collide2d library gives you functions to test whether shapes overlap. A common first demo is rectangle-circle collision:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Collide2d Demo</span>
+
+<span class="kd">let</span> <span class="nx">hit</span><span class="p">;</span>
 
 <span class="k">async</span> <span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">600</span><span class="p">,</span><span class="mf">600</span><span class="p">);</span>
-  <span class="nx">someTime</span> <span class="o">=</span> <span class="mf">2000</span><span class="p">;</span>
+    <span class="nx">createCanvas</span><span class="p">(</span><span class="nx">windowWidth</span><span class="p">,</span> <span class="nx">windowHeight</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">millis</span><span class="p">()</span> <span class="o">&lt;</span> <span class="nx">someTime</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">background</span><span class="p">(</span><span class="mf">255</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="k">else</span> <span class="p">{</span>
-    <span class="nx">background</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
-  <span class="p">}</span>
+    <span class="nx">background</span><span class="p">(</span><span class="mf">220</span><span class="p">);</span>
+
+    <span class="nx">hit</span> <span class="o">=</span> <span class="nx">collideRectCircle</span><span class="p">(</span><span class="mf">200</span><span class="p">,</span> <span class="mf">200</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="mf">150</span><span class="p">,</span> <span class="nx">mouseX</span><span class="p">,</span> <span class="nx">mouseY</span><span class="p">,</span> <span class="mf">100</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hit</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">hit</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">fill</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">fill</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="nx">rect</span><span class="p">(</span><span class="mf">200</span><span class="p">,</span> <span class="mf">200</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="mf">150</span><span class="p">);</span>
+    <span class="nx">circle</span><span class="p">(</span><span class="nx">mouseX</span><span class="p">,</span> <span class="nx">mouseY</span><span class="p">,</span> <span class="mf">100</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="https://editor.p5js.org/schellenberg/sketches/N1b8Tk-M9">Open an editable version of the millis example above in the p5js editor</a></p>
+<p>In this example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">collideRectCircle(rectX,</span> <span class="pre">rectY,</span> <span class="pre">rectW,</span> <span class="pre">rectH,</span> <span class="pre">circleX,</span> <span class="pre">circleY,</span> <span class="pre">circleDiameter)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> when the two shapes overlap.</p></li>
+<li><p>The rectangle turns blue on collision and white otherwise.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">console.log(hit)</span></code> prints collision state each frame for debugging.</p></li>
+</ul>
 </section>
 <section id="try-this">
 <h2>Try This<a class="headerlink" href="#try-this" title="Permalink to this headline">¶</a></h2>
-<p>Try to alter the code given above so that the background continues to switch from black to white once every 2 seconds.</p>
-</section>
-<section id="practice-problem">
-<h2>Practice Problem<a class="headerlink" href="#practice-problem" title="Permalink to this headline">¶</a></h2>
-<p>Traffic light simluator. Start with the following code, and attempt to get a traffic light working. Can be done nicely with a state variable, and use of the <code class="docutils literal notranslate"><span class="pre">millis()</span></code> function.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Traffic Light Starter Code</span>
-<span class="c1">// Your Name Here</span>
-<span class="c1">// The Date Here</span>
-
-<span class="c1">// GOAL: make a &#39;traffic light&#39; simulator. For now, just have the light</span>
-<span class="c1">// changing according to time. You may want to investigate the millis()</span>
-<span class="c1">// function at https://p5js.org/reference/#/p5/millis</span>
-
-<span class="k">async</span> <span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">600</span><span class="p">,</span> <span class="mf">600</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">background</span><span class="p">(</span><span class="mf">255</span><span class="p">);</span>
-  <span class="nx">drawOutlineOfLights</span><span class="p">();</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">drawOutlineOfLights</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">//box</span>
-  <span class="nx">rectMode</span><span class="p">(</span><span class="nx">CENTER</span><span class="p">);</span>
-  <span class="nx">fill</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
-  <span class="nx">rect</span><span class="p">(</span><span class="nx">width</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">height</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="mf">75</span><span class="p">,</span> <span class="mf">200</span><span class="p">,</span> <span class="mf">10</span><span class="p">);</span>
-
-  <span class="c1">//lights</span>
-  <span class="nx">fill</span><span class="p">(</span><span class="mf">255</span><span class="p">);</span>
-  <span class="nx">ellipse</span><span class="p">(</span><span class="nx">width</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">height</span><span class="o">/</span><span class="mf">2</span> <span class="o">-</span> <span class="mf">65</span><span class="p">,</span> <span class="mf">50</span><span class="p">,</span> <span class="mf">50</span><span class="p">);</span> <span class="c1">//top</span>
-  <span class="nx">ellipse</span><span class="p">(</span><span class="nx">width</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">height</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="mf">50</span><span class="p">,</span> <span class="mf">50</span><span class="p">);</span> <span class="c1">//middle</span>
-  <span class="nx">ellipse</span><span class="p">(</span><span class="nx">width</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">height</span><span class="o">/</span><span class="mf">2</span> <span class="o">+</span> <span class="mf">65</span><span class="p">,</span> <span class="mf">50</span><span class="p">,</span> <span class="mf">50</span><span class="p">);</span> <span class="c1">//bottom</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p><a class="reference external" href="https://editor.p5js.org/schellenberg/sketches/N51M3BkvY">Open an editable version of the traffic light starter code above in the p5js editor</a></p>
-</section>
-<section id="id2">
-<h2>Practice Problem<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>Put a button in the middle of the screen. When it is clicked, switch to a screen that has a ball bouncing around.</p>
+<ol class="arabic simple">
+<li><p>Change the rectangle size and position.</p></li>
+<li><p>Change the circle diameter.</p></li>
+<li><p>Add a second rectangle and test both collisions.</p></li>
+</ol>
 </section>
 </section>
 
 
   
       
-  <li id="relations-prev" class="navLink" title='Previous Section - Loops and Nested Loops' data-toggle="tooltip">
-    <a href="loops.html" >
+  <li id="relations-prev" class="navLink" title='Previous Section - p5.sound Library' data-toggle="tooltip">
+    <a href="sound.html" >
       <i class='prevNav glyphicon glyphicon-chevron-left'></i>
     </a>
   </li>
-  <a class="navLinkBg" id="navLinkBgLeft"  href="loops.html" ></a>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="sound.html" ></a>
   
-  <li id="relations-next" class="navLink" title='Next Section - Setting Up a Work Environment' data-toggle="tooltip" >
-    <a href="../ide/setup.html" >
+  <li id="relations-next" class="navLink" title='Next Section - Object Oriented Programming' data-toggle="tooltip" >
+    <a href="../oop/overview.html" >
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
     </a>
   </li>
-  <a class="navLinkBg navLink" id="navLinkBgRight" href="../ide/setup.html" >Next Section - Setting Up a Work Environment</a>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../oop/overview.html" >Next Section - Object Oriented Programming</a>
 
 <script type="text/javascript">
 
