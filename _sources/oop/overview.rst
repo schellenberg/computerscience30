@@ -23,7 +23,7 @@ To create a simple class:
     let myDog = new Dog("Snoopy");
     let otherDog = new Dog("Fido");
 
-    function setup() {
+    async function setup() {
         createCanvas(windowWidth, windowHeight);
         myDog.bark();
         otherDog.bark();
@@ -79,7 +79,7 @@ Walker OOP.
     let tyler;
     let nevan;
 
-    function setup() {
+    async function setup() {
         createCanvas(windowWidth, windowHeight);
         tyler = new Walker();
         nevan = new Walker();

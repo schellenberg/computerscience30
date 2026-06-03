@@ -5,7 +5,7 @@ p5.sound Library
 Installing a Library
 ---------------------
 
-A p5.js library can be any JavaScript code that extends or adds to the p5.js core functionality. p5.dom and p5.sound are part of the p5.js distribution, while contributed libraries are developed, owned, and maintained by members of the p5.js community. I have also included the p5.collide library as part of the p5js template folder that we have been using. For any other library that you want to use (you can find a `list of them here <https://p5js.org/libraries/>`_), you will need to download the .js file, put it in your project folder, then link to it using a script tag in your HTML file.
+A p5.js library can be any JavaScript code that extends or adds to the p5.js core functionality. p5.sound is part of the p5.js distribution, while contributed libraries are developed, owned, and maintained by members of the p5.js community. For any other library that you want to use (you can find a `list of them here <https://p5js.org/libraries/>`_), you will need to download the .js file, put it in your project folder, then link to it using a script tag in your HTML file. This process is automated for some libraries if you use ``Ctrl-Shift-P`` to open the command palette in VS Code, then type ``p5`` and select ``Install p5.js Contributor Library```.
 
 To include a library in your sketch, link it into your HTML file, after you have linked in p5.js. An example HTML file might look like this:
 

@@ -58,7 +58,7 @@ Try to figure out what this will do **without** running it!
 
 .. code-block:: javascript
 
-    function setup() {
+    async function setup() {
       createCanvas(300, 250);
     }
 
@@ -79,7 +79,7 @@ Try to figure out what this will do **without** running it!
 
 .. code-block:: javascript
 
-    function setup() {
+    async function setup() {
       createCanvas(windowWidth, windowHeight);
     }
 

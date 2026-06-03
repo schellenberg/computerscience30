@@ -24,29 +24,7 @@ To make VSCode into something better than just a plain text editor, we can insta
 
 You can explore many different extensions for VS Code, but the primary one we will use is:
 
-- ``cs30-p5``, which helps create and manage p5.js projects in VS Code. This will also include two other extensions (Live Server and ESLint). Live Server lets you run your code on your local machine for testing, by adding a "Go Live" button to the bottom of your VS Code window. ESLint will provide warnings when you make coding/convention errors.
-
-
-Optional Additional Feature
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-There is a configuration file in our template folder called `project.json` that helps provide instant feedback about possible problems in your code using a tool called ESLint (for example, warning you that you didn't declare a variable before using it, or that your indentation is incorrect). Setting up your machine to use this may not be feasible in a computer lab scenario, as it requires admin rights to install `https://nodejs.org <https://nodejs.org>`_. *I have pre-installed Node.js on our machines at WMC.* If you cannot install Node.js, the VS Code setup  will still work just fine, but you will not get instant feedback from ESLint about possible problems in your code.
-
-- if you haven't installed Node.js, and are:
-
-  - on Windows: in VS Code, open Terminal and type ``winget install Schniz.fnm``, then once that has completed, type ``fnm install 22``
-
-  - on Mac: in VS Code, open Terminal and type ``curl -o- https://fnm.vercel.app/install | bash``, then once that has completed, type ``fnm install 22``
-
-  - other installation options are available on the `Node.js website <https://nodejs.org/en/download>`_ 
-  
-- once Node.js is installed:
-
-  - in VS Code, open Terminal and type ``npm install -g eslint``
-
-  - if you get an error, you may need to allow scripts to run. Type ``Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser``, hit enter, then try installing eslint again.
-
-  - if you have installation problems with eslint, you can try updating npm [in VS Code, open Terminal and type ``npm install npm@latest -g``]
+- ``cs30-p5``, which helps create and manage p5.js projects in VS Code. This will also include two other extensions (Live Server and ESLint). Live Server lets you run your code on your local machine for testing, by adding a "Go Live" button to the bottom of your VS Code window. ESLint will provide warnings when you make coding/convention errors (I've bundled a runtime of ESLint as part of the cs30-p5 extension, so you shouldn't need to install anything else. If it doesn't work, you may need to install Node.js and then run ``npm install -g eslint``).
 
 
 GitHub

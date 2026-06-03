@@ -77,7 +77,7 @@ Visual Example
 
 Create a demo using a Shape class that has simple move and display functions. Next, make a couple child classes (like Circle and Square) that extend the Shape class. They should override the display method from the Shape class. Make a bunch of instances of Circle and Square, then iterate through them in the draw loop using a for...of loop.
 
-It should look something `like this live p5js sketch <https://editor.p5js.org/schellenberg/sketches/SNHEW0bKg>`_.`
+It should look something `like this live p5js sketch <https://editor.p5js.org/schellenberg/sketches/SNHEW0bKg>`_.
 
 
 Tutorial Video

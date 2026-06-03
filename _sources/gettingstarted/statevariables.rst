@@ -36,7 +36,7 @@ You can find out how many milliseconds (thousands of a second) have elapsed sinc
 
 	let someTime;
 
-	function setup() {
+	async function setup() {
 	  createCanvas(600,600);
 	  someTime = 2000;
 	}
@@ -74,7 +74,7 @@ Traffic light simluator. Start with the following code, and attempt to get a tra
 	// changing according to time. You may want to investigate the millis()
 	// function at https://p5js.org/reference/#/p5/millis
 
-	function setup() {
+	async function setup() {
 	  createCanvas(600, 600);
 	}
 

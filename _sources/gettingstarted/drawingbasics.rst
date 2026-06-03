@@ -15,6 +15,7 @@ Live code a demo that does the following:
 
 - displays a circle on the screen (talk about the coordinate plane)
 - update the location of the circle so that it goes wherever the mouse goes (``mouseX`` and ``mouseY``)
+- talk about why we use ``async function setup()`` (ensures any ``await`` calls in setup are completed before the ``draw()`` loop starts)
 - use ``console.log()`` to provide diagnostic messages (super useful when debugging your code)
 - make the circle start to move around the screen (global variables for x and y location, and x and y velocity; conditional statements to bounce when colliding with walls)
 - have the circle change to a random color every time it collides with a wall
@@ -49,6 +50,39 @@ In addition to what we've already done, here's a quick list of system variables 
 - ``mouseButton`` - Which button is pressed? Left, right, or center
 - ``mouseX`` - Current horizontal location of the mouse
 - ``mouseY`` - Current vertical location of the mouse
+
+
+Async and Await (for Loading Images)
+-------------------------------------
+
+When we load an image on the web, it can take a little time. Your program does not want to freeze while waiting, so loading is asynchronous (happens in the background).
+
+Think of it like this:
+
+- ``async`` means "this function might need to wait for something".
+- ``await`` means "pause here until this one thing is ready".
+
+In p5, this is useful when you want your image (or other data) to be fully loaded before the ``draw()`` loop starts using it.
+
+.. code-block:: javascript
+
+        let someImage;
+        let x = 100;
+        let y = 100;
+
+        async function setup() {
+            createCanvas(windowWidth, windowHeight);
+
+            // wait until the random image finishes loading.
+            someImage = await loadImage("https://picsum.photos/200");
+        }
+
+        function draw() {
+            background("white");
+            image(someImage, mouseX, mouseY);
+        }
+
+Here is a `live version of that image loading sketch <https://editor.p5js.org/schellenberg/sketches/4TVRJrn-P>`_.
 
 
 Your Turn
