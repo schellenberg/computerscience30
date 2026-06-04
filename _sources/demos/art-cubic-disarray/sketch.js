@@ -4,7 +4,7 @@
 // Aug 28, 2019
 
 
-function setup() {
+async function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
   drawGridOfCubes(100, 50, 25, 25, 450, height - 50);

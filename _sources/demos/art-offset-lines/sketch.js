@@ -4,7 +4,7 @@
 // Aug 28, 2019
 
 
-function setup() {
+async function setup() {
   createCanvas(windowWidth, windowHeight);
   // drawLineWithOffset(0, 50, width, 5);
   drawRowOfLinesWithOffsets(10, 10, width - 20, 5, height - 20, 20);

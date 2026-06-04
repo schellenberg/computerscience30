@@ -4,7 +4,7 @@
 // Aug 29, 2019
 
 
-function setup() {
+async function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
 }

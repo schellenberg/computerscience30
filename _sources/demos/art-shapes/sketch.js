@@ -4,7 +4,7 @@
 // Aug 28, 2019
 
 
-function setup() {
+async function setup() {
   createCanvas(windowWidth, windowHeight);
   drawManyShapes(50, 50, width - 100, height - 100, 50);
 }

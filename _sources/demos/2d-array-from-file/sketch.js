@@ -6,12 +6,11 @@ let grid;
 let shape;
 let rows, cols;
 
-// Need to load the text file before the rest of the sketch runs
-function preload() {
-  shape = loadStrings('assets/happy.txt');
-}
 
-function setup() {
+async function setup() {
+  // Need to load the text file before the rest of the sketch runs
+  shape = await loadStrings('assets/happy.txt');
+
   // Set column and row size based on the number of rows in the text file, and the
   // length of the first row of text in the text file. Assumes the rest of the lines
   // will have the same length.

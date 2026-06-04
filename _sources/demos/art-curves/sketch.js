@@ -4,7 +4,7 @@
 // Aug 28, 2019
 
 
-function setup() {
+async function setup() {
   createCanvas(windowWidth, windowHeight);
   drawManyCurves(1000);
 }

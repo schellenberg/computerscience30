@@ -4,7 +4,7 @@
 let theTiles = [];
 let tileSize = 20;
 
-function setup() {
+async function setup() {
   createCanvas(windowWidth, windowHeight);
   for (let x = 0; x < width; x += tileSize) {
     for (let y = 0; y < height; y += tileSize) {
