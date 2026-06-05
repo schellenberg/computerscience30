@@ -2,5 +2,6 @@
     "restructuredtext.confPath": "${workspaceFolder}",
     "restructuredtext.linter.run": "off",
     "restructuredtext.preview.docutils.disabled": true,
-    "esbonio.sphinx.confDir": "${workspaceFolder}"
+    "esbonio.sphinx.confDir": "${workspaceFolder}",
+    "eslint.nodePath": "c:\\Users\\schellenbergd\\.vscode\\extensions\\wmcicompsci.cs30-p5-1.9.7\\node_modules"
 }

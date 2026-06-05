@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>loadJSON &#8212; Computer Science 30 - Schellenberg</title>
+    <link rel="stylesheet" href="../_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.e4d5592da655219f.css?v=32648AE5" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/2.3.1/&#34;&#34;/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    <script src="../_static/runestonebase.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/runtime.c894f7032a5bccea.bundle.js?v=D20A5287"></script>
+    <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../_static/runestone.5b7c431cb6d3e0db.bundle.js?v=36CB01A8"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="p5.sound Library" href="../libraries/sound.html" />
+    <link rel="prev" title="localStorage" href="localstorage.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CS30';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = true;
+  eBookConfig.basecourse = 'CS30';
+  eBookConfig.runestone_version = '6.2.2';
+</script>
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("../_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="../index.html">Computer Science 30 - Schellenberg</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CS30/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CS30/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=CS30&page=loadJSON'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">loadJSON</a><ul>
+<li><a class="reference internal" href="#starter-example-async-await">Starter Example (async/await)</a></li>
+<li><a class="reference internal" href="#important-patterns-to-know">Important Patterns to Know</a></li>
+<li><a class="reference internal" href="#demo">Demo</a></li>
+<li><a class="reference internal" href="#next-example-weather-data-by-city">Next Example: Weather Data by City</a></li>
+<li><a class="reference internal" href="#id1">Demo</a></li>
+<li><a class="reference internal" href="#final-example-espn-scores-and-team-info">Final Example: ESPN Scores and Team Info</a></li>
+<li><a class="reference internal" href="#id2">Demo</a></li>
+<li><a class="reference internal" href="#reference">Reference</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+  <li id="relations-prev" title="Previous Chapter - localStorage" data-toggle="tooltip">
+    <a href="localstorage.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - p5.sound Library' data-toggle="tooltip" >
+    <a href="../libraries/sound.html" >
+      <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <section id="loadjson">
+<h1>loadJSON<a class="headerlink" href="#loadjson" title="Permalink to this headline">¶</a></h1>
+<p><em>From the p5js reference page</em></p>
+<p>Reads the contents of a JSON file or URL and creates a JavaScript object (or array) with its values.</p>
+<p>If a file is specified, it must be located in the sketch’s folder. The first parameter can also be a URL to JSON hosted online.</p>
+<p>This method is asynchronous, meaning it may not finish before the next line in your sketch is executed. You can handle this with by use the <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code> keywords, as shown below.</p>
+<section id="starter-example-async-await">
+<h2>Starter Example (async/await)<a class="headerlink" href="#starter-example-async-await" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">img</span><span class="p">;</span>
+
+<span class="k">async</span> <span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">400</span><span class="p">,</span> <span class="mf">400</span><span class="p">);</span>
+        <span class="kd">let</span> <span class="nx">json</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">loadJSON</span><span class="p">(</span><span class="s2">&quot;https://dog.ceo/api/breeds/image/random&quot;</span><span class="p">);</span>
+        <span class="c1">// console.log(json);</span>
+        <span class="nx">img</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">loadImage</span><span class="p">(</span><span class="nx">json</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">image</span><span class="p">(</span><span class="nx">img</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="mf">0</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In this example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">loadJSON()</span></code> gets JSON from a web API.</p></li>
+<li><p>The API returns an object with a <code class="docutils literal notranslate"><span class="pre">message</span></code> property that contains an image URL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadImage()</span></code> then loads that image so it can be drawn to the canvas.</p></li>
+</ul>
+</section>
+<section id="important-patterns-to-know">
+<h2>Important Patterns to Know<a class="headerlink" href="#important-patterns-to-know" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Access object values with dot notation, for example <code class="docutils literal notranslate"><span class="pre">json.message</span></code>.</p></li>
+<li><p>If JSON contains arrays, loop through them with <code class="docutils literal notranslate"><span class="pre">for</span></code> or <code class="docutils literal notranslate"><span class="pre">for...of</span></code>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">console.log(json)</span></code> to inspect unknown JSON structures.</p></li>
+</ul>
+</section>
+<section id="demo">
+<h2>Demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h2>
+<p>Use the Dog API endpoint <code class="docutils literal notranslate"><span class="pre">https://dog.ceo/api/breeds/image/random</span></code>.</p>
+<ol class="arabic simple">
+<li><p>Load JSON data in <code class="docutils literal notranslate"><span class="pre">setup()</span></code>.</p></li>
+<li><p>Extract the image URL from <code class="docutils literal notranslate"><span class="pre">json.message</span></code>.</p></li>
+<li><p>Load and display the dog image on the canvas.</p></li>
+<li><p>Add a mouse click (or key press) to fetch and show a new random dog.</p></li>
+</ol>
+</section>
+<section id="next-example-weather-data-by-city">
+<h2>Next Example: Weather Data by City<a class="headerlink" href="#next-example-weather-data-by-city" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">400</span><span class="p">,</span> <span class="mf">400</span><span class="p">);</span>
+
+  <span class="k">await</span> <span class="nx">getWeather</span><span class="p">(</span><span class="s2">&quot;Saskatoon&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">background</span><span class="p">(</span><span class="mf">220</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">async</span> <span class="kd">function</span> <span class="nx">getWeather</span><span class="p">(</span><span class="nx">cityName</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="c1">// Find coordinates</span>
+  <span class="kd">let</span> <span class="nx">geoData</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">loadJSON</span><span class="p">(</span><span class="sb">`https://geocoding-api.open-meteo.com/v1/search?name=</span><span class="si">${</span><span class="nx">cityName</span><span class="si">}</span><span class="sb">&amp;count=1`</span><span class="p">);</span>
+  <span class="c1">// console.log(geoData);</span>
+  <span class="kd">let</span> <span class="nx">lat</span> <span class="o">=</span> <span class="nx">geoData</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">latitude</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">lon</span> <span class="o">=</span> <span class="nx">geoData</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">longitude</span><span class="p">;</span>
+
+  <span class="c1">// Get weather</span>
+  <span class="kd">let</span> <span class="nx">weatherData</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">loadJSON</span><span class="p">(</span><span class="sb">`https://api.open-meteo.com/v1/gem?latitude=</span><span class="si">${</span><span class="nx">lat</span><span class="si">}</span><span class="sb">&amp;longitude=</span><span class="si">${</span><span class="nx">lon</span><span class="si">}</span><span class="sb">&amp;current=temperature_2m&amp;daily=temperature_2m_max,temperature_2m_min&amp;timezone=auto`</span><span class="p">);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">weatherData</span><span class="p">);</span>
+
+  <span class="c1">// console.log(&quot;Current:&quot;, weatherData.current.temperature_2m);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Today&#39;s High: &quot;</span> <span class="o">+</span> <span class="nx">weatherData</span><span class="p">.</span><span class="nx">daily</span><span class="p">.</span><span class="nx">temperature_2m_max</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Today&#39;s Low: &quot;</span> <span class="o">+</span> <span class="nx">weatherData</span><span class="p">.</span><span class="nx">daily</span><span class="p">.</span><span class="nx">temperature_2m_min</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In this example:</p>
+<ul class="simple">
+<li><p>The first <code class="docutils literal notranslate"><span class="pre">loadJSON()</span></code> call converts a city name into latitude/longitude.</p></li>
+<li><p>The second <code class="docutils literal notranslate"><span class="pre">loadJSON()</span></code> call uses those coordinates to get forecast data.</p></li>
+<li><p>Nested fields and arrays are accessed with paths like <code class="docutils literal notranslate"><span class="pre">weatherData.daily.temperature_2m_max[0]</span></code>.</p></li>
+</ul>
+</section>
+<section id="id1">
+<h2>Demo<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Use the weather example and turn it into a simple data visualization.</p>
+<ol class="arabic simple">
+<li><p>Request both temperature and humidity in <code class="docutils literal notranslate"><span class="pre">current</span></code> data:
+<code class="docutils literal notranslate"><span class="pre">current=temperature_2m,relative_humidity_2m</span></code></p></li>
+<li><p>Save both values to variables after loading weather JSON.</p></li>
+<li><p>Make the background color in <code class="docutils literal notranslate"><span class="pre">draw()</span></code> depend on the temperature.</p></li>
+<li><p>Draw a rectangle where the color depends on the humidity.</p></li>
+</ol>
+</section>
+<section id="final-example-espn-scores-and-team-info">
+<h2>Final Example: ESPN Scores and Team Info<a class="headerlink" href="#final-example-espn-scores-and-team-info" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">homeLogo</span><span class="p">,</span> <span class="nx">awayLogo</span><span class="p">;</span>
+
+<span class="k">async</span> <span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">createCanvas</span><span class="p">(</span><span class="mf">400</span><span class="p">,</span> <span class="mf">200</span><span class="p">);</span>
+
+  <span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">loadJSON</span><span class="p">(</span><span class="s2">&quot;https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard&quot;</span><span class="p">);</span>
+
+  <span class="kd">let</span> <span class="nx">game</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">events</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">competitions</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+
+  <span class="kd">let</span> <span class="nx">home</span> <span class="o">=</span> <span class="nx">game</span><span class="p">.</span><span class="nx">competitors</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">c</span> <span class="p">=&gt;</span> <span class="nx">c</span><span class="p">.</span><span class="nx">homeAway</span> <span class="o">===</span> <span class="s2">&quot;home&quot;</span><span class="p">).</span><span class="nx">team</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">away</span> <span class="o">=</span> <span class="nx">game</span><span class="p">.</span><span class="nx">competitors</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">c</span> <span class="p">=&gt;</span> <span class="nx">c</span><span class="p">.</span><span class="nx">homeAway</span> <span class="o">===</span> <span class="s2">&quot;away&quot;</span><span class="p">).</span><span class="nx">team</span><span class="p">;</span>
+
+  <span class="nx">homeLogo</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">loadImage</span><span class="p">(</span><span class="nx">home</span><span class="p">.</span><span class="nx">logo</span><span class="p">);</span>
+  <span class="nx">awayLogo</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">loadImage</span><span class="p">(</span><span class="nx">away</span><span class="p">.</span><span class="nx">logo</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">background</span><span class="p">(</span><span class="mf">220</span><span class="p">);</span>
+
+  <span class="nx">image</span><span class="p">(</span><span class="nx">homeLogo</span><span class="p">,</span> <span class="mf">50</span><span class="p">,</span> <span class="mf">50</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="mf">100</span><span class="p">);</span>
+  <span class="nx">image</span><span class="p">(</span><span class="nx">awayLogo</span><span class="p">,</span> <span class="mf">250</span><span class="p">,</span> <span class="mf">50</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="mf">100</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In this example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">loadJSON()</span></code> gets the live NBA scoreboard feed from ESPN.</p></li>
+<li><p>The code drills into nested arrays/objects: <code class="docutils literal notranslate"><span class="pre">events[0]</span> <span class="pre">-&gt;</span> <span class="pre">competitions[0]</span> <span class="pre">-&gt;</span> <span class="pre">competitors</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">find(...)</span></code> selects the home and away teams, then their logos are loaded with <code class="docutils literal notranslate"><span class="pre">loadImage()</span></code>.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>Demo<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Try extending this ESPN example.</p>
+<ol class="arabic simple">
+<li><p>Display logos from a few games tonight instead of just one game. Loop through <code class="docutils literal notranslate"><span class="pre">data.events</span></code> and load logos for each matchup you want to show.</p></li>
+<li><p>Switch to a different league by changing the API endpoint. For example, replace <code class="docutils literal notranslate"><span class="pre">nba</span></code> with <code class="docutils literal notranslate"><span class="pre">nhl</span></code>, <code class="docutils literal notranslate"><span class="pre">mlb</span></code>, or <code class="docutils literal notranslate"><span class="pre">football/nfl</span></code> in the URL.</p></li>
+<li><p>Draw each matchup in a row (away logo vs home logo) with team abbreviations.</p></li>
+</ol>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://p5js.org/reference/p5/loadJSON/">p5.js loadJSON() reference</a></p></li>
+</ul>
+</section>
+</section>
+
+
+  
+      
+  <li id="relations-prev" class="navLink" title='Previous Section - localStorage' data-toggle="tooltip">
+    <a href="localstorage.html" >
+      <i class='prevNav glyphicon glyphicon-chevron-left'></i>
+    </a>
+  </li>
+  <a class="navLinkBg" id="navLinkBgLeft"  href="localstorage.html" ></a>
+  
+  <li id="relations-next" class="navLink" title='Next Section - p5.sound Library' data-toggle="tooltip" >
+    <a href="../libraries/sound.html" >
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right'></i>
+    </a>
+  </li>
+  <a class="navLinkBg navLink" id="navLinkBgRight" href="../libraries/sound.html" >Next Section - p5.sound Library</a>
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018 Dan Schellenberg.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.2.2.
+    </p>
+  </div>
+</footer>
+
+
+
+  </body>
+</html>

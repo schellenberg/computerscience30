@@ -69,6 +69,7 @@ External Files
 
     externalfiles/strings.rst
     externalfiles/localstorage.rst
+    externalfiles/loadJSON.rst
     .. externalfiles/loadtable.rst
 
 
