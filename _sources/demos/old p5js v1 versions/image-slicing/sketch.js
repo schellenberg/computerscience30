@@ -74,7 +74,7 @@ function mouseClicked() {
 
   //check if it's sorted by converting the arrays to strings, then checking for equality
   if (correctOrder.join() === displayOrder.join()) {
-    backgroundColor = "red";
+    backgroundColor = "green";
   }
   else {
     backgroundColor = "black";

@@ -1,0 +1,15 @@
+{
+  "name": "mind-reader",
+  "version": "1.0.0",
+  "private": true,
+  "description": "p5.js mind reader demo",
+  "scripts": {
+    "clean:dist": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "obfuscate": "javascript-obfuscator sketch.js --output sketch.obfuscated.js --config obfuscator.config.json",
+    "obfuscate:compact": "javascript-obfuscator sketch.js --output sketch.obfuscated.js --config obfuscator.config.json --compact true",
+    "build:dist": "node scripts/build-dist.mjs"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^4.1.1"
+  }
+}
