@@ -23,6 +23,18 @@ Previous Projects
     - `Mini Games game <https://wmcics30.github.io/cs30-mini-games/>`_
     - `Mini Games repo <https://github.com/wmcics30/cs30-mini-games>`_
 
+- Platformer (Ayman) 
+    - `Platformer game <https://wmcics30.github.io/platformer/>`_ 
+    - `Platformer repo <https://github.com/wmcics30/platformer>`_ 
+
+- GeoGuessr (Bertin) 
+    - `GeoGuessr game <https://wmcics30.github.io/Ranked_Guessr/>`_ 
+    - `GeoGuessr repo <https://github.com/wmcics30/Ranked_Guessr>`_ 
+
+- Alzheimers Decision Making Inquiry Project (Seb) 
+    - `Alzheimers Decision Making Inquiry Project <https://wmcics30.github.io/alzheimers_decision-making/>`_ 
+    - `Alzheimers Decision Making Inquiry Project repo <https://github.com/wmcics30/alzheimers_decision-making>`_ 
+
 - Cookie Clicker (Aric) 
     - `Cookie Clicker game <https://wmcics30.github.io/major-project-2/>`_ 
     - `Cookie Clicker repo <https://github.com/wmcics30/major-project-2>`_ 
@@ -43,6 +55,14 @@ Previous Projects
     - `Ping-Ball with Matter.js game <https://wmcics30.github.io/major-project-pingball/>`_ 
     - `Ping-Ball with Matter.jsrepo <https://github.com/wmcics30/major-project-pingball>`_
 
+- Gambling Mini Games (Jon and TJ) 
+    - `Gambling Mini Games <https://wmcics30.github.io/ultimate-gambling-360-edition/>`_ 
+    - `Gambling Mini Games repo <https://github.com/wmcics30/ultimate-gambling-360-edition>`_ 
+
+- Essence Frequency Music Game (Carson) 
+    - `Essence Frequency Music game <https://wmcics30.github.io/essence-frequency/>`_ 
+    - `Essence Frequency Music repo <https://github.com/wmcics30/essence-frequency>`_ 
+
 - Platformer Game with p5play (Angadveer)
     - `Platformer game <https://wmcics30.github.io/major-project-platformer/>`_ 
     - `Platformer repo <https://github.com/wmcics30/major-project-platformer>`_
@@ -54,6 +74,10 @@ Previous Projects
 - 3D Puzzle Game [using just p5.js] (Judah)
     - `3D Puzzle game <https://wmcics30.github.io/3d-puzzle-game/>`_ 
     - `3D Puzzle repo <https://github.com/wmcics30/3d-puzzle-game>`_ 
+
+- Smash Bros Clone (Mitt)
+    - `Smash Bros Clone game <https://wmcics30.github.io/CS30-Smash-Bros-Clone/>`_ 
+    - `Smash Bros Clone repo <https://github.com/wmcics30/CS30-Smash-Bros-Clone>`_
 
 - Wave Defense Game (Alliam) 
     - `Wave Defense game <https://wmcics30.github.io/cs30-sds-waves/>`_ 
@@ -179,4 +203,10 @@ Previous Projects
 - WMCI Grade 9 Map Guide (Catherine and Csaba) 
     - `WMCI Grade 9 Map Guide <https://wmcicompsci.ca/map/>`_ 
     - no repo available (this was from before we used GitHub)
+
+- Zombie Pathfinding Game (Audrey) 
+    - `Zombie Pathfinding Game <https://wmcics30.github.io/zombie-pathfinding/>`_ 
+    - `Zombie Pathfinding Game repo <https://github.com/wmcics30/zombie-pathfinding>`_ 
+
+
 
