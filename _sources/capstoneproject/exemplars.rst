@@ -15,6 +15,10 @@ Previous Projects
     - `Dungeon Crawler game <https://wmcics30.github.io/cs30-final/>`_ 
     - `Dungeon Crawler repo <https://github.com/wmcics30/cs30-final>`_ 
 
+- Stock Price History Visualizer (Pak) 
+    - `Stock Price History Visualizer live <https://wmcics30.github.io/stock-prices/>`_ 
+    - `Stock Price History Visualizer repo <https://github.com/wmcics30/stock-prices>`_ 
+
 - Just Shapes and Beats Remix (Tareen)
     - `Shapes and Beats game <https://wmcics30.github.io/CS30-Major-Project-Rythmn/>`_
     - `Shapes and Beats repo <https://github.com/wmcics30/CS30-Major-Project-Rythmn>`_
@@ -64,8 +68,8 @@ Previous Projects
     - `Essence Frequency Music repo <https://github.com/wmcics30/essence-frequency>`_ 
 
 - Platformer Game with p5play (Angadveer)
-    - `Platformer game <https://wmcics30.github.io/major-project-platformer/>`_ 
-    - `Platformer repo <https://github.com/wmcics30/major-project-platformer>`_
+    - `Platformer p5play game <https://wmcics30.github.io/major-project-platformer/>`_ 
+    - `Platformer p5play repo <https://github.com/wmcics30/major-project-platformer>`_
 
 - Flower Shop (Faith)
     - `Flower Shop game <https://wmcics30.github.io/cs30-majorproject-flowers/>`_ 
