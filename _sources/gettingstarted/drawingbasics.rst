@@ -67,14 +67,12 @@ In p5, this is useful when you want your image (or other data) to be fully loade
 .. code-block:: javascript
 
         let someImage;
-        let x = 100;
-        let y = 100;
 
         async function setup() {
             createCanvas(windowWidth, windowHeight);
 
-            // wait until the random image finishes loading.
-            someImage = await loadImage("https://picsum.photos/200");
+            // wait until the image finishes loading.
+            someImage = await loadImage("https://images.pexels.com/photos/8474010/pexels-photo-8474010.jpeg?cs=srgb&dl=pexels-jaime-reimer-1376930-8474010.jpg&fm=jpg&w=640&h=427");
         }
 
         function draw() {

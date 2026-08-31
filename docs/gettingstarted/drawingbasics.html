@@ -280,14 +280,12 @@
 </ul>
 <p>In p5, this is useful when you want your image (or other data) to be fully loaded before the <code class="docutils literal notranslate"><span class="pre">draw()</span></code> loop starts using it.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">someImage</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mf">100</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="mf">100</span><span class="p">;</span>
 
 <span class="k">async</span> <span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">createCanvas</span><span class="p">(</span><span class="nx">windowWidth</span><span class="p">,</span> <span class="nx">windowHeight</span><span class="p">);</span>
 
-    <span class="c1">// wait until the random image finishes loading.</span>
-    <span class="nx">someImage</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">loadImage</span><span class="p">(</span><span class="s2">&quot;https://picsum.photos/200&quot;</span><span class="p">);</span>
+    <span class="c1">// wait until the image finishes loading.</span>
+    <span class="nx">someImage</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">loadImage</span><span class="p">(</span><span class="s2">&quot;https://images.pexels.com/photos/8474010/pexels-photo-8474010.jpeg?cs=srgb&amp;dl=pexels-jaime-reimer-1376930-8474010.jpg&amp;fm=jpg&amp;w=640&amp;h=427&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
