@@ -12,19 +12,19 @@ Setting Up a Work Environment
 Text Editor
 ------------
 
-Although you can use any text editor you'd like, I recommend you use `Visual Studio Code <https://code.visualstudio.com/>`_. VSCode works on Windows, Mac and Linux, so you should be able to get everything working on whatever computer you have.
+Although you can use any text editor you'd like, I recommend you use `VSCodium <https://vscodium.com/>`_. VSCodium works on Windows, Mac and Linux, so you should be able to get everything working on whatever computer you have.
 
-`Download Visual Studio Code now. <https://code.visualstudio.com/>`_
+`Download VSCodium now. <https://vscodium.com/>`_
 
-.. important:: Be sure to select the "Open with Code" options when installing VSCode! This allows you to right click on a file/folder in File Explorer and easily open it in VSCode.
+.. important:: Be sure to select the "Open with Code" options when installing VSCodium! This allows you to right click on a file/folder in File Explorer and easily open it in VSCodium.
 
-To make VSCode into something better than just a plain text editor, we can install packages to extend the built in functionality. To do this, click on the extensions tab (on the left hand sidebar).
+To make VSCodium into something better than just a plain text editor, we can install packages to extend the built in functionality. To do this, click on the extensions tab (on the left hand sidebar).
 
 .. image:: images/extensions-icon.png
 
-You can explore many different extensions for VS Code, but the primary one we will use is:
+You can explore many different extensions for VSCodium, but the primary one we will use is:
 
-- ``cs30-p5``, which helps create and manage p5.js projects in VS Code. This will also include two other extensions (Live Server and ESLint). Live Server lets you run your code on your local machine for testing, by adding a "Go Live" button to the bottom of your VS Code window. ESLint will provide warnings when you make coding/convention errors (I've bundled a runtime of ESLint as part of the cs30-p5 extension, so you shouldn't need to install anything else. If it doesn't work, you may need to install Node.js and then run ``npm install -g eslint``).
+- ``cs30-p5``, which helps create and manage p5.js projects in VSCodium. This will also include two other extensions (Live Server and ESLint). Live Server lets you run your code on your local machine for testing, by adding a "Go Live" button to the bottom of your VSCodium window. ESLint will provide warnings when you make coding/convention errors (I've bundled a runtime of ESLint as part of the cs30-p5 extension, so you shouldn't need to install anything else. If it doesn't work, you may need to install Node.js and then run ``npm install -g eslint``).
 
 
 GitHub

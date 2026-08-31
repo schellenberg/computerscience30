@@ -3,13 +3,13 @@ Debugging JavaScript
 
 .. topic:: Quick Overview of Day
 
-    Learn how to debug JavaScript using the VS Code editor.
+    Learn how to debug JavaScript using the VSCodium editor.
 
 
 Configuring the Debugger
 -------------------------
 
-To configure the debugger in VS Code, you need to create a launch.json file. This file tells VS Code how to run your code in the debugger. To create this file, click on the debug icon on the left hand sidebar:
+To configure the debugger in VSCodium, you need to create a launch.json file. This file tells VSCodium how to run your code in the debugger. To create this file, click on the debug icon on the left hand sidebar:
 
 .. image:: images/click-debug-pane.png
 
@@ -21,7 +21,7 @@ Choose the web browser you want to use (Chrome or Edge) when doing debugging:
 
 .. image:: images/select-web-app-debugger-config.png
 
-You now need to know which port you are using when you click the "Go Live" button in VS Code. The default port is 5500. To see the port, click the "Go Live" button in the bottom right corner of VS Code:
+You now need to know which port you are using when you click the "Go Live" button in VSCodium. The default port is 5500. To see the port, click the "Go Live" button in the bottom right corner of VSCodium:
 
 .. image:: images/click-go-live.png
 
@@ -41,7 +41,7 @@ Now that you have the debugger set up, you can use it to help you find and fix p
 
 .. image:: images/launch-debugger.png
 
-This will open a new browser window with your code running in it. In the VS Code window, you will see a new pane at the top of the screen that shows allows you to step through your code:
+This will open a new browser window with your code running in it. In the VSCodium window, you will see a new pane at the top of the screen that shows allows you to step through your code:
 
 .. image:: images/advancing-code-panel.png
 

@@ -2,7 +2,7 @@ collide2d Library
 =================
 
 
-Installing the Library in VS Code
+Installing the Library in VSCodium
 ----------------------------------
 
 With the cs30-p5 extension installed, you can add collide2d directly from the Command Palette:
