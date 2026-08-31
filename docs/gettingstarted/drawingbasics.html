@@ -229,7 +229,7 @@
 </div>
 <section id="class-demo">
 <h2>Class Demo<a class="headerlink" href="#class-demo" title="Permalink to this headline">¶</a></h2>
-<p>p5js has a number of functions that get called automatically for you. The most important ones for now are <code class="docutils literal notranslate"><span class="pre">setup()</span></code>, <code class="docutils literal notranslate"><span class="pre">draw()</span></code>, <code class="docutils literal notranslate"><span class="pre">keyTyped()</span></code> and <code class="docutils literal notranslate"><span class="pre">mousePressed()</span></code>.</p>
+<p>p5js has a number of functions that get called automatically for you. The most important ones for now are <code class="docutils literal notranslate"><span class="pre">setup()</span></code>, <code class="docutils literal notranslate"><span class="pre">draw()</span></code>, <code class="docutils literal notranslate"><span class="pre">keyIsDown()</span></code> and <code class="docutils literal notranslate"><span class="pre">mousePressed()</span></code>.</p>
 <p>Live code a demo that does the following:</p>
 <ul class="simple">
 <li><p>displays a circle on the screen (talk about the coordinate plane)</p></li>
@@ -247,8 +247,7 @@
 <section id="to-remember">
 <h2>To Remember<a class="headerlink" href="#to-remember" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>use <code class="docutils literal notranslate"><span class="pre">keyTyped()</span></code> instead of keyPressed()  <strong>in keyTyped(), the key variable is case sensitive!</strong></p></li>
-<li><p>can return false; to override default behaviour of that key (like space key scrolling…)</p></li>
+<li><p>use <code class="docutils literal notranslate"><span class="pre">keyIsDown()</span></code> with something like <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(keyIsDown(&quot;r&quot;))</span> <span class="pre">{</span></code> or <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(keyIsDown(UP_ARROW))</span> <span class="pre">{</span></code></p></li>
 </ul>
 </section>
 <section id="p5js-helpful-variables">

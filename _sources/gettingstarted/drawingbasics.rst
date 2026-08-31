@@ -9,7 +9,7 @@ The Basics of p5js
 Class Demo
 ------------------
 
-p5js has a number of functions that get called automatically for you. The most important ones for now are ``setup()``, ``draw()``, ``keyTyped()`` and ``mousePressed()``.
+p5js has a number of functions that get called automatically for you. The most important ones for now are ``setup()``, ``draw()``, ``keyIsDown()`` and ``mousePressed()``.
 
 Live code a demo that does the following:
 
@@ -28,8 +28,7 @@ Live code a demo that does the following:
 To Remember
 ------------
 
-- use ``keyTyped()`` instead of keyPressed()  **in keyTyped(), the key variable is case sensitive!**
-- can return false; to override default behaviour of that key (like space key scrolling...)
+- use ``keyIsDown()`` with something like ``if (keyIsDown("r")) {`` or ``if (keyIsDown(UP_ARROW)) {``
 
 
 p5js helpful variables
