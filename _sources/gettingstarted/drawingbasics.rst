@@ -107,7 +107,7 @@ Create a sketch that makes the following happen:
 - when the user hits the "b" key, reset the sketch with a black background
 
 You'll want to look up the ``mouseClicked()`` function in the  `p5js.org reference <https://p5js.org/reference/>`_.
-It should look something like `this sketch <https://editor.p5js.org/schellenberg/full/_unxJaK-q>`_.
+It should look something like `this live sketch <https://editor.p5js.org/schellenberg/full/_unxJaK-q>`_.
 
 
 Take it Further
